@@ -28,7 +28,7 @@
       b.type='button';b.setAttribute('role','tab');b.id=id+'-t'+i;
       b.setAttribute('aria-controls',id+'-p'+i);p.id=id+'-p'+i;p.setAttribute('aria-labelledby',b.id);
       b.innerHTML='<span class="n">0'+(i+1)+'</span>'+p.dataset.label;
-      b.addEventListener('click',function(){show(i)});
+      b.addEventListener('click',function(){show(i);if(tabs.getBoundingClientRect().top<0)toTop()});
       tabs.appendChild(b);return b;
     });
     tabs.addEventListener('keydown',function(e){
@@ -39,8 +39,14 @@
     foot.innerHTML='<button class="btn" type="button">← 이전</button><button class="btn primary" type="button">다음 →</button>';
     det.appendChild(foot);
     var prev=foot.children[0],next=foot.children[1];
-    prev.addEventListener('click',function(){show(Math.max(cur-1,0))});
-    next.addEventListener('click',function(){show(Math.min(cur+1,panels.length-1))});
+    prev.addEventListener('click',function(){show(Math.max(cur-1,0));toTop()});
+    next.addEventListener('click',function(){show(Math.min(cur+1,panels.length-1));toTop()});
+    function toTop(){
+      var nav=document.querySelector('.nav'),off=(nav?nav.offsetHeight:0)+12;
+      var y=tabs.getBoundingClientRect().top+scrollY-off;
+      var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      scrollTo({top:y,behavior:reduce?'auto':'smooth'});
+    }
     function show(i){
       cur=i;
       panels.forEach(function(p,j){p.hidden=j!==i});
