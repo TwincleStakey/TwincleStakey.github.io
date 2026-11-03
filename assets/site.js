@@ -104,3 +104,23 @@
   var card=h&&document.getElementById(h);
   if(card&&card.classList.contains('prob')){var b=card.querySelector('.more');if(b&&b.getAttribute('aria-expanded')==='false')b.click();setTimeout(function(){card.scrollIntoView()},50);addEventListener('load',function(){card.scrollIntoView()});}
 })();
+(function(){
+  // 사진 확대
+  var sel='.loop img,.media-card img,.shots img,.prob-sum figure img,.try-media img,.lm img,.ba-pair img';
+  document.querySelectorAll(sel).forEach(function(img){
+    img.classList.add('zoomable');img.tabIndex=0;img.setAttribute('role','button');
+    function open(){
+      var lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-label','확대한 사진');
+      var big=document.createElement('img');big.src=img.currentSrc||img.src;big.alt=img.alt;
+      var cap=document.createElement('p');cap.textContent=img.alt;
+      var x=document.createElement('button');x.className='lb-close';x.type='button';x.textContent='닫기 ✕';
+      var box=document.createElement('div');box.appendChild(big);box.appendChild(cap);
+      lb.appendChild(x);lb.appendChild(box);document.body.appendChild(lb);x.focus();
+      function close(){lb.remove();removeEventListener('keydown',esc);img.focus()}
+      function esc(e){if(e.key==='Escape')close()}
+      lb.addEventListener('click',close);addEventListener('keydown',esc);
+    }
+    img.addEventListener('click',open);
+    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+  });
+})();
