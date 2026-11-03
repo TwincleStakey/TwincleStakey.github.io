@@ -102,5 +102,5 @@
 (function(){
   var h=location.hash.slice(1);
   var card=h&&document.getElementById(h);
-  if(card&&card.classList.contains('prob')){var b=card.querySelector('.more');if(b&&b.getAttribute('aria-expanded')==='false')b.click();setTimeout(function(){card.scrollIntoView()},50);}
+  if(card&&card.classList.contains('prob')){var b=card.querySelector('.more');if(b&&b.getAttribute('aria-expanded')==='false')b.click();setTimeout(function(){card.scrollIntoView()},50);addEventListener('load',function(){card.scrollIntoView()});}
 })();
