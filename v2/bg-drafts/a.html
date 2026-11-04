@@ -1,0 +1,67 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>배경 시안 甲</title>
+<style>@font-face{font-family:'Paperozi';src:url(../assets/paperozi-400.d256aeb4.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Paperozi';src:url(../assets/paperozi-600.532b5054.woff2) format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Paperozi';src:url(../assets/paperozi-800.608c9c92.woff2) format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'DosStory';src:url(../assets/dosstory-400.fb959292.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+:root{--paper:#f7f4ec;--ink:#1c2230;--body:#3a4150;--mute:#7a8090;--line:#e3ddd0;--ac:#5b8a1f;--ac2:#2f6fb0;--bad:#c2483a;--warn:#a8731a;--code:#1d2433;--codeink:#e2e8f0;--chip:#ece6d8}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:radial-gradient(1200px 700px at 15% 0%,#14234a 0%,transparent 60%),radial-gradient(900px 600px at 90% 100%,#2a1640 0%,transparent 60%),#04060d;color:var(--body);font-family:'Paperozi',system-ui,sans-serif;font-size:18px;line-height:1.75;word-break:keep-all;min-height:100vh}
+#sky{position:fixed;inset:0;z-index:0;pointer-events:none}
+.sw{position:relative;z-index:2;display:flex;gap:8px;justify-content:center;padding:18px 16px 0;flex-wrap:wrap}
+.sw a{font-size:14px;color:#cbd5e1;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 14px;text-decoration:none;background:rgba(4,6,13,.6)}
+.sw a.on{background:#b8e46e;color:#0a1206;border-color:#b8e46e}
+.desc{position:relative;z-index:2;text-align:center;color:#94a3b8;font-size:15px;margin:10px 16px 0}
+.paper{position:relative;z-index:1;max-width:920px;margin:34px auto 90px;background:var(--paper);border:1px solid rgba(255,255,255,.18);border-radius:6px;box-shadow:0 0 0 8px rgba(255,255,255,.03),0 40px 120px rgba(0,0,0,.7);overflow:hidden}
+.bar{display:flex;align-items:center;gap:7px;padding:10px 16px;background:#0b1220;color:#b8e46e;font-family:'DosStory',monospace;font-size:13px;letter-spacing:.12em}
+.bar i{width:10px;height:10px;border-radius:2px;background:#b8e46e;opacity:.85}.bar i:nth-child(2){background:#7cc4ff}.bar i:nth-child(3){background:#f3d38a}.bar span{margin-left:10px}
+.in{padding:56px 64px 60px}
+.eb{font-family:'DosStory',monospace;color:var(--ac);letter-spacing:.14em;font-size:14px}
+h1{font-size:46px;line-height:1.2;color:var(--ink);margin:10px 0 0;font-weight:800;letter-spacing:-.02em}h1 em{font-style:normal;color:var(--ac)}
+.who{color:var(--ink);font-weight:600;font-size:21px;margin:20px 0 6px}
+h2{font-size:32px;color:var(--ink);margin:56px 0 18px;padding-top:30px;border-top:1px solid var(--line);font-weight:800}
+.no{font-family:'DosStory',monospace;color:var(--ac);font-size:.62em;margin-right:12px;font-weight:400;letter-spacing:.04em}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.row .no{font-size:14px}
+h3{font-size:25px;color:var(--ink);margin:4px 0 8px;font-weight:800}
+.key{color:var(--ink);font-weight:600;margin:0 0 10px}
+ul{margin:0;padding-left:1.1em}li{margin:0 0 .3em}li::marker{color:var(--ac)}
+.row img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:30px 0 18px}
+.sum div{background:var(--chip);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.sum b{font-family:'DosStory',monospace;font-weight:400;font-size:12px;letter-spacing:.12em}.sum .q{color:var(--bad)}.sum .c{color:var(--warn)}.sum .d{color:var(--ac)}
+.sum p{margin:4px 0 0;font-size:16px;line-height:1.6}
+pre{background:var(--code);color:var(--codeink);border-radius:10px;padding:16px 18px;font-size:13.5px;line-height:1.6;overflow:auto;font-family:ui-monospace,Menlo,Consolas,monospace;margin:0}
+pre .k{color:#c7a7ff}pre .f{color:#7cc4ff}pre .m{color:#6b7a90}
+@media(max-width:768px){.paper{margin:22px 12px 60px}.in{padding:30px 20px}h1{font-size:34px}.row,.sum{grid-template-columns:1fr}}
+</style></head><body><canvas id="sky"></canvas>
+<div class="sw"><a href="a.html" class="on">甲 종이 원고</a><a href="b.html" class="">乙 밝은 회백 카드</a><a href="c.html" class="">丙 짙은 남색 유리</a><a href="d.html" class="">丁 게임 창</a></div><p class="desc"><b style="color:#e2e8f0">甲 종이 원고</b> — 우주 위에 미색 종이 한 장. 블로그 글처럼 가장 밝고 읽기 쉽다.</p>
+<div class="paper"><div class="in">
+<div class="hero"><span class="eb">GAME CLIENT PROGRAMMER</span>
+<h1>영화에서는 관객이지만,<br>게임에서는 <em>주인공</em>입니다</h1>
+<p class="who">게임 클라이언트 개발자를 꿈꾸는 김기백입니다.</p>
+<p>영화와 소설이 보여주는 세계를 넘어, 직접 선택하고 행동하며 그 안에 존재하는 경험. 저는 플레이어가 이야기의 주인공이 되는 순간을 구현하고 싶습니다.</p></div>
+<h2><span class="no">2.3</span>핵심 시스템</h2>
+<div class="row"><div><span class="no">2.3.1</span><h3>멀티 판정과 지연 보상</h3><p class="key">맞는 쪽이 판정하고, 공격자가 본 자리로 되감아 잰다.</p>
+<ul><li>맞음 · 막기 · 튕겨내기는 맞는 쪽 PC가 정한다</li><li>다른 PC의 공격은 그 화면이 나를 그리던 시각만큼 위치를 되감는다</li><li>불꽃 · 소리는 바로, 체력은 확정이 올 때만</li></ul></div>
+<img src="../media/p_ffa_magyo.jpg" alt=""></div>
+<div class="sum"><div><b class="q">문제</b><p>게스트로 하면 화면에선 맞은 비도가 피해 없이 지나갔다.</p></div><div><b class="c">원인</b><p>맞는 쪽이 판정하는데 지연 보상이 없었다.</p></div><div><b class="d">해결</b><p>공격자가 나를 그리던 지연만큼 위치를 되감아 잰다.</p></div></div>
+<pre><span class="k">float</span> <span class="f">ViewDelayOf</span>(Duelist attacker)
+{
+    <span class="m">// 방장 몸: 게스트 PC 보간 버퍼(50ms + 3틱)만큼 더 늦게 그려진다</span>
+    <span class="k">float</span> delay = IsServer ? attackerOneWay + 0.05f + 3f / 60f : OneWay + attackerOneWay;
+    <span class="k">return</span> Mathf.Min(MaxRewind, delay);
+}</pre>
+</div></div>
+<script>
+(function(){var c=document.getElementById('sky'),x=c.getContext('2d'),W,H,S=[],P=[],dpr=Math.min(2,window.devicePixelRatio||1);
+var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function rs(){W=c.width=innerWidth*dpr;H=c.height=innerHeight*dpr;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px';S=[];var n=Math.round(innerWidth*innerHeight/2600);
+for(var i=0;i<n;i++){var r=Math.random();S.push({x:Math.random()*W,y:Math.random()*H,s:(r<.92?.5+Math.random()*.8:1.2+Math.random()*1.2)*dpr,a:.25+Math.random()*.7,t:Math.random()*6.28,v:.4+Math.random()*1.6,c:Math.random()<.12?'#cfe8ff':(Math.random()<.08?'#e8ffd0':'#ffffff')})}}
+function pop(){P.push({x:Math.random()*W,y:Math.random()*H,life:0,max:1.6+Math.random()*1.4,s:(1.4+Math.random()*1.6)*dpr})}
+var last=0;function f(t){var dt=Math.min(.05,(t-last)/1000||0);last=t;x.clearRect(0,0,W,H);
+for(var i=0;i<S.length;i++){var s=S[i];var a=still?s.a:s.a*(.55+.45*Math.sin(s.t+t/1000*s.v));x.globalAlpha=a;x.fillStyle=s.c;x.beginPath();x.arc(s.x,s.y,s.s,0,6.283);x.fill()}
+if(!still&&Math.random()<.035)pop();
+for(var j=P.length-1;j>=0;j--){var p=P[j];p.life+=dt;var k=p.life/p.max;if(k>=1){P.splice(j,1);continue}var a=Math.sin(k*Math.PI);var r=p.s*(1+a);
+x.globalAlpha=a;x.fillStyle='#fff';x.beginPath();x.arc(p.x,p.y,r*.6,0,6.283);x.fill();x.globalAlpha=a*.7;x.strokeStyle='#dff3ff';x.lineWidth=dpr*.8;x.beginPath();x.moveTo(p.x-r*3,p.y);x.lineTo(p.x+r*3,p.y);x.moveTo(p.x,p.y-r*3);x.lineTo(p.x,p.y+r*3);x.stroke()}
+x.globalAlpha=1;if(!still)requestAnimationFrame(f)}
+addEventListener('resize',rs);rs();requestAnimationFrame(f);})();</script></body></html>
