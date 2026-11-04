@@ -1,0 +1,89 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>목차 시안</title><link rel="stylesheet" href="assets/css.461dfdf4.css"><style>
+body{padding:40px 0 120px}
+.dh{max-width:1180px;margin:0 auto;padding:0 24px}
+.dh h1{font-size:40px;margin:0 0 8px}.dh p{color:var(--mute);margin:0 0 30px}
+.draft{max-width:1180px;margin:0 auto 70px;padding:0 24px}
+.draft .lab{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+.draft .lab b{font-family:var(--pixel);font-size:28px;color:var(--lime)}
+.draft .lab span{font-size:22px;color:var(--ink);font-weight:800}
+.draft .lab em{font-style:normal;color:var(--mute);font-size:16px}
+.tg{font-family:var(--pixel);font-size:11px;letter-spacing:.1em;color:var(--mute);border:1px solid var(--line2);border-radius:5px;padding:1px 6px;margin-left:8px;vertical-align:middle}
+.tg.team{color:var(--team);border-color:var(--team)}
+/* 甲 */
+.A{border:1px solid var(--line2);border-radius:14px;background:var(--panel);padding:22px 26px}
+.A .tt{font-weight:800;color:var(--ink);font-size:18px;margin-bottom:8px}
+.A ol{list-style:none;margin:0;padding:0}
+.A li{padding:12px 0;border-top:1px solid var(--line)}.A li:first-child{border-top:0}
+.A .h{display:flex;align-items:center;gap:12px}
+.A .h b{font-family:var(--pixel);font-weight:400;color:var(--lime);font-size:20px;width:22px}
+.A .h a{font-size:19px;font-weight:700;color:var(--ink)}
+.A .l2{display:flex;flex-wrap:wrap;gap:4px 18px;margin:6px 0 0 34px}
+.A .l2 a{font-size:15.5px;color:var(--body)}
+.A .l2 a:hover,.A .l3 a:hover,.A .h a:hover{color:var(--lime)}
+.A .l3{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0 0 34px}
+.A .l3 span{font-family:var(--pixel);font-size:12px;color:var(--mute);letter-spacing:.06em;margin-right:4px;min-width:110px}
+.A .l3 a{font-size:13.5px;color:var(--mute);border:1px solid var(--line2);border-radius:999px;padding:2px 10px}
+/* 乙 */
+.B{display:grid;grid-template-columns:1fr 1.6fr 1.6fr;grid-template-rows:auto auto;gap:14px}
+.B .cd{border:1px solid var(--line2);border-radius:14px;background:var(--panel);overflow:hidden;display:flex;flex-direction:column}
+.B .cd.big{grid-row:span 3}
+.B .cd.sm{align-self:start}
+.B .th{aspect-ratio:16/8;background:#000 center/cover;position:relative}
+.B .th span{position:absolute;left:12px;bottom:8px;font-family:var(--pixel);font-size:34px;color:#fff;text-shadow:0 2px 10px #000}
+.B .th.sm{aspect-ratio:auto;height:0}.B .th.sm span{display:none}
+.B .bd{padding:16px 18px 18px}
+.B .nm{font-size:20px;font-weight:800;color:var(--ink)}
+.B .cd.sm .nm::before{content:attr(data-n)}
+.B .sb{font-size:13.5px;color:var(--mute);margin:2px 0 10px}
+.B .it{padding:6px 0;border-top:1px solid var(--line)}
+.B .it>a{font-size:15.5px;color:var(--body);display:flex;gap:8px}
+.B .it>a b{font-family:var(--pixel);font-weight:400;color:var(--lime);font-size:13px;min-width:28px;padding-top:2px}
+.B .chips{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0 2px 36px}
+.B .c{font-size:12.5px;color:var(--mute);border:1px solid var(--line2);border-radius:999px;padding:1px 9px}
+.B .c:hover,.B .it>a:hover{color:var(--lime);border-color:var(--lime)}
+/* 丙 */
+.C{border:2px solid var(--line2);border-radius:6px;background:linear-gradient(180deg,#0d1420,#070b13);padding:18px;font-family:var(--sans)}
+.C .tt{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--pixel);color:var(--lime);font-size:18px;letter-spacing:.14em;padding:0 6px 12px;border-bottom:2px dashed var(--line2);margin-bottom:12px}
+.C .tt .k{font-size:12px;color:var(--mute);letter-spacing:.08em}
+.C ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.C .ch{display:grid;grid-template-columns:120px 130px 1fr auto;align-items:center;gap:16px;padding:10px 14px 10px 10px;border:2px solid transparent;border-radius:6px;background:rgba(255,255,255,.02)}
+.C .th{width:120px;aspect-ratio:16/9;background:#000 center/cover;border-radius:3px;grid-row:span 2}
+.C .th.none{background:repeating-linear-gradient(45deg,#111b2b 0 6px,#0d1420 6px 12px)}
+.C .cn{font-family:var(--pixel);color:var(--mute);font-size:14px;letter-spacing:.1em}
+.C .nm{font-size:21px;font-weight:800;color:var(--ink)}
+.C .sb{grid-column:2 / 4;font-size:14px;color:var(--mute);margin-top:-6px}
+.C .go{grid-row:1 / span 2;grid-column:4;font-family:var(--pixel);color:var(--lime);opacity:0;font-size:18px}
+.C .ch{grid-template-rows:auto auto}
+.C .th{grid-column:1;grid-row:1 / span 2}.C .cn{grid-column:2;grid-row:1}.C .nm{grid-column:3;grid-row:1}
+.C li.on .ch,.C .ch:hover{border-color:var(--lime);background:rgba(184,228,110,.06)}
+.C li.on .go,.C .ch:hover .go{opacity:1}
+.C .st{display:none;grid-template-columns:repeat(5,1fr);gap:8px;padding:10px 4px 4px 150px}
+.C li.on .st{display:grid}
+.C .st a{border:1px solid var(--line2);border-radius:4px;padding:8px 10px;font-size:14.5px;color:var(--body);background:var(--bg)}
+.C .st a em{display:block;font-style:normal;font-family:var(--pixel);font-size:12px;color:var(--lime);letter-spacing:.08em}
+.C .st a:hover{border-color:var(--lime)}
+/* 丁 */
+.D{display:grid;grid-template-columns:270px 1fr;gap:28px;border:1px solid var(--line2);border-radius:14px;background:var(--bg);padding:22px;height:560px;overflow:hidden}
+.D aside{border-right:1px solid var(--line);padding-right:18px;overflow:auto}
+.D .tt{font-weight:800;color:var(--ink);font-size:16px;margin-bottom:8px}
+.D a{display:flex;gap:8px;align-items:center;padding:5px 8px;border-radius:7px;color:var(--body);font-size:15px}
+.D a b{font-family:var(--pixel);font-weight:400;color:var(--lime);font-size:13px;min-width:24px}
+.D a i{margin-left:auto;font-style:normal;color:var(--mute);font-size:12px}
+.D .l1{font-weight:700;color:var(--ink);font-size:16px}
+.D .g{margin-bottom:2px}
+.D .l2{padding-left:22px;font-size:14.5px}
+.D .l2.cur{color:var(--lime)}
+.D .l3{padding-left:56px;font-size:13.5px;color:var(--mute);position:relative}
+.D .l3::before{content:"";position:absolute;left:44px;top:50%;width:5px;height:5px;border-radius:50%;background:var(--line2);transform:translateY(-50%)}
+.D .l3.now{color:var(--ink);background:rgba(184,228,110,.08)}.D .l3.now::before{background:var(--lime);box-shadow:0 0 8px var(--lime)}
+.D a:hover{background:rgba(255,255,255,.04)}
+.D .prog{height:4px;background:var(--line);border-radius:4px;margin:16px 8px 4px;overflow:hidden}.D .prog i{display:block;height:100%;background:var(--lime)}
+.D .pt{font-family:var(--pixel);font-size:11px;color:var(--mute);padding-left:8px;letter-spacing:.1em}
+.D .mock{padding-top:6px}
+.D .mh{font-size:24px;font-weight:800;color:var(--ink);margin:6px 0 14px}.D .mh .n{font-family:var(--pixel);color:var(--lime);font-size:16px;margin-right:8px}
+.D .ml{height:12px;background:var(--panel2);border-radius:6px;margin:0 0 10px;width:88%}.D .ml.s{width:60%}
+.D .mrow{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin:16px 0 26px}
+.D .mv{aspect-ratio:16/9;background:#000 center/cover;border-radius:10px;border:1px solid var(--line2)}
+@media(max-width:900px){.B{grid-template-columns:1fr}.B .cd.big{grid-row:auto}.C .ch{grid-template-columns:80px 1fr}.C .th{width:80px}.C .cn,.C .nm,.C .sb{grid-column:2}.C .cn{grid-row:1}.C .nm{grid-row:2}.C .sb{display:none}.C .st{padding-left:0;grid-template-columns:1fr 1fr}.D{grid-template-columns:1fr;height:auto}.D .mock{display:none}}
+</style></head><body>
+<div class="dh"><h1>목차 시안</h1><p>넷 중 하나를 고르거나, 섞어서 말해줘. 위치는 지금처럼 첫 화면 바로 밑 (丁은 화면 왼쪽).</p></div><section class="draft"><div class="lab"><b>甲</b><span>한 줄 요약형</span><em>큰 항목 한 줄 + 하위 항목을 가로로. 세부는 작은 칩. 가장 짧다.</em></div><nav class="A"><div class="tt">목차</div><ol><li><div class="h"><b>1</b><a href="#">자기소개</a></div><div class="l2"><a href="#">1.1 경력</a><a href="#">1.2 특기</a><a href="#">1.3 기술</a></div></li><li><div class="h"><b>2</b><a href="#">정무대전</a><span class="tg">MAIN 01</span></div><div class="l2"><a href="#">2.1 핵심 플레이</a><a href="#">2.2 기여 범위</a><a href="#">2.3 핵심 시스템</a><a href="#">2.4 기술 사례</a><a href="#">2.5 결과 · 회고</a></div><div class="l3"><span>2.3 핵심 시스템</span><a href="#">1. 멀티 판정</a><a href="#">2. 경지 성장</a><a href="#">3. 여섯 문파</a><a href="#">4. 대기실·랭크</a><a href="#">5. 측정 도구</a><a href="#">6. 입문 가이드</a></div><div class="l3"><span>2.4 기술 사례</span><a href="#">1. 안 맞는 공격</a><a href="#">2. 측정 환경</a><a href="#">3. 작은 커서</a></div></li><li><div class="h"><b>3</b><a href="#">나의 인생 라멘가게</a><span class="tg team">MAIN 02 · TEAM</span></div><div class="l2"><a href="#">3.1 핵심 플레이</a><a href="#">3.2 기여 범위</a><a href="#">3.3 핵심 시스템</a><a href="#">3.4 기술 사례</a><a href="#">3.5 결과 · 회고</a></div><div class="l3"><span>3.3 핵심 시스템</span><a href="#">1. 조리 판정</a><a href="#">2. 씬 빌더</a><a href="#">3. 랜덤 난이도</a><a href="#">4. 손님 반응</a></div><div class="l3"><span>3.4 기술 사례</span><a href="#">1. 엔딩 크레딧</a><a href="#">2. 커서 실종</a><a href="#">3. 두 번의 처리</a></div></li><li><div class="h"><b>4</b><a href="#">그 밖의 작업</a></div></li><li><div class="h"><b>5</b><a href="#">연락</a></div></li></ol></nav></section><section class="draft"><div class="lab"><b>乙</b><span>프로젝트 카드형</span><em>프로젝트마다 화면 한 장을 붙인 카드. 눈에 잘 들어오고 세부는 칩.</em></div><nav class="B"><div class="cd sm"><div class="th sm"><span>1</span></div><div class="bd"><div class="nm">자기소개</div><div class="sb">경력 · 특기 · 기술</div><div class="it"><a href="#"><b>1.1</b>경력</a></div><div class="it"><a href="#"><b>1.2</b>특기</a></div><div class="it"><a href="#"><b>1.3</b>기술</a></div></div></div><div class="cd big"><div class="th" style="background-image:url(media/p_play_3v3.jpg)"><span>2</span></div><div class="bd"><div class="nm">정무대전<span class="tg">MAIN 01</span></div><div class="sb">최대 6인 온라인 무협 대전 액션 · 1인</div><div class="it"><a href="#"><b>2.1</b>핵심 플레이</a></div><div class="it"><a href="#"><b>2.2</b>기여 범위</a></div><div class="it"><a href="#"><b>2.3</b>핵심 시스템</a><div class=chips><a class="c" href="#">멀티 판정</a><a class="c" href="#">경지 성장</a><a class="c" href="#">여섯 문파</a><a class="c" href="#">대기실·랭크</a><a class="c" href="#">측정 도구</a><a class="c" href="#">입문 가이드</a></div></div><div class="it"><a href="#"><b>2.4</b>기술 사례</a><div class=chips><a class="c" href="#">안 맞는 공격</a><a class="c" href="#">측정 환경</a><a class="c" href="#">작은 커서</a></div></div><div class="it"><a href="#"><b>2.5</b>결과 · 회고</a></div></div></div><div class="cd big"><div class="th" style="background-image:url(media/ramen/still_cosmic.jpg)"><span>3</span></div><div class="bd"><div class="nm">나의 인생 라멘가게<span class="tg team">MAIN 02 · TEAM</span></div><div class="sb">2D 조리 퍼즐 · 팀 4명</div><div class="it"><a href="#"><b>3.1</b>핵심 플레이</a></div><div class="it"><a href="#"><b>3.2</b>기여 범위</a></div><div class="it"><a href="#"><b>3.3</b>핵심 시스템</a><div class=chips><a class="c" href="#">조리 판정</a><a class="c" href="#">씬 빌더</a><a class="c" href="#">랜덤 난이도</a><a class="c" href="#">손님 반응</a></div></div><div class="it"><a href="#"><b>3.4</b>기술 사례</a><div class=chips><a class="c" href="#">엔딩 크레딧</a><a class="c" href="#">커서 실종</a><a class="c" href="#">두 번의 처리</a></div></div><div class="it"><a href="#"><b>3.5</b>결과 · 회고</a></div></div></div><div class="cd sm"><div class="th sm"><span>4</span></div><div class="bd"><div class="nm">그 밖의 작업</div><div class="sb">WebGL · 시네마틱 · 팀 작업 9개</div></div></div><div class="cd sm"><div class="th sm"><span>5</span></div><div class="bd"><div class="nm">연락</div><div class="sb">kbkim235@naver.com</div></div></div></nav></section><section class="draft"><div class="lab"><b>丙</b><span>챕터 선택형</span><em>게임 챕터 고르기 화면처럼. 마우스를 올린 챕터만 스테이지(하위 항목)가 펼쳐진다.</em></div><nav class="C"><div class="tt"><span>SELECT CHAPTER</span><span class="k">↑↓ 이동 · 클릭으로 바로 가기</span></div><ol><li class=""><a class="ch" href="#"><div class="th none"></div><span class="cn">CHAPTER 01</span><span class="nm">자기소개</span><span class="sb">경력 · 특기 · 기술</span><span class="go">▶</span></a><div class=st><a href="#"><em>1-1</em>경력</a><a href="#"><em>1-2</em>특기</a><a href="#"><em>1-3</em>기술</a></div></li><li class=" on"><a class="ch" href="#"><div class="th" style="background-image:url(media/p_play_3v3.jpg)"></div><span class="cn">CHAPTER 02</span><span class="nm">정무대전<span class="tg">MAIN 01</span></span><span class="sb">최대 6인 온라인 무협 대전 액션 · 1인</span><span class="go">▶</span></a><div class=st><a href="#"><em>2-1</em>핵심 플레이</a><a href="#"><em>2-2</em>기여 범위</a><a href="#"><em>2-3</em>핵심 시스템</a><a href="#"><em>2-4</em>기술 사례</a><a href="#"><em>2-5</em>결과 · 회고</a></div></li><li class=""><a class="ch" href="#"><div class="th" style="background-image:url(media/ramen/still_cosmic.jpg)"></div><span class="cn">CHAPTER 03</span><span class="nm">나의 인생 라멘가게<span class="tg team">MAIN 02 · TEAM</span></span><span class="sb">2D 조리 퍼즐 · 팀 4명</span><span class="go">▶</span></a><div class=st><a href="#"><em>3-1</em>핵심 플레이</a><a href="#"><em>3-2</em>기여 범위</a><a href="#"><em>3-3</em>핵심 시스템</a><a href="#"><em>3-4</em>기술 사례</a><a href="#"><em>3-5</em>결과 · 회고</a></div></li><li class=""><a class="ch" href="#"><div class="th none"></div><span class="cn">CHAPTER 04</span><span class="nm">그 밖의 작업</span><span class="sb">WebGL · 시네마틱 · 팀 작업 9개</span><span class="go">▶</span></a></li><li class=""><a class="ch" href="#"><div class="th none"></div><span class="cn">CHAPTER 05</span><span class="nm">연락</span><span class="sb">kbkim235@naver.com</span><span class="go">▶</span></a></li></ol></nav></section><section class="draft"><div class="lab"><b>丁</b><span>왼쪽 고정 사이드바형</span><em>목차를 따로 두지 않고 화면 왼쪽에 늘 붙어 있다. 지금 읽는 곳이 빛나고, 읽은 만큼 막대가 찬다.</em></div><div class="D"><aside><div class="tt">목차</div><div class="g"><a class="l1" href="#"><b>1</b>자기소개<i>▸</i></a></div><div class="g open"><a class="l1" href="#"><b>2</b>정무대전<i>▾</i></a><a class="l2" href="#"><b>2.1</b>핵심 플레이</a><a class="l2" href="#"><b>2.2</b>기여 범위</a><a class="l2 cur" href="#"><b>2.3</b>핵심 시스템</a><a class="l3" href="#">멀티 판정</a><a class="l3 now" href="#">경지 성장</a><a class="l3" href="#">여섯 문파</a><a class="l3" href="#">대기실·랭크</a><a class="l3" href="#">측정 도구</a><a class="l3" href="#">입문 가이드</a><a class="l2" href="#"><b>2.4</b>기술 사례</a><a class="l2" href="#"><b>2.5</b>결과 · 회고</a></div><div class="g"><a class="l1" href="#"><b>3</b>나의 인생 라멘가게<i>▸</i></a></div><div class="g"><a class="l1" href="#"><b>4</b>그 밖의 작업<i></i></a></div><div class="g"><a class="l1" href="#"><b>5</b>연락<i></i></a></div><div class="prog"><i style="width:38%"></i></div><div class="pt">38% 읽음</div></aside><div class="mock"><div class="mh"><span class="n">2.3.2</span> 판 안 경지 성장</div><div class="ml"></div><div class="ml s"></div><div class="mrow"><div class="mv" style="background-image:url(media/p_tab_realm.jpg)"></div><div><div class="ml"></div><div class="ml s"></div><div class="ml"></div></div></div><div class="mh"><span class="n">2.3.3</span> 여섯 문파</div><div class="ml"></div><div class="ml s"></div></div></div></section><script>document.querySelectorAll('.C li').forEach(li=>li.addEventListener('mouseenter',()=>{document.querySelectorAll('.C li').forEach(x=>x.classList.remove('on'));li.classList.add('on')}));document.querySelectorAll('nav a,.D a').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));</script></body></html>
