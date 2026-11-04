@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>정무대전 — 김기백 포트폴리오</title>
+<meta name="description" content="최대 6인 온라인 무협 대전 액션. Unity 6 + Netcode for GameObjects. 멀티 판정·지연 보상, 윈도우 커서, 측정 도구.">
+<meta property="og:title" content="정무대전 — 김기백 포트폴리오"><meta property="og:description" content="최대 6인 온라인 무협 대전 액션. Unity 6 + Netcode for GameObjects. 멀티 판정·지연 보상, 윈도우 커서, 측정 도구.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css.b0b63429.css">
+
+</head>
+<body class="has-toc">
+<div class="progress"></div>
+<header class="nav"><div class="wrap">
+<a class="logo" href="index.html"><i></i>김기백 · GAME CLIENT</a>
+<button class="burger" type="button" aria-label="메뉴">MENU</button>
+<ul>
+<li><a class="" href="index.html">HOME</a></li>
+<li><a class="" href="index.html#projects">PROJECTS</a></li>
+<li><a class=" on" href="jeongmu.html">정무대전</a></li>
+<li><a class="" href="ramen.html">라멘가게</a></li>
+<li><a class="" href="index.html#about">ABOUT</a></li>
+<li><a class="cta" href="resume.html">RESUME</a></li>
+</ul></div></header>
+<main>
+<ol class="rail"><li><a href="#play"><span>핵심 플레이</span><i></i></a></li><li><a href="#scope"><span>기여 범위</span><i></i></a></li><li><a href="#sys"><span>대표 시스템</span><i></i></a></li><li><a href="#cases"><span>기술 사례</span><i></i></a></li><li><a href="#result"><span>결과·회고</span><i></i></a></li><li><a href="#verify"><span>검증</span><i></i></a></li></ol><button class="fab" type="button" aria-label="목차">목차</button><div class="pop"><a href="#play">핵심 플레이</a><a href="#scope">기여 범위</a><a href="#sys">대표 시스템</a><a href="#cases">기술 사례</a><a href="#result">결과·회고</a><a href="#verify">검증</a></div>
+<div class="phead"><div class="wrap">
+<div class="crumb"><a href="index.html">HOME</a><span>/</span><a href="index.html#projects">PROJECTS</a><span>/</span><span>MAIN 01</span></div>
+<span class="tag solo">SOLO · 1인 개발</span> <span class="tag">UNITY 6 · NGO</span> <span class="tag">WINDOWS BUILD</span>
+<h1 style="margin-top:14px">정무대전 <small>正武大战 · 최대 6인 온라인 무협 대전 액션</small></h1>
+<p class="one">여섯 문파 무인이 무작위 맵에서 겨룬다. 판 안에서 경지가 오르고, 3대3 팀전·4인 개인전·랭크 대전이 있다. 수묵화와 붓글씨로 화면을 통일했다.</p>
+<div class="kv"><div><span class="k">GENRE</span><b>온라인 대전 액션</b></div><div><span class="k">PERIOD</span><b>2026.10 ~ 진행 중</b></div><div><span class="k">TEAM</span><b>1인</b></div><div><span class="k">ENGINE</span><b>Unity 6000.3 · URP</b></div><div><span class="k">NETWORK</span><b>Netcode for GameObjects · Relay</b></div><div><span class="k">ROLE</span><b>기획 · 클라이언트 · 네트워크 전부</b></div></div>
+<ul class="toc"><li><a href="#play">핵심 플레이</a></li><li><a href="#scope">기여 범위</a></li><li><a href="#sys">대표 시스템</a></li><li><a href="#cases">기술 사례</a></li><li><a href="#result">결과·회고</a></li><li><a href="#verify">검증</a></li></ul>
+</div></div>
+
+<section class="sec" id="play" data-spy><div class="wrap">
+<span class="eb">CORE PLAY</span><h2 class="sh">핵심 플레이 63초</h2>
+<p class="lead">3대3 팀전 한 판. 절정에 오르고, 녹광창과 범종이 오가고, 결정타로 끝난다. 소리가 있다.</p>
+<div class="video"><video id="v-play" muted playsinline preload="none" controls poster="media/p_play_3v3.jpg" data-src="media/play_3v3.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div></div>
+<div class="chapters"><button type="button" data-for="v-play" data-t="0"><b>0:00</b>대기실 → 개전</button><button type="button" data-for="v-play" data-t="7"><b>0:07</b>절정 등극</button><button type="button" data-for="v-play" data-t="24"><b>0:24</b>녹광창 · 범종</button><button type="button" data-for="v-play" data-t="33"><b>0:33</b>斬 결정타 예고</button><button type="button" data-for="v-play" data-t="44"><b>0:44</b>결정타</button><button type="button" data-for="v-play" data-t="49"><b>0:49</b>승리 · 결과창</button></div>
+<p class="mute" style="margin-top:14px;font-size:15px">전체 흐름(오프닝·도감·대기실·수련·4인전)은 <a class="t-lime" href="https://youtu.be/zpFt8mJXa7Y" target="_blank" rel="noopener">YouTube 시연 영상 ↗</a>에.</p>
+</div></section>
+
+<section class="sec" id="scope" data-spy><div class="wrap">
+<span class="eb">MY SCOPE</span><h2 class="sh">내 기여 범위</h2>
+<p class="lead">혼자 만들었다. 직접 짠 것과 가져다 쓴 것을 나눠 적는다.</p>
+<div class="dt"><table><thead><tr><th>구분</th><th>내용</th></tr></thead><tbody>
+<tr><td class="y">직접</td><td>게임플레이(6문파 초식·판정·경지·상태 이상), 멀티 동기화와 지연 보상, 무작위 맵, AI 협객, 대기실·랭크·계정, HUD·UI·연출(붓 UI·메쉬 FX 코드 생성), 윈도우 커서, 측정·녹화 도구, 윈도우 빌드</td></tr>
+<tr><td class="t">외부 서비스</td><td>Unity Relay · Multiplayer Services(세션·로비) — 한국 지역이 없어 직접 연결(UPnP)과 같은 공유기 직결을 따로 만들었다</td></tr>
+<tr><td class="w">외부 에셋</td><td>글꼴(마산정·충주김생체), 효과음(ElevenLabs 생성), BGM(Suno 생성). 그림·UI·이펙트는 전부 코드로 그렸다</td></tr>
+<tr><td class="m">도구</td><td>Unity MCP로 에디터 자동 조작, AI 코딩 도구를 썼다. 기획·연출 결정·밸런스·최종 선택과 검증은 전부 내가 했다</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section class="sec" id="sys" data-spy><div class="wrap">
+<span class="eb">SYSTEMS</span><h2 class="sh">대표 시스템 여섯</h2>
+<div class="sysg"><article id="sys-netcode"><div class="pic"><video muted playsinline preload="none" loop poster="media/p_tab_realm.jpg" data-src="media/tab_realm.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div></div><div class="tx"><h3>멀티 판정과 지연 보상</h3><p>맞는 쪽 PC가 맞음·막기·튕겨내기를 정한다. 다른 PC의 공격은 그 화면이 나를 그리던 시각으로 위치를 되감아 잰다. 내 공격이 내 화면에서 닿으면 불꽃·소리·멈칫은 바로 내고, 체력은 확정이 올 때만 깎는다.</p><div class="files">Duelist.cs · DuelProjectile.cs · RPC 129개 / NetworkVariable 143개</div></div></article><article id="sys-realm"><div class="pic"><video muted playsinline preload="none" loop poster="media/p_finisher.jpg" data-src="media/finisher.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div></div><div class="tx"><h3>판 안 경지 성장과 결정타</h3><p>처치·협공·비급·영약으로 깨달음을 모아 삼류에서 화경까지 오른다. 경지마다 새 기술이 열려 밀리던 쪽도 뒤집을 수 있다. 마지막 처치는 결정타 연출로 판을 닫는다.</p><div class="files">DuelistRealm.cs · DuelRealm*.cs · DuelGameFinale.cs</div></div></article><article id="sys-sects"><div class="pic"><video muted playsinline preload="none" loop poster="media/p_codex.jpg" data-src="media/codex.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div></div><div class="tx"><h3>여섯 문파, 서로 다른 무공</h3><p>당문·화산·소림·북해빙궁·마교·천음각. 문파마다 평타 3타와 Q·E·R, 고유 특성이 있고 독·빙결·기절·파세가 얽힌다. 무공 도감 영상 68개는 장면을 코드로 연출해 녹화하는 도구로 만들었다.</p><div class="files">Duelist*.cs (partial 21개) · DuelCodex.cs · DuelShowcase.cs</div></div></article><article id="sys-lobby"><div class="pic"><video muted playsinline preload="none" loop poster="media/p_lobby_sect_chat.jpg" data-src="media/lobby_sect_chat.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div></div><div class="tx"><h3>대기실 · 랭크 · 계정</h3><p>방 만들기와 코드 참가, 채팅, AI 추가, 문파 고르기. 랭크는 백엔드 없이 Unity 세션을 매칭 큐로 쓴다. 승패 보상·레벨·칭호·영물은 두 PC 대전에서 동기화를 확인했다.</p><div class="files">DuelGameUi.cs · DuelGameRank.cs · DuelProfile.cs · DuelChat.cs</div></div></article><article id="sys-tools"><div class="pic"><img src="media/still_result.jpg" alt="3대3 결과창" loading="lazy"><span class="tag real">실제 화면</span></div><div class="tx"><h3>측정 도구 — 느낌을 숫자로</h3><p>자동 대전 DuelSoak은 AI끼리 50~150판을 4배속으로 돌려 문파별 승률·판 길이·오류를 집계한다. "소림이 약하다"의 원인이 수치가 아니라 AI의 운기 조건이라는 걸 이걸로 알았다. 지연 시뮬·일치율 기록기는 CASE 01·02에.</p><div class="files">DuelSoak.cs · DuelNetSim.cs · DuelNetProbe.cs · Duelist.Diag</div></div></article><article id="sys-guide"><div class="pic"><video muted playsinline preload="none" loop poster="media/p_tutorial.jpg" data-src="media/tutorial.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div></div><div class="tx"><h3>입문 수련과 가이드 모드</h3><p>이동·평타·막기·튕겨내기·경공·운기조식·초식·절초를 차례로 익히는 입문 수련. 판 안에서는 책사 쪽지가 상황을 짚어 주고, 왼쪽에 기술 한 줄·오른쪽에 조작이 떠 있다. H로 끄고 켠다.</p><div class="files">DuelTutorial.cs · DuelCoach.cs</div></div></article></div>
+</div></section>
+
+<section class="sec" id="cases" data-spy><div class="wrap">
+<span class="eb">TECHNICAL CASES</span><h2 class="sh">기술 사례 셋</h2>
+<p class="lead">문제 → 제약 → 선택지 → 결정 → 근거 → 한계 순서로 적었다. 숫자는 전부 개발 빌드 실측이다.</p>
+<article class="case" id="case-1">
+<div class="ch"><span class="n">CASE 01 · NETCODE</span></div>
+<h3>게스트 화면에서는 안 맞는 공격</h3>
+<p class="one">맞는 쪽 판정 + 공격자가 보던 시각으로 되감기 · 개발 빌드 두 개로 실측</p>
+<div class="steps"><div>
+<div class="step"><span class="k q">문제</span><div><p>게스트로 들어가면 당문 비도가 화면에서는 분명히 맞았는데 피해가 안 들어갔다. 사자후는 기절 별만 뜨고 피해는 0이었다. 일치율을 재 보니 비도는 15%였다.</p></div></div>
+<div class="step"><span class="k c">제약</span><div><p>판정은 맞는 쪽 PC가 한다는 구조는 바꾸고 싶지 않았다. 막기·튕겨내기가 맞는 쪽 입력이라서다. 전용 서버도 없다. 방장이 곧 플레이어다. 에디터 두 개로 재면 포커스 없는 쪽이 1초마다 0.5초씩 멈춰 핑이 600~900ms로 튀었다.</p></div></div>
+<div class="step"><span class="k o">선택지</span><div><ul><li class="x">공격자 화면 기준으로 판정을 옮긴다 → 막는 사람의 반응이 무시된다</li><li class="x">NGO 보간 버퍼만 줄인다 → 핑이 튀면 끊긴다</li><li class="o"><span class="pick">맞는 쪽 판정은 두고, 공격자가 보던 시각으로 내 위치를 되감아 잰다</span></li></ul></div></div>
+<div class="step"><span class="k d">결정</span><div><p>소유자가 12ms 간격으로 자기 위치를 남겨 두고, 다른 PC의 공격은 "그 PC가 나를 그리던 지연"만큼 되감은 자리로 잰다. 막기·무적 같은 막는 쪽 상태는 지금 기준 그대로다.</p><p>되감기 시간은 방장·게스트 조합마다 다르다는 걸 실측으로 알았다. 처음엔 한 공식으로 쓰다가 게스트끼리 비도가 59%였다. 방장 몸은 게스트 PC의 보간 버퍼만큼 더 늦게 그려지고, 게스트 몸은 이미 늦은 시각이 찍혀 와 도착하는 대로 그려진다. 게스트 PC의 보간은 NGO 기본 Lerp 대신 고정 3틱으로 바꿨다. 기본 Lerp는 버퍼를 왕복 지연만큼 키우고 핑 스파이크를 몇 초씩 끌고 갔다.</p></div></div>
+<div class="step"><span class="k e">근거</span><div><p>개발 빌드 두 개를 <code>-host</code> / <code>-join</code> / <code>-autoplay</code> / <code>-lag 60 -jitter 10</code>으로 띄워 AI끼리 싸우게 하고, 5초마다 "내 화면에서 닿음 → 실제로 맞음" 비율을 기록했다. 오른쪽 수치와 코드.</p></div></div>
+<div class="step"><span class="k l">한계</span><div><p>되감기 상한이 0.25초라 그보다 느린 회선에서는 다시 어긋난다. 측정은 같은 PC의 빌드 두 개 + 시뮬 지연이라 실제 공유기 환경의 수치는 다를 수 있다. 사람 둘이 실제로 한 판의 일치율은 따로 재지 못했다.</p></div></div>
+</div>
+<div class="evid">
+<div class="nums"><div><b><s>15%</s>91%</b><span>당문 비도 일치율</span></div><div><b><s>59%</s>96%</b><span>게스트끼리 비도</span></div><div><b><s>360ms~1s</s>170ms</b><span>게스트 화면의 방장 지연</span></div></div>
+<figure><svg viewBox="0 0 560 250" width="100%" role="img" aria-label="되감기 판정 그림" style="display:block;background:#0b1220">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"/></marker></defs>
+<text x="20" y="28" fill="#8e9bad" font-size="13" font-family="monospace">공격자 PC 화면</text>
+<text x="300" y="28" fill="#8e9bad" font-size="13" font-family="monospace">맞는 쪽 PC (판정)</text>
+<line x1="280" y1="40" x2="280" y2="235" stroke="#1e2a3d" stroke-dasharray="4 4"/>
+<!-- 공격자 화면: 상대가 있던 자리 -->
+<circle cx="150" cy="120" r="18" fill="#7cc4ff" opacity=".9"/><text x="150" y="124" text-anchor="middle" font-size="11" fill="#06101a" font-weight="700">나</text>
+<path d="M60,120 L128,120" stroke="#b8e46e" stroke-width="3" marker-end="url(#ar)"/><text x="60" y="108" fill="#b8e46e" font-size="12">비도 던짐</text>
+<text x="150" y="160" text-anchor="middle" fill="#cfd8e3" font-size="12">공격자 화면 속 내 위치</text>
+<text x="150" y="178" text-anchor="middle" fill="#8e9bad" font-size="11">= 실제보다 90~170ms 전 자리</text>
+<!-- 판정 PC: 실제 위치 vs 되감은 위치 -->
+<circle cx="470" cy="90" r="18" fill="none" stroke="#ff8f7e" stroke-width="2" stroke-dasharray="3 3"/><text x="470" y="94" text-anchor="middle" font-size="11" fill="#ff8f7e">지금</text>
+<text x="470" y="60" text-anchor="middle" fill="#ff8f7e" font-size="12">지금 자리로 재면 빗나감</text>
+<circle cx="400" cy="150" r="18" fill="#7cc4ff" opacity=".9"/><text x="400" y="154" text-anchor="middle" font-size="11" fill="#06101a" font-weight="700">나</text>
+<path d="M452,100 Q420,120 414,138" stroke="#b8e46e" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+<text x="400" y="190" text-anchor="middle" fill="#b8e46e" font-size="12">ViewDelayOf(공격자)만큼 되감은 자리</text>
+<text x="400" y="208" text-anchor="middle" fill="#8e9bad" font-size="11">PositionAgo( 내 편도 + 상대 편도 + 보간 지연 )</text>
+<text x="400" y="232" text-anchor="middle" fill="#cfd8e3" font-size="12">→ 공격자가 본 그대로 맞음 · 막기·무적은 '지금' 기준</text>
+</svg><figcaption><span class="tag rec">재구성</span><b>되감기 판정</b> 공격자가 본 자리로 되감아 잰다</figcaption></figure>
+<pre class="cx"><span class="hd">Duelist.cs · ViewDelayOf / HitPosition</span><span class="cm">// 이 공격자의 PC가 내 몸을 얼마나 늦게 그리는지 (초). 같은 PC(방장의 AI 포함)면 0</span>
+<span class="kw">float</span> <span class="fn">ViewDelayOf</span>(Duelist attacker)
+{
+    <span class="kw">if</span> (attacker == <span class="kw">null</span> || attacker.IsOwner || nm == <span class="kw">null</span> || !nm.IsListening) <span class="kw">return</span> 0f;
+    <span class="kw">bool</span> attackerIsHost = attacker.OwnerClientId == NetworkManager.ServerClientId;
+    <span class="kw">float</span> attackerOneWay = attackerIsHost ? 0f
+        : nm.IsServer ? transport.GetCurrentRtt(attacker.OwnerClientId) / 2000f : OneWay;
+    <span class="cm">// 빌드 실측(편도 60±10ms): 방장 몸 → 게스트 화면 170ms, 게스트 몸 → 방장 화면 90ms</span>
+    <span class="cm">// 방장 몸은 게스트 PC의 보간 버퍼(서버 버퍼 50ms + 3틱)만큼 더 늦게 그려지고,</span>
+    <span class="cm">// 게스트 몸은 '이미 늦은' 시각이 찍혀 와서 버퍼 없이 도착하는 대로 그려진다</span>
+<span class="hi">    <span class="kw">float</span> delay = IsServer ? attackerOneWay + 0.05f + 3f / 60f</span>
+<span class="hi">                           : OneWay + attackerOneWay + (attackerIsHost ? 0.02f : 0.01f);</span>
+    <span class="kw">return</span> Mathf.Min(<span class="nm">MaxRewind</span>, delay);   <span class="cm">// 상한 0.25초</span>
+}
+
+<span class="cm">// 다른 PC의 공격을 잴 때 쓰는 내 위치 — 12ms 간격으로 남긴 위치 기록(약 0.75초치)을 되감는다</span>
+<span class="kw">public</span> Vector3 <span class="fn">HitPosition</span>(Duelist attacker) => PositionAgo(ViewDelayOf(attacker));</pre>
+<pre class="cx"><span class="hd">Duelist.cs · UseRemoteInterpolation (게스트 PC)</span><span class="kw">void</span> <span class="fn">UseRemoteInterpolation</span>()
+{
+    <span class="kw">if</span> (IsServer) { NetworkTransform.InterpolationBufferTickOffset = 0; <span class="kw">return</span>; }
+    <span class="kw">var</span> nt = GetComponent&lt;NetworkTransform&gt;();
+<span class="hi">    nt.PositionInterpolationType = nt.RotationInterpolationType = InterpolationTypes.LegacyLerp;</span>
+<span class="hi">    nt.PositionLerpSmoothing = nt.RotationLerpSmoothing = <span class="kw">false</span>;</span>
+    NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 2틱 + 1 = 3틱 전을 그린다</span>
+}</pre>
+</div></div></article><article class="case" id="case-2">
+<div class="ch"><span class="n">CASE 02 · MEASUREMENT</span></div>
+<h3>측정 환경을 바꾸고 나서야 보인 원인</h3>
+<p class="one">에디터 측정을 버리고 개발 빌드 두 개로 · 비도 출발점 통일</p>
+<div class="steps"><div>
+<div class="step"><span class="k q">문제</span><div><p>되감기를 넣은 뒤에도 에디터에서 비도 일치율이 38~60% 사이를 오갔다. 처음엔 에디터 멈춤 탓이라고 봤다.</p></div></div>
+<div class="step"><span class="k c">제약</span><div><p>포커스 없는 에디터는 플레이 중 게임 루프가 거의 안 돈다. 49초에 3프레임이었다. 플레이어 루프를 강제로 돌려도 1초마다 0.5초씩 화면 출력 대기에 걸렸다. 이 멈춤이 섞인 숫자는 믿을 수 없었다.</p></div></div>
+<div class="step"><span class="k o">선택지</span><div><ul><li class="x">멈춘 구간만 빼고 분석한다 → 매번 손으로 골라야 한다</li><li class="x">에디터에 루프 펌프를 건다 → 멈춤은 줄지만 0은 아니다</li><li class="o"><span class="pick">측정 환경 자체를 개발 빌드 두 개로 바꾼다</span></li></ul></div></div>
+<div class="step"><span class="k d">결정</span><div><p>정식 빌드와 따로 개발 빌드를 만들고 실행 인자로 방장·손님·자동 대전·지연 시뮬·일치율 기록을 켤 수 있게 했다. 같은 PC에서 창 두 개면 충분했다.</p><p>그러자 원인이 보였다. 던지는 사람 화면만 <b>지금 자리</b>에서 비도를 날리고 있었다. 걸으며 던지면 움직인 만큼, 최대 0.8m까지 궤적이 갈라졌다. 모든 화면이 시전 시점의 출발점에서 날리게 통일했다.</p></div></div>
+<div class="step"><span class="k e">근거</span><div><p>비도 91%(93/102), 전체 95%, 근접 97%. 이걸 원칙으로 적어 두었다. <b>시간이 지나 나가는 암기는 쏘는 사람이 출발점·방향을 정해 RPC로 보낸다.</b> 뒤에 새 초식(폭우연사)이 이 원칙을 깨 91%가 76%로 떨어진 것도 같은 측정으로 잡아 89%로 되돌렸다.</p></div></div>
+<div class="step"><span class="k l">한계</span><div><p>일치율 도구는 "내 화면에서 닿음 → 실제 맞음"만 센다. 반대 경우, 화면에선 빗나갔는데 맞은 것은 세지 않는다. 자동 대전은 AI 움직임이라 사람의 경공·페인트는 담기지 않는다.</p></div></div>
+</div>
+<div class="evid">
+<div class="nums"><div><b><s>38~60%</s>91%</b><span>비도 일치율 (빌드 실측)</span></div><div><b>95%</b><span>전체 판정 일치율</span></div><div><b><s>76%</s>89%</b><span>새 초식 회귀 → 복구</span></div></div>
+<figure><div class="dt"><table><thead><tr><th>측정 인자</th><th>하는 일</th></tr></thead><tbody>
+<tr><td><code>-host</code> / <code>-join 127.0.0.1</code></td><td>창 두 개로 방장·손님</td></tr>
+<tr><td><code>-autoplay</code></td><td>내 협객도 AI가 조종</td></tr>
+<tr><td><code>-lag 60 -jitter 10</code></td><td>보내는 쪽 지연 시뮬 (DuelNetSim)</td></tr>
+<tr><td><code>-netprobe 파일</code></td><td>5초마다 판정 일치율 표 (DuelNetProbe)</td></tr>
+<tr><td><code>-netrec 파일</code></td><td>60초 위치 기록 (UTC) → 두 화면 비교</td></tr>
+</tbody></table></div><figcaption><b>개발 빌드 실행 인자</b> 정식 빌드와 따로 둔 JEONGMU_NetTest</figcaption></figure>
+<figure><img src="media/still_ffa.jpg" alt="4인 개인전 화면" loading="lazy" class="zoom"><figcaption><span class="tag real">실제 화면</span><b>당문 비도</b> 걸으며 던지는 평타가 문제의 초식이었다</figcaption></figure>
+</div></div></article><article class="case" id="case-3">
+<div class="ch"><span class="n">CASE 03 · WINDOWS · UNITY 내부</span></div>
+<h3>다른 PC에서 커서가 너무 작다</h3>
+<p class="one">오진 한 번 → 유니티가 커서를 32px로 줄인다는 확인 → Win32로 직접 만들어 창에 걸기</p>
+<div class="steps"><div>
+<div class="step"><span class="k q">문제</span><div><p>다른 PC에서 커서가 작았다. 설정에서 키워도 그대로였다. 내 PC에서는 괜찮아 보여서 더 늦게 알았다.</p></div></div>
+<div class="step"><span class="k c">제약</span><div><p>윈도우 빌드다. 되도록 유니티 API 안에서 풀고 싶었다. 녹화에 커서가 찍히면 안 돼서 소프트웨어 커서는 피하고 싶었다.</p></div></div>
+<div class="step"><span class="k o">선택지</span><div><ul><li class="x">"하드웨어 커서는 64px 고정"이라 보고 크기별 이미지 11벌 → 오진. 바뀌지 않았다</li><li class="x">ForceSoftware 커서 → 녹화에 찍히고 한 프레임 늦다</li><li class="o"><span class="pick">Win32로 커서를 직접 만들어 게임 창에 건다</span></li></ul></div></div>
+<div class="step"><span class="k d">결정</span><div><p>원인을 다시 봤다. 윈도우에서 유니티 <code>Cursor.SetCursor</code>는 그림 크기와 상관없이 윈도우 기본 커서 칸(100% 배율에서 32px)으로 줄인다. UnityPlayer.dll이 <code>LoadImage/CopyImage</code>만 쓴다.</p><p><code>CreateIconIndirect</code>로 커서를 원본 크기로 만들고, 게임 창 WndProc를 가로채 <code>WM_SETCURSOR</code>에서 우리 커서를 건다. 그래도 유니티가 매 프레임 자기 화살표를 다시 걸어 깜빡였다. 그래서 UnityPlayer.dll 가져오기 표(IAT)의 <code>SetCursor</code> 칸을 우리 함수로 바꿔 끼웠다. 창을 가두는 것도 <code>ClipCursor</code>로 직접 한다. 종료 때 전부 되돌린다.</p></div></div>
+<div class="step"><span class="k e">근거</span><div><p>빌드 실측 — 설정 50/100/200% = 32/64/128px, 원 그리기·오른쪽 누름 중 화살표 깜빡임 0번, 정상 종료. 크기 공식은 64 × max(1, 모니터 높이/1080) × 설정값으로, 어느 PC에서나 같은 크기다.</p></div></div>
+<div class="step"><span class="k l">한계</span><div><p>윈도우 x64 전용이다. 에디터와 다른 OS는 유니티 커서 그대로다. UnityPlayer.dll 내부 가져오기 표 구조에 기대고 있어 엔진 버전이 바뀌면 다시 확인해야 한다. 오진으로 만든 11벌의 이미지는 결국 크기 단계용으로 남겼다.</p></div></div>
+</div>
+<div class="evid">
+<div class="nums"><div><b><s>32px</s>64px</b><span>100% 설정 · 1080p</span></div><div><b>128px</b><span>200% 설정</span></div><div><b>0</b><span>화살표 깜빡임 (빌드 실측)</span></div></div>
+<figure><svg viewBox="0 0 560 230" width="100%" role="img" aria-label="커서 가로채기 그림" style="display:block;background:#0b1220">
+<defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"/></marker></defs>
+<rect x="20" y="30" width="150" height="56" rx="8" fill="#111b2b" stroke="#2a3850"/><text x="95" y="53" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">Cursor.SetCursor</text><text x="95" y="72" text-anchor="middle" fill="#8e9bad" font-size="11">64px 그림을 줘도</text>
+<path d="M170,58 L220,58" stroke="#8e9bad" marker-end="url(#ar2)"/>
+<rect x="222" y="30" width="150" height="56" rx="8" fill="#111b2b" stroke="#ff8f7e"/><text x="297" y="53" text-anchor="middle" fill="#ff8f7e" font-size="13" font-weight="700">UnityPlayer.dll</text><text x="297" y="72" text-anchor="middle" fill="#8e9bad" font-size="11">LoadImage/CopyImage → 32px</text>
+<path d="M372,58 L422,58" stroke="#8e9bad" marker-end="url(#ar2)"/>
+<rect x="424" y="30" width="116" height="56" rx="8" fill="#111b2b" stroke="#2a3850"/><text x="482" y="53" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">USER32</text><text x="482" y="72" text-anchor="middle" fill="#8e9bad" font-size="11">SetCursor(32px)</text>
+<text x="20" y="120" fill="#b8e46e" font-size="13" font-weight="700">고친 뒤</text>
+<rect x="20" y="132" width="150" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"/><text x="95" y="155" text-anchor="middle" fill="#b8e46e" font-size="13" font-weight="700">CreateIconIndirect</text><text x="95" y="174" text-anchor="middle" fill="#8e9bad" font-size="11">원본 크기 HCURSOR 직접 생성</text>
+<path d="M170,160 L220,160" stroke="#8e9bad" marker-end="url(#ar2)"/>
+<rect x="222" y="132" width="150" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"/><text x="297" y="155" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">WndProc 가로채기</text><text x="297" y="174" text-anchor="middle" fill="#8e9bad" font-size="11">WM_SETCURSOR(HTCLIENT) 처리</text>
+<path d="M372,160 L422,160" stroke="#8e9bad" marker-end="url(#ar2)"/>
+<rect x="424" y="132" width="116" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"/><text x="482" y="155" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">IAT 교체</text><text x="482" y="174" text-anchor="middle" fill="#8e9bad" font-size="11">유니티가 다시 걸어도 우리 것</text>
+<text x="280" y="218" text-anchor="middle" fill="#8e9bad" font-size="11">UnityPlayer.dll 가져오기 표(IAT)의 USER32!SetCursor 칸 → 창 안이면 우리 커서로 바꿔 거는 함수. 종료 때 되돌림.</text>
+</svg><figcaption><span class="tag rec">재구성</span><b>커서가 32px이 되는 길과 가로챈 뒤</b></figcaption></figure>
+<pre class="cx"><span class="hd">DuelCursor.cs · Win.PatchUnitySetCursor</span><span class="cm">// UnityPlayer.dll 가져오기 표(IAT)에서 USER32.dll SetCursor 칸을 찾아 바꿔 끼운다 (64비트 PE)</span>
+<span class="kw">static void</span> <span class="fn">PatchUnitySetCursor</span>()
+{
+    <span class="kw">var</span> module = GetModuleHandle(<span class="nm">"UnityPlayer.dll"</span>);
+    <span class="kw">int</span> pe = Marshal.ReadInt32(module, 0x3C);
+    <span class="kw">int</span> imports = Marshal.ReadInt32(module, pe + 24 + 120); <span class="cm">// 데이터 디렉터리 1번 = 가져오기</span>
+    <span class="kw">for</span> (<span class="kw">int</span> d = imports; ; d += 20)
+    {
+        <span class="kw">int</span> names = ReadInt32(module, d), dll = ReadInt32(module, d + 12), slots = ReadInt32(module, d + 16);
+        <span class="kw">if</span> (dll == 0) <span class="kw">return</span>;
+        <span class="kw">if</span> (PtrToStringAnsi(module + dll) != <span class="nm">"USER32.dll"</span>) <span class="kw">continue</span>;
+        <span class="kw">for</span> (<span class="kw">int</span> i = 0; ; i++)
+        {
+            <span class="kw">long</span> thunk = Marshal.ReadInt64(module, names + i * 8);
+            <span class="kw">if</span> (thunk == 0) <span class="kw">return</span>;
+            <span class="kw">if</span> (thunk &lt; 0 || PtrToStringAnsi(module + (<span class="kw">int</span>)thunk + 2) != <span class="nm">"SetCursor"</span>) <span class="kw">continue</span>;
+<span class="hi">            iatSlot = module + slots + i * 8;</span>
+<span class="hi">            realSetCursor = Marshal.ReadIntPtr(iatSlot);</span>
+<span class="hi">            WriteSlot(Marshal.GetFunctionPointerForDelegate(unitySetCursor));</span>
+            <span class="kw">return</span>;
+        }
+    }
+}
+<span class="cm">// 유니티가 SetCursor를 불러도, 커서가 창 안이면 우리 커서로</span>
+<span class="kw">static</span> IntPtr <span class="fn">UnitySetCursor</span>(IntPtr cursor) => SetCursor(Inside() ? current : cursor);</pre>
+</div></div></article>
+</div></section>
+
+<section class="sec" id="result" data-spy><div class="wrap">
+<span class="eb">RESULT · RETRO</span><h2 class="sh">결과와 회고</h2>
+<div class="retro">
+<div class="card"><h3>테스트와 평가</h3><ul>
+<li>아카데미 동기 약 20명에게 빌드를 돌려 2~3일마다 고친 판을 다시 냈다. 문파는 3개에서 6개가 됐다.</li>
+<li>10월 27일 아카데미 멀티플레이 평가에 영상·평가서로 제출했다.</li>
+<li>자동 대전 밸런스 — 마교 86% → 76%, 당문 17% → 32% (50~150판, 미러 제외).</li>
+</ul></div>
+<div class="card"><h3>다시 하면 다르게</h3><ul>
+<li>측정 환경부터 의심한다. 에디터 숫자로 이틀을 썼다. 빌드 두 개는 반나절이었다.</li>
+<li>오진을 기록한다. 커서 11벌은 틀린 가설의 흔적이고, 그래서 다음엔 GetCursor부터 봤다.</li>
+<li>원칙은 문서로 남긴다. 투사체 RPC 원칙을 적어 두어서 새 초식의 회귀를 숫자로 잡았다.</li>
+</ul></div>
+</div>
+<div class="note" style="margin-top:20px"><b>아직 확인 전</b> 싱글(스토리) 모드, 관전·재접속, 서로 다른 PC 간 랭크 실전은 코드는 있으나 플레이 기록이 없어 여기 넣지 않았다.</div>
+</div></section>
+
+<section class="sec" id="verify" data-spy><div class="wrap">
+<span class="eb">VERIFY</span><h2 class="sh">확인할 수 있는 것</h2>
+<div class="links">
+<a href="https://youtu.be/zpFt8mJXa7Y" target="_blank" rel="noopener"><b>시연 영상 ↗</b><span>YouTube · 오프닝부터 결과창까지</span></a>
+<a href="#case-1"><b>코드 발췌</b><span>ViewDelayOf · UseRemoteInterpolation · PatchUnitySetCursor</span></a>
+<a href="mailto:kbkim235@naver.com?subject=정무대전 빌드 요청"><b>빌드 요청</b><span>윈도우 빌드(JEONGMU.exe)를 메일로 보낸다</span></a>
+</div>
+</div></section>
+</main>
+<section class="contact" id="contact">
+<div class="wrap">
+<span class="eb">CONTACT</span>
+<h2>함께 만들고 싶은 게임이 있다면</h2>
+<a class="mail" href="mailto:kbkim235@naver.com">kbkim235@naver.com</a>
+<div class="btns" style="justify-content:center">
+<a class="btn s" href="https://github.com/TwincleStakey" target="_blank" rel="noopener">GitHub ↗</a>
+<a class="btn s" href="https://play.unity.com/ko/user/cb9d2950-bc11-4dac-b62b-7d8dfe906d33" target="_blank" rel="noopener">Unity Play ↗</a>
+<a class="btn s" href="resume.html">이력서</a>
+</div></div></section>
+<footer><div class="wrap"><span>© 2026 김기백 · twinclestakey.github.io</span><span>화면 표시 — <span class="tag real">실제 화면</span> 게임에서 그대로 찍은 것 · <span class="tag rec">재구성</span> 설명용으로 다시 그린 것</span></div></footer>
+<script src="assets/js.ff27bc87.js"></script>
+</body></html>
