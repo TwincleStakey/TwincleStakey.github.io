@@ -7,117 +7,705 @@
 <meta name="description" content="영화에서는 관객이지만, 게임에서는 주인공입니다. Unity 클라이언트 프로그래머 김기백의 포트폴리오.">
 <meta property="og:title" content="김기백 · 게임 클라이언트 프로그래머"><meta property="og:description" content="영화에서는 관객이지만, 게임에서는 주인공입니다. Unity 클라이언트 프로그래머 김기백의 포트폴리오.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css.b0b63429.css">
-
+<link rel="stylesheet" href="assets/css.546acbf4.css">
+<link rel="stylesheet" href="assets/legacy.10a7d52b.css">
 </head>
-<body>
+<body class="has-toc">
 <div class="progress"></div>
 <header class="nav"><div class="wrap">
-<a class="logo" href="index.html"><i></i>김기백 · GAME CLIENT</a>
+<a class="logo" href="#top"><i></i>김기백 · GAME CLIENT</a>
 <button class="burger" type="button" aria-label="메뉴">MENU</button>
 <ul>
-<li><a class=" on" href="index.html">HOME</a></li>
-<li><a class="" href="index.html#projects">PROJECTS</a></li>
-<li><a class="" href="jeongmu.html">정무대전</a></li>
-<li><a class="" href="ramen.html">라멘가게</a></li>
-<li><a class="" href="index.html#about">ABOUT</a></li>
-<li><a class="cta" href="resume.html">RESUME</a></li>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#jm">정무대전</a></li>
+<li><a href="#ramen">라멘가게</a></li>
+<li><a href="#works">WORKS</a></li>
+<li><a class="cta" href="#contact">CONTACT</a></li>
 </ul></div></header>
-<main>
-
+<ol class="rail"><li><a href="#about"><span>1. 자기소개</span><i></i></a></li><li><a href="#jm"><span>2. 정무대전</span><i></i></a></li><li><a href="#ramen"><span>3. 나의 인생 라멘가게</span><i></i></a></li><li><a href="#works"><span>4. 그 밖의 작업</span><i></i></a></li><li><a href="#contact"><span>5. 연락</span><i></i></a></li></ol><button class="fab" type="button" aria-label="목차">목차</button><div class="pop"><a href="#about"><b>1</b>자기소개</a><a class="l2" href="#about-career"><b>1.1</b>경력</a><a class="l2" href="#about-skill"><b>1.2</b>특기</a><a class="l2" href="#about-stack"><b>1.3</b>기술</a><a href="#jm"><b>2</b>정무대전</a><a class="l2" href="#jm-play"><b>2.1</b>핵심 플레이</a><a class="l2" href="#jm-scope"><b>2.2</b>기여 범위</a><a class="l2" href="#jm-sys"><b>2.3</b>핵심 시스템</a><a class="l2" href="#jm-case"><b>2.4</b>기술 사례</a><a class="l2" href="#jm-retro"><b>2.5</b>결과 · 회고</a><a href="#ramen"><b>3</b>나의 인생 라멘가게</a><a class="l2" href="#rm-play"><b>3.1</b>핵심 플레이</a><a class="l2" href="#rm-scope"><b>3.2</b>기여 범위</a><a class="l2" href="#rm-sys"><b>3.3</b>핵심 시스템</a><a class="l2" href="#rm-case"><b>3.4</b>기술 사례</a><a class="l2" href="#rm-retro"><b>3.5</b>결과 · 회고</a><a href="#works"><b>4</b>그 밖의 작업</a><a href="#contact"><b>5</b>연락</a></div>
+<main id="top">
 <section class="hero"><div class="bgfx"></div><div class="wrap">
 <div>
 <div class="tagline"><span class="tag solo">GAME CLIENT PROGRAMMER</span><span class="tag">UNITY · C#</span><span class="tag">NETCODE</span></div>
 <h1>영화에서는 관객이지만,<br>게임에서는 <em>주인공</em>입니다</h1>
 <p class="who">게임 클라이언트 개발자를 꿈꾸는 김기백입니다.</p>
 <p class="lead">영화와 소설이 보여주는 세계를 넘어, 직접 선택하고 행동하며 그 안에 존재하는 경험. 저는 플레이어가 이야기의 주인공이 되는 순간을 구현하고 싶습니다.</p>
-<div class="btns"><a class="btn p" href="#projects">프로젝트 보기</a><a class="btn" href="resume.html">이력서</a></div>
-<div class="meta"><div><b>2</b>메인 프로젝트</div><div><b>6</b>문파 · 최대 6인 멀티</div><div><b>15%→91%</b>멀티 판정 일치율</div></div>
+<div class="btns"><a class="btn p" href="#jm">프로젝트 보기</a><a class="btn" href="#toc">목차</a></div>
+<div class="meta"><div><b>2</b>메인 프로젝트</div><div><b>6인</b>온라인 대전</div><div><b>15%→91%</b>멀티 판정 일치율</div></div>
 </div>
-<div class="shot"><video muted playsinline preload="none" loop poster="media/p_hero2.jpg" data-src="media/hero_loop.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div><div class="cap"><span><b>정무대전</b> · 3대3 팀전, 절정 경지</span><span>Unity 6 · Netcode for GameObjects</span></div></div>
+<div class="shot"><video muted playsinline preload="none" loop poster="media/p_hero2.jpg" data-src="media/hero_loop.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div><div class="cap"><span><b>정무대전</b> · 3대3 팀전</span><span>Unity 6 · Netcode for GameObjects</span></div></div>
 </div></section>
 
-<section id="projects"><div class="wrap">
-<span class="eb">SELECTED PROJECTS</span>
-<h2 class="sh">직접 만든 게임 두 개</h2>
-<p class="lead">하나는 혼자 만든 온라인 대전 액션, 하나는 넷이 만든 조리 퍼즐이다. 둘 다 끝까지 돌아가는 빌드가 있다.</p>
-<div class="sel">
-<a class="pcard" href="jeongmu.html">
-<div class="tx"><span class="eb">MAIN 01 · SOLO</span><h3>정무대전 <span class="sub">正武大战</span></h3>
-<p>여섯 문파 무인이 최대 6명까지 겨루는 온라인 무협 대전 액션. 맞는 쪽 PC가 판정하되 공격자가 보던 시각으로 위치를 되감는 지연 보상으로, 게스트 화면에서 안 맞던 공격을 15%에서 91%까지 끌어올렸다.</p>
-<div class="meta"><span><b>Unity 6</b> · URP</span><span><b>Netcode for GameObjects</b> · Relay</span><span><b>2026.10 ~</b> 진행 중</span><span>1인 개발</span></div>
-<span class="go">자세히 보기</span></div>
-<div class="md"><div class=""><video muted playsinline preload="none" loop poster="media/p_finisher.jpg" data-src="media/finisher.mp4"></video></div><span class="num">MAIN 01</span><span class="badge" style="position:absolute;left:12px;top:12px"><span class="tag real">실제 화면</span></span></div>
-</a>
-<a class="pcard alt" href="ramen.html">
-<div class="tx"><span class="eb team">MAIN 02 · TEAM PROJECT · 4명</span><h3>나의 인생 라멘가게</h3>
-<p>손님이 돌려 말하는 주문을 해석해 라멘을 만드는 2D 조리 퍼즐. 메인 개발로 조리 판정·시식과 엔딩 연출·UI 전체·화면을 코드로 짓는 씬 빌더를 맡았고, 팀원 시스템과의 접점에서 생긴 버그를 끝까지 추적했다.</p>
-<div class="meta"><span><b>Unity 6</b> · URP · uGUI</span><span><b>2026.09</b> · 2주</span><span>팀 4명 · 코드 2명</span></div>
-<span class="go">자세히 보기</span></div>
-<div class="md"><img src="media/ramen/still_cosmic.jpg" alt="나의 인생 라멘가게 시식 연출 화면"><span class="num">MAIN 02</span><span class="badge" style="position:absolute;left:12px;top:12px"><span class="tag real">실제 화면</span></span></div>
-</a>
-</div></div></section>
+<section class="tight" id="toc"><div class="wrap"><nav class="tree" aria-label="목차"><div class="tt">목차 <small>CONTENTS</small></div><div class="cols"><div><ol><li><a href="#about"><b>1</b>자기소개</a><ol><li><a href="#about-career"><b>1.1</b>경력</a></li><li><a href="#about-skill"><b>1.2</b>특기</a></li><li><a href="#about-stack"><b>1.3</b>기술</a></li></ol></li><li><a href="#jm"><b>2</b>정무대전<span class="tg">MAIN 01</span></a><ol><li><a href="#jm-play"><b>2.1</b>핵심 플레이</a></li><li><a href="#jm-scope"><b>2.2</b>기여 범위</a></li><li><a href="#jm-sys"><b>2.3</b>핵심 시스템</a><ol><li><a href="#jm-s1"><b>2.3.1</b>멀티 판정과 지연 보상</a></li><li><a href="#jm-s2"><b>2.3.2</b>판 안 경지 성장</a></li><li><a href="#jm-s3"><b>2.3.3</b>여섯 문파</a></li><li><a href="#jm-s4"><b>2.3.4</b>대기실 · 랭크 · 계정</a></li><li><a href="#jm-s5"><b>2.3.5</b>측정 도구</a></li><li><a href="#jm-s6"><b>2.3.6</b>입문 수련과 가이드</a></li></ol></li><li><a href="#jm-case"><b>2.4</b>기술 사례</a><ol><li><a href="#jm-c1"><b>2.4.1</b>게스트 화면에서는 안 맞는 공격</a></li><li><a href="#jm-c2"><b>2.4.2</b>측정 환경을 바꾸고 보인 원인</a></li><li><a href="#jm-c3"><b>2.4.3</b>다른 PC에서 너무 작은 커서</a></li></ol></li><li><a href="#jm-retro"><b>2.5</b>결과 · 회고</a></li></ol></li></ol></div><div><ol><li><a href="#ramen"><b>3</b>나의 인생 라멘가게<span class="tg team">MAIN 02 · TEAM</span></a><ol><li><a href="#rm-play"><b>3.1</b>핵심 플레이</a></li><li><a href="#rm-scope"><b>3.2</b>기여 범위</a></li><li><a href="#rm-sys"><b>3.3</b>핵심 시스템</a><ol><li><a href="#rm-s1"><b>3.3.1</b>조리 판정</a></li><li><a href="#rm-s2"><b>3.3.2</b>씬 빌더</a></li><li><a href="#rm-s3"><b>3.3.3</b>랜덤 난이도</a></li><li><a href="#rm-s4"><b>3.3.4</b>손님 반응과 연출 배속</a></li></ol></li><li><a href="#rm-case"><b>3.4</b>기술 사례</a><ol><li><a href="#bug-a"><b>3.4.1</b>끝까지 재생되지 않는 엔딩 크레딧</a></li><li><a href="#bug-b"><b>3.4.2</b>커서 실종, 둘째 손님부터 조작 불가</a></li><li><a href="#bug-c"><b>3.4.3</b>한 번의 클릭, 두 번의 처리</a></li></ol></li><li><a href="#rm-retro"><b>3.5</b>결과 · 회고</a></li></ol></li><li><a href="#works"><b>4</b>그 밖의 작업</a></li><li><a href="#contact"><b>5</b>연락</a></li></ol></div></div></nav></div></section>
 
-<section class="tight" id="built"><div class="wrap">
-<span class="eb">WHAT I BUILT</span>
-<h2 class="sh">할 수 있는 일 세 가지</h2>
-<div class="grid3">
-<div class="card"><span class="k">NETWORK</span><h3>멀티 판정과 지연 보상</h3><p>맞는 쪽 판정 구조를 유지한 채, 공격자 화면이 나를 그리던 시각으로 위치를 되감아 잰다. 예측 연출은 즉시, 체력은 확정 때만.</p><span class="from">정무대전 · <a href="jeongmu.html#case-1">사례 보기</a></span></div>
-<div class="card"><span class="k">TOOLING · DATA</span><h3>측정 도구로 원인을 숫자로</h3><p>AI끼리 50~150판을 돌리는 자동 대전, 지연 시뮬레이터, 판정 일치율 기록기. "약하다"는 느낌을 승률과 행동 시간으로 바꿔 원인을 찾았다.</p><span class="from">정무대전 · <a href="jeongmu.html#sys">대표 시스템</a></span></div>
-<div class="card"><span class="k">GAMEPLAY · UI</span><h3>플레이어가 만지는 부분</h3><p>조리 판정, 시식·엔딩 연출, HUD와 UI 전체. 손으로 배치하지 않고 코드로 화면을 짓는 에디터 툴로 씬 충돌을 없앴다.</p><span class="from">라멘가게 · <a href="ramen.html#sys">대표 시스템</a></span></div>
-</div></div></section>
-
-<section class="tight" id="highlights"><div class="wrap">
-<span class="eb">TECHNICAL HIGHLIGHTS</span>
-<h2 class="sh">기술 사례 두 개</h2>
-<div class="hl">
-<a href="jeongmu.html#case-1"><div><h3>게스트 화면에서는 안 맞는 공격</h3><p>되감기 시간을 방장·게스트 조합마다 실측해 분리했다. 개발 빌드 두 개로 잰 당문 비도 판정 일치율.</p></div><div class="big">15<small>%</small> → 91<small>%</small></div></a>
-<a href="jeongmu.html#case-3"><div><h3>다른 PC에서 커서가 너무 작다</h3><p>윈도우에서 유니티가 커서를 32px로 줄이는 걸 Win32로 직접 만들어 창에 걸고, UnityPlayer.dll의 SetCursor 가져오기 칸을 바꿔 끼웠다.</p></div><div class="big">32<small>PX</small> → 128<small>PX</small></div></a>
+<section id="about" data-spy data-top="about"><div class="wrap">
+<span class="eb"><a class="h-no" href="#toc" title="목차로">1</a> ABOUT</span>
+<h2 class="sh">자기소개</h2>
+<div class="about">
+<div class="sub" id="about-career" data-spy data-top="about" style="padding-top:10px"><h3 class="st"><a class="h-no" href="#toc" title="목차로">1.1</a>경력</h3>
+<ol class="route">
+<li><span class="when">이전 · 6년</span><b>해군 항공조작 부사관</b><span>P-3C 해상초계기 탑승</span></li>
+<li class="now"><span class="when">2026.05 ~ 2027.01</span><b>네오위즈 K 게임 아카데미 · Unity 과정</b><span>정무대전 1인 개발 · 라멘가게 메인 개발</span></li>
+<li class="next"><span class="when">NEXT</span><b>게임 클라이언트 프로그래머</b><span>함께 만들 팀을 찾고 있습니다.</span></li>
+</ol></div>
+<div>
+<div class="sub" id="about-skill" data-spy data-top="about" style="padding-top:10px"><h3 class="st"><a class="h-no" href="#toc" title="목차로">1.2</a>특기</h3>
+<div class="sk">
+<div><b>끝까지 찾는 디버깅</b><p>녹화와 측정으로 원인을 숫자로 찾는다.</p><span class="from">근거 · <a href="#bug-a">엔딩 크레딧 버그</a></span></div>
+<div><b>네트워크 동기화</b><p>맞는 쪽 판정 + 되감기, 빌드 두 개로 실측.</p><span class="from">근거 · <a href="#jm-c1">판정 일치율 15% → 91%</a></span></div>
+<div><b>반복 작업은 툴로</b><p>화면을 짓는 에디터 툴, AI 자동 대전.</p><span class="from">근거 · <a href="#rm-s2">씬 빌더</a> · <a href="#jm-s5">DuelSoak</a></span></div>
+</div></div>
+<div class="sub" id="about-stack" data-spy data-top="about" style="padding-top:34px"><h3 class="st"><a class="h-no" href="#toc" title="목차로">1.3</a>기술</h3>
+<div class="stack" style="margin-top:0"><span class="chip">Unity 6000.3</span><span class="chip">C#</span><span class="chip">URP</span><span class="chip">Netcode for GameObjects</span><span class="chip">Unity Relay</span><span class="chip">Input System</span><span class="chip">uGUI · TMP · IMGUI</span><span class="chip">Editor 스크립트</span><span class="chip">Win32 P/Invoke</span><span class="chip">Git · Git LFS</span><span class="chip">Python</span></div></div>
 </div>
-<p class="mute" style="margin-top:18px;font-size:16px">라멘가게의 사례 세 개 — 끝까지 재생되지 않는 엔딩 크레딧, 커서 실종, 한 번의 클릭에 두 번의 처리 — 는 <a class="t-lime" href="ramen.html#cases">라멘가게 페이지</a>에 있다.</p>
+</div></div></section>
+
+<section class="pban" id="jm" data-spy data-top="jm"><div class="wrap">
+<span class="eb"><a class="h-no" href="#toc" title="목차로">2</a> MAIN 01 · SOLO</span>
+<h2>정무대전 <small>正武大战 · 최대 6인 온라인 무협 대전 액션</small></h2>
+<p class="one">여섯 문파 무인이 무작위 맵에서 겨룬다. 판 안에서 경지가 오르고, 3대3 · 4인 개인전 · 랭크 대전이 있다.</p>
+<div class="kv"><div><span class="k">GENRE</span><b>온라인 대전 액션</b></div><div><span class="k">PERIOD</span><b>2026.10 ~ 진행 중</b></div><div><span class="k">TEAM</span><b>1인</b></div><div><span class="k">ENGINE</span><b>Unity 6000.3 · URP</b></div><div><span class="k">NETWORK</span><b>NGO · Relay</b></div><div><span class="k">ROLE</span><b>기획 · 클라 · 네트워크</b></div></div>
+<div class="sub" id="jm-play" data-spy data-top="jm"><h3 class="st"><a class="h-no" href="#toc" title="목차로">2.1</a>핵심 플레이</h3><p class="sl">3대3 팀전 한 판, 63초. 소리 있음.</p><div class="video"><video id="v-play" muted playsinline preload="none" controls poster="media/p_play_3v3.jpg" data-src="media/play_3v3.mp4"></video><div class="badge"><span class="tag real">실제 화면</span></div></div><div class="chapters"><button type="button" data-for="v-play" data-t="0"><b>0:00</b>대기실 → 개전</button><button type="button" data-for="v-play" data-t="7"><b>0:07</b>절정 등극</button><button type="button" data-for="v-play" data-t="24"><b>0:24</b>녹광창 · 범종</button><button type="button" data-for="v-play" data-t="33"><b>0:33</b>결정타 예고</button><button type="button" data-for="v-play" data-t="44"><b>0:44</b>결정타</button><button type="button" data-for="v-play" data-t="49"><b>0:49</b>승리</button></div><p class="mute" style="margin-top:12px;font-size:15px">전체 흐름은 <a class="t-lime" href="https://youtu.be/zpFt8mJXa7Y" target="_blank" rel="noopener">YouTube 시연 영상 ↗</a></p></div><div class="sub" id="jm-scope" data-spy data-top="jm"><h3 class="st"><a class="h-no" href="#toc" title="목차로">2.2</a>기여 범위</h3><div class="dt"><table><tbody>
+<tr><td class="y">직접</td><td>게임플레이 · 멀티 동기화 · 맵 · AI · 대기실 · 랭크 · UI · 연출 · 윈도우 커서 · 측정 도구 · 빌드</td></tr>
+<tr><td class="t">외부 서비스</td><td>Unity Relay · Multiplayer Services (세션 · 로비)</td></tr>
+<tr><td class="w">외부 에셋</td><td>글꼴, 효과음 · BGM(생성 도구). 그림 · UI · 이펙트는 코드로 그렸다</td></tr>
+<tr><td class="m">도구</td><td>Unity MCP, AI 코딩 도구 — 기획 · 결정 · 검증은 직접</td></tr>
+</tbody></table></div></div><div class="sub" id="jm-sys" data-spy data-top="jm"><h3 class="st"><a class="h-no" href="#toc" title="목차로">2.3</a>핵심 시스템</h3><div class="srows"><article class="srow" id="jm-s1" data-spy data-top="jm"><div class="stx"><span class="no">2.3.1</span><h4>멀티 판정과 지연 보상</h4><p class="key">맞는 쪽이 판정하고, 공격자가 본 자리로 되감아 잰다.</p><ul><li>맞음 · 막기 · 튕겨내기는 맞는 쪽 PC가 정한다</li><li>다른 PC의 공격은 그 화면이 나를 그리던 시각만큼 위치를 되감는다</li><li>불꽃 · 소리는 바로, 체력은 확정이 올 때만</li></ul><div class="files">Duelist.cs · RPC 129 · NetworkVariable 143</div></div><div class="smd"><video muted playsinline loop preload="none" poster="media/p_ffa_magyo.jpg" data-src="media/ffa_magyo.mp4"></video><span class="tag real">실제 화면</span></div></article><article class="srow" id="jm-s2" data-spy data-top="jm"><div class="stx"><span class="no">2.3.2</span><h4>판 안 경지 성장</h4><p class="key">삼류에서 화경까지, 판 안에서 오른다.</p><ul><li>처치 · 협공 · 비급 · 영약으로 깨달음이 쌓인다</li><li>경지마다 새 기술이 열려 밀리던 쪽도 뒤집는다</li><li>마지막 처치는 결정타 연출로 판을 닫는다</li></ul><div class="files">DuelistRealm.cs · DuelGameFinale.cs</div></div><div class="smd"><video muted playsinline loop preload="none" poster="media/p_tab_realm.jpg" data-src="media/tab_realm.mp4"></video><span class="tag real">실제 화면</span></div></article><article class="srow" id="jm-s3" data-spy data-top="jm"><div class="stx"><span class="no">2.3.3</span><h4>여섯 문파</h4><p class="key">문파마다 다른 무공, 서로 얽히는 상태 이상.</p><ul><li>당문 · 화산 · 소림 · 북해빙궁 · 마교 · 천음각</li><li>평타 3타 + Q · E · R + 고유 특성, 독 · 빙결 · 기절 · 파세</li><li>무공 도감 영상 68개는 장면을 코드로 연출해 녹화했다</li></ul><div class="files">Duelist*.cs (partial 21개) · DuelShowcase.cs</div></div><div class="smd"><video muted playsinline loop preload="none" poster="media/p_codex.jpg" data-src="media/codex.mp4"></video><span class="tag real">실제 화면</span></div></article><article class="srow" id="jm-s4" data-spy data-top="jm"><div class="stx"><span class="no">2.3.4</span><h4>대기실 · 랭크 · 계정</h4><p class="key">방 만들기부터 결과창까지, 멀티 흐름 전체.</p><ul><li>방 코드 참가 · 채팅 · AI 추가 · 문파 고르기</li><li>랭크는 백엔드 없이 Unity 세션을 매칭 큐로 쓴다</li><li>승패 보상 · 레벨 · 칭호 · 영물을 두 PC에서 동기화 확인</li></ul><div class="files">DuelGameUi.cs · DuelGameRank.cs · DuelProfile.cs</div></div><div class="smd"><video muted playsinline loop preload="none" poster="media/p_lobby_sect_chat.jpg" data-src="media/lobby_sect_chat.mp4"></video><span class="tag real">실제 화면</span></div></article><article class="srow" id="jm-s5" data-spy data-top="jm"><div class="stx"><span class="no">2.3.5</span><h4>측정 도구</h4><p class="key">느낌을 숫자로 바꾼다.</p><ul><li>DuelSoak — AI끼리 50~150판을 4배속으로, 문파별 승률 · 판 길이</li><li>"소림이 약하다"의 원인은 수치가 아니라 AI의 운기 조건이었다</li><li>DuelNetSim · DuelNetProbe — 지연 시뮬, 판정 일치율</li></ul><div class="files">DuelSoak.cs · DuelNetSim.cs · DuelNetProbe.cs</div></div><div class="smd plain"><svg viewBox="0 0 560 210" width="100%" role="img" aria-label="자동 대전 문파별 승률" style="display:block;background:#0b1220"><text x="16" y="20" fill="#8e9bad" font-size="12">DuelSoak 자동 대전 · 미러 제외 승률 <tspan fill="#5f6c7f">■ 150판</tspan> <tspan fill="#b8e46e">■ 패치 뒤 50판</tspan></text><text x="16" y="50" fill="#cfd8e3" font-size="13">마교</text><rect x="64" y="36" width="378" height="9" rx="2" fill="#5f6c7f"/><rect x="64" y="47" width="334" height="9" rx="2" fill="#b8e46e"/><text x="450" y="52" fill="#8e9bad" font-size="12">86% → <tspan fill="#b8e46e">76%</tspan></text><text x="16" y="82" fill="#cfd8e3" font-size="13">화산</text><rect x="64" y="68" width="216" height="9" rx="2" fill="#5f6c7f"/><rect x="64" y="79" width="246" height="9" rx="2" fill="#b8e46e"/><text x="318" y="84" fill="#8e9bad" font-size="12">49% → <tspan fill="#b8e46e">56%</tspan></text><text x="16" y="114" fill="#cfd8e3" font-size="13">소림</text><rect x="64" y="100" width="211" height="9" rx="2" fill="#5f6c7f"/><rect x="64" y="111" width="194" height="9" rx="2" fill="#b8e46e"/><text x="283" y="116" fill="#8e9bad" font-size="12">48% → <tspan fill="#b8e46e">44%</tspan></text><text x="16" y="146" fill="#cfd8e3" font-size="13">북해</text><rect x="64" y="132" width="194" height="9" rx="2" fill="#5f6c7f"/><rect x="64" y="143" width="167" height="9" rx="2" fill="#b8e46e"/><text x="266" y="148" fill="#8e9bad" font-size="12">44% → <tspan fill="#b8e46e">38%</tspan></text><text x="16" y="178" fill="#cfd8e3" font-size="13">당문</text><rect x="64" y="164" width="75" height="9" rx="2" fill="#5f6c7f"/><rect x="64" y="175" width="141" height="9" rx="2" fill="#b8e46e"/><text x="213" y="180" fill="#8e9bad" font-size="12">17% → <tspan fill="#b8e46e">32%</tspan></text><line x1="284" y1="32" x2="284" y2="196" stroke="#2a3850" stroke-dasharray="3 3"/><text x="280" y="206" text-anchor="end" fill="#5f6c7f" font-size="10">50%</text></svg><span class="tag draw">그림</span></div></article><article class="srow" id="jm-s6" data-spy data-top="jm"><div class="stx"><span class="no">2.3.6</span><h4>입문 수련과 가이드</h4><p class="key">처음 하는 사람도 한 판을 끝낼 수 있게.</p><ul><li>이동부터 절초까지 8단계 입문 수련</li><li>판 안에서는 책사 쪽지가 지금 할 일을 짚는다</li><li>LV 3 이하는 자동으로 켜지고, H로 끄고 켠다</li></ul><div class="files">DuelTutorial.cs · DuelCoach.cs</div></div><div class="smd"><video muted playsinline loop preload="none" poster="media/p_tutorial.jpg" data-src="media/tutorial.mp4"></video><span class="tag real">실제 화면</span></div></article></div></div><div class="sub" id="jm-case" data-spy data-top="jm"><h3 class="st"><a class="h-no" href="#toc" title="목차로">2.4</a>기술 사례</h3><p class="sl">숫자는 전부 개발 빌드 실측.</p><article class="case" id="jm-c1" data-spy data-top="jm">
+<div class="ch"><span class="n">NETCODE</span></div><h3><a class="h-no" href="#toc" title="목차로">2.4.1</a>게스트 화면에서는 안 맞는 공격</h3>
+<div class="nums" style="margin-top:16px"><div><b><s>15%</s>91%</b><span>당문 비도 일치율</span></div><div><b><s>59%</s>96%</b><span>게스트끼리 비도</span></div><div><b><s>360ms~1s</s>170ms</b><span>게스트 화면의 방장 지연</span></div></div>
+<div class="sum"><div class="q"><span class="k">문제</span><p>게스트로 하면 화면에선 맞은 비도가 피해 없이 지나갔다.</p></div><div class="c"><span class="k">원인</span><p>맞는 쪽이 판정하는데 지연 보상이 없었다. 공격자 화면 속 내 위치와 실제 위치가 달랐다.</p></div><div class="d"><span class="k">해결</span><p>공격자가 나를 그리던 지연만큼 위치를 되감아 잰다. 지연은 방장 · 게스트 조합별로 실측해 공식을 나눴다.</p></div></div>
+<details class="fold"><summary>자세히 보기<span>문제 · 제약 · 선택지 · 결정 · 근거 · 한계 / 그림 · 코드</span></summary><div class="fb"><div class="steps"><div><div class="step"><span class="k q">문제</span><div><p>비도 일치율 15%. 사자후는 기절 별만 뜨고 피해 0.</p></div></div><div class="step"><span class="k c">제약</span><div><p>막기 · 튕겨내기는 맞는 쪽 입력이라 판정 위치는 못 옮긴다. 전용 서버도 없다.</p></div></div><div class="step"><span class="k o">선택지</span><div><ul><li class="x">공격자 화면 기준 판정 → 막는 사람 반응이 무시된다</li><li class="x">보간 버퍼만 줄이기 → 핑이 튀면 끊긴다</li><li class="o"><span class="pick">맞는 쪽 판정 + 되감기</span></li></ul></div></div><div class="step"><span class="k d">결정</span><div><p>12ms마다 내 위치를 남겨 두고, 다른 PC 공격은 그만큼 되감은 자리로 잰다. 게스트 보간은 NGO 기본 Lerp 대신 고정 3틱.</p></div></div><div class="step"><span class="k e">근거</span><div><p>개발 빌드 두 개, 편도 60±10ms 시뮬, AI끼리 자동 대전. 5초마다 일치율 기록.</p></div></div><div class="step"><span class="k l">한계</span><div><p>되감기 상한 0.25초. 실제 공유기 환경 · 사람끼리 판은 따로 못 쟀다.</p></div></div></div><div class="evid"><figure><svg viewBox="0 0 560 250" width="100%" role="img" aria-label="되감기 판정 그림" style="display:block;background:#0b1220">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"/></marker></defs>
+<text x="20" y="28" fill="#8e9bad" font-size="13" font-family="monospace">공격자 PC 화면</text>
+<text x="300" y="28" fill="#8e9bad" font-size="13" font-family="monospace">맞는 쪽 PC (판정)</text>
+<line x1="280" y1="40" x2="280" y2="235" stroke="#1e2a3d" stroke-dasharray="4 4"/>
+<circle cx="150" cy="120" r="18" fill="#7cc4ff" opacity=".9"/><text x="150" y="124" text-anchor="middle" font-size="11" fill="#06101a" font-weight="700">나</text>
+<path d="M60,120 L128,120" stroke="#b8e46e" stroke-width="3" marker-end="url(#ar)"/><text x="60" y="108" fill="#b8e46e" font-size="12">비도 던짐</text>
+<text x="150" y="160" text-anchor="middle" fill="#cfd8e3" font-size="12">공격자 화면 속 내 위치</text>
+<text x="150" y="178" text-anchor="middle" fill="#8e9bad" font-size="11">= 실제보다 90~170ms 전 자리</text>
+<circle cx="470" cy="90" r="18" fill="none" stroke="#ff8f7e" stroke-width="2" stroke-dasharray="3 3"/><text x="470" y="94" text-anchor="middle" font-size="11" fill="#ff8f7e">지금</text>
+<text x="470" y="60" text-anchor="middle" fill="#ff8f7e" font-size="12">지금 자리로 재면 빗나감</text>
+<circle cx="400" cy="150" r="18" fill="#7cc4ff" opacity=".9"/><text x="400" y="154" text-anchor="middle" font-size="11" fill="#06101a" font-weight="700">나</text>
+<path d="M452,100 Q420,120 414,138" stroke="#b8e46e" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+<text x="400" y="190" text-anchor="middle" fill="#b8e46e" font-size="12">공격자가 보던 시각만큼 되감은 자리</text>
+<text x="400" y="232" text-anchor="middle" fill="#cfd8e3" font-size="12">→ 공격자가 본 그대로 맞음 · 막기는 '지금' 기준</text>
+</svg><figcaption><span class="tag rec">재구성</span><b>되감기 판정</b></figcaption></figure><pre class="cx"><span class="hd">Duelist.cs · ViewDelayOf / HitPosition</span><span class="kw">float</span> <span class="fn">ViewDelayOf</span>(Duelist attacker)
+{
+    <span class="kw">if</span> (attacker == <span class="kw">null</span> || attacker.IsOwner || !nm.IsListening) <span class="kw">return</span> 0f;
+    <span class="kw">bool</span> attackerIsHost = attacker.OwnerClientId == NetworkManager.ServerClientId;
+    <span class="kw">float</span> attackerOneWay = attackerIsHost ? 0f
+        : nm.IsServer ? transport.GetCurrentRtt(attacker.OwnerClientId) / 2000f : OneWay;
+    <span class="cm">// 방장 몸: 게스트 PC 보간 버퍼(50ms + 3틱)만큼 더 늦게 그려진다</span>
+    <span class="cm">// 게스트 몸: 이미 늦은 시각이 찍혀 와서 도착하는 대로 그려진다</span>
+<span class="hi">    <span class="kw">float</span> delay = IsServer ? attackerOneWay + 0.05f + 3f / 60f</span>
+<span class="hi">                           : OneWay + attackerOneWay + (attackerIsHost ? 0.02f : 0.01f);</span>
+    <span class="kw">return</span> Mathf.Min(<span class="nm">MaxRewind</span>, delay);   <span class="cm">// 상한 0.25초</span>
+}
+<span class="kw">public</span> Vector3 <span class="fn">HitPosition</span>(Duelist attacker) => PositionAgo(ViewDelayOf(attacker));</pre><pre class="cx"><span class="hd">Duelist.cs · UseRemoteInterpolation</span><span class="kw">if</span> (IsServer) { NetworkTransform.InterpolationBufferTickOffset = 0; <span class="kw">return</span>; }
+<span class="kw">var</span> nt = GetComponent&lt;NetworkTransform&gt;();
+<span class="hi">nt.PositionInterpolationType = nt.RotationInterpolationType = InterpolationTypes.LegacyLerp;</span>
+<span class="hi">nt.PositionLerpSmoothing = nt.RotationLerpSmoothing = <span class="kw">false</span>;</span>
+NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전을 그린다</span></pre></div></div></div></details>
+</article><article class="case" id="jm-c2" data-spy data-top="jm">
+<div class="ch"><span class="n">MEASUREMENT</span></div><h3><a class="h-no" href="#toc" title="목차로">2.4.2</a>측정 환경을 바꾸고 보인 원인</h3>
+<div class="nums" style="margin-top:16px"><div><b><s>38~60%</s>91%</b><span>비도 일치율</span></div><div><b>95%</b><span>전체 일치율</span></div><div><b><s>76%</s>89%</b><span>새 초식 회귀 → 복구</span></div></div>
+<div class="sum"><div class="q"><span class="k">문제</span><p>되감기를 넣은 뒤에도 에디터에서 비도 일치율이 38~60%를 오갔다.</p></div><div class="c"><span class="k">원인</span><p>에디터 멈춤 탓이 아니었다. 던지는 사람 화면만 지금 자리에서 비도를 날려 궤적이 최대 0.8m 갈라졌다.</p></div><div class="d"><span class="k">해결</span><p>측정을 개발 빌드 두 개로 옮기고, 투사체 출발점 · 방향은 쏘는 사람이 RPC로 보내게 통일했다.</p></div></div>
+<details class="fold"><summary>자세히 보기<span>문제 · 제약 · 선택지 · 결정 · 근거 · 한계 / 그림 · 코드</span></summary><div class="fb"><div class="steps"><div><div class="step"><span class="k q">문제</span><div><p>에디터 측정 숫자가 매번 달랐다.</p></div></div><div class="step"><span class="k c">제약</span><div><p>포커스 없는 에디터는 49초에 3프레임만 돌고, 1초마다 0.5초씩 멈췄다.</p></div></div><div class="step"><span class="k o">선택지</span><div><ul><li class="x">멈춘 구간만 빼고 분석 → 매번 손으로 골라야 한다</li><li class="x">에디터 루프 강제 구동 → 멈춤이 0은 아니다</li><li class="o"><span class="pick">개발 빌드 두 개로 측정</span></li></ul></div></div><div class="step"><span class="k d">결정</span><div><p>실행 인자로 방장 · 손님 · 자동 대전 · 지연 시뮬 · 일치율 기록을 켠다. 같은 PC 창 두 개로 충분했다.</p></div></div><div class="step"><span class="k e">근거</span><div><p>비도 93/102. 원칙을 문서로 남겨 새 초식이 깬 것(91→76%)도 같은 측정으로 잡았다.</p></div></div><div class="step"><span class="k l">한계</span><div><p>"화면에선 닿음 → 실제 맞음"만 센다. 반대 경우와 사람의 움직임은 안 담긴다.</p></div></div></div><div class="evid"><figure><div class="dt"><table><thead><tr><th>실행 인자</th><th>하는 일</th></tr></thead><tbody>
+<tr><td><code>-host</code> / <code>-join</code></td><td>창 두 개로 방장 · 손님</td></tr>
+<tr><td><code>-autoplay</code></td><td>내 협객도 AI가 조종</td></tr>
+<tr><td><code>-lag 60 -jitter 10</code></td><td>지연 시뮬 (DuelNetSim)</td></tr>
+<tr><td><code>-netprobe</code></td><td>5초마다 일치율 (DuelNetProbe)</td></tr>
+<tr><td><code>-netrec</code></td><td>60초 위치 기록 → 두 화면 비교</td></tr>
+</tbody></table></div><figcaption><b>개발 빌드 실행 인자</b></figcaption></figure>
+<figure><img class="zoom" src="media/still_ffa.jpg" alt="4인 개인전 화면" loading="lazy"><figcaption><span class="tag real">실제 화면</span><b>당문 비도</b> 걸으며 던지는 평타</figcaption></figure></div></div></div></details>
+</article><article class="case" id="jm-c3" data-spy data-top="jm">
+<div class="ch"><span class="n">WINDOWS</span></div><h3><a class="h-no" href="#toc" title="목차로">2.4.3</a>다른 PC에서 너무 작은 커서</h3>
+<div class="nums" style="margin-top:16px"><div><b><s>32px</s>64px</b><span>100% · 1080p</span></div><div><b>128px</b><span>200% 설정</span></div><div><b>0</b><span>화살표 깜빡임</span></div></div>
+<div class="sum"><div class="q"><span class="k">문제</span><p>다른 PC에서 커서가 작았다. 설정에서 키워도 그대로였다.</p></div><div class="c"><span class="k">원인</span><p>윈도우에서 유니티 SetCursor는 그림 크기와 상관없이 32px로 줄인다.</p></div><div class="d"><span class="k">해결</span><p>CreateIconIndirect로 커서를 직접 만들고, 창 WndProc과 UnityPlayer.dll의 SetCursor 칸을 가로챘다.</p></div></div>
+<details class="fold"><summary>자세히 보기<span>문제 · 제약 · 선택지 · 결정 · 근거 · 한계 / 그림 · 코드</span></summary><div class="fb"><div class="steps"><div><div class="step"><span class="k q">문제</span><div><p>내 PC에선 괜찮아 보여서 늦게 알았다.</p></div></div><div class="step"><span class="k c">제약</span><div><p>녹화에 찍히는 소프트웨어 커서는 피하고 싶었다.</p></div></div><div class="step"><span class="k o">선택지</span><div><ul><li class="x">"64px 고정"이라 보고 크기별 이미지 11벌 → 오진</li><li class="x">소프트웨어 커서 → 녹화에 찍히고 한 프레임 늦다</li><li class="o"><span class="pick">Win32로 직접 만들어 창에 건다</span></li></ul></div></div><div class="step"><span class="k d">결정</span><div><p>유니티가 매 프레임 화살표를 다시 걸어 깜빡여서, 가져오기 표(IAT)의 SetCursor 칸까지 바꿔 끼웠다. 종료 때 되돌린다.</p></div></div><div class="step"><span class="k e">근거</span><div><p>빌드 실측 50 / 100 / 200% = 32 / 64 / 128px, 깜빡임 0번.</p></div></div><div class="step"><span class="k l">한계</span><div><p>윈도우 x64 전용. 엔진 버전이 바뀌면 다시 확인해야 한다.</p></div></div></div><div class="evid"><figure><svg viewBox="0 0 560 210" width="100%" role="img" aria-label="커서 가로채기 그림" style="display:block;background:#0b1220">
+<defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"/></marker></defs>
+<text x="20" y="22" fill="#ff8f7e" font-size="13" font-weight="700">고치기 전</text>
+<rect x="20" y="32" width="150" height="56" rx="8" fill="#111b2b" stroke="#2a3850"/><text x="95" y="55" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">Cursor.SetCursor</text><text x="95" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">64px 그림</text>
+<path d="M170,60 L220,60" stroke="#8e9bad" marker-end="url(#ar2)"/>
+<rect x="222" y="32" width="150" height="56" rx="8" fill="#111b2b" stroke="#ff8f7e"/><text x="297" y="55" text-anchor="middle" fill="#ff8f7e" font-size="13" font-weight="700">UnityPlayer.dll</text><text x="297" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">32px로 줄임</text>
+<path d="M372,60 L422,60" stroke="#8e9bad" marker-end="url(#ar2)"/>
+<rect x="424" y="32" width="116" height="56" rx="8" fill="#111b2b" stroke="#2a3850"/><text x="482" y="55" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">화면</text><text x="482" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">작은 커서</text>
+<text x="20" y="118" fill="#b8e46e" font-size="13" font-weight="700">고친 뒤</text>
+<rect x="20" y="128" width="150" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"/><text x="95" y="151" text-anchor="middle" fill="#b8e46e" font-size="13" font-weight="700">CreateIconIndirect</text><text x="95" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">원본 크기로 직접 생성</text>
+<path d="M170,156 L220,156" stroke="#8e9bad" marker-end="url(#ar2)"/>
+<rect x="222" y="128" width="150" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"/><text x="297" y="151" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">WndProc 가로채기</text><text x="297" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">WM_SETCURSOR</text>
+<path d="M372,156 L422,156" stroke="#8e9bad" marker-end="url(#ar2)"/>
+<rect x="424" y="128" width="116" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"/><text x="482" y="151" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">IAT 교체</text><text x="482" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">다시 걸어도 우리 것</text>
+</svg><figcaption><span class="tag rec">재구성</span><b>32px이 되는 길과 가로챈 뒤</b></figcaption></figure><pre class="cx"><span class="hd">DuelCursor.cs · PatchUnitySetCursor (요약)</span><span class="kw">var</span> module = GetModuleHandle(<span class="nm">"UnityPlayer.dll"</span>);
+<span class="kw">int</span> imports = Marshal.ReadInt32(module, pe + 24 + 120); <span class="cm">// 가져오기 표</span>
+<span class="cm">// USER32.dll 항목에서 이름이 "SetCursor"인 칸을 찾는다</span>
+<span class="hi">iatSlot = module + slots + i * 8;</span>
+<span class="hi">realSetCursor = Marshal.ReadIntPtr(iatSlot);</span>
+<span class="hi">WriteSlot(Marshal.GetFunctionPointerForDelegate(unitySetCursor));</span>
+
+<span class="cm">// 유니티가 SetCursor를 불러도 창 안이면 우리 커서로</span>
+<span class="kw">static</span> IntPtr <span class="fn">UnitySetCursor</span>(IntPtr c) => SetCursor(Inside() ? current : c);</pre></div></div></div></details>
+</article></div><div class="sub" id="jm-retro" data-spy data-top="jm"><h3 class="st"><a class="h-no" href="#toc" title="목차로">2.5</a>결과 · 회고</h3><div class="retro2">
+<div class="g"><b>결과</b><ul><li>동기 약 20명 테스트, 2~3일마다 새 판</li><li>문파 3개 → 6개</li><li>10월 27일 아카데미 멀티플레이 평가 제출</li></ul></div>
+<div class="w"><b>다시 하면</b><ul><li>측정 환경부터 의심한다</li><li>오진도 기록한다</li><li>원칙은 문서로 남긴다</li></ul></div>
+<div class="t"><b>아직 확인 전</b><ul><li>싱글(스토리) 모드</li><li>관전 · 재접속</li><li>다른 PC끼리 랭크 실전</li></ul></div>
+</div></div>
+</div></section>
+<section class="pban" id="ramen" data-spy data-top="ramen"><div class="wrap">
+<span class="eb team"><a class="h-no" href="#toc" title="목차로">3</a> MAIN 02 · TEAM PROJECT · 4명</span>
+<h2>나의 인생 라멘가게 <small>돌려 말하는 주문을 해석해 라멘을 만드는 2D 조리 퍼즐</small></h2>
+<p class="one">메인 개발. 조리 판정 · 연출 · UI 전체 · 씬 빌더를 맡고, 팀원 시스템과의 접점을 이었다.</p>
+<div class="kv"><div><span class="k">GENRE</span><b>2D 조리 퍼즐</b></div><div><span class="k">PERIOD</span><b>2026.09 · 2주</b></div><div><span class="k">TEAM</span><b>4명 · 코드 2명</b></div><div><span class="k">ENGINE</span><b>Unity 6000.3 · URP</b></div><div><span class="k">UI</span><b>uGUI · TMP</b></div><div><span class="k">ROLE</span><b>메인 개발</b></div></div>
+<div class="sub" id="rm-play" data-spy data-top="ramen"><h3 class="st"><a class="h-no" href="#toc" title="목차로">3.1</a>핵심 플레이</h3><p class="sl">손님 한 명을 받는 흐름.</p><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/pF59wLZO8Vk" title="나의 인생 라멘가게 시연 영상" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="legacy" style="margin-top:22px"><div aria-label="한 손님을 받는 흐름" class="loop">
+<figure><img alt="1 주문 듣기: 손님이 사투리와 돌려 말하기로 주문한다" src="media/ramen/still_dialogue.jpg"/><figcaption><span class="n">1</span><span><b>주문 듣기</b><br/>손님이 사투리와 돌려 말하기로 주문한다</span></figcaption></figure>
+<figure><img alt="2 주문 해석: Tab으로 주문서, B로 레시피북을 연다" src="media/ramen/still_ordernote.jpg"/><figcaption><span class="n">2</span><span><b>주문 해석</b><br/>Tab으로 주문서, B로 레시피북을 연다</span></figcaption></figure>
+<figure><img alt="3 조리: 타래, 육수, 면, 토핑 순서로 담는다" src="media/ramen/still_bowlfull.jpg"/><figcaption><span class="n">3</span><span><b>조리</b><br/>타래 → 육수 → 면 → 토핑 순서로 담는다</span></figcaption></figure>
+<figure><img alt="4 시식 반응: 정확도 구간마다 다른 연출이 나온다" src="media/ramen/still_cosmic.jpg"/><figcaption><span class="n">4</span><span><b>시식 반응</b><br/>정확도 구간마다 다른 연출이 나온다</span></figcaption></figure>
+<figure><img alt="5 하루 정산: 목표 매출을 넘겨야 다음 날로 간다" src="media/ramen/still_stamp.jpg"/><figcaption><span class="n">5</span><span><b>하루 정산</b><br/>목표 매출을 넘겨야 다음 날로 간다</span></figcaption></figure>
+</div></div></div><div class="sub" id="rm-scope" data-spy data-top="ramen"><h3 class="st"><a class="h-no" href="#toc" title="목차로">3.2</a>기여 범위</h3><div class="dt"><table><tbody>
+<tr><td class="y">직접</td><td>조리 판정 · 시식 · 해금 · 엔딩 연출 · UI 전체 · 난이도 · 연출 배속 · 씬 빌더 · 빌드</td></tr>
+<tr><td class="t">팀원</td><td>주문 · 대사 · 채점 · 정산 (<code>Customer/</code>), 기획 · 아트</td></tr>
+<tr><td class="w">교집합</td><td><code>EvaluateRamen()</code> 하나로 조리 결과를 채점에 넘긴다</td></tr>
+</tbody></table></div><div class="legacy" style="margin-top:18px"><div class="legend"><span class="me"><i></i>내가 만든 것</span><span class="team"><i></i>팀원이 만든 것</span><span class="shared"><i></i>교집합</span></div><div aria-label="내가 만든 Bowl과 GameManager가 교집합인 EvaluateRamen을 거쳐 팀원이 만든 RamenCalculator와 DayManager로 이어진다" class="flow" role="img">
+<div class="node me"><b>Bowl</b><span>담긴 재료</span></div><div class="arr">→</div>
+<div class="node me"><b>GameManager</b><span>화면 흐름</span></div><div class="arr">→</div>
+<div class="node shared"><b>EvaluateRamen()</b><span>교집합</span></div><div class="arr">→</div>
+<div class="node team"><b>RamenCalculator</b><span>채점</span></div><div class="arr">→</div>
+<div class="node team"><b>DayManager</b><span>일차·정산</span></div>
+</div></div></div><div class="sub" id="rm-sys" data-spy data-top="ramen"><h3 class="st"><a class="h-no" href="#toc" title="목차로">3.3</a>핵심 시스템</h3><div class="srows"><article class="srow" id="rm-s1" data-spy data-top="ramen"><div class="stx"><span class="no">3.3.1</span><h4>조리 판정</h4><p class="key">순서와 수량을 그릇이 직접 막는다.</p><ul><li>타래 → 육수 → 면 순서를 어기면 그릇이 붉게 깜빡이고 재료를 안 받는다</li><li>토핑은 종류마다 최대 4개, 담는 자리를 정해 넘치지 않는다</li><li>최대 수량은 주문 · 조리가 같이 쓰는 상수 하나</li></ul><div class="files">Bowl.cs · IngredientTool.cs</div></div><div class="smd"><img class="zoom" src="media/ramen/cook.gif" alt="조리 화면 움짤" loading="lazy"><span class="tag real">실제 화면</span></div></article><article class="srow" id="rm-s2" data-spy data-top="ramen"><div class="stx"><span class="no">3.3.2</span><h4>씬 빌더</h4><p class="key">메뉴 한 번으로 화면 전체를 다시 짓는다.</p><ul><li>조리 화면 UI는 손으로 배치하지 않고 코드로 짓고 저장한다</li><li>좌표 · 크기를 상수 한 곳에 모아 해상도 변경도 상수만</li><li>씬 파일 충돌이 한 번도 없었다</li></ul><div class="files">Editor/RamenLayoutBuilder.cs</div></div><div class="smd plain"><svg viewBox="0 0 560 200" width="100%" role="img" aria-label="씬 빌더 흐름" style="display:block;background:#0b1220">
+<defs><marker id="ar3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"/></marker></defs>
+<rect x="20" y="40" width="150" height="70" rx="8" fill="#111b2b" stroke="#b8e46e"/><text x="95" y="68" text-anchor="middle" fill="#b8e46e" font-size="13" font-weight="700">상수 한 곳</text><text x="95" y="88" text-anchor="middle" fill="#8e9bad" font-size="11">좌표 · 크기 · 글자</text>
+<path d="M170,75 L220,75" stroke="#8e9bad" marker-end="url(#ar3)"/>
+<rect x="222" y="40" width="150" height="70" rx="8" fill="#111b2b" stroke="#2a3850"/><text x="297" y="68" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">RamenLayoutBuilder</text><text x="297" y="88" text-anchor="middle" fill="#8e9bad" font-size="11">메뉴 한 번</text>
+<path d="M372,75 L422,75" stroke="#8e9bad" marker-end="url(#ar3)"/>
+<rect x="424" y="40" width="116" height="70" rx="8" fill="#111b2b" stroke="#2a3850"/><text x="482" y="68" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">씬 생성 · 저장</text><text x="482" y="88" text-anchor="middle" fill="#8e9bad" font-size="11">손 배치 0</text>
+<text x="280" y="150" text-anchor="middle" fill="#cfd8e3" font-size="13">640×360 → 960×540 : 상수만 바꾸고 다시 실행</text>
+<text x="280" y="174" text-anchor="middle" fill="#8e9bad" font-size="12">씬 파일 충돌 0번</text>
+</svg><span class="tag rec">재구성</span></div></article><article class="srow" id="rm-s3" data-spy data-top="ramen"><div class="stx"><span class="no">3.3.3</span><h4>랜덤 난이도</h4><p class="key">하루 난이도가 한쪽으로 쏠리지 않게.</p><ul><li>손님마다 따로 뽑으니 첫날부터 어려운 손님만 나오기도 했다</li><li>일차별 구성을 표로 정해 두고 섞어서 한 명씩 꺼낸다 (셔플 백)</li></ul></div><div class="smd plain"><pre class="cx"><span class="hd">CustomerSpawner · DayDifficulties</span><span class="kw">private static readonly int</span>[][] DayDifficulties =
+{
+    <span class="kw">new</span>[] { 1, 1, 1, 1, 1 },
+    <span class="kw">new</span>[] { 1, 1, 1, 2, 2 },
+    <span class="kw">new</span>[] { 1, 1, 2, 2, 2, 3 },
+    <span class="kw">new</span>[] { 1, 2, 2, 2, 3, 3 },
+    <span class="kw">new</span>[] { 1, 2, 2, 3, 3, 3, 3, 3 }
+};  <span class="cm">// 일차별 구성을 섞어서 한 명씩 꺼낸다 (셔플 백)</span></pre></div></article><article class="srow" id="rm-s4" data-spy data-top="ramen"><div class="stx"><span class="no">3.3.4</span><h4>손님 반응과 연출 배속</h4><p class="key">점수보다 어떻게 틀렸는지 보여 준다.</p><ul><li>빠짐 · 넘침 · 뒤바뀜에 따라 손님 반응을 고른다</li><li>연출은 실시간 기준이라 빨리 감기가 안 먹었다 → 연출 전용 배율 CookTempo</li></ul><div class="files">CookTempo.cs</div></div><div class="smd"><img class="zoom" src="media/ramen/still_cosmic.jpg" alt="시식 연출 화면" loading="lazy"><span class="tag real">실제 화면</span></div></article></div></div><div class="sub" id="rm-case" data-spy data-top="ramen"><h3 class="st"><a class="h-no" href="#toc" title="목차로">3.4</a>기술 사례</h3><p class="sl">가장 오래 붙잡은 버그 세 개. 움짤은 실제 화면, 그림은 재구성.</p><div class="legacy"><article class="bug" data-spy="" data-top="ramen" id="bug-a">
+<div class="t"><h3><a class="h-no" href="#toc" title="목차로">3.4.1</a>끝까지 재생되지 않는 엔딩 크레딧</h3><span class="kw"><span class="chip">부모 좌표계</span><span class="chip">진행 순서</span><span class="chip">픽셀 측정</span></span></div>
+<div class="ba"><figure><img alt="끝까지 재생되지 않는 엔딩 크레딧 수정 전" loading="lazy" src="media/ramen/a_ba2_before.gif"/><figcaption class="b">수정 전</figcaption></figure><figure><img alt="끝까지 재생되지 않는 엔딩 크레딧 수정 후" loading="lazy" src="media/ramen/a_ba2_after.gif"/><figcaption class="a">수정 후</figcaption></figure></div>
+<div class="steps"><div><i class="b">문제</i>크레딧 마지막에 화면이 일찍 꺼지고, 아이리스가 엉뚱한 곳으로 닫히고, 갈색 띠가 남았다.</div><div><i class="w">원인</i>고정 타이머가 끝을 정하고 있었고, 같은 부모 안에서 좌표 변환이 두 번 걸렸다. 갈색 띠는 창과 같이 줄어든 비네트였다.</div><div><i class="t2">해결</i>끝맺음을 연출 쪽 한 곳으로 모으고, 녹화한 프레임의 픽셀을 재서 원인을 찾았다.</div></div>
+<div class="res"><span>→ 아이리스 오차 ±1px, 창 바깥 검정 아닌 픽셀 0개</span></div>
+<div class="folds"><details class="fold outer"><summary><b>자세히 보기</b><span>증상 · 시도 과정 · 원인 그림 · 코드 변경 · 고치기 전과 후 · 배운 것</span></summary><div class="fold-body"><details class="fold"><summary><b>증상</b><span>처음 본 화면</span></summary><div class="fold-body">
+<p class="lead" style="font-size:17px;margin-bottom:18px">크레딧은 화면을 반으로 나눠서 왼쪽에는 제작진 이름이 올라가고, 오른쪽 작은 창에서는 실제 게임이 돌아간다. 마지막 손님이 라멘을 네 그릇 먹고 더는 못 먹겠다며 카운터 뒤로 쓰러지면 까마귀가 날아와 모자 위에 앉는다. 그다음 까마귀를 중심으로 화면이 동그랗게 닫히고(아이리스), 마지막으로 조리 화면에 라멘 한 그릇이 나오면서 끝난다.</p>
+<p class="lead" style="font-size:17px;margin-bottom:18px">제출 전날 처음으로 크레딧을 끝까지 돌려 봤는데, 아래 네 가지 문제가 한꺼번에 생겼다. 한 화면에서 같이 보여서 하나의 문제처럼 보였지만 원인은 서로 관련이 없었다.</p>
+<div class="sym-grid">
+<figure class="media-card"><img alt="재구성: 40초에 화면이 검게 덮인 순간. 손님은 아직 먹는 중" src="media/ramen/a_sym1.png"/><span class="src">재구성</span><figcaption><b><span class="num">①</span>손님이 쓰러지기 전에 꺼지는 화면</b>이름 카드가 다 지나가는 40초쯤 검은 화면이 올라왔다. 손님은 아직 먹고 있는 중이라 마지막 장면까지 가지 못했다.</figcaption></figure>
+<figure class="media-card"><img alt="재구성: 아이리스가 까마귀가 아닌 오른쪽 빈 곳으로 오므라든 화면" src="media/ramen/a_sym2.png"/><span class="src">재구성</span><figcaption><b><span class="num">②</span>까마귀 옆 빈 곳으로 닫히는 아이리스</b>아이리스가 까마귀 오른쪽으로 닫혀서 까마귀가 어둠 속에 묻혔다.</figcaption></figure>
+<figure class="media-card"><img alt="실제 화면: 마지막 조리 화면에 그릇이 없다" src="media/ramen/a_empty.jpg"/><span class="src real">실제 화면</span><figcaption><b><span class="num">③</span>비어 있는 마지막 라멘</b>"오늘 밤도, 불을 밝힙니다." 뒤에 나와야 할 라멘이 없었다. 처음에는 그릇 자체가 없었고, 그릇을 다시 켠 뒤에는 빈 그릇만 나왔다.</figcaption></figure>
+<figure class="media-card"><img alt="실제 화면: 검은 화면 오른쪽에 갈색 세로 띠" src="media/ramen/a_brown.jpg"/><span class="src real">실제 화면</span><figcaption><b><span class="num">④</span>검은 화면 옆에 남는 갈색 띠</b>거의 검정에 가까운 갈색이라 언뜻 보면 잘 모르지만, 완전한 검정 옆에 붙어 있어서 경계가 보였다. 크레딧 내내 남아 있었다.</figcaption></figure>
+</div></div></details><details class="fold"><summary><b>시도 과정</b><span>6번의 시도 · WHY / DID / RESULT</span></summary><div class="fold-body">
+<ol class="tries">
+<li class="fail"><details class="try"><summary><span class="try-n">1</span><b>배경이 화면 밖까지 깔렸다는 가설</b><span class="tag-x">그대로</span></summary><div class="try-body"><div class="try-media"><figure class="media-card"><img alt="실제 화면: 갈색 띠가 남은 크레딧 화면" src="media/ramen/a_window.jpg"/><span class="src real">실제 화면</span></figure></div>
+<div class="row why"><span class="k">WHY</span><div class="v"><p>마지막 조리 화면을 보니 나무 조리대가 화면 끝까지 깔려 있었다. 배경 그림(<span class="mono">Background</span>)이 부모를 꽉 채우도록 늘어나 있어서, 16:9가 아닌 창에서는 게임 화면(960×540) 밖까지 그려지고 있었다. 카메라 배경색도 유니티 기본 파란색 그대로였다. 그래서 갈색 띠가 이 둘 중 하나 때문이라고 생각했다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>세 가지를 한 번에 수정했다.</p><ul><li>갈색 띠: 배경의 앵커를 가운데로 바꾸고 크기를 960×540으로 고정했다. 화면 바깥은 카메라 배경색을 검정으로 바꿨다.</li><li>① 화면이 꺼지는 문제: 화면을 검게 만드는 역할을 이름 카드 타이머에서 빼서, 연출 끝맺음 코루틴 <span class="mono">PlayEnding()</span>으로 옮겼다. 크레딧 전체 반복도 카드 타이머가 아니라 끝맺음이 끝났는지를 기준으로 돌게 바꿨다.</li><li>③ 빈 라멘: 주문 화면이 열릴 때 조리대 물건을 꺼 두는데, 크레딧에서는 다시 켜 주는 코드가 없어서 그릇이 꺼진 상태였다. 마지막 장면을 준비할 때 그릇을 다시 켜도록 했다.</li></ul></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>그릇은 다시 나왔지만 갈색 띠는 그대로였고, 화면도 여전히 일찍 꺼졌다. 배경을 맞추는 코드는 마지막 조리 화면에서만 실행돼서 갈색 띠가 보이는 동안에는 적용되지 않았다. 화면이 꺼지는 문제는 이름 카드를 그리는 <span class="mono">SeekTo()</span> 안에 화면을 어둡게 하는 코드가 하나 더 남아 있었다.</p></div></div></div></details>
+</li>
+<li class="fail"><details class="try"><summary><span class="try-n">2</span><b>검은 판이 화면 일부만 덮는다는 가설</b><span class="tag-x">아님</span></summary><div class="try-body">
+<div class="row why"><span class="k">WHY</span><div class="v"><p>예전에 창 바깥을 덮는 검은 판이 화면 왼쪽만 덮었던 적이 있었다. 그래서 그 틈으로 뒤쪽 화면이 비친다고 생각했다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>이번에는 고치기 전에 먼저 측정했다. 크레딧 한 장면을 이미지로 뽑아서 가로 한 줄의 픽셀 색을 읽어 봤다. x=940까지는 완전한 검정(0,0,0)이었고, 그 뒤로 아주 옅은 갈색(9,4,3)이 점점 옅어지면서 이어졌다.</p><p>검은 판에는 문제가 없었다. 그래서 갈색이 창 안쪽에서 나온다고 판단하고, 가게가 다 준비될 때까지 창을 투명하게 숨겼다가 서서히 보이게 했다. 이때 <span class="mono">SeekTo()</span>에 남아 있던 화면을 어둡게 하는 코드도 같이 지웠다.</p><figure class="did-media"><img alt="그림: 창 경계 가로 단면 실측값" src="media/ramen/a_did2.png"/><figcaption><span class="src">그림</span>측정한 값. 960~1060의 옅은 갈색은 창 바깥이었다.</figcaption></figure></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>화면이 일찍 꺼지는 문제는 여기서 해결됐다. 하지만 갈색 띠는 그대로였다. 나중에 확인해 보니 창은 x=1080쯤부터 시작해서, 960부터 보였던 옅은 갈색은 창 바깥이었다. 값은 제대로 쟀지만 그 값이 어디에 해당하는지를 잘못 판단했다.</p></div></div></div></details>
+</li>
+<li class="fail"><details class="try"><summary><span class="try-n">3</span><b>밤 배경 그림이 창보다 크다는 가설</b><span class="tag-x">그대로</span></summary><div class="try-body">
+<div class="row why"><span class="k">WHY</span><div class="v"><p>창 안쪽이 문제라면, 창 안에 화면보다 큰 그림이 있어서 창이 작아질 때 밖으로 삐져나와야 했다. 확인해 보니 주문 화면의 밤 배경(<span class="mono">Night</span>)이 화면보다 크게 잡혀 있었고, 색도 짙은 갈색이었다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>크레딧이 시작될 때 <span class="mono">Night</span> 크기를 960×540으로 줄였다.</p><p>빈 라멘 문제도 같이 봤다. 마지막 장면을 준비할 때 재료통을 먼저 끄고 재료를 넣고 있었는데, 재료 그림은 재료통이 가지고 있어서 꺼진 재료통에서는 그림을 못 가져온다고 생각했다. 그래서 재료통 켜기 → 재료 넣기 → 정리 순서로 바꿨다.</p><figure class="did-media"><img alt="그림: 마지막 장면에서 재료를 넣는 순서" src="media/ramen/a_did3.png"/><figcaption><span class="src">그림</span>재료를 넣는 순서 변경</figcaption></figure></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>갈색 띠는 이번에도 그대로였다. 같은 문제로 원인을 세 번째 잘못 짚은 것이다. 라멘도 여전히 비어 있었다. 재료를 받는 쪽에서 전부 거절하고 있었기 때문에 넣는 순서는 상관이 없었다(시도 5).</p></div></div></div></details>
+</li>
+<li class="fail"><details class="try"><summary><span class="try-n">4</span><b>조리 화면 그릇 복사본으로 빈 그릇 가리기</b><span class="tag-x">되돌림</span></summary><div class="try-body"><div class="try-media"><figure class="media-card"><img alt="그림: 손님 앞 그릇 그림은 원래 빈 그릇" src="media/ramen/a_try4.png"/><span class="src">그림</span></figure></div>
+<div class="row why"><span class="k">WHY</span><div class="v"><p>손님 앞 그릇 그림을 열어 보니 그림 자체가 빈 그릇이었다. 그날 그릇의 김을 애니메이션으로 따로 분리하면서 라멘 내용물도 같이 빠졌던 것이다. 그래서 조리 화면에서 실제로 만든 그릇을 손님 앞에 그대로 보여 주면 된다고 생각했다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>조리 화면 그릇을 그대로 따라 그리는 컴포넌트(<span class="mono">ServedBowlMirror</span>)가 테스트용으로 붙어 있어서, 크레딧 동안만 이 컴포넌트를 켰다.</p></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>바로 되돌렸다. 손님 화면이 조리 화면의 그릇을 가져다 쓰는 구조는 맞지 않았다. 화면은 맞아 보여도 빈 그릇이라는 원인은 그대로 남는다. 그릇 그림은 따로 다시 받기로 했다.</p></div></div></div></details>
+</li>
+<li class="ok"><details class="try"><summary><span class="try-n">5</span><b>넣는 쪽이 아닌 받는 쪽 확인</b><span class="tag-o">원인 ③</span></summary><div class="try-body"><div class="try-media"><figure class="fig" style="margin:0"><svg aria-label="재료를 담으려 하면 CanPick이 거절하는 흐름" role="img" viewbox="0 0 520 150">
+<defs><marker id="arA" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path class="f-mute" d="M0 0L10 5L0 10z"></path></marker></defs>
+<rect class="f-panel s-line2" height="50" rx="8" width="136" x="6" y="20"></rect>
+<text class="t-sm" text-anchor="middle" x="74" y="50">재료 담기</text>
+<line class="s-mute" marker-end="url(#arA)" x1="142" x2="186" y1="45" y2="45"></line>
+<rect class="f-panel s-warn" height="50" rx="8" width="170" x="188" y="20"></rect>
+<text class="t-sm" text-anchor="middle" x="273" y="41">CanPick(type)</text>
+<text class="t-warn" text-anchor="middle" x="273" y="61">튜토리얼 진행 중</text>
+<line class="s-mute" marker-end="url(#arA)" x1="358" x2="400" y1="45" y2="45"></line>
+<rect class="f-panel s-bad" height="50" rx="8" width="112" x="402" y="20"></rect>
+<text class="t-bad" text-anchor="middle" x="458" y="50">거절 → 빈 그릇</text>
+<text class="t-sm" x="6" y="116">안내 중인 재료 하나 말고 전부 false.</text>
+</svg></figure></div>
+<div class="row why"><span class="k">WHY</span><div class="v"><p>넣는 순서까지 고쳤는데도 라멘이 비어 있다면, 받는 쪽에서 재료를 거절하고 있다고 봤다. 그릇은 원래 규칙에 맞지 않는 재료를 받지 않게 만들어져 있다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>그릇 코드(<span class="mono">Bowl.cs</span>)를 재료가 들어오는 입구부터 따라가 봤다. <span class="mono">TryAdd()</span> → <span class="mono">AddToBowl()</span> → <span class="mono">IsAllowed()</span> 순서로 호출되는데, <span class="mono">IsAllowed()</span> 첫 줄이 튜토리얼 검사(<span class="mono">TutorialManager.CanPick()</span>)였다. 튜토리얼이 진행 중이면 지금 안내하는 재료 하나를 빼고는 전부 false를 돌려준다.</p><p>개발 키(F6)로 크레딧에 바로 들어가면 첫날 튜토리얼이 끝나지 않은 상태라서, 여기서 재료가 전부 막히고 있었다. 그래서 크레딧이 시작될 때 튜토리얼이 진행 중이면 끝난 것으로 처리하게 했다.</p></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>라멘이 제대로 채워졌다. 김, 차슈, 계란, 파, 멘마까지 전부 올라갔다. 손님 앞 그릇은 원래 그림 한 장이라 재료가 거절당해도 티가 나지 않았고, 실제로 재료를 넣는 마지막 그릇에서만 문제가 드러났던 것이다.</p></div></div></div></details>
+</li>
+<li class="ok"><details class="try"><summary><span class="try-n">6</span><b>녹화 후 프레임 단위 측정</b><span class="tag-o">원인 ② ④</span></summary><div class="try-body"><div class="try-media"><figure class="fig" style="margin:0"><svg aria-label="갈색 영역이 정확히 480 곱하기 270이고 이는 화면의 절반 크기" role="img" viewbox="0 0 520 210">
+<defs><radialgradient cx="50%" cy="50%" id="vgA" r="65%"><stop offset="55%" stop-color="#1a0d09" stop-opacity="0"></stop><stop offset="100%" stop-color="#3a1d12"></stop></radialgradient></defs>
+<rect class="f-black" height="190" rx="6" width="500" x="10" y="10"></rect>
+<rect fill="url(#vgA)" height="135" width="240" x="250" y="48"></rect>
+<rect class="f-shop" height="111" rx="3" width="216" x="262" y="60"></rect>
+<rect class="s-warn" fill="none" height="135" stroke-dasharray="5 4" width="240" x="250" y="48"></rect>
+<text class="t-warn" text-anchor="middle" x="370" y="38">잰 값: 480×270 · RGB(22,11,8)</text>
+<text class="t-sm" x="22" y="84">아이리스 중심도 재 보니</text>
+<text class="t-bad" x="22" y="108">기대값보다 x +120</text>
+</svg></figure></div>
+<div class="row why"><span class="k">WHY</span><div class="v"><p>갈색 띠를 세 번 고쳤는데 세 번 다 그대로였다. 추측으로는 계속 틀리고 있어서 정확한 숫자가 필요했다. 아이리스나 쓰러지는 장면은 실제로 Play를 해야만 볼 수 있어서, 플레이 화면을 프레임 단위로 확인해야 했다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>크레딧이 도는 동안 화면을 일정 간격으로 이미지로 저장하는 녹화 스크립트를 만들었다. 에디터에서만 쓰는 확인용이라 빌드에는 포함되지 않는다. 녹화한 프레임으로 두 가지를 측정했다.</p><ul><li>갈색 띠: 창 바깥의 어두운 픽셀만 모아서 영역을 계산했다. 색은 RGB(22,11,8), 크기는 캔버스 기준으로 정확히 480×270이었다.</li><li>아이리스: 원이 닫히는 프레임들을 나란히 놓고 중심이 어디로 가는지 확인했다. 중심이 까마귀보다 오른쪽에 있었다.</li></ul></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>480×270은 960×540의 정확히 절반이다. 크레딧 창(Frame)을 0.5배로 줄인 크기와 같아서, Frame 아래에 깔린 무언가라는 걸 알 수 있었다. 찾아보니 화면 가장자리를 어둡게 만드는 비네트(<span class="mono">ScreenVignette</span>)였다. 후처리 효과가 아니라 Frame 크기에 맞춘 그림 한 장이라서, Frame과 같이 줄어들어 창 둘레에 남아 있었다.</p><p>아이리스는 좌표 계산을 따라가 보니 120칸 밀려 있었다(원인 그림 ②). 두 문제를 고친 뒤 다시 녹화해서, 창 바깥에 검정이 아닌 픽셀이 하나도 없는 것을 확인했다.</p></div></div></div></details>
+</li>
+</ol></div></details><details class="fold"><summary><b>원인 그림</b><span>그림으로 본 원인</span></summary><div class="fold-body">
+<div class="figs">
+<figure class="fig"><svg aria-label="카드 시계는 40초에 끝나고 무대는 그 뒤로도 이어지는 타임라인" role="img" viewbox="0 0 520 190">
+<text class="t-mute" x="0" y="40">카드 시계</text>
+<rect class="f-line" height="24" rx="4" width="250" x="90" y="24"></rect>
+<text class="t-sm" text-anchor="middle" x="215" y="41">이름 카드 9장</text>
+<line class="s-bad" stroke-dasharray="4 4" x1="340" x2="340" y1="14" y2="120"></line>
+<text class="t-bad" x="346" y="18">40초 · 화면 검게</text>
+<text class="t-mute" x="0" y="92">무대</text>
+<rect class="f-lime" height="24" rx="4" width="210" x="90" y="76"></rect>
+<text class="t-dark" text-anchor="middle" x="195" y="93">네 그릇 먹기</text>
+<rect class="f-lime2" height="24" rx="4" width="70" x="302" y="76"></rect>
+<rect class="f-lime2" height="24" rx="4" width="64" x="374" y="76"></rect>
+<rect class="f-lime2" height="24" rx="4" width="74" x="440" y="76"></rect>
+<rect class="f-cut" height="36" width="176" x="340" y="70"></rect>
+<text class="t-bad" text-anchor="middle" x="372" y="124">쓰러짐 · 까마귀 · 아이리스가 잘림</text>
+<text class="t-sm" x="90" y="158">고친 뒤: 카드 시계는 글자만 맡고,</text>
+<text class="t-lime" x="90" y="180">화면을 검게 하는 건 아이리스가 끝난 뒤 무대가 한다</text>
+</svg><figcaption><b>① 끝나는 시점을 정하던 카드 타이머</b>크레딧에는 타이머가 두 개 돌고 있었다. 이름 카드는 노래 길이에 맞춘 고정 타이머로, 손님 연출은 코루틴으로 각자 속도대로 진행됐다. 카드 타이머가 40초에 화면을 꺼 버려서 손님이 조금만 오래 먹어도 뒷부분이 잘렸다. 지금은 카드 타이머는 글자만 넘기고, 화면을 끄는 건 연출 마지막의 <span class="mono">PlayEnding()</span> 하나뿐이다.</figcaption></figure>
+<figure class="fig"><svg aria-label="Frame 안의 까마귀 위치와 한 번 더 변환해 120칸 밀린 위치" role="img" viewbox="0 0 520 210">
+<rect class="f-black" height="190" rx="6" width="500" x="10" y="10"></rect>
+<text class="t-mute" x="22" y="34">화면</text>
+<rect class="f-frame" height="138" rx="4" width="245" x="250" y="50"></rect>
+<text class="t-sm" x="260" y="72">Frame (×0.5, +240)</text>
+<circle class="f-lime" cx="320" cy="130" r="9"></circle>
+<text class="t-lime" text-anchor="middle" x="320" y="166">까마귀</text>
+<circle class="s-lime" cx="320" cy="130" fill="none" r="26"></circle>
+<circle class="f-bad" cx="440" cy="130" r="9"></circle>
+<circle class="s-bad" cx="440" cy="130" fill="none" r="26" stroke-dasharray="4 3"></circle>
+<text class="t-bad" text-anchor="middle" x="440" y="176">조여진 곳</text>
+<line class="s-warn" x1="332" x2="428" y1="104" y2="104"></line>
+<text class="t-warn" text-anchor="middle" x="380" y="96">+120</text>
+<text class="t-sm" x="22" y="70">변환을 한 번 더 걸면</text>
+<text class="t-sm" x="22" y="92">240 × 0.5 = 120칸</text>
+<text class="t-bad" x="22" y="114">오른쪽으로 밀린다</text>
+</svg><figcaption><b>② 같은 부모 안에서 한 번 더 걸린 변환</b>까마귀와 아이리스 판은 둘 다 Frame의 자식이라서, Frame을 줄이고 옮긴 효과가 이미 둘 다에 적용돼 있다. 그런데 까마귀 좌표를 화면 좌표로 한 번 더 바꿔서(×0.5, +240) 넘기는 바람에 변환이 두 번 걸렸다. 까마귀가 x=0에 있으면 원은 240이 아니라 360에 닫혔다. 120칸 차이다.</figcaption></figure>
+<figure class="fig"><svg aria-label="재료를 담으려 하면 CanPick이 거절하는 흐름" role="img" viewbox="0 0 520 150">
+<defs><marker id="ar" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path class="f-mute" d="M0 0L10 5L0 10z"></path></marker></defs>
+<rect class="f-panel s-line2" height="50" rx="8" width="136" x="6" y="20"></rect>
+<text class="t-sm" text-anchor="middle" x="74" y="50">재료 담기</text>
+<line class="s-mute" marker-end="url(#ar)" x1="142" x2="186" y1="45" y2="45"></line>
+<rect class="f-panel s-warn" height="50" rx="8" width="170" x="188" y="20"></rect>
+<text class="t-sm" text-anchor="middle" x="273" y="41">CanPick(type)</text>
+<text class="t-warn" text-anchor="middle" x="273" y="61">튜토리얼 진행 중</text>
+<line class="s-mute" marker-end="url(#ar)" x1="358" x2="400" y1="45" y2="45"></line>
+<rect class="f-panel s-bad" height="50" rx="8" width="112" x="402" y="20"></rect>
+<text class="t-bad" text-anchor="middle" x="458" y="50">거절 → 빈 그릇</text>
+<text class="t-sm" x="6" y="110">안내 중인 재료 하나 말고 전부 false.</text>
+<text class="t-lime" x="6" y="134">크레딧이 시작될 때 튜토리얼을 끝난 것으로 처리했다.</text>
+</svg><figcaption><b>③ 끝나지 않은 튜토리얼</b>튜토리얼 상태는 싱글턴이라 게임 어디서든 접근할 수 있다. 그릇은 재료를 받을 때마다 이 상태를 확인하는데, 크레딧 코드만 봐서는 알 수 없는 연결이었다.</figcaption></figure>
+<figure class="fig"><svg aria-label="Frame을 절반으로 줄이면 그 밑의 비네트 그림도 480 곱하기 270으로 줄어 갈색 띠로 보인다" role="img" viewbox="0 0 520 210">
+<defs><radialgradient cx="50%" cy="50%" id="vg" r="65%"><stop offset="55%" stop-color="#1a0d09" stop-opacity="0"></stop><stop offset="100%" stop-color="#3a1d12"></stop></radialgradient></defs>
+<rect class="f-black" height="190" rx="6" width="500" x="10" y="10"></rect>
+<rect fill="url(#vg)" height="135" width="240" x="250" y="48"></rect>
+<rect class="f-shop" height="111" rx="3" width="216" x="262" y="60"></rect>
+<text class="t-sm" text-anchor="middle" x="370" y="120">가게 창</text>
+<rect class="s-warn" fill="none" height="135" stroke-dasharray="5 4" width="240" x="250" y="48"></rect>
+<text class="t-warn" text-anchor="middle" x="370" y="38">비네트 480×270 = 960×540 × 0.5</text>
+<text class="t-sm" x="22" y="84">검은 바탕 위에</text>
+<text class="t-sm" x="22" y="106">가장자리만 갈색(22,11,8)</text>
+<text class="t-bad" x="22" y="128">→ 네모난 띠로 보였다</text>
+</svg><figcaption><b>④ 같이 줄어든 비네트</b>비네트는 Frame 크기에 맞춰 깔아 둔 그림 한 장이었다. 크레딧에서 Frame이 절반으로 줄어들자 비네트도 480×270으로 같이 줄었고, 창보다 조금 커서 가장자리의 갈색 부분만 창 둘레에 남았다.</figcaption></figure>
+</div></div></details><details class="fold"><summary><b>코드 변경</b><span>바뀐 줄과 설명</span></summary><div class="fold-body">
+<div class="stack-col" style="gap:26px">
+<div>
+<div class="code2"><div class="hd"><span class="file">CreditsSequence.cs</span><span class="fn">CrowCloses()</span><span class="cause2">원인 ② 좌표 변환을 두 번</span><span class="what">엔딩 크레딧 진행을 담당하는 파일이다. <span class="mono">CrowCloses()</span>는 까마귀가 앉으면 그 위치로 아이리스를 닫는 함수다.</span></div>
+<ol>
+<li>Vector2 spot = cutscene != <span class="kw">null</span> ? cutscene.CrowSpot : Vector2.zero;</li>
+<li class="del"><span class="kw">yield return</span> iris.CloseTo(spot * StageScale + StageCenter, IrisCloseSeconds);</li>
+<li class="add"><span class="kw">yield return</span> iris.CloseTo(spot, IrisCloseSeconds, IrisHoldRadius, IrisHoldSeconds);</li>
+</ol></div>
+<ul class="notes"><li><span class="ln">1</span><span><span class="mono">spot</span>은 까마귀가 앉은 위치로, Frame 안의 좌표다.</span></li><li><span class="ln del">2 지움</span><span>창의 축소(0.5)와 이동(+240)을 한 번 더 적용했다. 아이리스 판도 같은 Frame 안에 있어서 이미 적용된 변환이었다.</span></li><li><span class="ln add">3 추가</span><span>같은 부모끼리는 좌표를 그대로 넘긴다. 뒤의 두 값은 원이 까마귀 크기에서 잠깐 멈췄다가 닫히게 하려고 추가했다.</span></li></ul>
+</div>
+<div>
+<div class="code2"><div class="hd"><span class="file">CreditsSequence.cs</span><span class="fn">HideStageUi()</span><span class="cause2">원인 ③ 끝나지 않은 튜토리얼</span><span class="what">같은 파일이다. <span class="mono">HideStageUi()</span>는 크레딧이 시작될 때 게임 화면의 안내 UI를 정리하는 함수다.</span></div>
+<ol>
+<li>Transform frame = FindFrame();</li>
+<li><span class="kw">if</span> (frame == <span class="kw">null</span>) <span class="kw">return</span>;</li>
+<li class="add"><span class="kw">if</span> (TutorialManager.Instance != <span class="kw">null</span> &amp;&amp; TutorialManager.Instance.IsRunning)</li>
+<li class="add">{</li>
+<li class="add">    TutorialManager.Instance.Finish();</li>
+<li class="add">}</li>
+</ol></div>
+<ul class="notes"><li><span class="ln add">3–6 추가</span><span>튜토리얼이 아직 진행 중이면 끝난 것으로 처리한다. 크레딧이 끝나면 씬을 다시 불러오기 때문에 되돌리지 않아도 된다.</span></li></ul>
+</div>
+<div>
+<div class="code2"><div class="hd"><span class="file">CreditsSequence.cs</span><span class="fn">FrameHidden</span><span class="cause2">원인 ④ 같이 줄어든 비네트</span><span class="what">같은 파일이다. <span class="mono">FrameHidden</span>은 크레딧 동안 꺼 둘 화면 요소의 이름 목록이다.</span></div>
+<ol>
+<li><span class="kw">public static readonly string</span>[] FrameHidden =</li>
+<li>{</li>
+<li> <span class="st">"TitleScreen"</span>, <span class="st">"KeyHint_Tab"</span>, <span class="st">"KeyHint_Book"</span>, <span class="st">"KeyHint_Esc"</span>, <span class="st">"HoldToSkip"</span>, <span class="st">"DragLayer"</span>,</li>
+<li> <span class="st">"TutorialPrompt"</span>, <span class="st">"TutorialDim"</span>,</li>
+<li class="add"> <span class="st">"ScreenVignette"</span>, <span class="st">"ScreenGrain"</span>,</li>
+<li>};</li>
+</ol></div>
+<ul class="notes"><li><span class="ln add">5 추가</span><span>비네트와 화면 노이즈(Grain)를 추가했다. Frame과 같이 줄어들어 갈색 띠로 남던 그림이라서 크레딧 동안 끈다. 마지막 조리 화면에서는 Frame이 원래 크기로 돌아오기 때문에 다시 켠다.</span></li></ul>
+</div>
+<p class="mute" style="font-size:15.5px">원인 ①은 이름 카드를 움직이는 <span class="mono">SeekTo()</span>에서 화면을 어둡게 하던 코드를 지우고, <span class="mono">PlayEnding()</span>에서만 화면을 검게 하도록 옮겨서 해결했다.</p>
+</div></div></details><details class="fold"><summary><b>고치기 전과 후</b><span>비교 움짤과 확인 결과</span></summary><div class="fold-body">
+<div class="ba-block">
+<div class="ba-pair"><figure class="media-card"><img alt="재구성 이전: 40초에 화면이 검어져 뒤 장면이 잘린다" src="media/ramen/a_ba1_before.gif"/><span class="src">재구성 · <span class="tag-b">이전</span></span></figure><figure class="media-card"><img alt="재구성 이후: 쓰러지고 까마귀가 앉고 아이리스가 닫힌 뒤 검어진다" src="media/ramen/a_ba1_after.gif"/><span class="src">재구성 · <span class="tag-a">이후</span></span></figure></div>
+<h5>① 화면이 꺼지는 시점</h5>
+<p>아래 흰 선이 시간이다. 수정 전에는 40초 표시에서 화면이 통째로 꺼져서 쓰러지는 장면과 까마귀, 아이리스가 전부 잘렸다. 수정 후에는 손님이 카운터 뒤로 쓰러지고, 까마귀가 모자에 앉고, 아이리스가 다 닫힌 다음에 화면이 꺼진다.</p>
+</div>
+<div class="ba-block">
+<div class="ba-pair"><figure class="media-card"><img alt="재구성 이전: 아이리스가 까마귀 오른쪽 120칸 지점으로 닫힌다" src="media/ramen/a_ba2_before.gif"/><span class="src">재구성 · <span class="tag-b">이전</span></span></figure><figure class="media-card"><img alt="재구성 이후: 아이리스가 까마귀로 닫힌다" src="media/ramen/a_ba2_after.gif"/><span class="src">재구성 · <span class="tag-a">이후</span></span></figure></div>
+<h5>② 아이리스가 닫히는 위치</h5>
+<p>수정 전에는 까마귀 오른쪽 120칸 지점으로 닫혀서 까마귀가 어둠에 묻혔다. 수정 후에는 까마귀를 중심으로 닫힌다.</p>
+</div>
+<div class="ba-block">
+<div class="ba-pair"><figure class="media-card"><img alt="실제 화면 이전: 창 둘레에 갈색 띠" src="media/ramen/a_window.jpg"/><span class="src real">실제 화면 · <span class="tag-b">이전</span></span></figure><figure class="media-card"><img alt="재구성 이후: 창 바깥이 완전히 검다" src="media/ramen/a_ba3_after.jpg"/><span class="src">재구성 · <span class="tag-a">이후</span></span></figure></div>
+<h5>③ 창 둘레의 갈색 띠</h5>
+<p>크레딧 동안 비네트를 끄자 창 바깥이 전부 검정이 됐다. 수정 후 녹화에서 창 바깥을 전부 확인해서 검정이 아닌 픽셀이 0개인 것을 확인했다.</p>
+</div>
+<div class="two" style="margin-top:18px">
+<div class="stack-col" style="gap:12px">
+<p class="lead" style="font-size:17px">아이리스 중심도 다시 녹화해서 측정했다. 기대값은 화면 x = 1440이다.</p>
+<div class="tbl num"><table style="min-width:0">
+<thead><tr><th>프레임</th><th>아이리스 중심</th><th>지름</th></tr></thead>
+<tbody class="mono">
+<tr><td>618</td><td>1441, 532</td><td>458</td></tr>
+<tr><td>620</td><td>1440, 527</td><td>280</td></tr>
+<tr><td>622</td><td>1439, 527</td><td>134</td></tr>
+</tbody>
+</table></div>
+</div>
+<ul class="checks"><li><span class="ok">✓</span><span>창 바깥에 검정이 아닌 픽셀 0개</span></li><li><span class="ok">✓</span><span>손님이 쓰러지고 까마귀가 앉은 다음에 화면이 꺼짐</span></li><li><span class="ok">✓</span><span>마지막 라멘에 토핑까지 전부 담김</span></li><li><span class="ok">✓</span><span>크레딧이 꺼 둔 것만 되돌리는 리셋 메뉴를 만들어서, 확인하다가 다른 화면이 망가지지 않게 함</span></li></ul>
+</div></div></details><details class="fold"><summary><b>배운 것</b><span>다음에 다르게 할 것</span></summary><div class="fold-body">
+<div class="lessons"><div class="lesson has-media"><div class="lm"><img alt="재구성: 끝맺음을 무대가 쥔 뒤의 크레딧 흐름" src="media/ramen/a_ba1_after.gif"/></div><b>길이가 다른 두 흐름의 끝은 한쪽에서만</b><span>고정 길이(이름 카드, 노래)와 가변 길이(손님 연출)가 같이 돌고 있었는데, 고정된 쪽이 끝나는 시점을 쥐고 있었다. 게다가 화면을 끄는 코드가 두 군데에 있어서 한 번 고친 뒤에도 또 잘렸다. 앞으로 연출을 만들 때는 이 장면을 누가 끝낼지 하나로 정하고, 화면을 덮는 코드가 정말 한 곳에만 있는지 검색해서 확인하려고 한다.</span></div><div class="lesson has-media"><div class="anim lm"><div class="frame-demo"><div class="fr"><span>Frame</span><span class="crow2"></span><span class="ghost"></span></div><span class="leg">초록 = 그대로 넘김 · 빨강 = 한 번 더 변환</span></div></div><b>좌표를 넘길 때 먼저 확인할 좌표 공간</b><span>부모의 크기와 위치 변화는 자식 전체에 그대로 적용된다. 그래서 같은 부모 아래끼리는 좌표를 그대로 주고받고, 다른 부모로 넘길 때만 변환해야 한다. 이번에는 "화면 좌표로 바꿔야 한다"는 주석까지 달려 있었는데, 받는 쪽의 부모를 Hierarchy에서 한 번만 확인했어도 바로 알 수 있었을 것이다.</span></div><div class="lesson"><b>개발 키로 중간 진입할 때 남아 있는 이전 상태</b><span>크레딧으로 바로 가는 키를 만들었는데, 그 사이에 끝났어야 할 튜토리얼이 그대로 남아 있었다. 중간부터 시작하는 키를 만들 때는 정상적으로 그 지점까지 왔을 때의 상태를 맞춰 주는 코드도 같이 넣어야 한다는 걸 알게 됐다.</span></div><div class="lesson"><b>원인을 가리는 수정은 되돌리기</b><span>빈 그릇을 다른 그릇의 복사본으로 가리면 화면은 맞아 보여도 원인은 그대로 남는다. 재료를 거절하는 조건을 찾는 게 맞는 방향이었다.</span></div><div class="lesson has-media"><div class="lm"><img alt="그림: 창 경계 실측값" src="media/ramen/a_did2.png"/></div><b>세 번 틀리면 추측 대신 측정</b><span>480×270이라는 숫자 하나로 원인을 바로 찾았다. 측정하기 전에는 "어떤 그림이 이 크기일까"라는 질문 자체를 할 수 없었다. 그리고 값을 쟀으면 그 값이 어디에 해당하는지도 같이 확인해야 한다. 시도 2에서 960부터 보인 값을 창이라고 판단한 것이 그 실수였다.</span></div>
+</div></div></details></div></details></div>
+</article><article class="bug" data-spy="" data-top="ramen" id="bug-b">
+<div class="t"><h3><a class="h-no" href="#toc" title="목차로">3.4.2</a>커서 실종, 둘째 손님부터 조작 불가</h3><span class="kw"><span class="chip">Canvas Render Mode</span><span class="chip">OnEnable</span><span class="chip">싱글턴</span></span></div>
+<div class="ba"><figure><img alt="커서 실종, 둘째 손님부터 조작 불가 수정 전" loading="lazy" src="media/ramen/b_ba1_before.gif"/><figcaption class="b">수정 전</figcaption></figure><figure><img alt="커서 실종, 둘째 손님부터 조작 불가 수정 후" loading="lazy" src="media/ramen/b_ba1_after.gif"/><figcaption class="a">수정 후</figcaption></figure></div>
+<div class="steps"><div><i class="b">문제</i>재료통 위에서 커서가 사라지고, 시식 연출을 본 뒤에는 재료가 집히지 않았다.</div><div><i class="w">원인</i>Camera 모드 Canvas에 마우스 픽셀 좌표를 그대로 넣고 있었고, 커서 등록이 Awake에만 있었다.</div><div><i class="t2">해결</i>좌표 변환 네 곳을 CanvasPoint 하나로 모으고, 등록을 OnEnable로 옮겼다.</div></div>
+<div class="res"><span>→ 렌더 모드와 상관없이 동작, 연출 이후에도 정상 조작</span></div>
+<div class="folds"><details class="fold outer"><summary><b>자세히 보기</b><span>증상 · 시도 과정 · 원인 그림 · 코드 변경 · 고치기 전과 후 · 배운 것</span></summary><div class="fold-body"><details class="fold"><summary><b>증상</b><span>처음 본 화면</span></summary><div class="fold-body">
+<p class="lead" style="font-size:17px;margin-bottom:18px">조리 화면에서는 재료통 밖에서는 픽셀 화살표 커서를 쓰고, 재료통 위에 올라가거나 재료를 들면 시스템 커서를 끄고 젓가락·국자 그림(<span class="mono">CookingCursor</span>)을 마우스 위치에 직접 그린다. 버그는 이 그림 커서 쪽에서 생겼다.</p>
+<div class="sym-grid">
+<figure class="media-card"><img alt="실제 화면: 재료통 위에서 커서가 사라진 상태" src="media/ramen/b_cursor.jpg"/><span class="src real">실제 화면</span><figcaption><b><span class="num">①</span>재료통 위에서 사라지는 커서</b>튜토리얼에서 안내하는 재료통에 마우스를 올리는 순간 젓가락도, 화살표도 보이지 않았다. 마우스가 어디를 가리키는지 알 수 없어서 재료를 집을 수가 없었다.</figcaption></figure>
+<figure class="media-card"><img alt="실제 화면: 손님이 라멘을 먹는 시식 연출" src="media/ramen/eating.jpg"/><span class="src real">실제 화면</span><figcaption><b><span class="num">②</span>시식 연출 이후 집히지 않는 재료</b>첫 손님은 문제가 없었는데, 손님이 라멘을 먹는 이 연출이 한 번 지나가면 다음 손님부터 커서가 화살표에서 바뀌지 않고 재료통을 눌러도 반응이 없었다.</figcaption></figure>
+</div>
+<p class="mute" style="font-size:15.5px;margin-top:14px">처음에는 둘 다 커서 문제로 보여서 하나의 버그라고 생각했다. 실제로는 서로 다른 버그 두 개였다.</p></div></details><details class="fold"><summary><b>시도 과정</b><span>3번의 시도 · WHY / DID / RESULT</span></summary><div class="fold-body">
+<ol class="tries">
+<li class="fail"><details class="try"><summary><span class="try-n">1</span><b>튜토리얼 어두운 판에 커서가 가려졌다는 가설</b><span class="tag-x">그대로</span></summary><div class="try-body"><div class="try-media"><figure class="media-card"><img alt="그림: 그리기 순서 가설. 어두운 판 100, 커서 0에서 120으로 올림" src="media/ramen/b_try1.png"/><span class="src">그림</span></figure></div>
+<div class="row why"><span class="k">WHY</span><div class="v"><p>튜토리얼은 안내 중인 재료통만 밝게 두고 나머지를 반투명한 검은 판으로 덮는다. 이 판은 자체 Canvas를 가지고 sortingOrder 100으로 그려진다. 커서가 들어 있는 <span class="mono">DragLayer</span>는 따로 Canvas가 없어서 순서 0을 따르고 있었다. 마침 확인창이 같은 이유로 판 아래에 깔리는 버그도 있어서, 커서도 같은 문제라고 생각했다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>씬을 만드는 에디터 스크립트(<span class="mono">RamenLayoutBuilder</span>)에서 <span class="mono">DragLayer</span>에 Canvas를 추가하고, overrideSorting을 켜서 sortingOrder를 120으로 올렸다. 어두운 판(100)보다는 위, Tab 주문서(150)보다는 아래다. 커서 그림이 클릭을 가로채면 안 되기 때문에 GraphicRaycaster는 추가하지 않았다. 확인창 두 개도 팝업 순서로 올렸다.</p></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>확인창은 실제로 판 아래에 있었기 때문에 정상적으로 고쳐졌다. 하지만 커서는 여전히 사라졌다. 나중에 확인해 보니 커서는 판 아래가 아니라 화면 밖에 있었다. 그래서 순서를 아무리 올려도 보일 수가 없었다.</p></div></div></div></details>
+</li>
+<li class="fail"><details class="try"><summary><span class="try-n">2</span><b>수정 사항이 씬에 반영되지 않았다는 가설</b><span class="tag-x">그대로</span></summary><div class="try-body">
+<div class="row why"><span class="k">WHY</span><div class="v"><p>이 프로젝트는 UI를 손으로 배치하지 않고, 빌더를 실행해서 씬을 통째로 다시 만든다. 그래서 빌더 코드를 고쳐도 빌더를 다시 실행하기 전에는 씬이 바뀌지 않는다. 수정할 때 Play 중이라 빌더를 바로 실행하지 못했기 때문에, 아직 반영이 안 됐다고 생각했다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>가설은 그대로 두고 빌더를 다시 실행해서 씬에 반영했다. Console도 확인했지만 커서 관련 에러는 없었다. 화면 밖에 그려지는 커서는 에러를 남기지 않는다는 걸 그때는 몰랐다.</p></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>반영된 씬에서도 커서는 사라졌다. 거기에 둘째 손님부터 조작이 안 되는 증상까지 새로 보였다. 반영 문제가 아니라 가설 자체가 틀렸다는 뜻이었다.</p></div></div></div></details>
+</li>
+<li class="ok"><details class="try"><summary><span class="try-n">3</span><b>Console과 카메라 값 확인</b><span class="tag-o">원인 두 개</span></summary><div class="try-body"><div class="try-media"><figure class="media-card"><img alt="그림: 콘솔 경고 8번과 카메라 Size 5" src="media/ramen/b_try3.png"/><span class="src">그림 · 당시 값</span></figure></div>
+<div class="row why"><span class="k">WHY</span><div class="v"><p>같은 가설로 두 번 실패했고, 증상이 하나 더 늘었다. 새 증상은 그리기 순서로는 설명할 수 없었다. 그리기 순서는 보이는지 안 보이는지의 문제지, 클릭이 되는지 안 되는지의 문제가 아니기 때문이다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><ul><li>Console: 둘째 손님에서 재료통을 눌렀을 때 <span class="mono">[LiquidSlot] 씬에 커서가 없습니다.</span> 경고가 8번 쌓여 있었다. 재료통이 <span class="mono">CookingCursor.Instance</span>를 찾았는데 null이었다는 뜻이다. 커서 오브젝트는 씬에 있는데 등록이 풀려 있었다.</li><li>커서를 끄는 곳: 시식 연출은 화면을 비우기 위해 상단바, 재료통, 그릇, <span class="mono">DragLayer</span>를 껐다가 끝나면 다시 켠다. 커서는 <span class="mono">DragLayer</span>의 자식이라 같이 꺼졌다가 켜진다.</li><li>카메라: Main Camera가 직교(Orthographic) 카메라에 Size 5였다. 화면 세로가 월드 기준 10칸이라는 뜻이다. 며칠 전 화면 필터를 UI에도 적용하려고 Canvas를 Overlay에서 Camera 모드로 바꾼 게 생각났다. 그러면 마우스 픽셀 값을 그대로 넣는 코드는 전부 틀리게 된다. 검색해 보니 그런 코드가 네 군데 있었다.</li></ul><figure class="did-media"><img alt="재구성: 마우스 좌표를 그대로 쓰던 네 곳" src="media/ramen/b_did3.png"/><figcaption><span class="src">재구성</span>마우스 값을 그대로 쓰던 네 곳</figcaption></figure></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>원인이 두 개였다. 커서가 사라진 건 화면 밖 멀리 그려졌기 때문이고, 둘째 손님부터 조작이 안 된 건 <span class="mono">Instance</span> 등록이 풀린 채로 돌아오지 않았기 때문이었다. 하나는 처음부터, 하나는 시식 연출 이후부터 생겨서 하나의 버그처럼 이어져 보였다.</p></div></div></div></details>
+</li>
+</ol></div></details><details class="fold"><summary><b>원인 그림</b><span>그림으로 본 원인</span></summary><div class="fold-body">
+<div class="figs">
+<figure class="fig"><svg aria-label="Overlay에서는 화면 안에 있던 커서가 Camera 모드에서는 화면 밖 멀리 나간다" role="img" viewbox="0 0 520 240">
+<defs><marker id="ar2" markerheight="7" markerwidth="7" orient="auto" refx="9" refy="5" viewbox="0 0 10 10"><path class="f-bad" d="M0 0L10 5L0 10z"></path></marker></defs>
+<text class="t-mute" x="10" y="22">Overlay · 세로 540칸</text>
+<rect class="f-panel s-line2" height="124" rx="4" width="220" x="10" y="34"></rect>
+<circle class="f-lime" cx="120" cy="96" r="7"></circle>
+<text class="t-lime" text-anchor="middle" x="120" y="124">커서 (480, 300)</text>
+<text class="t-sm" x="10" y="186">마우스 좌표 = 월드 좌표</text>
+<text class="t-mute" x="290" y="22">Camera · 세로 10칸</text>
+<rect class="f-panel s-line2" height="64" rx="4" width="220" x="290" y="160"></rect>
+<text class="t-sm" text-anchor="middle" x="400" y="198">실제 화면 (10칸)</text>
+<line class="s-bad" marker-end="url(#ar2)" stroke-dasharray="4 4" x1="400" x2="400" y1="160" y2="40"></line>
+<circle class="f-bad" cx="400" cy="34" r="7"></circle>
+<text class="t-bad" x="414" y="70">y = 300칸</text>
+<text class="t-bad" x="414" y="92">화면 30개 위</text>
+</svg><figcaption><b>① Canvas 모드에 따라 달라지는 1칸의 크기</b>Overlay에서는 월드 1칸이 화면 1픽셀이라서 마우스 좌표를 그대로 넣어도 우연히 맞았다. Camera 모드에서는 카메라가 기준이라 화면 세로가 10칸밖에 안 된다. 마우스 y=300을 그대로 넣으면 화면 30개만큼 위로 올라가 버린다.</figcaption></figure>
+<figure class="fig"><svg aria-label="손님1, 시식 연출, 손님2로 이어지는 동안 Instance가 null로 남는 타임라인" role="img" viewbox="0 0 520 240">
+<line class="s-line2" x1="60" x2="510" y1="60" y2="60"></line>
+<circle class="f-lime" cx="100" cy="60" r="6"></circle><text class="t-sm" text-anchor="middle" x="100" y="40">손님 1</text>
+<rect class="f-panel s-warn" height="36" rx="6" width="220" x="160" y="42"></rect><text class="t-warn" text-anchor="middle" x="270" y="66">시식 연출 (끔 → 켬)</text>
+<circle class="f-bad" cx="450" cy="60" r="6"></circle><text class="t-sm" text-anchor="middle" x="450" y="40">손님 2</text>
+<text class="t-mute" x="6" y="122">이전</text>
+<text class="t-sm" text-anchor="middle" x="100" y="114">Awake</text><text class="t-lime" text-anchor="middle" x="100" y="134">등록</text>
+<text class="t-sm" text-anchor="middle" x="215" y="114">OnDisable</text><text class="t-warn" text-anchor="middle" x="215" y="134">해제</text>
+<text class="t-sm" text-anchor="middle" x="330" y="114">다시 켜짐</text><text class="t-bad" text-anchor="middle" x="330" y="134">Awake 안 불림</text>
+<text class="t-bad" text-anchor="middle" x="450" y="122">null</text>
+<line class="s-line2" stroke-dasharray="2 4" x1="6" x2="510" y1="156" y2="156"></line>
+<text class="t-mute" x="6" y="196">이후</text>
+<text class="t-sm" text-anchor="middle" x="100" y="188">OnEnable</text><text class="t-lime" text-anchor="middle" x="100" y="208">등록</text>
+<text class="t-sm" text-anchor="middle" x="215" y="188">OnDisable</text><text class="t-warn" text-anchor="middle" x="215" y="208">해제</text>
+<text class="t-sm" text-anchor="middle" x="330" y="188">OnEnable</text><text class="t-lime" text-anchor="middle" x="330" y="208">다시 등록</text>
+<text class="t-lime" text-anchor="middle" x="450" y="196">정상</text>
+</svg><figcaption><b>② 한 번뿐인 등록, 매번 일어나는 해제</b>시식 연출이 <span class="mono">DragLayer</span>를 끄면 커서의 <span class="mono">OnDisable()</span>이 등록을 지운다. 다시 켜질 때 등록을 해 줘야 하는데, 등록하는 <span class="mono">Awake()</span>는 오브젝트가 처음 생길 때 한 번만 호출된다.</figcaption></figure>
+</div>
+<div class="tbl center" style="margin-top:18px"><table style="min-width:0">
+<thead><tr><th></th><th>처음 켜짐</th><th>꺼짐</th><th>다시 켜짐</th><th>파괴</th></tr></thead>
+<tbody>
+<tr><td class="mono mute">Awake</td><td class="ok">●</td><td class="mute">–</td><td class="no">✕</td><td class="mute">–</td></tr>
+<tr><td class="mono mute">OnEnable</td><td class="ok">●</td><td class="mute">–</td><td class="ok">●</td><td class="mute">–</td></tr>
+<tr><td class="mono mute">OnDisable</td><td class="mute">–</td><td class="tri">●</td><td class="mute">–</td><td class="tri">●</td></tr>
+<tr><td class="mono mute">OnDestroy</td><td class="mute">–</td><td class="mute">–</td><td class="mute">–</td><td class="tri">●</td></tr>
+</tbody>
+</table></div></div></details><details class="fold"><summary><b>코드 변경</b><span>바뀐 줄과 설명</span></summary><div class="fold-body">
+<div class="stack-col" style="gap:26px">
+<div>
+<div class="code2"><div class="hd"><span class="file">CookingCursor.cs</span><span class="fn">Follow()</span><span class="cause2">원인 ① 픽셀 좌표를 그대로 넣음</span><span class="what">조리 화면의 그림 커서를 마우스 위치에 그리는 파일이다. <span class="mono">Follow()</span>는 매 프레임 커서를 마우스 위치로 옮긴다.</span></div>
+<ol>
+<li><span class="kw">float</span> scale = canvas != <span class="kw">null</span> ? canvas.scaleFactor : 1f;</li>
+<li>Vector2 screen = Mouse.current.position.ReadValue();</li>
+<li>Vector2 offset = HotspotOffset() + <span class="kw">new</span> Vector2(0f, -dip);</li>
+<li class="del">rect.position = screen + offset * scale;</li>
+<li class="add">rect.position = CanvasPoint.ToWorld(rect.parent <span class="kw">as</span> RectTransform, screen + offset * scale);</li>
+</ol></div>
+<ul class="notes"><li><span class="ln">2</span><span><span class="mono">screen</span>은 마우스 위치로, 화면 왼쪽 아래가 (0, 0)인 픽셀 단위다.</span></li><li><span class="ln">3</span><span><span class="mono">offset</span>은 젓가락 끝이 마우스 끝에 오도록 그림 위치를 살짝 조정하는 값이다.</span></li><li><span class="ln del">4 지움</span><span>픽셀 좌표를 월드 좌표(<span class="mono">position</span>)에 그대로 넣었다. Overlay에서는 맞았지만 Camera 모드에서는 화면 밖으로 나간다.</span></li><li><span class="ln add">5 추가</span><span>새로 만든 <span class="mono">CanvasPoint.ToWorld()</span>로 월드 좌표로 바꿔서 넣는다.</span></li></ul>
+</div>
+<div>
+<div class="code2"><div class="hd"><span class="file">CanvasPoint.cs</span><span class="fn">새 파일</span><span class="cause2">원인 ① 같은 계산이 네 곳에</span><span class="what">화면 좌표를 UI 월드 좌표로 바꾸는 계산을 한곳에 모은 파일이다.</span></div>
+<ol>
+<li class="add"><span class="kw">public static</span> Vector3 ToWorld(RectTransform area, Vector2 screen)</li>
+<li class="add">{</li>
+<li class="add"> <span class="kw">if</span> (area == <span class="kw">null</span>) <span class="kw">return</span> screen;</li>
+<li class="add">    Vector3 world;</li>
+<li class="add"> <span class="kw">return</span> RectTransformUtility.ScreenPointToWorldPointInRectangle(area, screen, CameraFor(area), <span class="kw">out</span> world)</li>
+<li class="add">        ? world : (Vector3)screen;</li>
+<li class="add">}</li>
+<li class="add"><span class="kw">public static</span> Camera CameraFor(RectTransform area)</li>
+<li class="add">{</li>
+<li class="add">    Canvas canvas = area != <span class="kw">null</span> ? area.GetComponentInParent&lt;Canvas&gt;() : <span class="kw">null</span>;</li>
+<li class="add"> <span class="kw">if</span> (canvas == <span class="kw">null</span>) <span class="kw">return null</span>;</li>
+<li class="add">    canvas = canvas.rootCanvas;</li>
+<li class="add"> <span class="kw">return</span> canvas.renderMode == RenderMode.ScreenSpaceOverlay ? <span class="kw">null</span> : canvas.worldCamera;</li>
+<li class="add">}</li>
+</ol></div>
+<ul class="notes"><li><span class="ln add">1–7</span><span>유니티 내장 함수로 화면 좌표를 UI 평면 위의 좌표로 바꾼다. 어떤 카메라로 보고 있는지를 같이 넘기는 게 중요하다.</span></li><li><span class="ln add">8–14</span><span>Overlay면 카메라 없이(null), Camera 모드면 해당 Canvas의 카메라를 돌려준다. 나중에 렌더 모드를 바꿔도 이 함수만 맞으면 된다.</span></li></ul>
+</div>
+<div>
+<div class="code2"><div class="hd"><span class="file">IngredientSlot.cs · ClickRipple.cs · OrderNoteUI.cs</span><span class="fn">MoveGhost() · Update() · PointerOverPaper()</span><span class="cause2">원인 ① 나머지 세 곳</span><span class="what">드래그할 때 따라오는 재료 그림, 클릭한 자리에 퍼지는 링, Tab 주문서 위에 마우스가 있는지 확인하는 판정이다. 셋 다 같은 이유로 틀려 있었다.</span></div>
+<ol>
+<li><span class="cm">// IngredientSlot.cs  MoveGhost() 를 새로 만들어 Update·CreateGhost·OnDrag 가 같이 부른다</span></li>
+<li class="del">ghost.transform.position = eventData.position;</li>
+<li class="add">ghost.transform.position = CanvasPoint.ToWorld(ghost.transform.parent <span class="kw">as</span> RectTransform, screen);</li>
+<li><span class="cm">// ClickRipple.cs  Update()</span></li>
+<li class="del">rect.position = Mouse.current.position.ReadValue();</li>
+<li class="add">rect.position = CanvasPoint.ToWorld(rect.parent <span class="kw">as</span> RectTransform, Mouse.current.position.ReadValue());</li>
+<li><span class="cm">// OrderNoteUI.cs  PointerOverPaper()</span></li>
+<li class="del">    panel, Mouse.current.position.ReadValue(), <span class="kw">null</span>);</li>
+<li class="add">    panel, Mouse.current.position.ReadValue(), CanvasPoint.CameraFor(panel));</li>
+</ol></div>
+<ul class="notes"><li><span class="ln add">2 → 3</span><span>드래그 그림. 마우스 값을 그대로 넣던 코드를 <span class="mono">ToWorld()</span>로 바꿨다.</span></li><li><span class="ln add">5 → 6</span><span>클릭 링도 같은 방식으로 바꿨다.</span></li><li><span class="ln add">8 → 9</span><span>판정 함수에 카메라 자리를 null로 넘기고 있었다. <span class="mono">CameraFor()</span>로 맞는 카메라를 넘기게 했다.</span></li></ul>
+</div>
+<div>
+<div class="code2"><div class="hd"><span class="file">CookingCursor.cs</span><span class="fn">Awake() · OnEnable() · OnDisable()</span><span class="cause2">원인 ② 등록과 해제의 짝이 어긋남</span><span class="what">같은 파일이다. <span class="mono">Instance</span>는 재료통들이 현재 커서를 찾을 때 쓰는 전역 참조(싱글턴)다.</span></div>
+<ol>
+<li><span class="kw">private void</span> Awake()</li>
+<li>{</li>
+<li class="del">    Instance = <span class="kw">this</span>;</li>
+<li>    rect = GetComponent&lt;RectTransform&gt;();</li>
+<li>    image = GetComponent&lt;Image&gt;();</li>
+<li>    canvas = GetComponentInParent&lt;Canvas&gt;();</li>
+<li class="add"> <span class="kw">if</span> (canvas != <span class="kw">null</span>) canvas = canvas.rootCanvas;</li>
+<li>    baseSize = rect.sizeDelta;</li>
+<li>}</li>
+<li><span class="kw">private void</span> OnEnable()</li>
+<li>{</li>
+<li class="add">    Instance = <span class="kw">this</span>;</li>
+<li>    arrowMode = AnyUiOpen() || !ToolVisible();</li>
+<li>    ApplyCursorMode();</li>
+<li>}</li>
+<li><span class="kw">private void</span> OnDisable()</li>
+<li>{</li>
+<li>    Cursor.SetCursor(<span class="kw">null</span>, Vector2.zero, CursorMode.Auto);</li>
+<li>    Cursor.visible = <span class="kw">true</span>;</li>
+<li> <span class="kw">if</span> (Instance == <span class="kw">this</span>) Instance = <span class="kw">null</span>;</li>
+<li>}</li>
+</ol></div>
+<ul class="notes"><li><span class="ln del">3 지움</span><span>오브젝트가 처음 생길 때 한 번만 등록하고 있었다.</span></li><li><span class="ln add">7 추가</span><span>시도 1에서 <span class="mono">DragLayer</span>에 Canvas를 추가하면서 가장 가까운 Canvas가 바뀌어서, 배율은 루트 Canvas에서 읽게 했다.</span></li><li><span class="ln add">12 추가</span><span>켜질 때마다 다시 등록한다. 시식 연출이 껐다 켜도 등록이 돌아온다.</span></li><li><span class="ln">20</span><span>꺼질 때 등록을 지운다. 이제 <span class="mono">OnEnable()</span>과 <span class="mono">OnDisable()</span>이 짝이 맞는다.</span></li></ul>
+</div>
+</div></div></details><details class="fold"><summary><b>고치기 전과 후</b><span>비교 움짤과 확인 결과</span></summary><div class="fold-body">
+<div class="ba-block">
+<div class="ba-pair"><figure class="media-card"><img alt="재구성 이전: 재료통 위로 가면 커서가 사라진다" src="media/ramen/b_ba1_before.gif"/><span class="src">재구성 · <span class="tag-b">이전</span></span></figure><figure class="media-card"><img alt="재구성 이후: 재료통 위에서 젓가락 커서가 마우스를 따라온다" src="media/ramen/b_ba1_after.gif"/><span class="src">재구성 · <span class="tag-a">이후</span></span></figure></div>
+<h5>① 마우스를 따라오는 커서</h5>
+<p>실제 조리 화면 위에 게임에서 쓴 커서 그림을 올려서 다시 만든 움짤이다. 수정 전에는 재료통에 들어가는 순간 시스템 커서가 꺼지고, 젓가락은 화면 위 멀리 그려져서 아무것도 보이지 않는다. 수정 후에는 화살표가 젓가락으로 바뀌어 마우스를 따라오고, 재료를 끌어서 옮기는 것까지 보인다.</p>
+</div>
+<div class="ba-block">
+<div class="ba-pair"><figure class="media-card"><img alt="재구성 이전: 시식 연출 뒤 둘째 손님에서 재료통을 눌러도 반응이 없다" src="media/ramen/b_ba2_before.gif"/><span class="src">재구성 · <span class="tag-b">이전</span></span></figure><figure class="media-card"><img alt="재구성 이후: 시식 연출 뒤에도 재료가 집힌다" src="media/ramen/b_ba2_after.gif"/><span class="src">재구성 · <span class="tag-a">이후</span></span></figure></div>
+<h5>② 연출 이후의 조작</h5>
+<p>손님 1 → 시식 연출 → 손님 2 순서다. 수정 전에는 연출이 <span class="mono">DragLayer</span>를 껐다 켠 뒤 <span class="mono">Instance</span>가 null로 남아서, 둘째 손님에서는 눌러도 아무 반응이 없고 Console 경고만 쌓인다. 수정 후에는 다시 켜질 때 <span class="mono">OnEnable()</span>이 등록해서 정상적으로 재료가 집힌다.</p>
+</div>
+<div class="two" style="margin-top:18px">
+<ul class="checks"><li><span class="ok">✓</span><span>커서, 드래그 그림, 클릭 링, Tab 주문서 네 곳이 <span class="mono">CanvasPoint</span> 하나를 거치게 됨</span></li><li><span class="ok">✓</span><span>렌더 모드를 Overlay로 되돌려도 같은 코드로 동작</span></li><li><span class="ok">✓</span><span>시식 연출 이후 둘째 손님부터도 재료가 집힘</span></li><li><span class="ok">✓</span><span>이후로 커서가 사라지는 문제는 다시 생기지 않음</span></li></ul>
+<figure class="media-card"><img alt="실제 화면: 고친 뒤 조리 플레이" src="media/ramen/cook.gif" style="aspect-ratio:16/9;object-fit:cover"/><span class="src real">실제 화면 · 고친 뒤</span></figure>
+</div></div></details><details class="fold"><summary><b>배운 것</b><span>다음에 다르게 할 것</span></summary><div class="fold-body">
+<div class="lessons"><div class="lesson has-media"><div class="lm"><img alt="재구성: 픽셀 좌표를 그대로 넣어 커서가 사라지는 모습" src="media/ramen/b_ba1_before.gif"/></div><b>서로 다른 단위인 화면 좌표와 월드 좌표</b><span>마우스 위치는 화면 픽셀 단위이고, <span class="mono">RectTransform.position</span>은 월드 좌표다. Overlay에서만 두 값이 우연히 같다. 렌더 모드를 바꾼 건 화면 필터 때문이라 커서와는 상관없는 작업이었는데, 그 우연에 기대고 있던 코드가 전부 깨졌다. 두 좌표 사이는 <span class="mono">RectTransformUtility</span>처럼 카메라를 받는 함수로 변환해야 렌더 모드가 바뀌어도 문제가 없다.</span></div><div class="lesson"><b>여러 곳에 있는 같은 계산은 하나로</b><span>렌더 모드 하나를 바꿨는데 네 곳이 한꺼번에 깨졌다. 함수 하나로 모여 있었다면 한 곳만 고치면 됐을 것이다. 같은 계산을 두 번째로 쓰게 되면 함수로 빼 두려고 한다.</span></div><div class="lesson has-media"><div class="anim lm">
+<div class="lc">
+<span></span><span class="h">DragLayer</span><span class="h" style="grid-column:span 3">Instance</span>
+<span class="alabel b">이전</span><span class="v"><span class="on k1">켜짐</span><span class="off k2">꺼짐</span><span class="on k3">다시 켜짐</span></span><span class="v" style="grid-column:span 3"><span class="on k1">this · 정상</span><span class="off k2">null · 해제됨</span><span class="off k3">null · 그대로 (Awake 안 불림)</span></span>
+<span class="alabel g">이후</span><span class="v"><span class="on k1">켜짐</span><span class="off k2">꺼짐</span><span class="on k3">다시 켜짐</span></span><span class="v" style="grid-column:span 3"><span class="on k1">this · 정상</span><span class="off k2">null · 해제됨</span><span class="on k3">this · OnEnable이 다시 등록</span></span>
+</div>
+</div><b>등록과 해제는 같은 짝 안에</b><span><span class="mono">Awake</span> ↔ <span class="mono">OnDestroy</span>, <span class="mono">OnEnable</span> ↔ <span class="mono">OnDisable</span>. 짝이 어긋나면 위처럼 껐다 켜는 순간 등록이 사라진다. 껐다 켜질 수 있는 오브젝트의 싱글턴 등록이나 이벤트 구독은 <span class="mono">OnEnable</span>/<span class="mono">OnDisable</span>에 두는 게 맞다.</span></div><div class="lesson"><b>부모가 꺼질 때 같이 불리는 자식의 OnDisable</b><span>커서 스크립트는 직접 꺼진 적이 없었다. 부모인 <span class="mono">DragLayer</span>가 꺼졌을 뿐이다. 오브젝트를 끄는 코드를 짤 때는 그 아래에 무엇이 붙어 있는지도 같이 확인해야 한다.</span></div><div class="lesson has-media"><div class="lm"><img alt="그림: 콘솔 경고와 카메라 값" src="media/ramen/b_try3.png"/></div><b>모든 증상을 설명하는 가설인지 먼저 확인</b><span>어두운 판에 가려졌다는 가설은 바로 옆에서 실제로 같은 버그가 있어서 더 믿게 됐다. 하지만 그 가설로는 둘째 손님부터 조작이 안 되는 증상을 설명할 수 없었다. 그걸 먼저 따져 봤다면 더 빨리 찾았을 것이다. 이제 화면 버그가 생기면 Console과 Inspector 값부터 확인한다.</span></div>
+</div></div></details></div></details></div>
+</article><article class="bug" data-spy="" data-top="ramen" id="bug-c">
+<div class="t"><h3><a class="h-no" href="#toc" title="목차로">3.4.3</a>한 번의 클릭, 두 번의 처리</h3><span class="kw"><span class="chip">Input System</span><span class="chip">코루틴</span><span class="chip">이벤트 vs 폴링</span></span></div>
+<div class="ba"><figure><img alt="한 번의 클릭, 두 번의 처리 수정 전" loading="lazy" src="media/ramen/c_ba1_before.gif"/><figcaption class="b">수정 전</figcaption></figure><figure><img alt="한 번의 클릭, 두 번의 처리 수정 후" loading="lazy" src="media/ramen/c_ba1_after.gif"/><figcaption class="a">수정 후</figcaption></figure></div>
+<div class="steps"><div><i class="b">문제</i>내레이션 둘째 줄부터 타자기 효과가 사라졌고, ▶ 버튼을 누르면 결과창이 뜨지 않았다.</div><div><i class="w">원인</i>wasPressedThisFrame은 그 프레임 내내 true인데, 같은 프레임에 두 곳에서 읽고 있었다.</div><div><i class="t2">해결</i>기다림이 끝날 때도 한 프레임 쉬게 하고, 한 입력은 한 곳에서만 처리하게 정리했다.</div></div>
+<div class="res"><span>→ 모든 줄 타자기 정상, ▶ 버튼은 원인과 수정안 정리</span></div>
+<div class="folds"><details class="fold outer"><summary><b>자세히 보기</b><span>증상 · 시도 과정 · 원인 그림 · 코드 변경 · 고치기 전과 후 · 배운 것</span></summary><div class="fold-body"><details class="fold"><summary><b>증상</b><span>처음 본 화면</span></summary><div class="fold-body">
+<div class="sym-grid">
+<figure class="media-card"><img alt="실제 화면: 내레이션이 한꺼번에 찍힌 화면" src="media/ramen/c_typewriter.jpg"/><span class="src real">실제 화면</span><figcaption><b><span class="num">①</span>타자기 없이 한 번에 출력되는 다음 줄</b>스토리 모드를 고르면 검은 화면에 내레이션이 한 줄씩 나온다. 그때는 대사가 아직 없어서 "냥냥." 같은 테스트용 문장을 넣어 뒀다. 첫 줄은 한 글자씩 출력되는데, 클릭해서 넘기면 둘째 줄부터는 한 번에 다 나왔다.</figcaption></figure>
+<figure class="media-card"><img alt="실제 화면: 손님 소감 뒤 ▶를 누르자 결과창 없이 조리 화면으로 넘어가는 녹화" src="media/ramen/c_bug.gif"/><span class="src">실제 화면 · 제출 빌드</span><figcaption><b><span class="num">②</span>▶ 버튼을 누르면 뜨지 않는 결과창</b>제출한 빌드를 다시 플레이하면서 녹화한 영상이다. 손님 소감이 다 나오고 말풍선 아래에 ▶ 버튼이 뜨는데, 이걸 누르면 결과창 없이 주문 화면이 내려가고 손님 없는 조리 화면만 남는다. 다음 손님도 오지 않는다. 빈 곳을 누르거나 Space를 누르면 정상적으로 동작한다.</figcaption></figure>
+</div>
+<p class="mute" style="font-size:15.5px;margin-top:14px">두 문제 모두 한 번 눌렀는데 한 단계가 더 넘어가는 형태였다. 원인도 같은 값 하나에서 나왔다.</p></div></details><details class="fold"><summary><b>시도 과정</b><span>4번의 시도 · WHY / DID / RESULT</span></summary><div class="fold-body">
+<ol class="tries">
+<li class="fail"><details class="try"><summary><span class="try-n">1</span><b>타자기: 들어갈 때만 쉬던 한 프레임</b><span class="tag-x">반쪽</span></summary><div class="try-body">
+<div class="row why"><span class="k">WHY</span><div class="v"><p>내레이션을 처음 만들 때, 줄이 출력되는 도중에 눌러서 한 번에 보이게 하면 그 입력이 다음 줄로 넘어가는 입력으로도 읽힐 것 같았다. 그래서 줄 끝에서 입력을 기다리기 전에 한 프레임 쉬도록 만들어 뒀다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>내레이션(<span class="mono">OpeningNarration</span>)은 코루틴으로 동작하고, 줄마다 두 단계를 반복한다.</p><ul><li>타자기 루프: 매 프레임 글자를 하나씩 늘려서 출력한다. 루프 맨 앞의 <span class="mono">if (Pressed()) break;</span>가 건너뛰기 검사다.</li><li><span class="mono">WaitForPress()</span>: 줄 끝에 ▼를 깜빡이면서 입력을 기다린다. 여기 들어갈 때 <span class="mono">yield return null</span>로 한 프레임 쉰다.</li></ul><p><span class="mono">Pressed()</span>는 Input System의 <span class="mono">wasPressedThisFrame</span>을 확인한다.</p><figure class="did-media"><img alt="그림: 처음 짠 흐름. 쉬는 자리가 들어가는 쪽에만 있다" src="media/ramen/c_did1.png"/><figcaption><span class="src">그림</span>처음 만든 흐름. 쉬는 부분이 들어가는 쪽에만 있었다.</figcaption></figure></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>실제로 돌려 보니 넘긴 줄은 전부 한 번에 출력됐다. 들어갈 때 쉬는 건 출력 도중에 누른 입력만 막을 수 있었다. 기다림이 끝나고 다음 줄로 넘어가는 순간은 아무것도 막지 못하고 있었다.</p></div></div></div></details>
+</li>
+<li class="ok"><details class="try"><summary><span class="try-n">2</span><b>타자기: 나갈 때도 한 프레임 쉬기</b><span class="tag-o">해결 ①</span></summary><div class="try-body"><div class="try-media"><figure class="media-card"><img alt="그림: 프레임 N에서 클릭이 대기 종료와 다음 줄 건너뛰기에 둘 다 쓰인다" src="media/ramen/c_try1.png"/><span class="src">그림</span></figure></div>
+<div class="row why"><span class="k">WHY</span><div class="v"><p>막아 둔 코드가 있는데도 한 번에 출력된다면, 같은 클릭이 나가는 쪽에서 한 번 더 읽히고 있다고 판단했다. 그래서 클릭한 프레임 안에서 어떤 순서로 코드가 실행되는지 따라가 봤다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><ul><li>프레임 N에 클릭하면 <span class="mono">wasPressedThisFrame</span>이 true가 된다.</li><li><span class="mono">WaitForPress()</span>의 <span class="mono">while (!Pressed())</span>가 끝난다.</li><li>함수 끝에 yield가 없어서 같은 프레임에 바로 다음 줄 루프가 시작된다.</li><li>루프 첫 검사인 <span class="mono">if (Pressed())</span>도 아직 프레임 N이라 true가 되고, 바로 break돼서 줄 전체가 출력된다.</li></ul><p>그래서 <span class="mono">WaitForPress()</span> 끝에도 <span class="mono">yield return null</span>을 넣었다. 이제 다음 줄은 프레임 N+1부터 시작되고, 그때는 false다. 같은 이유로 내레이션이 시작될 때도 한 프레임 쉬게 했다.</p></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>넘긴 줄도 한 글자씩 출력됐다. 출력 중에 누르면 그 줄만 마저 나오고, 한 번 더 눌러야 다음 줄로 넘어간다.</p></div></div></div></details>
+</li>
+<li class="fail"><details class="try"><summary><span class="try-n">3</span><b>▶ 버튼을 의심했다가 제외한 이전 버그</b><span class="tag-x">그땐 아님</span></summary><div class="try-body"><div class="try-media"><figure class="media-card"><img alt="실제 화면: 시식 연출. 이때는 말풍선 버튼이 꺼져 있었다" src="media/ramen/eating.jpg"/><span class="src real">실제 화면 · 시식 연출</span></figure></div>
+<div class="row why"><span class="k">WHY</span><div class="v"><p>그 전에 시식 연출 중에 클릭을 한 번 하면 손님이 소감도 없이 사라지는 버그가 있었다. 말풍선 아래 ▶ 버튼은 원래 주문 대사를 넘기다가 마지막에 주문 화면을 닫는 버튼이라, 이 버튼이 시식 중에도 클릭을 받는다고 의심했다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>버튼에 연결된 <span class="mono">OrderScreenUI.Advance()</span>를 확인했다. 남은 대사가 있으면 다음 대사로, 없으면 <span class="mono">Close()</span>를 호출한다. 그리고 시식 연출이 시작될 때 버튼 상태를 확인해 보니 꺼져 있어서 클릭을 받을 수 없는 상태였다. 실제 원인은 건너뛰기였다. 클릭 한 번에 연출 전체가 끝나 버리고 있었다.</p></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>건너뛰기를 연출 전체를 끝내는 방식에서 마지막 장면(소감)으로 넘어가는 방식으로 바꿔서 해결했다. 그때는 버튼이 꺼져 있었기 때문에 판단이 맞았다. 문제는 나중에 이 버튼을 다시 켜게 되면서 생겼다.</p></div></div></div></details>
+</li>
+<li class="ok"><details class="try"><summary><span class="try-n">4</span><b>▶ 버튼: 제출 빌드 로그 추적</b><span class="tag-o">원인 ②</span></summary><div class="try-body">
+<div class="row why"><span class="k">WHY</span><div class="v"><p>제출한 빌드를 다시 플레이하다가 결과창이 뜨지 않는 걸 발견했다. 화면만으로는 어디서 멈췄는지 알 수 없어서, 빌드가 남기는 로그(Player.log)를 확인했다.</p></div></div>
+<div class="row did"><span class="k">DID</span><div class="v"><p>로그에는 제출 → 채점 100% → 정산까지는 기록돼 있었는데, 그다음에 와야 할 "서빙 완료 1/5"가 없었다. 연출이 끝나지 않았다는 뜻이라서 거기서부터 거꾸로 따라갔다.</p><ul><li>소감 뒤에 뜨는 ▶ 버튼은 새로 만든 버튼이 아니라 주문 대사용 버튼을 다시 켠 것이었다. onClick에는 여전히 <span class="mono">Advance()</span>가 연결돼 있어서, 마지막 대사로 처리되고 <span class="mono">Close()</span>까지 실행됐다.</li><li>같은 클릭을 같은 프레임에 시식 연출의 다음 입력 대기도 읽고 있었다.</li><li><span class="mono">Close()</span>는 주문 화면을 내리고 그 오브젝트를 끄는데, 시식 연출 컴포넌트가 바로 그 오브젝트에 붙어 있었다. 오브젝트가 꺼지면 거기서 돌던 코루틴도 전부 멈춘다. 연출이 끝났다는 신호를 보내지 못해서 결과창이 열리지 않았다.</li></ul><figure class="did-media"><img alt="재구성: 제출 빌드 로그. 서빙 완료 줄이 없다" src="media/ramen/c_did4.png"/><figcaption><span class="src">재구성</span>제출 빌드 로그. 있어야 할 "서빙 완료"가 없다.</figcaption></figure></div></div>
+<div class="row res"><span class="k">RESULT</span><div class="v"><p>이 ▶ 버튼은 손님 반응이 나올 때 무엇을 눌러야 하는지 안 보인다는 문제를 고치면서 다시 띄운 것이었다. 그때 버튼에 주문 화면을 닫는 기능이 이미 연결돼 있다는 걸 확인하지 않았다. 예전에 버튼이 꺼져 있어서 원인이 아니라고 제외했던 경로가 다시 열린 것이다. 빈 곳 클릭이나 Space는 버튼을 거치지 않아서 정상적으로 동작했다.</p></div></div></div></details>
+</li>
+</ol></div></details><details class="fold"><summary><b>원인 그림</b><span>그림으로 본 원인</span></summary><div class="fold-body">
+<div class="figs">
+<figure class="fig"><svg aria-label="프레임 N에서 클릭이 대기 종료와 다음 줄 건너뛰기 둘 다에 쓰이는 타임라인" role="img" viewbox="0 0 520 220">
+<rect class="f-hi" height="204" rx="6" width="204" x="104" y="8"></rect>
+<text class="t-warn" text-anchor="middle" x="206" y="30">프레임 N · 클릭</text>
+<text class="t-mute" text-anchor="middle" x="414" y="30">프레임 N+1</text>
+<text class="t-mute" x="6" y="66">입력</text>
+<text class="t-sm" text-anchor="middle" x="206" y="66">눌림 = true</text>
+<text class="t-mute" text-anchor="middle" x="414" y="66">눌림 = false</text>
+<text class="t-mute" x="6" y="112">이전</text>
+<text class="t-sm" text-anchor="middle" x="206" y="104">대기 끝 → 다음 줄 시작</text>
+<text class="t-bad" text-anchor="middle" x="206" y="126">눌림 true → 통째로</text>
+<text class="t-mute" x="6" y="176">이후</text>
+<text class="t-sm" text-anchor="middle" x="206" y="176">대기 끝 → 한 프레임 쉼</text>
+<text class="t-sm" text-anchor="middle" x="414" y="166">다음 줄 시작</text>
+<text class="t-lime" text-anchor="middle" x="414" y="188">눌림 false → 한 글자씩</text>
+</svg><figcaption><b>① 같은 프레임 안에서 두 번 읽힌 클릭</b><span class="mono">wasPressedThisFrame</span>은 누른 프레임 동안 계속 true다. 기다림이 끝나고 다음 기다림이 같은 프레임에 시작되면 같은 클릭을 한 번 더 읽게 된다.</figcaption></figure>
+<figure class="fig"><svg aria-label="한 번의 클릭이 버튼 onClick과 대기 코루틴 두 경로로 갈라지는 그림" role="img" viewbox="0 0 520 220">
+<circle class="f-panel s-warn" cx="56" cy="110" r="34"></circle>
+<text class="t-warn" text-anchor="middle" x="56" y="106">▶ 클릭</text>
+<text class="t-mute" text-anchor="middle" x="56" y="126">1번</text>
+<line class="s-mute" x1="90" x2="160" y1="96" y2="56"></line>
+<line class="s-mute" x1="90" x2="160" y1="124" y2="164"></line>
+<rect class="f-panel s-line2" height="52" rx="8" width="196" x="160" y="30"></rect>
+<text class="t-sm" text-anchor="middle" x="258" y="52">버튼 이벤트 onClick</text>
+<text class="t-mute" text-anchor="middle" x="258" y="72">주문 화면 닫기</text>
+<rect class="f-panel s-bad" height="52" rx="8" width="142" x="372" y="30"></rect>
+<text class="t-bad" text-anchor="middle" x="443" y="61">조리 화면으로</text>
+<rect class="f-panel s-line2" height="52" rx="8" width="196" x="160" y="138"></rect>
+<text class="t-sm" text-anchor="middle" x="258" y="160">매 프레임 검사</text>
+<text class="t-mute" text-anchor="middle" x="258" y="180">다음 단계로</text>
+<rect class="f-panel s-lime" height="52" rx="8" width="142" x="372" y="138"></rect>
+<text class="t-lime" text-anchor="middle" x="443" y="169">따봉 → 결과창</text>
+<text class="t-bad" text-anchor="middle" x="258" y="116">두 흐름이 엇갈린다</text>
+</svg><figcaption><b>② 같은 클릭을 나눠 받은 이벤트와 폴링</b>버튼 이벤트(onClick)와 매 프레임 입력 검사가 같은 클릭에 각각 반응했다. 한쪽은 주문 화면을 닫고, 다른 쪽은 결과창으로 넘어가려고 했다. 닫는 쪽이 연출이 붙은 오브젝트까지 꺼 버려서 결과창 쪽 흐름이 멈췄다.</figcaption></figure>
+</div></div></details><details class="fold"><summary><b>코드 변경</b><span>바뀐 줄과 설명</span></summary><div class="fold-body">
+<div class="stack-col" style="gap:26px">
+<div>
+<div class="code2"><div class="hd"><span class="file">OpeningNarration.cs</span><span class="fn">WaitForPress()</span><span class="cause2">원인 ① 기다림이 끝난 프레임에 클릭을 또 읽음</span><span class="what">게임 시작 전에 검은 화면에 내레이션을 한 줄씩 출력하는 파일이다. <span class="mono">WaitForPress()</span>는 한 줄을 다 출력한 뒤 입력을 기다리는 코루틴이다.</span></div>
+<ol>
+<li><span class="kw">yield return null</span>;</li>
+<li><span class="kw">float</span> t = 0f;</li>
+<li><span class="kw">while</span> (!Pressed())</li>
+<li>{</li>
+<li>    t += Time.unscaledDeltaTime;</li>
+<li> <span class="kw">if</span> (prompt != <span class="kw">null</span>) prompt.enabled = Mathf.Repeat(t, blinkSeconds) &lt; blinkSeconds * 0.5f;</li>
+<li> <span class="kw">yield return null</span>;</li>
+<li>}</li>
+<li><span class="kw">if</span> (prompt != <span class="kw">null</span>) prompt.enabled = <span class="kw">false</span>;</li>
+<li>Sfx.Play(<span class="st">"sfx_flow_next"</span>, 0.5f);</li>
+<li class="add"><span class="kw">yield return null</span>;</li>
+</ol></div>
+<ul class="notes"><li><span class="ln">1</span><span>들어갈 때 한 프레임 쉬는 코드로, 처음부터 있던 줄이다.</span></li><li><span class="ln">3–8</span><span>입력이 들어올 때까지 매 프레임 확인하면서 ▼를 깜빡인다.</span></li><li><span class="ln add">11 추가</span><span>기다림이 끝날 때도 한 프레임 쉰다. 이 줄이 없으면 같은 프레임에 다음 줄 타자기가 시작돼서, 방금 누른 클릭을 건너뛰기로 한 번 더 읽는다.</span></li></ul>
+</div>
+<div>
+<div class="code2"><div class="hd"><span class="file">OrderScreenUI.cs</span><span class="fn">Advance()</span><span class="cause2">원인 ② 클릭 하나를 두 곳이 처리</span><span class="cause2" style="color:var(--mute);border-color:var(--line-2)">수정안 · 제출 빌드에는 없음</span><span class="what">손님 말풍선 아래 버튼을 관리하는 파일이다. <span class="mono">Advance()</span>는 버튼을 누를 때마다 호출돼서 다음 대사로 넘기거나, 마지막 대사면 주문 화면을 닫는다.</span></div>
+<ol>
+<li><span class="kw">private void</span> Advance()</li>
+<li>{</li>
+<li class="add"> <span class="kw">if</span> (cutscene != <span class="kw">null</span> &amp;&amp; cutscene.WaitingForNext) <span class="kw">return</span>;</li>
+<li> <span class="kw">if</span> (IsTyping)</li>
+<li>    {</li>
+<li>        FinishTyping();</li>
+<li> <span class="kw">return</span>;</li>
+<li>    }</li>
+<li>    ...</li>
+<li>    Close();</li>
+<li>}</li>
+</ol></div>
+<ul class="notes"><li><span class="ln add">3 추가</span><span>시식 연출이 다음 입력을 기다리는 중이면 버튼은 아무것도 하지 않는다. 그 클릭은 연출 쪽에서만 처리된다.</span></li><li><span class="ln">10</span><span>마지막 대사면 주문 화면을 닫는다. 소감 뒤의 ▶도 이 버튼이라서 여기까지 실행됐다.</span></li></ul>
+</div>
+<p class="mute" style="font-size:15.5px">제출이 끝난 빌드라서 수정안은 게임에 넣지 않았다. 실제로 적용하려면 <span class="mono">OrderScreenUI</span>가 시식 연출을 참조할 필드와, 연출 쪽에서 대기 상태를 외부에서 읽을 수 있는 속성을 하나씩 더 만들어야 한다.</p>
+</div></div></details><details class="fold"><summary><b>고치기 전과 후</b><span>비교 움짤과 확인 결과</span></summary><div class="fold-body">
+<div class="ba-block">
+<div class="ba-pair"><figure class="media-card"><img alt="재구성 이전: 클릭으로 넘긴 줄이 한 번에 찍힌다" src="media/ramen/c_ba1_before.gif"/><span class="src">재구성 · <span class="tag-b">이전</span></span></figure><figure class="media-card"><img alt="재구성 이후: 넘긴 줄도 한 글자씩 찍힌다" src="media/ramen/c_ba1_after.gif"/><span class="src">재구성 · <span class="tag-a">이후</span></span></figure></div>
+<h5>① 줄을 넘길 때의 타자기 효과</h5>
+<p>노란색 클릭 표시가 줄을 넘기는 순간이다. 수정 전에는 넘긴 줄이 한 번에 나오고, 수정 후에는 첫 줄처럼 한 글자씩 출력된다.</p>
+</div>
+<div class="ba-block">
+<div class="ba-pair"><figure class="media-card"><img alt="실제 화면 이전: ▶를 누르자 조리 화면으로 넘어간다" src="media/ramen/c_bug.gif"/><span class="src real">실제 화면 · <span class="tag-b">이전</span></span></figure><figure class="media-card"><img alt="재구성 이후: ▶를 누르면 따봉과 결과창이 뜬다" src="media/ramen/c_ba2_after.gif"/><span class="src">재구성 · 수정안 · <span class="tag-a">이후</span></span></figure></div>
+<h5>② ▶ 버튼을 누른 뒤의 결과창</h5>
+<p>왼쪽은 제출 빌드를 그대로 녹화한 영상이고, 오른쪽은 수정안을 적용했을 때의 흐름을 실제 화면으로 다시 만든 것이다.</p>
+</div>
+<ul class="checks"><li><span class="ok">✓</span><span>① 모든 줄이 한 글자씩 출력되고, 누르면 그 줄만 마저 출력됨</span></li><li><span class="tri">△</span><span>② 로그와 코드로 원인까지 확인했고, 수정안은 정리만 해 둠</span></li></ul></div></details><details class="fold"><summary><b>배운 것</b><span>다음에 다르게 할 것</span></summary><div class="fold-body">
+<div class="lessons"><div class="lesson has-media"><div class="lm"><img alt="그림: 같은 프레임에 두 번 읽힌 클릭" src="media/ramen/c_try1.png"/></div><b>그 프레임 동안 계속 true인 wasPressedThisFrame</b><span>한 번 누르면 한 번만 true가 되는 게 아니다. 누른 프레임 안에서는 몇 번을 확인해도 true다. 같은 프레임에 이 값을 읽는 코드가 두 개면 둘 다 반응한다.</span></div><div class="lesson"><b>같은 프레임에 이어질 수 있는 두 코루틴</b><span>기다림 하나가 끝나고 다음 기다림이 시작되는 사이에 프레임이 바뀐다는 보장이 없다. <span class="mono">yield return null</span> 없이 넘어가면 둘은 같은 프레임에서 실행된다. 입력을 받고 다음 단계로 넘어갈 때는 들어갈 때와 나갈 때 모두 한 프레임 쉬는 것을 기본으로 하려고 한다.</span></div><div class="lesson has-media"><div class="anim lm"><div class="path"><div class="src">▶ 클릭</div><div class="dst d1 off">버튼 이벤트 → 주문 화면 닫기 (무시)</div><div class="dst d2 on">시식 연출 → 따봉 → 결과창</div><span class="dot"></span></div></div><b>하나의 입력은 한 곳에서만 처리</b><span>버튼 이벤트(onClick)와 매 프레임 입력 검사를 같은 동작에 섞으면 한 번의 클릭이 두 경로로 나뉜다. 둘 중 하나로 정하거나, 한쪽이 처리하는 동안 다른 쪽은 무시하게 만들어야 한다.</span></div><div class="lesson"><b>오브젝트를 끄면 같이 멈추는 코루틴</b><span>주문 화면을 끄는 코드는 화면만 끈다고 생각했는데, 같은 오브젝트에 연출이 붙어 있어서 연출까지 멈췄다. 오브젝트를 끌 때는 거기에 무엇이 붙어 있는지 먼저 확인해야 한다.</span></div><div class="lesson"><b>기능 추가 전에 같은 입력을 읽는 곳부터 확인</b><span>▶ 버튼은 편의 기능으로 다시 추가했는데, 예전에 원인이 아니라고 제외했던 경로를 다시 열게 됐다. 버튼 하나를 다시 쓸 때도 그 버튼에 이미 무엇이 연결돼 있는지부터 확인해야 한다.</span></div>
+</div></div></details></div></details></div>
+</article></div></div><div class="sub" id="rm-retro" data-spy data-top="ramen"><h3 class="st"><a class="h-no" href="#toc" title="목차로">3.5</a>결과 · 회고</h3><div class="retro2">
+<div class="g"><b>잘 된 점</b><ul><li>코드로 짓는 화면 → 씬 충돌 0번</li><li>채점은 함수 하나로만 연결해 서로의 내부를 몰라도 됐다</li></ul></div>
+<div class="w"><b>아쉬운 점</b><ul><li>절대 좌표로 적은 손님 위치가 화면을 넓히자 어긋났다</li><li>연출 버그를 눈으로만 보다 시간을 썼다 → 처음부터 녹화</li></ul></div>
+<div class="t"><b>협업</b><ul><li>공용 타입은 한 사람이 먼저 만들어 올린다</li><li>씬 · 프리팹은 자동 머지를 끄고 충돌로 드러낸다</li></ul></div>
+</div>
+<details class="fold" style="margin-top:22px"><summary>그 밖에 짧게 잡은 다섯 가지<span>증상 · 원인 · 해결</span></summary><div class="fb legacy"><div class="fold-body"><div class="tbl"><table>
+<thead><tr><th>증상</th><th>원인</th><th>해결</th></tr></thead>
+<tbody>
+<tr><td>에디터에서는 되는데 빌드만 실패</td><td><span class="mono">#if UNITY_EDITOR</span> 안에서 선언하고 밖에서 사용</td><td>선언을 가드 밖으로 옮기고 같은 유형 26곳을 전부 확인</td></tr>
+<tr><td>토핑 5개짜리 주문은 무조건 오답</td><td>재료 상한이 두 파일에 따로 적혀 있음</td><td>상수 하나로 통일</td></tr>
+<tr><td>저장소를 새로 받으면 주문이 안 생김</td><td>빌더가 씬을 고치기만 하고 저장하지 않음</td><td>빌더가 저장까지 하도록 수정</td></tr>
+<tr><td>머지는 됐는데 씬이 조용히 깨짐</td><td>씬 파일을 줄 단위로 머지해 참조 ID가 어긋남</td><td><span class="mono">.gitattributes</span>에 <span class="mono">-merge</span>를 걸어 명시적 충돌로 전환</td></tr>
+<tr><td>Play 직후 간판 점등 연출이 안 보임</td><td>첫 프레임 하나가 4.27초. <span class="mono">unscaledDeltaTime</span>은 유니티가 잘라 주지 않음</td><td>한 프레임에 흘려보낼 시간을 0.05초로 제한</td></tr>
+</tbody>
+</table></div></div></div></details></div>
+<div class="btns" style="margin-top:30px"><a class="btn s" href="https://github.com/TwincleStakey/Team_ramen" target="_blank" rel="noopener">GitHub ↗</a><a class="btn s" href="https://youtu.be/pF59wLZO8Vk" target="_blank" rel="noopener">시연 영상 ↗</a></div>
 </div></section>
 
-<section class="tight" id="more"><div class="wrap">
-<span class="eb">MORE PROJECTS</span>
+<section id="works" data-spy data-top="works" style="border-top:1px solid var(--line)"><div class="wrap">
+<span class="eb"><a class="h-no" href="#toc" title="목차로">4</a> MORE PROJECTS</span>
 <h2 class="sh">그 밖의 작업</h2>
 <div class="strip hid"><a class="tile" href="https://youtu.be/Okqo8yjtl2w" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/Okqo8yjtl2w/hqdefault.jpg)"><span><b>Novalast</b><i>GAME · WebGL</i></span></a><a class="tile" href="https://youtu.be/pR34jS3oCPQ" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/pR34jS3oCPQ/hqdefault.jpg)"><span><b>High Stakes</b><i>카드 베팅 · WebGL</i></span></a><a class="tile" href="https://youtu.be/PYXJpKdQYW8" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/PYXJpKdQYW8/hqdefault.jpg)"><span><b>Breaker</b><i>3D FPS · WebGL</i></span></a><a class="tile" href="https://youtu.be/nQV6A8qrcCM" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/nQV6A8qrcCM/hqdefault.jpg)"><span><b>야간상담</b><i>공포 · WebGL</i></span></a><a class="tile" href="https://youtu.be/dhQ-Co4C3cY" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/dhQ-Co4C3cY/hqdefault.jpg)"><span><b>NFT 강화 게임</b><i>강화 · 자동 사냥</i></span></a><a class="tile" href="https://youtu.be/o3MAWROWvsE" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/o3MAWROWvsE/hqdefault.jpg)"><span><b>Deep Abyss</b><i>2D · WebGL</i></span></a><a class="tile" href="https://youtu.be/7EcrHt_X7pQ" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/7EcrHt_X7pQ/hqdefault.jpg)"><span><b>UNKNOWN</b><i>TEAM · 시네마틱</i></span></a><a class="tile" href="https://youtu.be/bfZDj0d48Nw" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/bfZDj0d48Nw/hqdefault.jpg)"><span><b>LIGHTNING STICK MAN</b><i>2D 플랫포머</i></span></a><a class="tile" href="https://youtu.be/fTrZAboNWJU" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/fTrZAboNWJU/hqdefault.jpg)"><span><b>터레인 시네마틱</b><i>SOLO · 시네마틱</i></span></a></div>
 <button class="btn s more-btn" type="button">나머지 5개 더 보기</button>
-<p class="mute" style="margin-top:14px;font-size:15px">썸네일을 누르면 영상이 열린다. 웹에서 바로 할 수 있는 게임은 <a class="t-lime" href="https://play.unity.com/ko/user/cb9d2950-bc11-4dac-b62b-7d8dfe906d33" target="_blank" rel="noopener">Unity Play</a>에 올려 두었다.</p>
+<p class="mute" style="margin-top:14px;font-size:15px">썸네일을 누르면 영상이 열린다. 웹에서 바로 할 수 있는 게임은 <a class="t-lime" href="https://play.unity.com/ko/user/cb9d2950-bc11-4dac-b62b-7d8dfe906d33" target="_blank" rel="noopener">Unity Play</a>에.</p>
 </div></section>
-
-<section id="about"><div class="wrap">
-<span class="eb">ABOUT &amp; RESUME</span>
-<h2 class="sh">자기소개</h2>
-<div class="about">
-<div>
-<p class="phil">6년 동안 해상초계기에 타면서 배운 건 <b>절차를 끝까지 지키는 것</b>이었다. 게임을 만들면서는 그 습관이 <b>원인을 숫자로 확인할 때까지 멈추지 않는 것</b>으로 바뀌었다. 느낌으로 고치지 않고 녹화하고, 재고, 두 번 확인한다. 그렇게 만든 화면 앞에서 플레이어가 주인공이 되는 순간을 보고 싶다.</p>
-<ol class="route">
-<li><span class="when">이전 · 6년</span><b>해군 항공조작 부사관</b><span>P-3C 해상초계기 탑승 · 절차와 점검표로 일하는 법</span></li>
-<li class="now"><span class="when">2026.05 ~ 2027.01</span><b>네오위즈 K 게임 아카데미 · Unity 과정</b><span>「나의 인생 라멘가게」 메인 개발 · 「정무대전」 1인 개발 진행 중</span></li>
-<li class="next"><span class="when">NEXT</span><b>게임 클라이언트 프로그래머</b><span>함께 만들 팀을 찾고 있습니다.</span></li>
-</ol>
-</div>
-<div>
-<div class="sk">
-<div><b>끝까지 찾는 디버깅</b><p>녹화와 픽셀 측정으로 원인을 숫자로 찾는다.</p><span class="from">근거 · <a href="ramen.html#bug-a">엔딩 크레딧 버그 6번의 시도</a></span></div>
-<div><b>네트워크 동기화</b><p>맞는 쪽 판정 + 되감기, 예측 연출, 개발 빌드 두 개로 실측.</p><span class="from">근거 · <a href="jeongmu.html#case-1">판정 일치율 15% → 91%</a></span></div>
-<div><b>반복 작업은 툴로</b><p>화면을 코드로 짓는 에디터 툴, AI 자동 대전으로 밸런스 측정.</p><span class="from">근거 · <a href="ramen.html#sys">씬 빌더</a> · <a href="jeongmu.html#sys">DuelSoak</a></span></div>
-</div>
-<div class="stack"><span class="chip">Unity 6000.3</span><span class="chip">C#</span><span class="chip">URP</span><span class="chip">Netcode for GameObjects</span><span class="chip">Unity Relay · Multiplayer Services</span><span class="chip">Input System</span><span class="chip">uGUI · TMP · IMGUI</span><span class="chip">Editor 스크립트</span><span class="chip">Win32 P/Invoke</span><span class="chip">Git · Git LFS</span><span class="chip">Python</span></div>
-<div class="btns" style="margin-top:18px"><a class="btn s" href="resume.html">이력서 보기</a><a class="btn s" href="https://github.com/TwincleStakey" target="_blank" rel="noopener">GitHub ↗</a></div>
-</div>
-</div></div></section>
 </main>
-<section class="contact" id="contact">
+<section class="contact" id="contact" data-spy data-top="contact">
 <div class="wrap">
-<span class="eb">CONTACT</span>
+<span class="eb"><a class="h-no" href="#toc" title="목차로">5</a> CONTACT</span>
 <h2>함께 만들고 싶은 게임이 있다면</h2>
 <a class="mail" href="mailto:kbkim235@naver.com">kbkim235@naver.com</a>
 <div class="btns" style="justify-content:center">
 <a class="btn s" href="https://github.com/TwincleStakey" target="_blank" rel="noopener">GitHub ↗</a>
 <a class="btn s" href="https://play.unity.com/ko/user/cb9d2950-bc11-4dac-b62b-7d8dfe906d33" target="_blank" rel="noopener">Unity Play ↗</a>
-<a class="btn s" href="resume.html">이력서</a>
 </div></div></section>
-<footer><div class="wrap"><span>© 2026 김기백 · twinclestakey.github.io</span><span>화면 표시 — <span class="tag real">실제 화면</span> 게임에서 그대로 찍은 것 · <span class="tag rec">재구성</span> 설명용으로 다시 그린 것</span></div></footer>
-<script src="assets/js.ff27bc87.js"></script>
+<footer><div class="wrap"><span>© 2026 김기백 · twinclestakey.github.io</span><span><span class="tag real">실제 화면</span> 게임에서 그대로 찍은 것 · <span class="tag rec">재구성</span> 설명용으로 다시 그린 것 · 채팅창은 모자이크</span></div></footer>
+<script src="assets/js.078554c6.js"></script>
 </body></html>
