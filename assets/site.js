@@ -130,3 +130,47 @@
     img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
   });
 })();
+(function(){
+  // 별자리: 별에 올리면(포커스·탭) 카드. 카드는 화면 안쪽으로 붙인다
+  var map=document.querySelector('.sky-map');if(!map)return;
+  var stars=[].slice.call(map.querySelectorAll('.star')),GAP=12,last='';
+  // 썸네일이 안 열리면 깨진 그림 대신 배경색
+  map.querySelectorAll('.sc-thumb img').forEach(function(img){
+    function bad(){img.parentNode.classList.add('noimg')}
+    if(img.complete&&!img.naturalWidth)bad();else img.addEventListener('error',bad);
+  });
+  function place(a){
+    var card=a.querySelector('.star-card'),dot=a.querySelector('.dot');if(!card||!dot)return;
+    var m=map.getBoundingClientRect(),d=dot.getBoundingClientRect(),o=a.getBoundingClientRect();
+    var W=card.offsetWidth,H=card.offsetHeight,lo=16,hi=document.documentElement.clientWidth-16;
+    var cx=d.left+d.width/2,upper=(d.top+d.height/2-m.top)<m.height/2,x,y;
+    if(d.right+GAP+W<=hi)x=d.right+GAP;
+    else if(d.left-GAP-W>=lo)x=d.left-GAP-W;
+    if(x!=null){y=upper?d.top-6:d.bottom+6-H}
+    else{x=Math.max(lo,Math.min(cx-W/2,hi-W));y=upper?d.bottom+GAP:d.top-GAP-H}
+    card.style.left=Math.round(x-o.left)+'px';card.style.top=Math.round(y-o.top)+'px';
+  }
+  function all(){stars.forEach(place)}
+  function close(except){stars.forEach(function(s){if(s!==except)s.classList.remove('open')})}
+  stars.forEach(function(a){
+    a.addEventListener('mouseenter',function(){place(a)});
+    a.addEventListener('focus',function(){place(a)});
+    a.addEventListener('mouseleave',function(){a.classList.remove('hush')});
+    a.addEventListener('blur',function(){a.classList.remove('hush','open')});
+  });
+  addEventListener('pointerdown',function(e){last=e.pointerType},true);
+  addEventListener('keydown',function(e){
+    last='key';
+    if(e.key==='Escape')stars.forEach(function(s){if(s.classList.contains('open')||s.matches(':hover')||s===document.activeElement){s.classList.remove('open');s.classList.add('hush')}});
+  },true);
+  // 터치: 첫 탭은 카드만, 열린 카드(별)를 한 번 더 탭하면 링크로
+  map.addEventListener('click',function(e){
+    var a=e.target.closest('.star');if(!a||e.detail===0)return;
+    var touch=last==='touch'||last==='pen'||(!last&&!matchMedia('(hover:hover)').matches);
+    if(!touch||a.classList.contains('open'))return;
+    e.preventDefault();close(a);place(a);a.classList.remove('hush');a.classList.add('open');
+  });
+  document.addEventListener('click',function(e){if(!e.target.closest||!e.target.closest('.sky-map .star'))close()});
+  all();addEventListener('resize',all);addEventListener('load',all);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(all);
+})();
