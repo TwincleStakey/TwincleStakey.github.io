@@ -176,12 +176,12 @@
 })();
 (function(){
   // 지금 보고 있는 항목 표시 + 진행 바
-  var ids=['project','bugs','bug-a','bug-b','bug-c','wip','works','contact'];
+  var ids=['about','project','bugs','bug-a','bug-b','bug-c','wip','works','contact'];
   var secs=ids.map(function(i){return document.getElementById(i)}).filter(Boolean);
   var links=[].slice.call(document.querySelectorAll('.nav ul a, .float a[href^="#"], .toc a'));
   var bar=document.querySelector('.progress i'), fl=document.querySelector('.float');
   var fabTxt=document.querySelector('.fab em');
-  var names={project:'대표 프로젝트',bugs:'문제 해결','bug-a':'A 엔딩 크레딧','bug-b':'B 커서 실종','bug-c':'C 클릭 두 번',wip:'만들고 있는 것',works:'그 밖의 작업',contact:'연락'};
+  var names={about:'자기소개',project:'대표 프로젝트',bugs:'문제 해결','bug-a':'A 엔딩 크레딧','bug-b':'B 커서 실종','bug-c':'C 클릭 두 번',wip:'만들고 있는 것',works:'그 밖의 작업',contact:'연락'};
   var ticking=false;
   function update(){
     ticking=false;
