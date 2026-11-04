@@ -1,0 +1,50 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI 활용 표현 시안</title><link rel="stylesheet" href="assets/css.a2394251.css"><style>
+body{padding:30px 0 90px}
+.top{max-width:1240px;margin:0 auto 18px;padding:0 24px;position:relative;z-index:2}.top h1{color:#e2e8f0;font-size:30px;margin:0 0 6px}.top p{color:#94a3b8;margin:0}
+.lab{max-width:1240px;margin:40px auto 10px;padding:0 24px;position:relative;z-index:2;display:flex;gap:12px;align-items:baseline;color:#e2e8f0}
+.lab b{font-family:var(--pixel);color:#b8e46e;font-size:24px}.lab span{font-size:20px;font-weight:800}.lab em{font-style:normal;color:#94a3b8;font-size:15px}
+main.paper{margin-top:0!important;padding:34px 0 30px}
+.where{font-family:var(--pixel);font-size:13px;color:var(--mute);letter-spacing:.06em;margin:0 0 10px}
+/* 甲 사례 속 한 줄 */
+.ailine{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;margin:14px 0 4px;font-size:15px}
+.ailine>div{padding:10px 14px;border-left:1px solid var(--line)}.ailine>div:first-child{border-left:0;background:#f6f8fb;display:flex;align-items:center;font-family:var(--pixel);font-size:13px;color:#5b4fa8;letter-spacing:.06em}
+.ailine .k{display:block;font-size:12.5px;color:var(--mute);margin-bottom:2px}.ailine b{color:var(--ink);font-weight:600}
+/* 乙 작업 흐름 */
+.flowai{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch;margin:6px 0 0}
+.flowai .st{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-right:22px}
+.flowai .st:last-child{margin-right:0}
+.flowai .st::after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);color:var(--mute);font-weight:800}
+.flowai .st:last-child::after{display:none}
+.flowai .who{display:inline-block;font-family:var(--pixel);font-size:12px;border-radius:5px;padding:1px 7px;margin-bottom:6px}
+.flowai .me{background:#eef8e3;color:#2e6b1a;border:1px solid #a9d27a}.flowai .ai{background:#efeafb;color:#5b4fa8;border:1px solid #b9acec}
+.flowai b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}.flowai p{margin:0;font-size:14.5px;line-height:1.6}
+.flowai .st.loop{border-color:#a9d27a;background:#f7fbf1}
+.cap2{font-size:14px;color:var(--mute);margin:10px 0 0}
+/* 丙 특기 카드 */
+.aicard{border:1px solid #b9acec;background:linear-gradient(180deg,#faf8ff,#fff);border-radius:14px;padding:18px 20px;max-width:560px}
+.aicard h5{margin:0 0 6px;font-size:18px;color:var(--ink)}.aicard>p{margin:0 0 12px;font-size:15.5px}
+.aicard ol{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:6px;counter-reset:a}
+.aicard li{counter-increment:a;display:grid;grid-template-columns:26px 1fr;gap:8px;font-size:15px;align-items:baseline}
+.aicard li::before{content:counter(a);width:22px;height:22px;border-radius:50%;background:#5b4fa8;color:#fff;display:grid;place-items:center;font-family:var(--pixel);font-size:12px}
+.aicard li b{color:var(--ink)}
+.aicard a{color:#5b4fa8;font-weight:600;font-size:14.5px}
+@media(max-width:900px){.ailine{grid-template-columns:1fr}.ailine>div{border-left:0;border-top:1px solid var(--line)}.flowai{grid-template-columns:1fr}.flowai .st{margin:0 0 18px}.flowai .st::after{content:"↓";right:auto;left:50%;top:auto;bottom:-20px;transform:none}}
+</style></head><body><canvas id="sky"></canvas>
+<div class="top"><h1>AI 활용 표현 시안</h1><p>AI를 따로 큰 섹션으로 만들지 않고, 사이트 안에 자연스럽게 녹이는 세 가지 방법.</p></div>
+<div class="lab"><b>甲</b><span>사례 속 한 줄</span><em>대표 사례(2.4.2)에만 "AI와 나눈 일" 줄을 넣는다. 맡긴 것 · 정한 것 · 확인한 방법.</em></div><main class="paper"><div class="wrap"><p class="where">2.4.2 기술 사례 안</p><div class="case" style="margin:0"><div class="ch"><span class="n">측정</span></div><h3><span class="h-no">2.4.2</span>측정 방법을 바꾸고서야 찾은 원인</h3>
+<p class="state"><span class="st ok">적용 · 개발 빌드에서 확인</span></p>
+<div class="nums" style="margin-top:14px"><div><b><s>38~60%</s>91%</b><span>비도 일치율</span></div><div><b>95%</b><span>전체 일치율</span></div><div><b><s>76%</s>89%</b><span>AI로 넣은 새 기술 → 측정으로 복구</span></div></div>
+<div class="ailine"><div>AI와 나눈 일</div><div><span class="k">AI에 맡긴 것</span><b>새 기술 구현 · 측정 도구 코드</b></div><div><span class="k">직접 정한 것</span><b>판정 원칙 · 측정 방식 · 통과 기준</b></div><div><span class="k">확인한 방법</span><b>빌드 두 개로 일치율 재측정</b></div></div>
+<div class="sum"><div class="q"><span class="k">문제</span><p>되감기를 넣은 뒤에도 에디터에서 비도 일치율이 38~60%를 오갔다.</p></div><div class="c"><span class="k">원인</span><p>던지는 사람 화면만 지금 자리에서 비도를 날려 궤적이 최대 0.8m 갈라졌다.</p></div><div class="d"><span class="k">해결</span><p>측정을 개발 빌드 두 개로 옮기고, 투사체 출발점 · 방향은 쏘는 사람이 RPC로 보내게 통일했다.</p></div></div></div></div></main>
+<div class="lab"><b>乙</b><span>작업 흐름 한 장</span><em>기여 범위 밑에 "정하기 → 만들기 → 확인하기 → 규칙 남기기" 흐름을 한 번만 보여 준다. AI 칸만 보라색.</em></div><main class="paper"><div class="wrap"><p class="where">2.2 기여 범위 아래</p><h4 style="font-size:20px;margin:0 0 12px">이렇게 일했다</h4>
+<div class="flowai">
+<div class="st"><span class="who me">직접</span><b>정하기</b><p>무엇을 만들지, 어떤 방식으로 갈지 시안을 비교해 고른다.</p></div>
+<div class="st"><span class="who ai">AI 코딩 도구</span><b>만들기</b><p>기능 단위로 나눠 구현을 맡긴다. 에디터 조작은 Unity MCP로.</p></div>
+<div class="st"><span class="who me">직접</span><b>확인하기</b><p>개발 빌드 실측 · 자동 대전 · 녹화로 결과를 숫자로 본다.</p></div>
+<div class="st loop"><span class="who me">직접</span><b>규칙 남기기</b><p>깨진 곳은 원칙과 재측정 규칙으로 문서에 남긴다. → 2.4.2</p></div>
+</div><p class="cap2">기술 사례마다 따로 적지 않고, 이 흐름 하나로 보여 준다.</p></div></main>
+<div class="lab"><b>丙</b><span>특기 카드</span><em>소개의 특기 안에서 일하는 방식 세 단계로 보여 주고, 증거로 2.4.2를 잇는다.</em></div><main class="paper"><div class="wrap"><p class="where">1.2 특기 안</p><div class="aicard"><h5>AI 활용 개발</h5><p>AI에 일을 맡기되, 결과를 믿기 전에 숫자로 확인한다.</p>
+<ol><li><span><b>나눠 맡긴다</b> — 기능 단위로 작업을 쪼개 AI 코딩 도구에 맡긴다</span></li><li><span><b>직접 잰다</b> — 판정 일치율 · 자동 대전 · 녹화로 결과를 확인한다</span></li><li><span><b>규칙으로 남긴다</b> — 깨진 원칙은 재측정 규칙과 함께 문서로 남긴다</span></li></ol>
+<a href="#">실제로 잡아낸 사례 · 2.4.2 →</a></div></div></main>
+<div class="lab"><b>丁</b><span>지금 그대로</span><em>표 한 줄과 특기 문장만. 가장 조용하다.</em></div><main class="paper"><div class="wrap"><p class="where">지금 사이트 (비교용)</p><div class="dt"><table><tbody><tr><td class="m" style="white-space:nowrap">AI 활용</td><td>Claude Code · Unity MCP에 기능 단위로 작업을 나눠 맡겼다. 무엇을 만들지와 어떤 방식으로 갈지는 직접 정했고, 결과는 개발 빌드 실측 · 자동 대전 · 녹화로 확인했다</td></tr></tbody></table></div></div></main>
+<script src="assets/js.9e6f7bc3.js"></script></body></html>
