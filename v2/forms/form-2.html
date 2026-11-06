@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>시안 2 · 스크롤 따라 바뀌는 그림</title>
+<link rel="stylesheet" href="forms.css">
+<style>
+.page{max-width:1180px;margin:0 auto;padding:0 24px}
+.head{padding:48px 0 10px;max-width:720px}
+.head h1{font-size:30px;margin:0 0 6px;line-height:1.3}
+.head p{margin:0 0 10px}
+.story{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;margin:20px 0 80px}
+.steps .st{min-height:72vh;display:flex;flex-direction:column;justify-content:center;opacity:.35;transition:opacity .3s}
+.steps .st.on{opacity:1}
+.steps .st .n{font-size:13px;font-weight:700;color:var(--green);letter-spacing:.04em}
+.steps .st h3{font-size:21px;margin:2px 0 10px;line-height:1.35}
+.steps .st p{margin:0 0 12px}
+.stick{position:sticky;top:12vh;height:76vh;display:flex;align-items:center}
+.stick .slot{position:relative;width:100%}
+.stick .slot>div{position:absolute;inset:0 0 auto 0;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s;pointer-events:none}
+.stick .slot>div.on{opacity:1;transform:none;pointer-events:auto;position:relative}
+.stick .slot>div:not(.on){position:absolute}
+.divider{border-top:1px solid var(--line);margin:20px 0 0}
+/* 구조 그림: 지금 단계의 상자만 진하게 */
+.whofig svg g{transition:opacity .3s}
+.whofig.focus-shooter svg g:not(#g-shooter),.whofig.focus-victim svg g:not(#g-victim),.whofig.focus-host svg g:not(#g-host){opacity:.25}
+@media(max-width:860px){.story{display:block}.stick{position:sticky;top:0;height:auto;background:#fff;z-index:2;padding:10px 0;border-bottom:1px solid var(--line)}.steps .st{min-height:60vh}}
+</style>
+</head>
+<body>
+<div class="draftbar"><b>시안 2</b> 스크롤 따라 바뀌는 그림 (왼쪽 글이 넘어가면 오른쪽 그림이 바뀐다) <a href="index.html">← 시안 목록</a></div>
+<div class="page">
+ <div class="head"><p class="eyebrow">2.3 · 정무대전</p><h1>구조 한 장</h1><p>판의 흐름과 체력은 방장이, 맞았는지는 맞는 쪽이, 투사체 출발점은 쏘는 쪽이 정한다.</p></div>
+ <div class="story" data-story="who">
+  <div class="steps">
+   <div class="st" data-focus="shooter"><span class="n">1 / 3</span><h3>쏘는 쪽은 출발점만 정한다</h3><p>투사체는 네트워크 오브젝트가 아니다. 쏘는 사람이 출발점과 방향을 RPC 한 번으로 보내고, 각 PC가 직접 날린다.</p></div>
+   <div class="st" data-focus="victim"><span class="n">2 / 3</span><h3>맞았는지는 맞는 쪽이 정한다</h3><p>막기 · 튕겨내기는 맞는 쪽이 누른 입력이라, 판정도 맞는 쪽 PC가 한다. 다른 PC에서 온 공격은 그 화면에 내가 보이던 시점으로 위치를 되돌려 잰다.</p></div>
+   <div class="st" data-focus="host"><span class="n">3 / 3</span><h3>체력과 판 흐름은 방장이 정한다</h3><p>맞는 쪽이 보낸 피해는 방장이 한 번 더 걸러서 체력에 반영한다. 무적 시간을 길게 보고해도 상한 이상은 받지 않는다.</p></div>
+  </div>
+  <div class="stick"><div class="slot"><div class="on whofig" id="whofig"><div class="fig" data-svg="who"></div></div></div></div>
+ </div>
+
+ <div class="divider"></div>
+ <div class="head"><p class="eyebrow">2.4.2 · 기술 사례 · 측정</p><h1>두 화면에서 다르게 날아간 비도</h1>
+  <div class="nums"><div><b><s>38~60%</s>91%</b><span>비도 일치율</span></div><div><b>95%</b><span>전체 일치율</span></div><div><b><s>76%</s>89%</b><span>AI로 넣은 새 기술 → 복구</span></div></div>
+  <p class="cond">비도 102번 중 93번 일치 · 개발 빌드 두 개, 편도 지연 60±10ms</p></div>
+ <div class="story" data-story="case">
+  <div class="steps">
+   <div class="st" data-show="0"><span class="n">문제</span><h3>잴 때마다 달라지는 숫자</h3><p>되감기를 넣은 뒤에도 비도 일치율이 잴 때마다 38~60%로 달랐다. 창 두 개를 띄우면 포커스 없는 에디터가 49초에 3프레임만 돌았다. 프로파일러로 보니 화면 출력 대기가 1초마다 500ms씩 걸리고 있었다.</p></div>
+   <div class="st" data-show="1"><span class="n">측정</span><h3>개발 빌드 두 개로 옮기기</h3><p>에디터에서만 생기는 멈춤이라, 측정을 개발 빌드 두 개로 옮겼다. 실행 인자 하나로 방장 · 손님 · 자동 대전 · 지연 시뮬 · 일치율 기록을 켤 수 있게 만들었다.</p><ul class="opt"><li class="x">멈춘 구간만 빼고 분석 → 매번 손으로 골라야 한다</li><li class="o">개발 빌드 두 개로 측정</li></ul></div>
+   <div class="st" data-show="2"><span class="n">원인</span><h3>던지는 사람 화면만 다른 출발점</h3><p>숫자가 안정되자 진짜 원인이 보였다. 던지는 사람 화면에서만 비도가 지금 자리에서 출발해 궤적이 최대 0.8m 갈라졌다.</p></div>
+   <div class="st" data-show="3"><span class="n">해결</span><h3>출발점은 쏘는 사람이 보낸다</h3><p>출발점과 걸음 속도를 RPC로 보내고, 모든 화면이 같은 식으로 자리를 셈하게 했다. 비도 102번 중 93번이 일치했다.</p><div class="rule"><b>실제로 남긴 원칙</b>시간이 지난 뒤 나가는 암기는 출발점과 방향을 쏘는 사람이 정해 RPC로 보낸다. 새 초식을 넣으면 빌드 두 개로 일치율을 다시 잰다.</div></div>
+   <div class="st" data-show="4"><span class="n">코드</span><h3>바뀐 부분</h3><p>던지는 순간의 자리와 걸음을 한 번에 보내고, 받는 쪽은 같은 식으로 자리를 셈한다.</p><p class="ai"><b>AI와 나눈 일</b> 새 기술 구현과 측정 도구 코드는 맡겼고, 판정 원칙 · 측정 방식 · 통과 기준은 직접 정했다.</p></div>
+  </div>
+  <div class="stick"><div class="slot" id="caseslot">
+   <div class="on"><div class="fig" data-svg="range"></div></div>
+   <div><div class="fig" data-svg="measure"></div></div>
+   <div><div class="fig" data-svg="cause"></div></div>
+   <div><div class="fig" data-svg="fix"></div></div>
+   <div><div data-code></div></div>
+  </div></div>
+ </div>
+</div>
+<script src="forms.js"></script>
+<script>
+const stories=[...document.querySelectorAll('.story')];
+function pick(){const mid=innerHeight*.5;
+ stories.forEach(s=>{const sts=[...s.querySelectorAll('.st')];let on=sts[0];for(const st of sts){if(st.getBoundingClientRect().top<mid)on=st}
+  sts.forEach(x=>x.classList.toggle('on',x===on));
+  if(s.dataset.story==='who'){document.getElementById('whofig').className='on whofig focus-'+on.dataset.focus}
+  else{const i=+on.dataset.show;[...document.getElementById('caseslot').children].forEach((c,j)=>c.classList.toggle('on',j===i))}})}
+addEventListener('scroll',pick,{passive:true});pick();
+</script>
+</body>
+</html>

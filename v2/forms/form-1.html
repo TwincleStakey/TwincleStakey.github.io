@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>시안 1 · 개발 문서형</title>
+<link rel="stylesheet" href="forms.css">
+<style>
+.wrap{display:grid;grid-template-columns:200px minmax(0,1fr) 480px;max-width:1480px;margin:0 auto}
+nav{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);padding:28px 20px;font-size:14px;line-height:2}
+nav .me{font-weight:700;font-size:15.5px;line-height:1.4;margin-bottom:14px}nav .me span{display:block;font-weight:400;font-size:12.5px;color:var(--mute)}
+nav a{display:block;color:var(--mute);text-decoration:none}nav a.sub{padding-left:12px;font-size:13.5px}
+nav a.on{color:var(--ink);font-weight:600;box-shadow:inset 2px 0 0 var(--green);padding-left:10px;margin-left:-10px}nav a.sub.on{padding-left:22px}
+main{padding:44px 48px 40vh;max-width:760px}
+main h1{font-size:30px;margin:0 0 4px;line-height:1.3}
+main h2{font-size:23px;margin:56px 0 6px;line-height:1.35}
+main p{margin:0 0 14px}
+.blk{padding:6px 0 6px 14px;margin:0 0 6px -14px;border-left:2px solid transparent;transition:border-color .2s}
+.blk.on{border-left-color:var(--green)}
+.blk .inline{display:none;margin:12px 0}
+aside{position:sticky;top:0;height:100vh;padding:28px 24px;border-left:1px solid var(--line);background:#fcfcfd;display:flex;flex-direction:column}
+aside .lbl{font-size:12.5px;color:var(--mute);font-weight:600;margin-bottom:10px}
+aside .stage{flex:1;overflow:auto}
+aside .stage>*{animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+@media(max-width:1100px){.wrap{grid-template-columns:200px minmax(0,1fr)}aside{display:none}.blk .inline{display:block}}
+@media(max-width:760px){.wrap{display:block}nav{display:none}main{padding:28px 16px 80px}}
+</style>
+</head>
+<body>
+<div class="draftbar"><b>시안 1</b> 개발 문서형 (왼쪽 목차 · 가운데 본문 · 오른쪽 따라다니는 패널) <a href="index.html">← 시안 목록</a></div>
+<div class="wrap">
+<nav><div class="me">김기백<span>게임 클라이언트 프로그래머</span></div>
+ <a href="#s1">1. 소개</a><a href="#s2">2. 정무대전</a><a class="sub" href="#s23">2.3 구조 한 장</a><a class="sub" href="#s242">2.4.2 두 화면의 비도</a><a href="#">3. 라멘가게</a><a href="#">4. 그 밖의 작업</a></nav>
+<main>
+ <section id="s2">
+  <p class="eyebrow">2 · 메인 프로젝트 · 1인 개발</p>
+  <h1>정무대전</h1>
+  <div class="blk" data-panel="shot"><p>여섯 문파 무인이 무작위 맵에서 겨루는 최대 6인 온라인 무협 대전 액션이다. 판 안에서 경지가 오르고, 3대3 · 4인 개인전 · 랭크 대전이 있다.</p>
+   <div class="inline"><img src="../media/p_hero2.jpg" alt="정무대전 3대3 팀전 화면" width="1280" height="720"></div></div>
+ </section>
+
+ <section id="s23">
+  <h2>2.3 구조 한 장</h2>
+  <div class="blk" data-panel="who"><p>판의 흐름과 체력은 방장이 정하고, 맞았는지는 맞는 쪽이, 투사체가 어디서 출발하는지는 쏘는 쪽이 정한다. 맞는 쪽이 보낸 피해는 방장이 한 번 더 걸러서 체력에 반영한다. 무적 시간을 길게 보고해도 상한 이상은 받지 않는다.</p>
+   <div class="inline"><div class="fig" data-svg="who"></div></div></div>
+  <div class="blk" data-panel="chunks"><p>네트워크를 타는 클래스는 협객(Duelist)과 판(DuelGame) 둘뿐이다. 이펙트, 소리, 지형 모습 같은 나머지 코드는 각 PC에서 보이는 것만 맡고, 네트워크 값은 읽기만 한다.</p>
+   <p>작업을 여러 갈래로 동시에 진행하면서 같은 파일을 고치다 충돌이 나지 않게, 새 기술은 새 partial 파일로 붙였다. 새 파일을 먼저 넣고 기존 코드에서 부르는 건 나중에 하는 순서도 정해 뒀다.</p>
+   <div class="inline"><div class="fig" data-svg="chunks"></div></div></div>
+ </section>
+
+ <section id="s242">
+  <p class="eyebrow" style="margin-top:56px">2.4.2 · 기술 사례 · 측정</p>
+  <h2 style="margin-top:0">두 화면에서 다르게 날아간 비도</h2>
+  <div class="blk" data-panel="sum">
+   <div class="nums"><div><b><s>38~60%</s>91%</b><span>비도 일치율</span></div><div><b>95%</b><span>전체 일치율</span></div><div><b><s>76%</s>89%</b><span>AI로 넣은 새 기술 → 복구</span></div></div>
+   <p class="cond">비도 102번 중 93번 일치 · 개발 빌드 두 개, 편도 지연 60±10ms</p></div>
+  <div class="blk" data-panel="range"><p>되감기를 넣은 뒤에도 비도 일치율이 잴 때마다 38~60%로 달랐다. 창 두 개를 띄우면 포커스 없는 에디터가 49초에 3프레임만 돌았다. 프로파일러로 보니 화면 출력 대기가 1초마다 500ms씩 걸리고 있었다.</p>
+   <div class="inline"><div class="fig" data-svg="range"></div></div></div>
+  <div class="blk" data-panel="measure"><p>에디터에서만 생기는 멈춤이라, 측정을 개발 빌드 두 개로 옮겼다. 실행 인자 하나로 방장 · 손님 · 자동 대전 · 지연 시뮬 · 일치율 기록을 켤 수 있게 만들었다.</p>
+   <ul class="opt"><li class="x">멈춘 구간만 빼고 분석 → 매번 손으로 골라야 한다</li><li class="x">에디터 루프 강제 구동 → 멈춤이 0은 아니다</li><li class="o">개발 빌드 두 개로 측정</li></ul>
+   <div class="inline"><div class="fig" data-svg="measure"></div></div></div>
+  <div class="blk" data-panel="cause"><p>숫자가 안정되자 진짜 원인이 보였다. 던지는 사람 화면에서만 비도가 지금 자리에서 출발해 궤적이 최대 0.8m 갈라졌다.</p>
+   <div class="inline"><div class="fig" data-svg="cause"></div></div></div>
+  <div class="blk" data-panel="code"><p>출발점과 방향을 쏘는 사람이 RPC로 보내게 통일해 비도 102번 중 93번이 일치했다. 걸으며 던질 때도 길이 갈라지지 않게, 걸음 속도까지 같이 보내서 모든 화면이 같은 식으로 자리를 셈한다.</p>
+   <div class="inline"><div data-code></div></div></div>
+  <div class="blk" data-panel="fix"><div class="rule"><b>실제로 남긴 원칙</b>시간이 지난 뒤 나가는 암기는 출발점과 방향을 쏘는 사람이 정해 RPC로 보낸다. 새 초식을 넣으면 빌드 두 개로 일치율을 다시 잰다.</div>
+   <p>나중에 AI 코딩 도구로 폭우연사를 넣었을 때 이 원칙이 깨져 일치율이 76%로 떨어졌다. 같은 측정으로 바로 찾아 89%로 되돌렸다.</p>
+   <p class="ai"><b>AI와 나눈 일</b> 새 기술 구현과 측정 도구 코드는 맡겼고, 판정 원칙 · 측정 방식 · 통과 기준은 직접 정했다.</p>
+   <div class="inline"><div class="fig" data-svg="fix"></div></div></div>
+  <div class="blk" data-panel="fix"><p><b>한계</b> "화면에서 닿음 → 실제로 맞음"만 센다. 반대 경우와 사람의 실제 움직임은 담기지 않는다.</p></div>
+ </section>
+</main>
+<aside><div class="lbl" id="plbl">이 문단의 근거</div><div class="stage" id="stage"></div></aside>
+</div>
+<script src="forms.js"></script>
+<script>
+const P={shot:['게임 화면','<img src="../media/p_hero2.jpg" alt="정무대전 3대3 팀전 화면" width="1280" height="720" style="border-radius:6px"><div class="cap" style="font-size:13px;color:#6e7781;margin-top:8px">3대3 팀전 (실제 화면)</div>'],
+ sum:['개요','<img src="../media/still_ffa.jpg" alt="4인 개인전 화면" width="1280" height="720" style="border-radius:6px"><div style="font-size:13px;color:#6e7781;margin-top:8px">당문 비도 · 걸으며 던지는 평타 (실제 화면)</div>'],
+ code:['코드',window.CODE]};
+['who','chunks','range','measure','cause','fix'].forEach(k=>P[k]=['그림',`<div class="fig">${FIGS[k].svg}<div class="cap">${FIGS[k].cap}</div></div>`]);
+const stage=document.getElementById('stage'),lbl=document.getElementById('plbl');let cur='';
+function show(k){if(k===cur)return;cur=k;lbl.textContent='이 문단의 근거 · '+P[k][0];stage.innerHTML=P[k][1]}
+const blks=[...document.querySelectorAll('.blk')];
+function pick(){const mid=innerHeight*.4;let best=blks[0];for(const b of blks){const r=b.getBoundingClientRect();if(r.top<mid)best=b}
+ blks.forEach(b=>b.classList.toggle('on',b===best));show(best.dataset.panel);
+ const sec=best.closest('section').id;document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+sec||(sec.startsWith('s2')&&a.getAttribute('href')==='#s2')))}
+addEventListener('scroll',pick,{passive:true});pick();
+</script>
+</body>
+</html>
