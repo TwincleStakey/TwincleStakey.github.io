@@ -81,7 +81,7 @@ body{background:#0d1524;background-image:radial-gradient(1px 1px at 20px 30px,#f
 .sw button[aria-pressed=true]{background:#b8e46e;color:#0b1220;border-color:#b8e46e;font-weight:700}
 @media(max-width:1000px){.hv2 .big{font-size:80px}.hero h1{font-size:34px!important}}
 @media print{.sw{display:none}}
-</style></head><body class="h1 t1">
+</style></head><body class="h1 t3">
 <div class="draftbar"><b>제목 · 목차 시안</b> 우주 1 배경 위에서 제목 영역 4종, 목차 4종. 왼쪽 아래 버튼으로 바꿔 본다. <a href="index.html">← 시안 목록</a></div>
 <header class="top"><div class="in"><span class="nm"><i>✦</i>김기백 · GAME CLIENT</span><nav><a href="#">소개</a><a href="#" class="on">정무대전</a><a href="#">라멘가게</a><a href="#">그 밖의 작업</a><a href="#">연락</a></nav></div></header><div class="hero">
  <div class="hv hv1"><p class="ey">PROJECT 02 · 1인 개발</p><h1>정무대전 <span class="han">正武大战</span></h1><p class="sub">최대 6인 온라인 무협 대전 액션</p>
@@ -145,6 +145,6 @@ function spy(){let i=0;H.forEach((h,j)=>{if(h&&h.getBoundingClientRect().top<inn
  toc.style.setProperty('--i',i);}
 addEventListener('scroll',spy,{passive:true});spy();
 </script><script>addEventListener("scroll",()=>{const h=document.documentElement,p=h.scrollTop/(h.scrollHeight-innerHeight);document.querySelectorAll("[data-prog]").forEach(e=>e.style.setProperty("--p",p))},{passive:true})</script><div class="sw" aria-label="시안 바꾸기"><div><b>제목</b><button data-k="h" data-v="1">1</button><button data-k="h" data-v="2">2</button><button data-k="h" data-v="3">3</button><button data-k="h" data-v="4">4</button></div><div><b>목차</b><button data-k="t" data-v="1">1</button><button data-k="t" data-v="2">2</button><button data-k="t" data-v="3">3</button><button data-k="t" data-v="4">4</button></div></div>
-<script>(()=>{const q=new URLSearchParams(location.search);const st={h:q.get('h')||'1',t:q.get('t')||'1'};
+<script>(()=>{const q=new URLSearchParams(location.search);const st={h:q.get('h')||'1',t:q.get('t')||'3'};
 function apply(){document.body.className='h'+st.h+' t'+st.t;document.querySelectorAll('.sw button').forEach(b=>b.setAttribute('aria-pressed',st[b.dataset.k]===b.dataset.v))}
 document.querySelectorAll('.sw button').forEach(b=>b.onclick=()=>{st[b.dataset.k]=b.dataset.v;apply();history.replaceState(null,'','?h='+st.h+'&t='+st.t)});apply()})()</script></body></html>
