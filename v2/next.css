@@ -1,8 +1,8 @@
 /* 취업용 한 페이지 · 우주 배경 + 블로그형 본문 */
-@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=3a808359) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=3a808359) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=3a808359) format('woff2')}
-@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=3a808359) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=cbece387) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=cbece387) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=cbece387) format('woff2')}
+@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=cbece387) format('woff2')}
 :root{--ink:#1f2328;--body:#30363d;--mute:#6e7781;--line:#d8dde3;--soft:#f5f7f9;--green:#3f8a1f;--greenbg:#f3f8ee;--lime:#b8e46e;--red:#c3402b;--blue:#2f6fb5;--mono:'D2Coding',ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}
 html{background:#05080f;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -522,3 +522,67 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .fig .cap{color:#4d5965}
 .psr+.fig,.cond+.fig{margin-top:18px}
 .tl a.s{color:#9fb0c6}
+
+/* ═══ 작업서 반영 (11-22): 첫 화면 · 대표작 카드 · 상세 분량 ═══ */
+.cue{display:none!important}
+.v3 .who3 h1{font-size:54px;line-height:1.12;color:#fff;margin:0;font-weight:700;letter-spacing:-.01em}
+.v3 .who3 h1 span{display:inline-block;font-size:24px;font-weight:500;color:#dfe7f1;margin-left:14px;letter-spacing:0;vertical-align:8px}
+.v3 .intro3{margin:18px 0 0;color:#e2e9f2;font-size:18.5px;line-height:1.75;max-width:720px}
+.cta3{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.cta{display:grid;grid-template-columns:auto auto;grid-template-areas:"b i" "s i";column-gap:18px;align-items:center;text-decoration:none;background:var(--lime);color:#0b1220;border-radius:12px;padding:10px 18px 11px 20px;transition:transform .15s ease,box-shadow .15s ease}
+.cta b{grid-area:b;font-size:19px;line-height:1.3}
+.cta span{grid-area:s;font-size:14.5px;font-weight:600;opacity:.82}
+.cta i{grid-area:i;font-style:normal;font-size:20px;font-weight:700}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(184,228,110,.28)}
+.v3 .line{font-size:17px;font-weight:500;color:#b9c6d6;margin:22px 0 0;line-height:1.6;width:auto;letter-spacing:0}
+.v3 .line em{color:var(--lime);font-weight:700}
+.v3 .who3 .pills{margin-top:16px}
+.sks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.sk{border:1px solid #ffffff1f;background:rgba(14,22,38,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:14px;padding:16px 20px 18px}
+.sk b{display:block;color:var(--lime);font-size:16px;margin-bottom:6px}
+.sk p{margin:0;color:#e2e9f2;font-size:15.5px;line-height:1.65}
+.strip{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.strip>div{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;font-size:14.5px;color:#c4cfdd;padding:0 4px}
+.strip b{color:#8fa1b6;font-size:13.5px;letter-spacing:.06em;margin-right:2px}
+.strip span{display:inline-block}
+.chips3{display:flex!important;flex-wrap:wrap;gap:6px}
+.chips3 i{font-style:normal;border:1px solid #ffffff2e;background:#ffffff0d;border-radius:7px;padding:1px 9px;font-size:13.5px;color:#e6edf5}
+.landed .sks.hx{transition-delay:.15s}.landed .strip.hx{transition-delay:.3s}.landed .mepic.hx{transition-delay:.05s}.landed .nxt.hx{transition-delay:.5s}
+@media(max-height:820px) and (min-width:1001px){.v3 .who3 h1{font-size:44px}.v3 .intro3{font-size:17px;margin-top:12px}.cta3{margin-top:16px}.v3 .line{margin-top:14px}.sks{margin-top:20px}.sk{padding:12px 16px 14px}.sk p{font-size:14.5px}}
+@media(max-width:1000px){
+ .v3 .who3 h1{font-size:38px}.v3 .who3 h1 span{display:block;margin:8px 0 0;font-size:18px}
+ .v3 .intro3{font-size:16.5px}
+ .cta3{flex-direction:column}.cta{grid-template-columns:1fr auto}
+ .sks{grid-template-columns:1fr;gap:10px;margin-top:24px}
+ .strip{grid-template-columns:1fr}
+ .v3 .top1{grid-template-columns:1fr}
+ .v3 .mepic{width:96px;order:-1;border-radius:14px}
+}
+/* 대표작 카드: 기여 한 줄 + 단추는 아래 줄 */
+.pick .d{padding-right:0}
+.pick .c2{display:block;margin-top:8px;padding-top:8px;border-top:1px solid #ffffff1f;font-size:15px;line-height:1.6;color:#e2e9f2}
+.pick .go{position:static;display:inline-block;margin-top:12px}
+/* 상세 */
+.made.wide li{grid-template-columns:92px 1fr}
+.ask{font-size:22px;font-weight:700;color:var(--ink);margin:6px 0 0;letter-spacing:-.01em}
+.numt{margin:30px 0 0}
+.numt h4{margin:0 0 4px;font-size:18px}
+.tbl.num td:first-child{width:30%;font-weight:700}
+.tbl.num td[rowspan]{border-left:1px solid var(--line);padding-left:14px;color:var(--body)}
+.case.fold2{padding:4px 28px 14px;margin-top:14px}
+.case.fold2>.more{margin:0;border-top:0}
+.case.fold2>.more>summary{font-size:17px;color:var(--ink);flex-wrap:wrap}
+.case.fold2>.more>summary span{color:var(--green);font-weight:600}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.tri figure{margin:0}
+.tri img,.tri video{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:8px;display:block;background:#000}
+.tri figcaption{text-align:left;margin-top:8px;font-size:14.5px;line-height:1.6;color:#30363d}
+.tri figcaption b{display:block;font-size:15.5px;color:var(--ink)}
+.say{margin:22px 0 0;padding:14px 18px;border-left:3px solid var(--green);background:var(--soft);border-radius:0 8px 8px 0;font-size:16px;line-height:1.8;color:var(--ink)}
+@media(max-width:760px){.tri{grid-template-columns:1fr}.case.fold2{padding:2px 16px 10px}.ask{font-size:19px}.made.wide li{grid-template-columns:76px 1fr}.tbl.num td[rowspan]{border-left:0;padding-left:0}}
+.strip>div{align-content:flex-start}
+.strip>div:first-child span{flex-basis:calc(100% - 50px)}
+.strip>div:first-child span+span{margin-left:38px}
+.pick .pic{aspect-ratio:20/9}
+@media(max-width:1000px){.strip>div:first-child span{flex-basis:100%}.strip>div:first-child span+span{margin-left:0}}
+.tri+.also{margin-top:24px!important}
