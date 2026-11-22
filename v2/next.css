@@ -607,3 +607,16 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .nextup .nmain b{font-size:20px}
 @media(max-width:760px){.duo2{grid-template-columns:1fr}.nrow{grid-template-columns:1fr 1fr 1fr}.nextup .nmain{grid-column:1/-1}.nextup .tx{padding:8px 10px 10px}.nextup b{font-size:14px}.nextup i{font-size:11.5px}}
 @media print{.nextup{display:none}}
+/* 첫 화면: 작업 규모 숫자, 사진 아래 연락 버튼, C++ 한 줄 */
+.stats3{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0}
+.stats3 li{border:1px solid #ffffff26;background:rgba(14,22,38,.55);border-radius:10px;padding:6px 14px 7px;font-size:13.5px;color:#b9c6d6;line-height:1.35}
+.stats3 b{display:block;font-size:20px;color:#fff;letter-spacing:-.01em}
+.v3 .cta3{margin-top:18px}
+.mecol{display:grid;justify-items:center;gap:14px}
+.mecol .mepic{margin:0}
+.mecol .pills{margin:0;flex-direction:column;align-items:stretch;text-align:center;width:100%}
+.strip .cpp{flex-basis:100%;margin-top:6px;color:#e2e9f2}
+.pts.how li b{color:var(--green);margin-right:10px}
+@media(max-height:820px) and (min-width:1001px){.stats3 b{font-size:17px}.stats3{margin-top:12px}}
+@media(max-width:1000px){.mecol{order:-1;grid-template-columns:auto 1fr;justify-items:start;align-items:end}.mecol .pills{flex-direction:column;align-items:flex-start;width:auto}.stats3 li{flex:1 1 30%}}
+@media(max-height:820px) and (min-width:1001px){.v3 .nxt{display:none}}
