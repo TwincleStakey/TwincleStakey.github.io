@@ -12,20 +12,20 @@ const svg=(w,h,body)=>`<svg viewBox="0 0 ${w} ${h}" role="img">${defs}${body}</s
 
 const FIGS={
 // 1. 문제: 에디터에서 재면 흔들리고, 빌드에서 재면 안정
-range: {cap:"같은 상황을 어디서 쟀느냐에 따라 숫자가 달랐다", svg:svg(520,210,
+range: {cap:"에디터에서는 값이 흔들려 원인을 볼 수 없었다", svg:svg(520,210,
  t(0,22,"비도 판정 일치율",{weight:700,size:14})+
  `<line x1="130" y1="170" x2="500" y2="170" stroke="#c9ced6"/>`+
  [0,25,50,75,100].map(v=>`<line x1="${130+v*3.7}" y1="166" x2="${130+v*3.7}" y2="174" stroke="#c9ced6"/>`+t(130+v*3.7,192,v+"%",{size:11,fill:"#6e7781",anchor:"middle"})).join("")+
  t(0,78,"에디터에서 측정",{size:13})+
  `<rect x="${130+38*3.7}" y="64" width="${22*3.7}" height="18" rx="3" fill="#f2c9c1"/>`+t(130+60*3.7+10,78,"38~60% · 잴 때마다 다름",{size:12.5,fill:"#c3402b"})+
- t(0,130,"개발 빌드 두 개",{size:13})+
+ t(0,122,"개발 빌드 두 개",{size:13})+t(0,140,"(출발점 고친 뒤)",{size:11.5,fill:"#6e7781"})+
  `<circle cx="${130+91*3.7}" cy="125" r="8" fill="#3f8a1f"/>`+t(130+91*3.7-14,129,"91%",{size:12.5,fill:"#3f8a1f",anchor:"end",weight:700})
 )},
 // 2. 측정 방법
 measure:{cap:"같은 PC에 개발 빌드 창 두 개, 지연을 일부러 걸고 봇끼리 싸우게 했다",svg:svg(520,250,
  box(8,8,504,234,{fill:"#fbfcfd",dash:1})+t(20,30,"PC 한 대",{size:12,fill:"#6e7781"})+
  box(30,46,190,110)+t(125,70,"방장 창",{anchor:"middle",weight:700})+t(125,94,"-host -autoplay",{anchor:"middle",size:12,fill:"#2f6fb5"})+t(125,116,"봇이 조종",{anchor:"middle",size:12,fill:"#6e7781"})+
- box(300,46,190,110)+t(395,70,"손님 창",{anchor:"middle",weight:700})+t(395,94,"-join -autoplay",{anchor:"middle",size:12,fill:"#2f6fb5"})+t(395,116,"봇이 조종",{anchor:"middle",size:12,fill:"#6e7781"})+
+ box(300,46,190,110)+t(395,70,"게스트 창",{anchor:"middle",weight:700})+t(395,94,"-join -autoplay",{anchor:"middle",size:12,fill:"#2f6fb5"})+t(395,116,"봇이 조종",{anchor:"middle",size:12,fill:"#6e7781"})+
  arrow(222,92,298,92)+arrow(298,112,222,112)+t(260,84,"60±10ms",{anchor:"middle",size:11.5,fill:"#c3402b"})+t(260,132,"지연 시뮬",{anchor:"middle",size:11,fill:"#6e7781"})+
  box(30,178,460,44,{fill:"#f3f8ee",stroke:"#a9d27a"})+t(260,205,"-netprobe · 5초마다 \"내 화면에서 닿음 → 실제로 맞음\" 일치율 기록",{anchor:"middle",size:12.5,fill:"#2e6b1a"})
 )},
@@ -45,7 +45,7 @@ cause:{cap:"걸으며 던지면, 던지는 사람 화면의 비도만 다른 자
 fix:{cap:"출발점과 걸음 속도를 한 번 보내고, 모든 화면이 같은 식으로 자리를 셈한다",svg:svg(520,240,
  box(10,80,150,80,{fill:"#fff"})+t(85,108,"던지는 사람",{anchor:"middle",weight:700})+t(85,130,"출발점 from",{anchor:"middle",size:12,fill:"#2f6fb5"})+t(85,148,"걸음 vel",{anchor:"middle",size:12,fill:"#2f6fb5"})+
  arrow(162,120,232,50,'#3f8a1f','g')+arrow(162,120,232,120,'#3f8a1f','g')+arrow(162,120,232,190,'#3f8a1f','g')+t(196,100,"RPC",{anchor:"middle",size:11.5,fill:"#3f8a1f",weight:700})+
- [["방장 화면",50],["손님 1 화면",120],["손님 2 화면",190]].map(([n,y])=>box(236,y-24,270,48,{fill:"#f3f8ee",stroke:"#a9d27a"})+t(250,y-3,n,{size:12.5,weight:700})+t(250,y+15,"At(t) = from + vel × t",{size:12,fill:"#2e6b1a"})).join("")
+ [["방장 화면",50],["게스트 1 화면",120],["게스트 2 화면",190]].map(([n,y])=>box(236,y-24,270,48,{fill:"#f3f8ee",stroke:"#a9d27a"})+t(250,y-3,n,{size:12.5,weight:700})+t(250,y+15,"At(t) = from + vel × t",{size:12,fill:"#2e6b1a"})).join("")
 )},
 // 구조: 누가 무엇을 정하나
 who:{cap:"판의 흐름과 체력은 방장, 맞았는지는 맞는 쪽, 출발점은 쏘는 쪽이 정한다",svg:svg(560,300,

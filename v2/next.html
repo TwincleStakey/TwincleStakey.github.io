@@ -7,7 +7,7 @@
 <meta name="description" content="영화보다 더 영화 같은 게임을 만드는 것이 목표입니다. Unity 클라이언트 프로그래머 김기백의 포트폴리오.">
 <meta property="og:title" content="김기백 · 게임 클라이언트 프로그래머"><meta property="og:description" content="정무대전(1인 개발 · 최대 6인 온라인 대전) · 나의 인생 라멘가게(팀 프로젝트)"><meta property="og:image" content="media/p_hero2.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="next.css?v=3c81476d">
+<link rel="stylesheet" href="next.css?v=666c9ead">
 </head>
 <body class="t-b">
 <header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
@@ -72,35 +72,64 @@
  <p class="eyebrow">1 · 메인 프로젝트 · 1인 개발</p>
  <h2>정무대전 <small>正武大战</small></h2>
  <p class="meta">2026.10 ~ 진행 중 · Unity 6000.3 · Netcode for GameObjects · Relay</p>
- <p class="lead">여섯 문파 무인이 무작위 맵에서 겨루는 최대 6인 온라인 무협 대전 액션.</p>
+ <p class="lead">여섯 문파(캐릭터 유형) 가운데 하나를 골라 최대 6명이 겨루는 온라인 무협 대전 액션.</p>
 
  <p class="lbl">내가 만든 것</p>
  <ul class="made">
   <li><b>전투</b><span>여섯 문파 기술, 막기 · 튕겨내기, 상태 이상</span></li>
   <li><b>멀티</b><span>방 만들기부터 결과창 · 랭크 대전까지</span></li>
-  <li><b>성장</b><span>판 안에서 경지가 오르고 기술이 열리는 구조</span></li>
+  <li><b>연출</b><span>경지 등극, 결정타, 시작 카운트다운, 무공 도감 영상</span></li>
   <li><b>도구</b><span>자동 대전, 지연 시뮬, 판정 일치율 측정</span></li>
  </ul>
+ <p class="lbl">가져다 쓴 것</p>
+ <p class="used">Unity Relay · Multiplayer Services(세션 · 로비), 글꼴, 효과음 · 배경음(생성 도구). 그림 · UI · 이펙트는 코드로 그렸다.</p>
  <p class="lbl">AI와 나눈 일</p>
- <div class="ai"><div><b>AI에 맡긴 것</b>기능 단위 구현 · 측정 도구 코드</div><div><b>직접 정한 것</b>무엇을 만들지 · 판정 원칙 · 통과 기준</div><div><b>확인한 방법</b>개발 빌드 실측 · 자동 대전 · 녹화</div></div>
+ <div class="ai"><div><b>AI에 맡긴 것</b>Claude Code · Unity MCP에 기능 단위로 나눠 맡긴 구현, 측정 도구 코드</div><div><b>직접 정한 것</b>무엇을 만들지 · 판정 원칙 · 통과 기준</div><div><b>확인한 방법</b>개발 빌드 실측 · 자동 대전 · 녹화</div></div>
  </section>
 
  <section id="jm-play">
  <h3><span class="no">1.1</span>플레이 영상</h3>
- <figure><video muted playsinline preload="none" controls poster="media/p_play_3v3.jpg" data-src="media/play_3v3.mp4" width="1280" height="720"></video><figcaption>3대3 팀전 한 판(63초, 소리가 나온다) · 오프닝부터 결과창까지는 <a href="https://youtu.be/zpFt8mJXa7Y" target="_blank" rel="noopener">YouTube 시연 영상 ↗</a></figcaption></figure>
+ <figure><video muted playsinline preload="none" controls poster="media/p_play_3v3.jpg" data-src="media/play_3v3.mp4" width="1280" height="720" aria-label="정무대전 3대3 팀전 한 판"></video><figcaption>3대3 팀전 한 판(63초, 소리가 나온다) · 오프닝부터 결과창까지는 <a href="https://youtu.be/zpFt8mJXa7Y" target="_blank" rel="noopener">YouTube 시연 영상 ↗</a></figcaption></figure>
  </section>
 
  <section id="jm-arch">
  <h3><span class="no">1.2</span>구조 한 장</h3>
  <div class="fig" data-svg="who"></div>
- <p style="margin-top:18px">판의 흐름과 체력은 방장이, 맞았는지는 맞는 쪽이, 투사체 출발점은 쏘는 쪽이 정한다. 맞는 쪽이 보낸 피해는 방장이 한 번 더 걸러서 반영한다. 네트워크를 타는 클래스는 협객(Duelist)과 판(DuelGame) 둘뿐이고, 나머지 약 210개는 화면만 맡는다.</p>
+ <p style="margin-top:18px">방장은 방을 만든 PC, 게스트는 접속한 PC다. 맞는 쪽이 판정하게 한 것은 막기 · 튕겨내기처럼 맞는 사람이 누른 입력을 살리기 위해서다. 맞는 쪽이 보낸 피해는 방장이 상한을 넘지 않는지 확인한 뒤 체력에 반영한다. 부정행위까지 막는 구조는 아니다.</p>
  </section>
 
  <section id="jm-sys">
  <h3><span class="no">1.3</span>핵심 시스템</h3>
  <div class="sys">
-  <h4>되감기 판정</h4>
-  <p>맞는 쪽 PC가 판정하고, 공격자 화면에 보이던 위치로 되돌려서 잰다. 막기 · 튕겨내기는 지금 기준이라 맞는 쪽 입력이 무시되지 않는다.</p>
+  <h4>여섯 문파</h4>
+  <p>문파마다 무공이 다르고, 독 · 빙결 · 기절 같은 상태 이상이 서로 맞물린다. 무공 도감의 기술 영상 68개는 장면을 코드로 연출해 녹화했다.</p>
+  <figure><img src="media/jm_sect1.jpg" alt="문파별 기술 영상과 설명이 나오는 무공 도감 화면" loading="lazy"><figcaption>무공 도감 · 실제 화면</figcaption></figure>
+ </div>
+ <div class="sys">
+  <h4>판 안 경지 성장</h4>
+  <p>경지는 한 판 안에서 오르는 등급이다. 때리고, 막고, 튕겨내면 깨달음이 쌓이고, 경지를 돌파하면 문파마다 다른 기술이 하나씩 열린다.</p>
+  <figure><img src="media/jm_realm4.jpg" alt="이류 등극 알림과 함께 새 기술이 열린 화면" width="1280" height="620" loading="lazy"><figcaption>이류 등극: 새 기술 "회수 비도"가 열리고(①) 최대 체력이 오른다(②) · 실제 화면</figcaption></figure>
+ </div>
+ <div class="sys">
+  <h4>결정타 연출</h4>
+  <p>판을 끝내는 마지막 일격에는 화면이 잠깐 조용해졌다가 문파 색 붓 한 획이 그어진다. 여섯 문파마다 다른 연출을 만들었다.</p>
+  <figure><video muted loop playsinline preload="none" controls poster="media/p_finisher2.jpg" data-src="media/finisher.mp4" width="1280" height="720" aria-label="결정타 연출"></video><figcaption>결정타 · 실제 화면</figcaption></figure>
+ </div>
+ <p class="also"><b>그 밖에</b>대기실 · 결과창 · 랭크 대전 / 입문 수련 8단계와 가이드 / 무작위 지형 5종 / 자동 대전으로 문파별 승률 측정</p>
+ </section>
+
+ <section id="jm-case">
+ <h3><span class="no">1.4</span>기술 사례</h3>
+
+ <div class="case" id="jm-c1">
+  <h4>화면에서는 맞았는데 피해가 없는 비도 <span class="res">게스트끼리 일치율 59% → 96%</span></h4>
+  <dl class="psr">
+   <dt class="q">문제</dt><dd>게스트 화면에서 맞은 비도(던지는 암기)가 피해 없이 지나갔다.</dd>
+   <dt>원인</dt><dd>맞는 쪽 PC가 판정하는데 지연 보상이 없었다. 공격자 화면 속 내 위치와 실제 위치가 달랐다.</dd>
+   <dt class="d">해결</dt><dd>공격자 화면에 내가 보이던 시점으로 위치를 되감아 판정한다.</dd>
+   <dt>결과</dt><dd>처음엔 모든 조합에 같은 시간을 썼더니 게스트끼리는 일치율이 59%였다. 방장 · 게스트 조합마다 따로 재서 맞춘 뒤 96%가 됐다.</dd>
+  </dl>
+  <p class="cond">일치율은 "내 화면에서 닿은 공격 가운데 실제로 맞은 비율"이다. 측정 조건: 같은 PC에서 개발 빌드, 편도 지연 60±10ms, 봇끼리 자동 대전. 실제 인터넷 환경 전체를 대표하는 값은 아니다.</p>
   <div class="fig dark"><svg viewBox="0 0 560 250" width="100%" role="img" aria-label="되감기 판정 그림" style="display:block;background:#0b1220">
 <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"></path></marker></defs>
 <text x="20" y="28" fill="#8e9bad" font-size="13" font-family="monospace">공격자 PC 화면</text>
@@ -117,35 +146,9 @@
 <text x="400" y="190" text-anchor="middle" fill="#b8e46e" font-size="12">공격자가 보던 시각만큼 되감은 자리</text>
 <text x="400" y="232" text-anchor="middle" fill="#cfd8e3" font-size="12">→ 공격자가 본 그대로 맞음 · 막기는 '지금' 기준</text>
 </svg></div>
- </div>
- <div class="sys">
-  <h4>판 안 경지 성장</h4>
-  <p>때리고, 막고, 튕겨내면 깨달음이 쌓이고, 경지를 돌파하면 문파마다 다른 기술이 하나씩 열린다. 돌파 중에 맞으면 주화입마에 빠진다.</p>
-  <figure><img src="media/jm_realm4.jpg" alt="이류 등극 알림과 함께 새 기술이 열린 화면" width="1280" height="620" loading="lazy"><figcaption>이류 등극: 새 기술 "회수 비도"가 열리고(①) 최대 체력이 오른다(②) · 실제 화면</figcaption></figure>
- </div>
- <div class="sys">
-  <h4>측정 도구</h4>
-  <p>봇끼리 50~150판을 4배속으로 돌려 문파별 승률을 모으고, 지연을 일부러 걸어 두 화면의 판정 일치율을 잰다. AI가 짠 코드를 눈으로만 보고 넘기지 않으려고 만들었다.</p>
-  <div class="fig"><svg viewBox="0 0 560 236" role="img" aria-label="자동 대전 문파별 승률 패치 전후"><line x1="320.0" y1="14" x2="320.0" y2="196" stroke="#c9ced6" stroke-dasharray="3 3"/><text x="320.0" y="212" font-size="11.5" fill="#6e7781" text-anchor="middle" style="font-family:Pretendard,sans-serif">50%</text><text x="110.0" y="212" font-size="11.5" fill="#9aa3ad" text-anchor="middle" style="font-family:Pretendard,sans-serif">0%</text><text x="530.0" y="212" font-size="11.5" fill="#9aa3ad" text-anchor="middle" style="font-family:Pretendard,sans-serif">100%</text><text x="0" y="37" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">마교</text><line x1="110.0" y1="32" x2="530.0" y2="32" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="471.2" y1="32" x2="429.2" y2="32" stroke="#a9d27a" stroke-width="6"/><circle cx="471.2" cy="32" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="429.2" cy="32" r="6.5" fill="#3f8a1f"/><text x="485.2" y="37" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">86% → <tspan font-weight="700" fill="#3f8a1f">76%</tspan></text><text x="0" y="73" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">화산</text><line x1="110.0" y1="68" x2="530.0" y2="68" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="315.8" y1="68" x2="345.20000000000005" y2="68" stroke="#a9d27a" stroke-width="6"/><circle cx="315.8" cy="68" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="345.20000000000005" cy="68" r="6.5" fill="#3f8a1f"/><text x="359.20000000000005" y="73" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">49% → <tspan font-weight="700" fill="#3f8a1f">56%</tspan></text><text x="0" y="109" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">소림</text><line x1="110.0" y1="104" x2="530.0" y2="104" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="311.6" y1="104" x2="294.8" y2="104" stroke="#a9d27a" stroke-width="6"/><circle cx="311.6" cy="104" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="294.8" cy="104" r="6.5" fill="#3f8a1f"/><text x="325.6" y="109" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">48% → <tspan font-weight="700" fill="#3f8a1f">44%</tspan></text><text x="0" y="145" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">북해</text><line x1="110.0" y1="140" x2="530.0" y2="140" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="294.8" y1="140" x2="269.6" y2="140" stroke="#a9d27a" stroke-width="6"/><circle cx="294.8" cy="140" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="269.6" cy="140" r="6.5" fill="#3f8a1f"/><text x="308.8" y="145" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">44% → <tspan font-weight="700" fill="#3f8a1f">38%</tspan></text><text x="0" y="181" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">당문</text><line x1="110.0" y1="176" x2="530.0" y2="176" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="181.4" y1="176" x2="244.4" y2="176" stroke="#a9d27a" stroke-width="6"/><circle cx="181.4" cy="176" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="244.4" cy="176" r="6.5" fill="#3f8a1f"/><text x="258.4" y="181" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">17% → <tspan font-weight="700" fill="#3f8a1f">32%</tspan></text><circle cx="118" cy="228" r="5" fill="#fff" stroke="#8b949e" stroke-width="2"/><text x="130" y="232" font-size="11.5" fill="#6e7781" style="font-family:Pretendard,sans-serif">패치 전</text><circle cx="196" cy="228" r="5.5" fill="#3f8a1f"/><text x="208" y="232" font-size="11.5" fill="#6e7781" style="font-family:Pretendard,sans-serif">패치 뒤</text></svg><div class="cap">자동 대전으로 잰 문파별 승률(같은 문파끼리는 제외). 패치 전 150판, 패치 뒤 50판</div></div>
- </div>
- <p class="also"><b>그 밖에</b>대기실 · 결과창 · 랭크 대전 / 입문 수련 8단계와 가이드 / 무공 도감(영상 68개) / 무작위 지형 5종</p>
- </section>
-
- <section id="jm-case">
- <h3><span class="no">1.4</span>기술 사례</h3>
-
- <div class="case" id="jm-c1">
-  <h4>게스트 화면에서만 빗나가는 비도 <span class="res">일치율 15% → 91%</span></h4>
-  <dl class="psr">
-   <dt class="q">문제</dt><dd>게스트 화면에서 맞은 비도가 실제로는 맞지 않았다.</dd>
-   <dt>원인</dt><dd>맞는 쪽이 지연 보상 없이 지금 위치로 판정했고, 던진 사람 화면만 비도 출발점이 달랐다.</dd>
-   <dt class="d">해결</dt><dd>공격자가 보던 시점으로 위치를 되감아 판정하고, 출발점과 방향은 쏘는 사람이 보낸다.</dd>
-   <dt>그 뒤</dt><dd>AI로 넣은 새 기술이 이 원칙을 깨서 76%로 떨어졌고, 같은 측정으로 찾아 89%로 되돌렸다.</dd>
-  </dl>
-  <p class="cond">측정 조건: 같은 PC에서 개발 빌드 두 개, 편도 지연 60±10ms, 봇끼리 자동 대전. 실제 인터넷 환경 전체를 대표하는 값은 아니다.</p>
-  <div class="fig" data-svg="cause"></div>
-  <details class="more"><summary>과정 펼치기 <span>측정을 빌드로 옮긴 이유 · 선택지 · 한계 · 코드</span></summary><div class="in">
-   <p>재 보니 게스트 화면에서 닿은 비도 가운데 실제로 맞은 것은 15%였다. 판정을 공격자 쪽으로 옮기면 막기 · 튕겨내기처럼 맞는 쪽이 누른 입력이 무시된다. 그래서 판정은 맞는 쪽에 두고, 12ms마다 기록해 둔 내 위치를 공격자 화면에 보이던 시점으로 되돌려서 쟀다.</p>
+  <details class="more"><summary>과정 펼치기 <span>선택지 · 한계 · 코드</span></summary><div class="in">
+   <p>판정을 공격자 쪽으로 옮기면 막기 · 튕겨내기처럼 맞는 쪽이 누른 입력이 무시된다. 그래서 판정은 맞는 쪽에 두고, 12ms마다 기록해 둔 내 위치를 공격자 화면에 보이던 시점으로 되돌려서 쟀다. 되감기를 넣기 전에 에디터에서 잰 일치율은 15%였다. 에디터 측정이라 위 빌드 수치와는 조건이 다르다.</p>
+   <p>게스트 화면에서 방장이 늦게 보이던 시간도 줄였다. NGO 기본 보간은 핑이 튀면 버퍼를 키워서 방장을 360ms~1초 늦게 그렸다. 게스트 쪽 보간을 고정 3틱으로 바꿔 170ms로 줄였다.</p>
    <pre class="cx"><span class="hd">Duelist.cs · ViewDelayOf / HitPosition</span><span class="kw">float</span> <span class="fn">ViewDelayOf</span>(Duelist attacker)
 {
     <span class="kw">if</span> (attacker == <span class="kw">null</span> || attacker.IsOwner || !nm.IsListening) <span class="kw">return</span> 0f;
@@ -159,35 +162,49 @@
     <span class="kw">return</span> Mathf.Min(<span class="nm">MaxRewind</span>, delay);   <span class="cm">// 상한 0.25초</span>
 }
 <span class="kw">public</span> Vector3 <span class="fn">HitPosition</span>(Duelist attacker) =&gt; PositionAgo(ViewDelayOf(attacker));</pre>
-<pre class="cx"><span class="hd">Duelist.cs · UseRemoteInterpolation</span><span class="kw">if</span> (IsServer) { NetworkTransform.InterpolationBufferTickOffset = 0; <span class="kw">return</span>; }
-<span class="kw">var</span> nt = GetComponent&lt;NetworkTransform&gt;();
-<span class="hi">nt.PositionInterpolationType = nt.RotationInterpolationType = InterpolationTypes.LegacyLerp;</span>
-<span class="hi">nt.PositionLerpSmoothing = nt.RotationLerpSmoothing = <span class="kw">false</span>;</span>
-NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전을 그린다</span></pre>
-   <p>되감기를 넣은 뒤에도 에디터에서는 일치율이 잴 때마다 38~60%로 달랐다. 창 두 개를 띄우면 포커스 없는 에디터가 49초에 3프레임만 돌았고, 프로파일러로 보니 화면 출력 대기가 1초마다 500ms씩 걸리고 있었다. 에디터에서만 생기는 멈춤이라 측정을 개발 빌드 두 개로 옮겼다.</p>
-   <div class="fig" data-svg="range"></div>
-   <div class="fig" data-svg="measure" style="margin-top:14px"></div>
-   <p style="margin-top:18px">숫자가 안정되자 남은 원인이 보였다. 던지는 사람 화면에서만 비도가 지금 자리에서 출발해 궤적이 최대 0.8m 갈라졌다. 출발점과 걸음 속도를 RPC 하나로 보내고 모든 화면이 같은 식으로 자리를 셈하게 하자, 비도 102번 중 93번이 일치했다.</p>
-   <div class="fig" data-svg="fix"></div>
-   <div data-code></div>
-   <div class="rule"><b>실제로 남긴 원칙</b>시간이 지난 뒤 나가는 암기는 출발점과 방향을 쏘는 사람이 정해 RPC로 보낸다. 새 초식을 넣으면 빌드 두 개로 일치율을 다시 잰다.</div>
+   <p class="cond">코드의 0.05, 0.02, 0.01은 방장 · 게스트 조합마다 개발 빌드에서 재서 맞춘 값이다.</p>
    <p class="lbl">선택지</p>
-   <ul class="opt"><li class="x">공격자 화면 기준 판정 → 막는 사람 반응이 무시된다</li><li class="x">에디터에서 멈춘 구간만 빼고 분석 → 매번 손으로 골라야 한다</li><li class="o">맞는 쪽 판정 + 되감기, 측정은 개발 빌드 두 개</li></ul>
+   <ul class="opt"><li class="x">공격자 화면 기준 판정 → 막는 사람 반응이 무시된다</li><li class="x">보간 버퍼만 줄이기 → 핑이 튀면 끊긴다</li><li class="o">맞는 쪽 판정 + 되감기</li></ul>
    <p class="lbl">한계</p>
-   <p>0.25초보다 늦은 연결은 보정하지 않는다. "화면에서 닿음 → 실제로 맞음"만 세고, 실제 공유기 환경이나 사람끼리 한 판은 아직 재지 못했다.</p>
+   <p>되감기는 0.25초까지만 한다. 실제 공유기 환경이나 사람끼리 한 판은 아직 재지 못했다.</p>
   </div></details>
  </div>
 
  <div class="case" id="jm-c2">
+  <h4>두 화면에서 다르게 날아간 비도 <span class="res">개발 빌드에서 91% (93/102)</span></h4>
+  <dl class="psr">
+   <dt class="q">문제</dt><dd>되감기를 넣은 뒤에도 에디터에서 잰 비도 일치율이 38~60%로 잴 때마다 달랐다.</dd>
+   <dt>원인</dt><dd>던지는 사람 화면만 '지금 자리'에서 비도를 날려 궤적이 최대 0.8m 갈라졌다. 에디터가 멈칫거려 숫자가 흔들리는 바람에 이 원인이 가려져 있었다.</dd>
+   <dt class="d">해결</dt><dd>측정을 개발 빌드 두 개로 옮겨 숫자를 안정시키고, 출발점과 방향은 쏘는 사람이 정해 모든 화면에 보내게 했다.</dd>
+   <dt>결과</dt><dd>개발 빌드에서 비도 102번 중 93번(91%)이 일치했다. 전체 공격은 95%다.</dd>
+   <dt>그 뒤</dt><dd>AI 코딩 도구로 넣은 새 기술 '폭우연사'가 이 원칙을 어겨 일치율이 91%에서 76%로 떨어졌다. 같은 측정으로 찾아 89%로 올렸고, 새 기술을 넣으면 빌드 두 개로 다시 잰다는 규칙을 남겼다.</dd>
+  </dl>
+  <div class="fig" data-svg="cause"></div>
+  <details class="more"><summary>과정 펼치기 <span>측정을 빌드로 옮긴 이유 · 선택지 · 한계 · 코드</span></summary><div class="in">
+   <p>창 두 개를 띄우면 포커스 없는 에디터가 49초에 3프레임만 돌았다. 프로파일러로 보니 화면 출력 대기가 1초마다 500ms씩 걸리고 있었다. 에디터에서만 생기는 멈춤이라 측정을 개발 빌드 두 개로 옮겼다. 실행 인자 하나로 방장 · 게스트 · 자동 대전 · 지연 시뮬 · 일치율 기록을 켤 수 있게 만들었다.</p>
+   <div class="fig" data-svg="range"></div>
+   <div class="fig" data-svg="measure" style="margin-top:14px"></div>
+   <p style="margin-top:18px">숫자가 안정되자 남은 원인이 보였다. 던지는 사람 화면에서만 비도가 지금 자리에서 출발하고 있었다. 던지는 순간의 자리와 걸음 속도를 RPC 하나로 보내고, 던진 사람을 포함한 모든 화면이 같은 식으로 자리를 셈하게 했다.</p>
+   <div class="fig" data-svg="fix"></div>
+   <div data-code></div>
+   <div class="rule"><b>실제로 남긴 원칙</b>시간이 지난 뒤 나가는 암기는 출발점과 방향을 쏘는 사람이 정해 RPC로 보낸다. 새 초식을 넣으면 빌드 두 개로 일치율을 다시 잰다.</div>
+   <p class="lbl">선택지</p>
+   <ul class="opt"><li class="x">멈춘 구간만 빼고 분석 → 매번 손으로 골라야 한다</li><li class="x">에디터 루프 강제 구동 → 멈춤이 0은 아니다</li><li class="o">개발 빌드 두 개로 측정</li></ul>
+   <p class="lbl">한계</p>
+   <p>"화면에서 닿음 → 실제로 맞음"만 센다. 반대 경우와 사람의 실제 움직임은 담기지 않는다.</p>
+  </div></details>
+ </div>
+
+ <div class="case" id="jm-c3">
   <h4>다른 PC에서만 작아지는 커서 <span class="res">32px → 64px</span></h4>
   <dl class="psr">
    <dt class="q">문제</dt><dd>다른 PC에서 커서가 작았고, 설정에서 키워도 그대로였다.</dd>
-   <dt>원인</dt><dd>윈도우에서 유니티 SetCursor는 그림 크기와 상관없이 32px로 줄인다.</dd>
+   <dt>원인</dt><dd>Unity 6000.3 윈도우 빌드에서 Cursor.SetCursor로 넘긴 64px 그림이 32px로 그려지고 있었다.</dd>
    <dt class="d">해결</dt><dd>Win32로 커서를 직접 만들고, 유니티가 되돌리지 못하게 SetCursor 호출을 가로챘다.</dd>
   </dl>
   <p class="cond">윈도우 빌드, 1080p 모니터 기준. 설정 50 / 100 / 200%에서 32 / 64 / 128px, 기본 화살표 깜빡임 0번.</p>
   <details class="more"><summary>과정 펼치기 <span>잘못 짚은 원인 · 선택지 · 한계 · 코드</span></summary><div class="in">
-   <p>내 PC에서는 괜찮아 보여서 늦게 알았다. 처음엔 64px로 고정된 거라고 보고 크기별 이미지를 11벌 만들었는데, 잘못 짚은 원인이었다. 유니티의 SetCursor가 윈도우에서는 그림 크기와 상관없이 32px로 줄이고 있었다.</p>
+   <p>내 PC에서는 괜찮아 보여서 늦게 알았다. 처음엔 64px로 고정된 거라고 보고 크기별 이미지를 11벌 만들었는데, 잘못 짚은 원인이었다.</p>
    <p>Win32의 CreateIconIndirect로 커서를 직접 만들어 창에 걸었더니, 유니티가 매 프레임 기본 화살표를 다시 걸어서 커서가 깜빡였다. 그래서 WndProc과 UnityPlayer.dll의 SetCursor 호출(가져오기 표, IAT)까지 가로채고, 게임을 끌 때 되돌리게 했다.</p>
    <div class="fig dark"><svg viewBox="0 0 560 210" width="100%" role="img" aria-label="커서 가로채기 그림" style="display:block;background:#0b1220">
 <defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"></path></marker></defs>
@@ -224,9 +241,9 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  <section id="jm-retro">
  <h3><span class="no">1.5</span>결과 · 회고</h3>
  <ul class="retro">
-  <li>동기 약 20명이 테스트했고, 2~3일마다 새 빌드를 냈다.</li>
-  <li>다음에는 측정 방법부터 의심한다.</li>
-  <li>실제 인터넷 환경과 사람끼리 한 판은 아직 재지 못했다.</li>
+  <li>아카데미 동기 약 20명이 테스트했고, 2~3일마다 새 빌드를 냈다.</li>
+  <li>다음에는 값이 이상하면 코드보다 측정 방법부터 의심한다.</li>
+  <li>아직 확인하지 못한 것: 실제 인터넷 환경에서 사람끼리 한 판, 서로 다른 PC끼리 하는 랭크 대전, 관전 · 재접속.</li>
  </ul>
  </section>
 </article>
@@ -238,8 +255,9 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
   <a class="c" href="#jm-arch" data-n="1.2">구조 한 장</a>
   <a class="c" href="#jm-sys" data-n="1.3">핵심 시스템</a>
   <a class="c" href="#jm-case" data-n="1.4">기술 사례</a>
-  <a class="s" href="#jm-c1" data-n="·">빗나가는 비도</a>
-  <a class="s" href="#jm-c2" data-n="·">작아지는 커서</a>
+  <a class="s" href="#jm-c1" data-n="·">피해가 없는 비도</a>
+  <a class="s" href="#jm-c2" data-n="·">다르게 날아간 비도</a>
+  <a class="s" href="#jm-c3" data-n="·">작아지는 커서</a>
   <a class="c" href="#jm-retro" data-n="1.5">결과 · 회고</a>
  </nav>
  <div class="bar"><i></i></div>
@@ -432,8 +450,8 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
 </div></footer>
 
 <script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
-<script src="forms/space.js?v=2d6ad288"></script>
-<script src="forms/forms.js?v=2d6ad288"></script>
+<script src="forms/space.js?v=666c9ead"></script>
+<script src="forms/forms.js?v=666c9ead"></script>
 <script>
 (function(){
  var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
@@ -470,7 +488,8 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
       f.appendChild(ws)});n.parentNode.replaceChild(f,n)}
     else if(n.nodeType===1&&n.tagName!=='BR')walk(n)})})(line)})();
  function later(f,ms){timers.push(setTimeout(f,ms))}
- function finish(){timers.forEach(clearTimeout);timers=[];state='done';line.className='line done';line.style.transition='';line.style.transform='';root.classList.remove('opening');document.body.classList.add('landed')}
+ var holdUntil=0,lastWheel=0;
+ function finish(){timers.forEach(clearTimeout);timers=[];state='done';holdUntil=Date.now()+(reduce||location.hash?0:2200);line.className='line done';line.style.transition='';line.style.transform='';root.classList.remove('opening');document.body.classList.add('landed')}
  function center(){var r=line.getBoundingClientRect(),K=Math.min(1.7,(innerWidth*.88)/r.width);
   return 'translate('+(innerWidth/2-(r.left+r.width/2))+'px,'+(innerHeight/2-(r.top+r.height/2))+'px) scale('+K+')'}
  function play(){if(state!=='idle')return;state='playing';cue.classList.add('off');
@@ -481,7 +500,7 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
   line.className='line';line.style.transition='none';line.style.transform='';cue.classList.remove('off')}
  function onInput(e){if(state==='done')return;
   if(e.type==='keydown'&&[' ','ArrowDown','PageDown','Enter'].indexOf(e.key)<0)return;
-  if(e.type==='wheel'&&e.deltaY<=0)return;
+  if(e.type==='wheel'){lastWheel=Date.now();if(e.deltaY<=0)return}
   if(e.target&&e.target.closest&&e.target.closest('.sw'))return;
   if(e.cancelable)e.preventDefault();
   if(state==='idle')play();else if(e.type!=='wheel'&&e.type!=='touchmove')finish()}
@@ -495,10 +514,14 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  function pageTo(y){paging=true;scrollTo({top:y,behavior:reduce?'auto':'smooth'});setTimeout(function(){paging=false},900)}
  function pager(dir,e){if(state!=='done'||innerWidth<=1000)return false;var P=projY(),y=scrollY;if(P>innerHeight*1.25)return false;
   if(paging){e.preventDefault();return true}
-  if(dir>0&&y<P-4){e.preventDefault();pageTo(P);return true}
-  if(dir<0&&y>0&&y<=P+4){e.preventDefault();pageTo(0);return true}
-  return false}
- addEventListener('wheel',function(e){if(e.ctrlKey||!e.deltaY)return;pager(e.deltaY>0?1:-1,e)},{passive:false});
+  var zone=(dir>0&&y<P-4)||(dir<0&&y>0&&y<=P+4);if(!zone)return false;
+  e.preventDefault();
+  /* 첫 화면이 다 뜰 때까지는 넘기지 않고, 굴리던 휠이 이어지는 것도 새 동작으로 치지 않는다 */
+  if(Date.now()<holdUntil)return true;
+  if(e.type==='wheel'&&!fresh)return true;
+  pageTo(dir>0?P:0);return true}
+ var fresh=true;
+ addEventListener('wheel',function(e){if(e.ctrlKey||!e.deltaY)return;var now=Date.now();fresh=now-lastWheel>220;lastWheel=now;pager(e.deltaY>0?1:-1,e)},{passive:false});
  addEventListener('keydown',function(e){if(e.target&&e.target.closest&&e.target.closest('a,button,input,textarea,summary'))return;
   if(['ArrowDown','PageDown',' '].indexOf(e.key)>=0)pager(1,e);else if(['ArrowUp','PageUp'].indexOf(e.key)>=0)pager(-1,e)});
  /* 아래쪽 카드들은 화면에 들어올 때 나타난다 */
