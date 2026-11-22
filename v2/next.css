@@ -462,3 +462,20 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 @media(max-width:640px){.fig .duo{grid-template-columns:1fr;max-width:360px}}
 
 .case .kind{display:inline-block;margin:0 0 8px;padding:2px 9px;border-radius:999px;background:#1f2328;color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.02em}
+
+/* 세 칸 그림 */
+.fig .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.fig .trio .step{background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:12px 12px 12px}
+.fig .trio .st{display:block;font-size:14.5px;font-weight:700;color:#1f2328;line-height:1.4}
+.fig .trio .st i{font-style:normal;margin-left:4px}
+.fig .trio .st .bad{color:#c3402b}.fig .trio .st .good{color:#3f8a1f}
+.fig .trio svg{max-width:260px;width:100%;margin:6px auto 0}
+.fig .trio p{font-size:14px;line-height:1.6;color:#30363d;margin:4px 0 0}
+@media(max-width:760px){.fig .trio{grid-template-columns:1fr}}
+
+.fig .trio .tg{display:block;font-style:normal;font-size:13px;font-weight:700;margin-top:2px}
+.fig .trio .tg.bad{color:#c3402b}.fig .trio .tg.good{color:#3f8a1f}
+.fig .trio svg{max-width:300px}
+
+.fig .lead2{font-size:14.5px;font-weight:700;color:#1f2328;margin:0 2px 10px}
+.fig .lead2 span{font-weight:400;color:#5d6773;margin-left:8px;font-size:13.5px}

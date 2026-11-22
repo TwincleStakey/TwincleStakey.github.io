@@ -11,26 +11,35 @@ const defs=`<defs>
 const svg=(w,h,body)=>`<svg viewBox="0 0 ${w} ${h}" role="img">${defs}${body}</svg>`;
 
 const FIGS={
-// 0. 되감기: 같은 장면을 판정 위치만 바꿔 나란히
-rewind:{cap:"판정은 맞는 쪽 PC 담당. 네트워크 지연 때문에 공격자 화면에는 상대의 0.1~0.17초 전 위치가 보이므로, 그 시점 위치로 되감아 판정(지연 보상)",svg:`<div class="duo">`+
- [0,1].map(ok=>{const c=ok?"#3f8a1f":"#c3402b",x=0;return svg(320,318,""+
-  t(4,18,ok?"되감기 후":"되감기 전",{weight:700,size:14.5})+t(78,18,ok?"명중":"빗나감",{size:13,weight:700,fill:c})+
-  t(4,38,ok?"공격자 화면에 보이던 위치로 되감아 판정":"맞는 쪽 PC가 '지금 위치'로 판정",{size:12,fill:"#5d6773"})+
-  box(0,50,320,262,{fill:"#fff",stroke:"#dfe3e8"})+
-  `<circle cx="44" cy="214" r="13" fill="#1f2328"/>`+t(44,248,"공격자",{anchor:"middle",size:12.5})+
-  `<line x1="196" y1="194" x2="196" y2="134" stroke="#9aa4af" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#a)"/>`+
-  t(186,160,"지연 동안",{anchor:"end",size:11.5,fill:"#6e7781"})+t(186,175,"이동",{anchor:"end",size:11.5,fill:"#6e7781"})+
-  `<circle cx="196" cy="214" r="17" fill="#eaf2fb" stroke="#2f6fb5" stroke-width="1.6" stroke-dasharray="4 3"/>`+t(196,218,"과거",{anchor:"middle",size:11,fill:"#2f6fb5",weight:700})+
-  t(196,256,"공격자 화면에 보이는 맞는 쪽",{anchor:"middle",size:12,fill:"#2f6fb5"})+t(196,273,"네트워크 지연만큼 과거 (0.1~0.17초 전)",{anchor:"middle",size:11.5,fill:"#6e7781"})+
-  `<circle cx="196" cy="110" r="17" fill="#2f6fb5"/>`+t(196,114,"지금",{anchor:"middle",size:11,fill:"#fff",weight:700})+
-  t(228,ok?96:102,"맞는 쪽",{size:12.5,fill:"#2f6fb5",weight:700})+(ok?t(228,112,"(실제 위치)",{size:11.5,fill:"#6e7781"}):"")+
-  `<circle cx="196" cy="${ok?214:110}" r="24" fill="none" stroke="${c}" stroke-width="2.2"/>`+
-  (ok? `<path d="M221 122 C 268 140, 268 186, 226 204" fill="none" stroke="${c}" stroke-width="2" marker-end="url(#g)"/>`+t(264,160,"되감기",{size:12.5,fill:c,weight:700})+t(230,226,"여기로 판정",{size:12.5,fill:c,weight:700})
-     : t(228,120,"여기로 판정",{size:12.5,fill:c,weight:700}))+
-  t(110,204,"비도",{anchor:"middle",size:12,fill:"#6e7781"})+
-  (ok? `<line x1="60" y1="214" x2="170" y2="214" stroke="${c}" stroke-width="2.2" marker-end="url(#g)"/>`
-     : `<line x1="60" y1="214" x2="176" y2="214" stroke="#1f2328" stroke-width="2.2"/><line x1="216" y1="214" x2="304" y2="214" stroke="${c}" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#r)"/>`+t(266,204,"피해 없음",{anchor:"middle",size:12,fill:c,weight:700})))
- }).join("")+`</div>`
+// 0. 되감기: 비도 한 발을 두 PC에서 본 모습, 세 칸
+rewind:{cap:"되감기 = 지연 보상(Lag Compensation). 공격자 화면에서 맞은 공격은 맞는 쪽 PC에서도 맞게 하는 것이 목적",svg:(()=>{
+ const R="#c3402b",G="#3f8a1f",B="#2f6fb5",M="#6e7781";
+ const atk=`<circle cx="60" cy="26" r="11" fill="#1f2328"/>`+t(78,30,"공격자",{size:12.5,weight:700});
+ const ghost=`<circle cx="60" cy="140" r="14" fill="#eaf2fb" stroke="${B}" stroke-width="1.6" stroke-dasharray="4 3"/>`;
+ const now=`<circle cx="176" cy="140" r="14" fill="${B}"/>`+t(176,116,"맞는 쪽",{anchor:"middle",size:12.5,weight:700,fill:B});
+ const trail=c=>[84,102,120,138,154].map(x=>`<circle cx="${x}" cy="140" r="2.6" fill="${c}"/>`).join("");
+ const knife=(c,id)=>`<line x1="60" y1="40" x2="60" y2="122" stroke="${c}" stroke-width="2.2" marker-end="url(#${id})"/>`+t(50,84,"비도",{anchor:"end",size:12,fill:M});
+ const times=t(60,174,"0.1~0.17초 전",{anchor:"middle",size:11.5,fill:M})+t(176,174,"지금",{anchor:"middle",size:11.5,fill:M,weight:700});
+ const sv=b=>`<svg viewBox="16 8 196 194" role="img">${defs}${b}</svg>`;
+ const p1=sv(atk+knife("#1f2328","a")+
+  ghost+t(84,136,"맞는 쪽",{size:12.5,weight:700,fill:B})+t(84,153,"(0.1~0.17초 전 모습)",{size:11.5,fill:M})+
+  t(60,176,"명중",{anchor:"middle",size:12.5,weight:700,fill:G}));
+ const p2=sv(atk+knife("#1f2328","a")+ghost+trail("#b6bec8")+now+times+
+  `<path d="M53 133 L67 147 M67 133 L53 147" stroke="${R}" stroke-width="2.2"/>`+
+  t(118,128,"이동 →",{anchor:"middle",size:11.5,fill:M})+
+  `<circle cx="176" cy="140" r="20" fill="none" stroke="${R}" stroke-width="2.2"/>`+
+  t(60,192,"비도 도착 · 빈자리",{anchor:"middle",size:12,weight:700,fill:R})+t(176,192,"판정 위치",{anchor:"middle",size:12,weight:700,fill:R}));
+ const p3=sv(atk+knife("#1f2328","a")+ghost+trail(G)+now+times+
+  `<path d="M160 131 C 140 100, 100 100, 79 126" fill="none" stroke="${G}" stroke-width="2" marker-end="url(#g)"/>`+t(120,97,"되감기",{anchor:"middle",size:12.5,weight:700,fill:G})+
+  t(120,161,"12ms마다 기록",{anchor:"middle",size:10.5,fill:G})+
+  `<circle cx="60" cy="140" r="20" fill="none" stroke="${G}" stroke-width="2.2"/>`+
+  t(60,192,"판정 위치 · 명중",{anchor:"middle",size:12,weight:700,fill:G}));
+ const step=(n,title,tag,cls,sv,txt)=>`<div class="step"><b class="st">${n} ${title}</b><i class="tg ${cls}">${tag}</i>${sv}<p>${txt}</p></div>`;
+ return `<div class="lead2">비도(던지는 암기) 한 발을 두 PC에서 본 모습 <span>점선 원 = 과거 위치, 파란 원 = 지금 위치</span></div><div class="trio">`+
+  step("①","공격자 PC 화면","화면에서는 명중","good",p1,"비도가 상대에게 맞은 것으로 보임. 단, 네트워크 지연 때문에 화면 속 상대는 0.1~0.17초 전 모습(점선 원)")+
+  step("②","맞는 쪽 PC · 되감기 전","빗나감","bad",p2,"판정은 맞는 쪽 PC 담당. 내 캐릭터의 지금 위치로 판정하면, 비도가 도착한 곳은 이미 떠난 빈자리라 피해 없음")+
+  step("③","맞는 쪽 PC · 되감기 후","명중","good",p3,"12ms마다 기록해 둔 내 위치 중 공격자가 보던 시점의 위치를 꺼내 판정. 되감는 시간 = 공격자 편도 지연 + 보간 버퍼(최대 0.25초)")+
+ `</div>`})()
 },
 // 1. 문제: 에디터에서 재면 흔들리고, 빌드에서 재면 안정
 range: {cap:"에디터에서는 값이 흔들려 원인 확인 불가", svg:svg(520,210,
