@@ -11,6 +11,27 @@ const defs=`<defs>
 const svg=(w,h,body)=>`<svg viewBox="0 0 ${w} ${h}" role="img">${defs}${body}</svg>`;
 
 const FIGS={
+// 0. 되감기: 같은 장면을 판정 위치만 바꿔 나란히
+rewind:{cap:"판정은 맞는 쪽 PC 담당. 네트워크 지연 때문에 공격자 화면에는 상대의 0.1~0.17초 전 위치가 보이므로, 그 시점 위치로 되감아 판정(지연 보상)",svg:`<div class="duo">`+
+ [0,1].map(ok=>{const c=ok?"#3f8a1f":"#c3402b",x=0;return svg(320,318,""+
+  t(4,18,ok?"되감기 후":"되감기 전",{weight:700,size:14.5})+t(78,18,ok?"명중":"빗나감",{size:13,weight:700,fill:c})+
+  t(4,38,ok?"공격자 화면에 보이던 위치로 되감아 판정":"맞는 쪽 PC가 '지금 위치'로 판정",{size:12,fill:"#5d6773"})+
+  box(0,50,320,262,{fill:"#fff",stroke:"#dfe3e8"})+
+  `<circle cx="44" cy="214" r="13" fill="#1f2328"/>`+t(44,248,"공격자",{anchor:"middle",size:12.5})+
+  `<line x1="196" y1="194" x2="196" y2="134" stroke="#9aa4af" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#a)"/>`+
+  t(186,160,"지연 동안",{anchor:"end",size:11.5,fill:"#6e7781"})+t(186,175,"이동",{anchor:"end",size:11.5,fill:"#6e7781"})+
+  `<circle cx="196" cy="214" r="17" fill="#eaf2fb" stroke="#2f6fb5" stroke-width="1.6" stroke-dasharray="4 3"/>`+t(196,218,"과거",{anchor:"middle",size:11,fill:"#2f6fb5",weight:700})+
+  t(196,256,"공격자 화면에 보이는 맞는 쪽",{anchor:"middle",size:12,fill:"#2f6fb5"})+t(196,273,"네트워크 지연만큼 과거 (0.1~0.17초 전)",{anchor:"middle",size:11.5,fill:"#6e7781"})+
+  `<circle cx="196" cy="110" r="17" fill="#2f6fb5"/>`+t(196,114,"지금",{anchor:"middle",size:11,fill:"#fff",weight:700})+
+  t(228,ok?96:102,"맞는 쪽",{size:12.5,fill:"#2f6fb5",weight:700})+(ok?t(228,112,"(실제 위치)",{size:11.5,fill:"#6e7781"}):"")+
+  `<circle cx="196" cy="${ok?214:110}" r="24" fill="none" stroke="${c}" stroke-width="2.2"/>`+
+  (ok? `<path d="M221 122 C 268 140, 268 186, 226 204" fill="none" stroke="${c}" stroke-width="2" marker-end="url(#g)"/>`+t(264,160,"되감기",{size:12.5,fill:c,weight:700})+t(230,226,"여기로 판정",{size:12.5,fill:c,weight:700})
+     : t(228,120,"여기로 판정",{size:12.5,fill:c,weight:700}))+
+  t(110,204,"비도",{anchor:"middle",size:12,fill:"#6e7781"})+
+  (ok? `<line x1="60" y1="214" x2="170" y2="214" stroke="${c}" stroke-width="2.2" marker-end="url(#g)"/>`
+     : `<line x1="60" y1="214" x2="176" y2="214" stroke="#1f2328" stroke-width="2.2"/><line x1="216" y1="214" x2="304" y2="214" stroke="${c}" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#r)"/>`+t(266,204,"피해 없음",{anchor:"middle",size:12,fill:c,weight:700})))
+ }).join("")+`</div>`
+},
 // 1. 문제: 에디터에서 재면 흔들리고, 빌드에서 재면 안정
 range: {cap:"에디터에서는 값이 흔들려 원인 확인 불가", svg:svg(520,210,
  t(0,22,"비도 판정 일치율",{weight:700,size:14})+

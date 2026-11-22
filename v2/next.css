@@ -1,8 +1,8 @@
 /* 취업용 한 페이지 · 우주 배경 + 블로그형 본문 */
-@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=73a5e5bd) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=73a5e5bd) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=73a5e5bd) format('woff2')}
-@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=73a5e5bd) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=3502b02f) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=3502b02f) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=3502b02f) format('woff2')}
+@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=3502b02f) format('woff2')}
 :root{--ink:#1f2328;--body:#30363d;--mute:#6e7781;--line:#d8dde3;--soft:#f5f7f9;--green:#3f8a1f;--greenbg:#f3f8ee;--lime:#b8e46e;--red:#c3402b;--blue:#2f6fb5;--mono:'D2Coding',ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}
 html{background:#05080f;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -456,3 +456,9 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .landed .nxt.hx{transition-delay:1.75s}
 @media(prefers-reduced-motion:reduce){.fact{opacity:1;transform:none;transition:none}}
 @media print{.fact{opacity:1!important;transform:none!important}}
+
+.fig .duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:0 auto}
+.fig .duo svg{max-width:none}
+@media(max-width:640px){.fig .duo{grid-template-columns:1fr;max-width:360px}}
+
+.case .kind{display:inline-block;margin:0 0 8px;padding:2px 9px;border-radius:999px;background:#1f2328;color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.02em}
