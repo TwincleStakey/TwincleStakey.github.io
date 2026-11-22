@@ -7,7 +7,7 @@
 <meta name="description" content="영화보다 더 영화 같은 게임을 만드는 것이 목표입니다. Unity 클라이언트 프로그래머 김기백의 포트폴리오.">
 <meta property="og:title" content="김기백 · 게임 클라이언트 프로그래머"><meta property="og:description" content="정무대전(1인 개발 · 최대 6인 온라인 대전) · 나의 인생 라멘가게(팀 프로젝트)"><meta property="og:image" content="media/p_hero2.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="next.css?v=fba29992">
+<link rel="stylesheet" href="next.css?v=3c81476d">
 </head>
 <body class="t-b">
 <header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
@@ -29,12 +29,12 @@
   </div>
   <div class="facts hx">
    <div class="fact"><b>경력</b>
-    <ol><li><span>이전 · 6년</span><strong>해군 항공조작 부사관</strong><i>P-3C 해상초계기 탑승</i></li>
+    <ol><li><span>이전 · 6년</span><strong>해군 항공조작 부사관 · 중사</strong><i>P-3C 해상초계기 탑승</i></li>
     <li><span>2026.05 ~ 2027.01</span><strong>네오위즈 K 게임 아카데미</strong><i>Unity 과정</i></li></ol></div>
    <div class="fact"><b>특기</b>
-    <ul><li><strong>전투 · 판정 구현</strong><i>여섯 문파의 기술, 막기 · 튕겨내기, 상태 이상까지 전투를 직접 만들었다.</i></li>
-    <li><strong>멀티플레이 동기화</strong><i>최대 6명이 같은 판을 보도록 판정과 위치를 맞췄다.</i></li>
-    <li><strong>AI 활용과 검증</strong><i>AI 코딩 도구에 기능 단위로 일을 맡기고, 결과는 직접 만든 측정 도구와 빌드로 확인한다.</i></li></ul></div>
+    <ul><li><strong>전투 · 판정 구현</strong><i>여섯 문파의 기술, 막기 · 튕겨내기, 상태 이상까지 전투를 직접 만들었습니다.</i></li>
+    <li><strong>멀티플레이 동기화</strong><i>최대 6명이 같은 판을 보도록 판정과 위치를 맞췄습니다.</i></li>
+    <li><strong>AI 활용과 검증</strong><i>AI 코딩 도구에 기능 단위로 일을 맡기고, 결과는 직접 만든 측정 도구와 빌드로 확인합니다.</i></li></ul></div>
    <div class="fact"><b>기술</b>
     <div class="chips2"><span>Unity 6000.3</span><span>C#</span><span>URP</span><span>Netcode for GameObjects</span><span>Unity Relay</span><span>Input System</span><span>Win32 P/Invoke</span><span>Git LFS</span></div></div>
   </div>
@@ -66,6 +66,7 @@
 <main class="col">
 
 <div class="fold" data-p="jm"><div class="fin0">
+<div class="pj">
 <article class="sheet" id="jm">
  <section class="head">
  <p class="eyebrow">1 · 메인 프로젝트 · 1인 개발</p>
@@ -229,10 +230,26 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  </ul>
  </section>
 </article>
+<aside class="toc" aria-label="정무대전 목차">
+ <div class="th"><b>정무대전</b><span class="pct">0%</span></div>
+ <nav class="tl">
+  <a class="c" href="#jm" data-n="1">개요</a>
+  <a class="c" href="#jm-play" data-n="1.1">플레이 영상</a>
+  <a class="c" href="#jm-arch" data-n="1.2">구조 한 장</a>
+  <a class="c" href="#jm-sys" data-n="1.3">핵심 시스템</a>
+  <a class="c" href="#jm-case" data-n="1.4">기술 사례</a>
+  <a class="s" href="#jm-c1" data-n="·">빗나가는 비도</a>
+  <a class="s" href="#jm-c2" data-n="·">작아지는 커서</a>
+  <a class="c" href="#jm-retro" data-n="1.5">결과 · 회고</a>
+ </nav>
+ <div class="bar"><i></i></div>
+</aside>
+</div>
 <p class="shut"><button type="button" data-shut="jm">정무대전 접기 ▴</button></p>
 </div></div>
 
 <div class="fold" data-p="ramen"><div class="fin0">
+<div class="pj">
 <article class="sheet" id="ramen">
  <section class="head">
  <p class="eyebrow">2 · 팀 프로젝트</p>
@@ -329,6 +346,19 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  </ul>
  </section>
 </article>
+<aside class="toc" aria-label="나의 인생 라멘가게 목차">
+ <div class="th"><b>나의 인생 라멘가게</b><span class="pct">0%</span></div>
+ <nav class="tl">
+  <a class="c" href="#ramen" data-n="2">개요</a>
+  <a class="c" href="#rm-play" data-n="2.1">플레이 영상</a>
+  <a class="c" href="#rm-sys" data-n="2.2">핵심 시스템</a>
+  <a class="c" href="#rm-case" data-n="2.3">기술 사례</a>
+  <a class="s" href="#rm-c1" data-n="·">집히지 않는 재료</a>
+  <a class="c" href="#rm-retro" data-n="2.4">회고</a>
+ </nav>
+ <div class="bar"><i></i></div>
+</aside>
+</div>
 <p class="shut"><button type="button" data-shut="ramen">라멘가게 접기 ▴</button></p>
 </div></div>
 
@@ -392,25 +422,6 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
 
 </main>
 
-<aside class="toc" aria-label="목차">
- <div class="th"><b>목차</b><span class="pct">0%</span></div>
- <nav class="tl">
-  <a class="c" href="#jm" data-n="1">정무대전</a>
-  <a class="s" data-g="jm" href="#jm-play" data-n="1.1">플레이 영상</a>
-  <a class="s" data-g="jm" href="#jm-arch" data-n="1.2">구조 한 장</a>
-  <a class="s" data-g="jm" href="#jm-sys" data-n="1.3">핵심 시스템</a>
-  <a class="s" data-g="jm" href="#jm-case" data-n="1.4">기술 사례</a>
-  <a class="s" data-g="jm" href="#jm-retro" data-n="1.5">결과 · 회고</a>
-  <a class="c" href="#ramen" data-n="2">라멘가게</a>
-  <a class="s" data-g="ramen" href="#rm-play" data-n="2.1">플레이 영상</a>
-  <a class="s" data-g="ramen" href="#rm-sys" data-n="2.2">핵심 시스템</a>
-  <a class="s" data-g="ramen" href="#rm-case" data-n="2.3">기술 사례</a>
-  <a class="s" data-g="ramen" href="#rm-retro" data-n="2.4">회고</a>
-  <a class="c" href="#works" data-n="3">그 밖의 작업</a>
-  <a class="c" href="#contact" data-n="4">연락</a>
- </nav>
- <div class="bar"><i></i></div>
-</aside>
 </div>
 
 <footer><div class="fin" id="contact">
@@ -421,8 +432,8 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
 </div></footer>
 
 <script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
-<script src="forms/space.js?v=fba29992"></script>
-<script src="forms/forms.js?v=fba29992"></script>
+<script src="forms/space.js?v=2d6ad288"></script>
+<script src="forms/forms.js?v=2d6ad288"></script>
 <script>
 (function(){
  var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
@@ -494,14 +505,19 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  var rv=$$('.col>.sheet, .scr2 .sublbl, .pick, .subc');
  if(!reduce&&'IntersectionObserver' in window){rv.forEach(function(e){e.classList.add('rv')});
   var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px'});rv.forEach(function(e){ro.observe(e)})}
- var L=$$('.toc .tl a'),H=L.map(function(a){return document.querySelector(a.getAttribute('href'))}),toc=document.querySelector('.toc'),N=$$('.top nav a'),pct=toc.querySelector('.pct');
- function spy(){var i=-1;H.forEach(function(h,j){if(!h)return;var p=ownerOf(h);if(p&&!folds[p].classList.contains('open'))return;if(h.getBoundingClientRect().top<innerHeight*.3)i=j});
-  var d=document.documentElement,p=Math.max(0,Math.min(1,d.scrollTop/Math.max(1,d.scrollHeight-innerHeight)));
-  if(p>.995)i=L.length-1;
-  L.forEach(function(a,j){a.classList.toggle('on',j===i);a.classList.toggle('done',j<i)});
-  toc.style.setProperty('--p',p);pct.textContent=Math.round(p*100)+'%';
-  var ch=i<0?'#top':L[i].getAttribute('href').replace(/^#(jm|rm)-.*/,function(m,k){return k==='jm'?'#jm':'#ramen'});
-  N.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===ch)});}
+ var N=$$('.top nav a'),tocs={};
+ $$('.fold .toc').forEach(function(t){var p=t.closest('.fold').dataset.p,L=$$('.tl a',t);tocs[p]={el:t,L:L,pct:t.querySelector('.pct'),H:L.map(function(a){return document.querySelector(a.getAttribute('href'))})}});
+ function c01(x){return x<0?0:x>1?1:x}
+ function spy(){var cur='#top',w=document.getElementById('works'),d=document.documentElement;
+  Object.keys(folds).forEach(function(k){var f=folds[k];if(!f.classList.contains('open'))return;var r=f.getBoundingClientRect();
+   if(r.top<innerHeight*.4&&r.bottom>innerHeight*.3)cur='#'+k;
+   var t=tocs[k];if(!t)return;var i=0;t.H.forEach(function(h,j){if(h&&h.getBoundingClientRect().top<innerHeight*.3)i=j});
+   var p=c01((innerHeight*.3-r.top)/Math.max(1,r.height-innerHeight*.5));
+   t.L.forEach(function(a,j){a.classList.toggle('on',j===i);a.classList.toggle('done',j<i)});
+   t.el.style.setProperty('--p',p);t.pct.textContent=Math.round(p*100)+'%'});
+  if(w&&w.getBoundingClientRect().top<innerHeight*.35)cur='#works';
+  if(d.scrollTop>=d.scrollHeight-innerHeight-4)cur='#contact';
+  N.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===cur)});}
  addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy();
 
  /* 영상은 화면에 들어올 때 불러온다 */

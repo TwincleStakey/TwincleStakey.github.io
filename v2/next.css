@@ -419,3 +419,22 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .shot{display:block;aspect-ratio:16/9;overflow:hidden;border-radius:8px;border:1px solid var(--line);background:#0a0f1a}
 .shot img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:1000px){button.subc{grid-template-columns:118px 1fr}.shots{gap:8px}}
+
+/* ── 목차는 펼친 프로젝트에 붙는다 ── */
+.shell{display:block;max-width:1168px;margin:0 auto;padding:0 24px 40px}
+.pj{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:36px;align-items:start}
+.pj .toc{position:sticky;top:90px;width:240px}
+.toc .th b{font-size:16px;color:#fff}
+.toc .tl a.s{grid-template-columns:38px 1fr;color:#7f90a6}
+.toc .tl a.s::before{text-align:center;padding-right:16px}
+.toc .tl a.c{margin-top:6px}
+/* 목차가 없는 카드는 가로를 다 쓴다 */
+.t-b .subsheet>section.head{padding:34px 44px 38px}
+.subsheet .shots{grid-template-columns:repeat(4,1fr)}
+.subsheet figure{max-width:820px;margin-left:auto;margin-right:auto}
+.subsheet .lbl{max-width:820px;margin-left:auto;margin-right:auto}
+#works .tiles{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.shell{padding:0 0 30px}.pj{display:block}.pj .toc{display:none}.subsheet .shots{grid-template-columns:1fr 1fr}#works .tiles{grid-template-columns:repeat(2,1fr)}}
+@media print{.pj{display:block}}
+/* 접힌 상자가 스크롤 상자가 되지 않게 해서, 안쪽 목차가 화면을 따라오게 한다 */
+.fold>.fin0{overflow:clip}
