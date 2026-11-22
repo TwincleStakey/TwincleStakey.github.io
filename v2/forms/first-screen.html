@@ -17,7 +17,7 @@
 .fs video,.fs img{display:block;width:100%;height:100%;object-fit:cover}
 .st{display:flex;gap:0;margin:0}
 .st div{padding:0 22px;border-left:1px solid #ffffff26}.st div:first-child{padding-left:0;border-left:0}
-.st b{display:block;color:#fff;font-size:26px;line-height:1.2;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.st b{display:block;color:#fff;font-size:19px;line-height:1.2;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
 .st b s{font-size:15px;font-weight:400;color:#8494a8;margin-right:6px}.st b em{font-style:normal;color:var(--lime)}
 .st span{font-size:13px;color:#9fb0c4}
 .tagl{position:absolute;left:14px;bottom:12px;font-size:12.5px;color:#fff;background:#000000a6;border-radius:20px;padding:2px 12px}
@@ -38,7 +38,7 @@
 .v2 .fs2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:44px;align-items:center}
 .fs2 h1{font-size:54px}.fs2 .role{display:block;font-size:20px;margin:10px 0 0}
 .fs2 .say{font-size:16.5px;margin:18px 0 26px}
-.fs2 .st{margin-bottom:28px}.fs2 .st b{font-size:23px}.fs2 .st div{padding:0 16px}
+.fs2 .st{margin-bottom:28px}.fs2 .st div{padding:0 16px}
 .fs2 .frame{position:relative;border-radius:14px;overflow:hidden;border:1px solid #ffffff26;box-shadow:0 30px 80px rgba(0,0,0,.55);aspect-ratio:16/9}
 
 /* 3 · 큰 숫자 */
@@ -75,7 +75,8 @@
 .sw button[aria-pressed=true]{background:#b8e46e;color:#0b1220;border-color:#b8e46e;font-weight:700}
 .below{opacity:.96}
 .cB{display:none}.cb .cA{display:none}.cb .cB{display:inline}
-.st span{max-width:150px;display:block;line-height:1.4;margin-top:3px}
+.st span{max-width:170px;display:block;line-height:1.4;margin-top:3px}
+.fs3 h1.line{font-size:48px;line-height:1.25;margin:0;font-weight:700;letter-spacing:-.02em}.fs3 h1.line em{font-style:normal;color:var(--lime)}.fs3 .say{font-size:16.5px;margin:20px 0 26px}.fs3 .st{margin-bottom:26px}.fs3 .st div{padding:0 16px}
 
 @media(max-width:1000px){
  .fs1{height:auto;min-height:0;padding-top:56.25vw}.fs1 .bg{bottom:auto;height:56.25vw}
@@ -83,8 +84,8 @@
  .fs1 .tx{position:static;padding:8px 18px 34px;max-width:none}.fs1 h1{font-size:40px}.fs1 .role{font-size:17px}.fs1 .tagl,.fs1 .more{display:none}
  .v2 .fs2,.v3 .fs3{grid-template-columns:1fr;gap:24px;padding:34px 18px 34px;min-height:0}
  .fs2 h1{font-size:40px}.fs2 .frame{order:-1}.fs3 .frame{order:2}
- .fs3 .big{font-size:64px}.fs3 .big s{font-size:28px}.fs3 .big i{font-size:32px}.fs3 h1{font-size:20px}
- .st{flex-wrap:wrap;gap:14px 0}.st div{padding:0 14px}.st b{font-size:21px!important}
+ .fs3 h1.line{font-size:31px}
+ .st{flex-wrap:wrap;gap:14px 0}.st div{padding:0 14px}.st b{font-size:17px!important}
  .fs4{padding:30px 18px;min-height:0}.fs4 .hd{display:block}.fs4 h1{font-size:36px}.fs4 .role{display:block;margin:6px 0 0}.fs4 .cards{grid-template-columns:1fr}.fs4 .hd .pills{margin-top:16px}
  .fs4 .card:nth-child(2) .pic{aspect-ratio:16/9}
 }
@@ -100,8 +101,8 @@
  <div class="tx">
   <p class="ey">GAME CLIENT PROGRAMMER</p>
   <h1>김기백<span class="role">게임 클라이언트 프로그래머 · 신입</span></h1>
-  <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었습니다. 화면에서 맞은 공격이 실제로는 안 맞는 문제를 직접 재서 고쳤습니다.</span></p>
-  <div class="st"><div><b><s>15%</s><em>91%</em></b><span>화면에서 맞은 공격이 실제로 맞은 비율</span></div><div><b>최대 6인</b><span>온라인 대전 · 1인 개발</span></div><div><b>여섯 문파</b><span>3대3 · 4인 개인전</span></div></div>
+  <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었고, 팀에서는 2D 조리 퍼즐 '나의 인생 라멘가게'의 조리 판정과 화면을 맡았습니다.</span></p>
+  <div class="st"><div><b>전투 · 판정</b><span>기술, 막기 · 튕겨내기, 상태 이상</span></div><div><b>멀티플레이</b><span>최대 6인 판정 · 위치 동기화</span></div><div><b>AI 활용과 검증</b><span>맡기고, 직접 재서 확인</span></div></div>
   <div class="pills" style="margin-top:0"><a class="p" href="#">정무대전 보기</a><a href="#">라멘가게 보기</a><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
  </div>
  <span class="tagl">정무대전 · 3대3 팀전 (실제 화면)</span>
@@ -112,22 +113,21 @@
  <div>
   <p class="ey">GAME CLIENT PROGRAMMER</p>
   <h1>김기백<span class="role">게임 클라이언트 프로그래머 · 신입</span></h1>
-  <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었습니다. 화면에서 맞은 공격이 실제로는 안 맞는 문제를 직접 재서 고쳤습니다.</span></p>
-  <div class="st"><div><b><s>15%</s><em>91%</em></b><span>화면에서 맞은 공격이 실제로 맞은 비율</span></div><div><b>최대 6인</b><span>온라인 대전 · 1인 개발</span></div><div><b>여섯 문파</b><span>3대3 · 4인 개인전</span></div></div>
+  <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었고, 팀에서는 2D 조리 퍼즐 '나의 인생 라멘가게'의 조리 판정과 화면을 맡았습니다.</span></p>
+  <div class="st"><div><b>전투 · 판정</b><span>기술, 막기 · 튕겨내기, 상태 이상</span></div><div><b>멀티플레이</b><span>최대 6인 판정 · 위치 동기화</span></div><div><b>AI 활용과 검증</b><span>맡기고, 직접 재서 확인</span></div></div>
   <div class="pills" style="margin-top:0"><a class="p" href="#">정무대전 보기</a><a href="#">라멘가게 보기</a><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
  </div>
  <div class="frame"><video muted loop playsinline autoplay preload="metadata" poster="../media/p_hero2.jpg" src="../media/hero_loop_s.mp4"></video><span class="tagl">정무대전 · 3대3 팀전 (실제 화면)</span></div>
 </section>
 
-<!-- 3 · 큰 숫자 -->
+<!-- 3 · 큰 문장 -->
 <section class="fs fs3">
  <div>
   <span class="who">김기백<span>게임 클라이언트 프로그래머 · 신입</span></span>
-  <div class="big"><s>15%</s><i>→</i><em>91%</em></div>
-  <h1>게스트 화면에서 맞은 공격이<br>실제로도 맞게 만들었습니다.</h1>
-  <p class="cond">정무대전 · 게스트 화면에서 맞은 비도가 실제로 맞은 비율 · 개발 빌드 두 개, 편도 지연 60±10ms</p>
-  <p class="say"><span class="cA">최대 6인 온라인 무협 대전 액션을 혼자 만들었습니다. 영화에서는 관객이지만, 게임에서는 주인공입니다.</span><span class="cB">최대 6인 온라인 무협 대전 액션 '정무대전'을 혼자 만들었습니다.</span></p>
-  <div class="pills" style="margin-top:0"><a class="p" href="#">어떻게 고쳤는지 보기</a><a href="#">라멘가게 보기</a><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
+  <h1 class="line">영화에서는 관객이지만,<br>게임에서는 <em>주인공</em>입니다.</h1>
+  <p class="say"><span class="cA">플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었고, 팀에서는 2D 조리 퍼즐 '나의 인생 라멘가게'의 조리 판정과 화면을 맡았습니다.</span></p>
+  <div class="st"><div><b>전투 · 판정</b><span>기술, 막기 · 튕겨내기, 상태 이상</span></div><div><b>멀티플레이</b><span>최대 6인 판정 · 위치 동기화</span></div><div><b>AI 활용과 검증</b><span>맡기고, 직접 재서 확인</span></div></div>
+  <div class="pills" style="margin-top:0"><a class="p" href="#">정무대전 보기</a><a href="#">라멘가게 보기</a><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
  </div>
  <div class="frame"><video muted loop playsinline autoplay preload="metadata" poster="../media/p_hero2.jpg" src="../media/hero_loop_s.mp4"></video><span class="tagl">정무대전 · 3대3 팀전 (실제 화면)</span></div>
 </section>
@@ -137,12 +137,12 @@
  <div class="hd">
   <div><p class="ey">GAME CLIENT PROGRAMMER</p>
    <h1>김기백<span class="role">게임 클라이언트 프로그래머 · 신입</span></h1>
-   <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었습니다. 화면에서 맞은 공격이 실제로는 안 맞는 문제를 직접 재서 고쳤습니다.</span></p></div>
+   <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었고, 팀에서는 2D 조리 퍼즐 '나의 인생 라멘가게'의 조리 판정과 화면을 맡았습니다.</span></p></div>
   <div class="pills"><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
  </div>
  <div class="cards">
   <a class="card" href="#"><div class="pic"><video muted loop playsinline autoplay preload="metadata" poster="../media/p_hero2.jpg" src="../media/hero_loop_s.mp4"></video></div>
-   <div class="bd"><span class="k">1인 개발 · 2026.10 ~</span><h2>정무대전</h2><p>여섯 문파 무인이 겨루는 최대 6인 온라인 무협 대전 액션</p><span class="n">화면에서 맞은 공격이 실제로 맞은 비율 15% → 91%</span></div></a>
+   <div class="bd"><span class="k">1인 개발 · 2026.10 ~</span><h2>정무대전</h2><p>여섯 문파 무인이 겨루는 최대 6인 온라인 무협 대전 액션</p><span class="n">전투 · 멀티 동기화 · 측정 도구</span></div></a>
   <a class="card" href="#"><div class="pic"><img src="../media/rm_cook2.jpg" alt="나의 인생 라멘가게 조리 화면"></div>
    <div class="bd"><span class="k">팀 프로젝트 · 2026.09</span><h2>나의 인생 라멘가게</h2><p>돌려 말한 주문을 해석해 라멘을 만드는 2D 조리 퍼즐</p><span class="n">조리 판정 · 화면 전체 · 씬 빌더</span></div></a>
  </div>
@@ -157,7 +157,7 @@
  </dl>
 </article></main><aside class="toc"><div class="th"><b>목차</b><span class="pct">0%</span></div><nav class="tl"><a class="c on" href="#" data-n="1">소개</a><a class="c" href="#" data-n="2">정무대전</a><a class="c" href="#" data-n="3">라멘가게</a><a class="c" href="#" data-n="4">그 밖의 작업</a><a class="c" href="#" data-n="5">연락</a></nav></aside></div>
 
-<div class="sw" aria-label="시안 바꾸기"><b>첫 화면</b><button data-v="1">1 영상 전면</button><button data-v="2">2 좌우 분할</button><button data-v="3">3 큰 숫자</button><button data-v="4">4 프로젝트 둘</button><b style="margin-left:10px">문구</b><button data-c="a">A 지금 문장</button><button data-c="b">B 한 일 먼저</button></div>
+<div class="sw" aria-label="시안 바꾸기"><b>첫 화면</b><button data-v="1">1 영상 전면</button><button data-v="2">2 좌우 분할</button><button data-v="3">3 큰 문장</button><button data-v="4">4 프로젝트 둘</button><b style="margin-left:10px">문구</b><button data-c="a">A 지금 문장</button><button data-c="b">B 한 일 먼저</button></div>
 
 <script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
 <script src="space.js"></script>

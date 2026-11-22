@@ -11,42 +11,40 @@
 </head>
 <body>
 <header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
-<nav><a href="#about">소개</a><a href="#jm">정무대전</a><a href="#ramen">라멘가게</a><a href="#works">그 밖의 작업</a><a href="#contact">연락</a></nav></div></header>
+<nav><a href="#top">소개</a><a href="#jm">정무대전</a><a href="#ramen">라멘가게</a><a href="#works">그 밖의 작업</a><a href="#contact">연락</a></nav></div></header>
 
 <div class="hero" id="top">
- <p class="ey">PORTFOLIO · 2026</p>
- <h1>김기백 <span>게임 클라이언트 프로그래머 · 신입</span></h1>
- <p class="sub">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</p>
- <div class="pills"><a class="p" href="#jm">정무대전 보기</a><a href="#ramen">라멘가게 보기</a><a href="https://github.com/TwincleStakey" target="_blank" rel="noopener">GitHub ↗</a><a href="mailto:kbkim235@naver.com">kbkim235@naver.com</a></div>
+ <div class="intro">
+  <div>
+   <p class="ey">GAME CLIENT PROGRAMMER</p>
+   <h1>김기백 <span>게임 클라이언트 프로그래머 · 신입</span></h1>
+   <p class="sub">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</p>
+   <div class="pills"><a href="https://github.com/TwincleStakey" target="_blank" rel="noopener">GitHub ↗</a><a href="mailto:kbkim235@naver.com">kbkim235@naver.com</a></div>
+  </div>
+  <dl class="me" id="about">
+   <dt>경력</dt><dd>해군 항공조작 부사관 6년(P-3C 해상초계기 탑승) → 네오위즈 K 게임 아카데미 Unity 과정(2026.05 ~ 2027.01)</dd>
+   <dt>특기</dt><dd>전투 · 판정 구현 / 멀티플레이 동기화 / AI 활용과 검증</dd>
+   <dt>기술</dt><dd>Unity 6000.3 · C# · URP · Netcode for GameObjects · Unity Relay · Input System · Win32 P/Invoke · Git LFS</dd>
+  </dl>
+ </div>
+ <div class="picks">
+  <button class="pick" type="button" data-p="jm" aria-expanded="false" aria-controls="jm">
+   <span class="pic"><video muted loop playsinline autoplay preload="metadata" poster="media/p_hero2.jpg" src="media/hero_loop_s.mp4" aria-label="정무대전 3대3 팀전 플레이 화면"></video></span>
+   <span class="bd"><span class="k">메인 프로젝트 · 1인 개발 · 2026.10 ~</span><strong>정무대전</strong><span class="d">여섯 문파 무인이 무작위 맵에서 겨루는 최대 6인 온라인 무협 대전 액션</span><span class="go"><i class="o">펼쳐 보기</i><i class="c">접기</i></span></span>
+  </button>
+  <button class="pick" type="button" data-p="ramen" aria-expanded="false" aria-controls="ramen">
+   <span class="pic"><img src="media/ramen/cook.gif" alt="나의 인생 라멘가게 조리 화면" width="480" height="270"></span>
+   <span class="bd"><span class="k">팀 프로젝트 · 2026.09 · 2주</span><strong>나의 인생 라멘가게</strong><span class="d">손님이 돌려 말한 주문을 해석해 라멘을 만드는 2D 조리 퍼즐</span><span class="go"><i class="o">펼쳐 보기</i><i class="c">접기</i></span></span>
+  </button>
+ </div>
 </div>
 
 <div class="shell">
 <main class="col">
 
-<article class="sheet">
- <figure style="margin-top:0"><video muted loop playsinline autoplay preload="metadata" poster="media/p_hero2.jpg" src="media/hero_loop_s.mp4" width="1280" height="720" aria-label="정무대전 3대3 팀전 플레이 화면"></video><figcaption>정무대전 3대3 팀전 (실제 화면)</figcaption></figure>
- <div class="nums">
-  <div><b><s>15%</s><em>91%</em></b><span>게스트 화면 판정 일치율 · 정무대전</span></div>
-  <div><b>최대 6인</b><span>온라인 대전 액션 1인 개발 · 정무대전</span></div>
-  <div><b>충돌 0번</b><span>화면을 코드로 만든 팀 작업 · 라멘가게</span></div>
- </div>
-
- <section id="about">
- <h3 style="margin-top:44px"><span class="no">1</span>소개</h3>
- <dl class="who">
-  <dt>경력</dt><dd>해군 항공조작 부사관 6년(P-3C 해상초계기 탑승) → 네오위즈 K 게임 아카데미 Unity 과정(2026.05 ~ 2027.01)</dd>
-  <dt>특기</dt><dd><ul>
-   <li><b>전투 · 판정 구현</b> — 여섯 문파의 기술, 막기 · 튕겨내기, 상태 이상까지 전투를 직접 만들었다.</li>
-   <li><b>멀티플레이 동기화</b> — 최대 6명이 같은 판을 보도록 판정과 위치를 맞췄다.</li>
-   <li><b>AI 활용과 검증</b> — AI 코딩 도구에 기능 단위로 일을 맡기고, 결과는 직접 만든 측정 도구와 빌드로 확인한다.</li>
-  </ul></dd>
-  <dt>기술</dt><dd><div class="chips"><span>Unity 6000.3</span><span>C#</span><span>URP</span><span>Netcode for GameObjects</span><span>Unity Relay</span><span>Input System</span><span>Win32 P/Invoke</span><span>Git LFS</span></div></dd>
- </dl>
- </section>
-</article>
-
+<div class="fold" data-p="jm"><div class="fin0">
 <article class="sheet" id="jm">
- <p class="eyebrow">2 · 메인 프로젝트 · 1인 개발</p>
+ <p class="eyebrow">1 · 메인 프로젝트 · 1인 개발</p>
  <h2>정무대전 <small>正武大战</small></h2>
  <p class="meta">2026.10 ~ 진행 중 · Unity 6000.3 · Netcode for GameObjects · Relay</p>
  <p class="lead">여섯 문파 무인이 무작위 맵에서 겨루는 최대 6인 온라인 무협 대전 액션.</p>
@@ -62,18 +60,18 @@
  <div class="ai"><div><b>AI에 맡긴 것</b>기능 단위 구현 · 측정 도구 코드</div><div><b>직접 정한 것</b>무엇을 만들지 · 판정 원칙 · 통과 기준</div><div><b>확인한 방법</b>개발 빌드 실측 · 자동 대전 · 녹화</div></div>
 
  <section id="jm-play">
- <h3><span class="no">2.1</span>플레이 영상</h3>
+ <h3><span class="no">1.1</span>플레이 영상</h3>
  <figure><video muted playsinline preload="none" controls poster="media/p_play_3v3.jpg" data-src="media/play_3v3.mp4" width="1280" height="720"></video><figcaption>3대3 팀전 한 판(63초, 소리가 나온다) · 오프닝부터 결과창까지는 <a href="https://youtu.be/zpFt8mJXa7Y" target="_blank" rel="noopener">YouTube 시연 영상 ↗</a></figcaption></figure>
  </section>
 
  <section id="jm-arch">
- <h3><span class="no">2.2</span>구조 한 장</h3>
+ <h3><span class="no">1.2</span>구조 한 장</h3>
  <div class="fig" data-svg="who"></div>
  <p style="margin-top:18px">판의 흐름과 체력은 방장이, 맞았는지는 맞는 쪽이, 투사체 출발점은 쏘는 쪽이 정한다. 맞는 쪽이 보낸 피해는 방장이 한 번 더 걸러서 반영한다. 네트워크를 타는 클래스는 협객(Duelist)과 판(DuelGame) 둘뿐이고, 나머지 약 210개는 화면만 맡는다.</p>
  </section>
 
  <section id="jm-sys">
- <h3><span class="no">2.3</span>핵심 시스템</h3>
+ <h3><span class="no">1.3</span>핵심 시스템</h3>
  <div class="sys">
   <h4>되감기 판정</h4>
   <p>맞는 쪽 PC가 판정하고, 공격자 화면에 보이던 위치로 되돌려서 잰다. 막기 · 튕겨내기는 지금 기준이라 맞는 쪽 입력이 무시되지 않는다.</p>
@@ -108,7 +106,7 @@
  </section>
 
  <section id="jm-case">
- <h3><span class="no">2.4</span>기술 사례</h3>
+ <h3><span class="no">1.4</span>기술 사례</h3>
 
  <div class="case" id="jm-c1">
   <h4>게스트 화면에서만 빗나가는 비도 <span class="res">일치율 15% → 91%</span></h4>
@@ -198,7 +196,7 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  </section>
 
  <section id="jm-retro">
- <h3><span class="no">2.5</span>결과 · 회고</h3>
+ <h3><span class="no">1.5</span>결과 · 회고</h3>
  <ul class="retro">
   <li>동기 약 20명이 테스트했고, 2~3일마다 새 빌드를 냈다.</li>
   <li>다음에는 측정 방법부터 의심한다.</li>
@@ -206,9 +204,12 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  </ul>
  </section>
 </article>
+<p class="shut"><button type="button" data-shut="jm">정무대전 접기 ▴</button></p>
+</div></div>
 
+<div class="fold" data-p="ramen"><div class="fin0">
 <article class="sheet" id="ramen">
- <p class="eyebrow">3 · 팀 프로젝트</p>
+ <p class="eyebrow">2 · 팀 프로젝트</p>
  <h2>나의 인생 라멘가게</h2>
  <p class="meta">2026.09 · 2주 · 게임 파트 4명 중 프로그래밍 2명 · Unity 6000.3 · URP</p>
  <p class="lead">손님이 돌려 말한 주문을 해석해 라멘을 만드는 2D 조리 퍼즐.</p>
@@ -224,12 +225,12 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  <div class="ai"><div><b>AI에 맡긴 것</b>구현 속도가 필요한 코드</div><div><b>직접 한 것</b>기획자 요구를 기능으로 나누기</div><div><b>확인한 방법</b>녹화 · 로그로 버그 원인 확인</div></div>
 
  <section id="rm-play">
- <h3><span class="no">3.1</span>플레이 영상</h3>
+ <h3><span class="no">2.1</span>플레이 영상</h3>
  <figure><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/pF59wLZO8Vk" title="나의 인생 라멘가게 시연 영상" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>주문 듣기 → 주문 해석 → 조리 → 시식 반응 → 하루 정산</figcaption></figure>
  </section>
 
  <section id="rm-sys">
- <h3><span class="no">3.2</span>핵심 시스템</h3>
+ <h3><span class="no">2.2</span>핵심 시스템</h3>
  <div class="sys">
   <h4>조리 판정</h4>
   <p>순서에 맞는 재료를 가져가면 그릇 테두리가 빛나며 받고, 순서를 어기면 붉게 깜빡이며 받지 않는다.</p>
@@ -244,7 +245,7 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  </section>
 
  <section id="rm-case">
- <h3><span class="no">3.3</span>기술 사례</h3>
+ <h3><span class="no">2.3</span>기술 사례</h3>
  <div class="case" id="rm-c1">
   <h4>둘째 손님부터 집히지 않는 재료 <span class="res">진행 불가 → 정상</span></h4>
   <div class="pair" style="margin-top:14px">
@@ -293,7 +294,7 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  </section>
 
  <section id="rm-retro">
- <h3><span class="no">3.4</span>회고</h3>
+ <h3><span class="no">2.4</span>회고</h3>
  <ul class="retro">
   <li>화면을 코드로 만들어 씬 파일 충돌이 한 번도 없었다.</li>
   <li>채점과는 함수 하나로만 연결해, 서로 상대 코드를 몰라도 작업할 수 있었다.</li>
@@ -301,9 +302,10 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  </ul>
  </section>
 </article>
+<p class="shut"><button type="button" data-shut="ramen">라멘가게 접기 ▴</button></p>
+</div></div>
 
 <article class="sheet" id="works">
- <p class="eyebrow">4 · 그 밖의 작업</p>
  <h2 style="font-size:26px">그 밖의 작업</h2>
  <div class="tiles">
 <a class="tile" href="https://youtu.be/Okqo8yjtl2w" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/Okqo8yjtl2w/hqdefault.jpg)"><span><b>Novalast</b><i>WebGL</i></span></a>
@@ -324,20 +326,19 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
 <aside class="toc" aria-label="목차">
  <div class="th"><b>목차</b><span class="pct">0%</span></div>
  <nav class="tl">
-  <a class="c" href="#about" data-n="1">소개</a>
-  <a class="c" href="#jm" data-n="2">정무대전</a>
-  <a class="s" href="#jm-play" data-n="2.1">플레이 영상</a>
-  <a class="s" href="#jm-arch" data-n="2.2">구조 한 장</a>
-  <a class="s" href="#jm-sys" data-n="2.3">핵심 시스템</a>
-  <a class="s" href="#jm-case" data-n="2.4">기술 사례</a>
-  <a class="s" href="#jm-retro" data-n="2.5">결과 · 회고</a>
-  <a class="c" href="#ramen" data-n="3">라멘가게</a>
-  <a class="s" href="#rm-play" data-n="3.1">플레이 영상</a>
-  <a class="s" href="#rm-sys" data-n="3.2">핵심 시스템</a>
-  <a class="s" href="#rm-case" data-n="3.3">기술 사례</a>
-  <a class="s" href="#rm-retro" data-n="3.4">회고</a>
-  <a class="c" href="#works" data-n="4">그 밖의 작업</a>
-  <a class="c" href="#contact" data-n="5">연락</a>
+  <a class="c" href="#jm" data-n="1">정무대전</a>
+  <a class="s" data-g="jm" href="#jm-play" data-n="1.1">플레이 영상</a>
+  <a class="s" data-g="jm" href="#jm-arch" data-n="1.2">구조 한 장</a>
+  <a class="s" data-g="jm" href="#jm-sys" data-n="1.3">핵심 시스템</a>
+  <a class="s" data-g="jm" href="#jm-case" data-n="1.4">기술 사례</a>
+  <a class="s" data-g="jm" href="#jm-retro" data-n="1.5">결과 · 회고</a>
+  <a class="c" href="#ramen" data-n="2">라멘가게</a>
+  <a class="s" data-g="ramen" href="#rm-play" data-n="2.1">플레이 영상</a>
+  <a class="s" data-g="ramen" href="#rm-sys" data-n="2.2">핵심 시스템</a>
+  <a class="s" data-g="ramen" href="#rm-case" data-n="2.3">기술 사례</a>
+  <a class="s" data-g="ramen" href="#rm-retro" data-n="2.4">회고</a>
+  <a class="c" href="#works" data-n="3">그 밖의 작업</a>
+  <a class="c" href="#contact" data-n="4">연락</a>
  </nav>
  <div class="bar"><i></i></div>
 </aside>
@@ -355,23 +356,42 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
 <script src="forms/forms.js"></script>
 <script>
 (function(){
- var L=[].slice.call(document.querySelectorAll('.toc .tl a')),H=L.map(function(a){return document.querySelector(a.getAttribute('href'))}),toc=document.querySelector('.toc'),
-     N=[].slice.call(document.querySelectorAll('.top nav a')),pct=toc.querySelector('.pct');
- function spy(){var i=0;H.forEach(function(h,j){if(h&&h.getBoundingClientRect().top<innerHeight*.3)i=j});
-  var d=document.documentElement,p=Math.max(0,Math.min(1,d.scrollTop/(d.scrollHeight-innerHeight)));
+ var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
+ var folds={},picks={};$$('.fold').forEach(function(f){folds[f.dataset.p]=f});$$('.pick').forEach(function(b){picks[b.dataset.p]=b});
+ var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function ownerOf(el){var f=el&&el.closest('.fold');return f?f.dataset.p:null}
+ function setOpen(p,on){Object.keys(folds).forEach(function(k){var o=on&&k===p;folds[k].classList.toggle('open',o);picks[k].setAttribute('aria-expanded',o);document.body.classList.toggle('open-'+k,o)});setTimeout(spy,520)}
+ function go(el){var y=el.getBoundingClientRect().top+scrollY-76;scrollTo({top:y,behavior:reduce?'auto':'smooth'})}
+ function openTo(id){var el=document.getElementById(id);if(!el)return false;var p=ownerOf(el);
+  if(p&&!folds[p].classList.contains('open')){setOpen(p,true);setTimeout(function(){go(el)},reduce?0:480)}else go(el);
+  var d=el.closest('details');if(d)d.open=true;return true}
+ $$('.pick').forEach(function(b){b.addEventListener('click',function(){var p=b.dataset.p,was=folds[p].classList.contains('open');
+  setOpen(p,!was);if(!was){history.replaceState(null,'','#'+p);setTimeout(function(){go(document.getElementById(p))},reduce?0:480)}else history.replaceState(null,'',location.pathname)})});
+ $$('[data-shut]').forEach(function(b){b.addEventListener('click',function(){setOpen(b.dataset.shut,false);history.replaceState(null,'',location.pathname);go(document.querySelector('.picks'))})});
+ document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a||e.metaKey||e.ctrlKey)return;var id=a.getAttribute('href').slice(1);
+  if(id==='top'){e.preventDefault();scrollTo({top:0,behavior:reduce?'auto':'smooth'});return}
+  if(openTo(id)){e.preventDefault();history.replaceState(null,'','#'+id)}});
+ if(location.hash)addEventListener('load',function(){openTo(decodeURIComponent(location.hash.slice(1)))});
+ addEventListener('hashchange',function(){if(location.hash)openTo(decodeURIComponent(location.hash.slice(1)))});
+
+ var L=$$('.toc .tl a'),H=L.map(function(a){return document.querySelector(a.getAttribute('href'))}),toc=document.querySelector('.toc'),N=$$('.top nav a'),pct=toc.querySelector('.pct');
+ function spy(){var i=-1;H.forEach(function(h,j){if(!h)return;var p=ownerOf(h);if(p&&!folds[p].classList.contains('open'))return;if(h.getBoundingClientRect().top<innerHeight*.3)i=j});
+  var d=document.documentElement,p=Math.max(0,Math.min(1,d.scrollTop/Math.max(1,d.scrollHeight-innerHeight)));
   if(p>.995)i=L.length-1;
   L.forEach(function(a,j){a.classList.toggle('on',j===i);a.classList.toggle('done',j<i)});
   toc.style.setProperty('--p',p);pct.textContent=Math.round(p*100)+'%';
-  var ch=L[i].getAttribute('href').replace(/^#(jm|rm)-.*/,function(m,k){return k==='jm'?'#jm':'#ramen'});
+  var ch=i<0?'#top':L[i].getAttribute('href').replace(/^#(jm|rm)-.*/,function(m,k){return k==='jm'?'#jm':'#ramen'});
   N.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===ch)});}
  addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy();
+
  /* 영상은 화면에 들어올 때 불러온다 */
- var vids=[].slice.call(document.querySelectorAll('video[data-src]'));
+ var vids=$$('video[data-src]');
  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!e.target.src){e.target.src=e.target.getAttribute('data-src');io.unobserve(e.target)}})},{rootMargin:'300px 0px'});vids.forEach(function(v){io.observe(v)})}
  else vids.forEach(function(v){v.src=v.getAttribute('data-src')});
  /* 인쇄할 때는 접힌 곳을 모두 펼친다 */
- addEventListener('beforeprint',function(){[].forEach.call(document.querySelectorAll('details'),function(d){d.open=true})});
+ addEventListener('beforeprint',function(){Object.keys(folds).forEach(function(k){folds[k].classList.add('open')});$$('details').forEach(function(d){d.open=true})});
 })();
 </script>
+
 </body>
 </html>
