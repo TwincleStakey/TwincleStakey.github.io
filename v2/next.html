@@ -7,15 +7,13 @@
 <meta name="description" content="Unity 클라이언트 프로그래머 김기백의 포트폴리오. 최대 6인 온라인 대전 액션 정무대전(1인 개발), 2D 조리 퍼즐 나의 인생 라멘가게(팀).">
 <meta property="og:title" content="김기백 · 게임 클라이언트 프로그래머"><meta property="og:description" content="정무대전(1인 개발 · 최대 6인 온라인 대전) · 나의 인생 라멘가게(팀 프로젝트)"><meta property="og:image" content="media/p_hero2.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="next.css?v=31e2b7e9">
+<link rel="stylesheet" href="next.css?v=dce6bb55">
 </head>
 <body class="t-b">
 <header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
 <nav><a href="#top">소개</a><a href="#jm">정무대전</a><a href="#ramen">라멘가게</a><a href="#works">그 밖의 작업</a><a href="#contact">연락</a></nav></div></header>
 
-<section class="gate" id="gate" aria-hidden="true">
- <div class="gdn"><span>아래로 스크롤</span><i></i></div>
-</section>
+<div class="cue" id="cue" aria-hidden="true"><i class="ms"><b></b></i><span>스크롤</span></div>
 
 <div class="hero" id="top">
  <div class="intro">
@@ -365,9 +363,10 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
  <small>© 2026 김기백 · "실제 화면"은 게임에서 그대로 찍은 것, "재구성"은 설명용으로 다시 만든 것이다.</small>
 </div></footer>
 
+<div class="sw" aria-label="문장 효과 시안"><b>문장 효과</b><button data-fx="1">1 떠오르기</button><button data-fx="2">2 또렷해지기</button><button data-fx="3">3 타자기</button><button data-fx="4">4 빛 훑기</button><button data-fx="5">5 별가루</button><button data-replay>↻ 다시 보기</button></div>
 <script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
-<script src="forms/space.js?v=31e2b7e9"></script>
-<script src="forms/forms.js?v=31e2b7e9"></script>
+<script src="forms/space.js?v=dce6bb55"></script>
+<script src="forms/forms.js?v=dce6bb55"></script>
 <script>
 (function(){
  var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
@@ -390,23 +389,39 @@ NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전
 
 
 
- /* 여는 장면: 빈 화면 → 문장 등장 → 문장이 제자리로 → 이름과 정보 */
- var line=document.getElementById('line'),gate=document.getElementById('gate'),cue=document.querySelector('.gdn');
- var skip=reduce||!!location.hash||scrollY>40;
- function clamp(x){return x<0?0:x>1?1:x}
- function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
- function docPos(el){var x=0,y=0;while(el){x+=el.offsetLeft;y+=el.offsetTop;el=el.offsetParent}return [x,y]}
- function scene(){
-  if(skip){document.body.classList.add('landed');line.style.transform='';line.style.opacity=1;if(cue)cue.style.opacity=0;return}
-  var G=gate.offsetHeight,sy=scrollY,a=clamp((sy-G*.04)/(G*.2)),t=ease(clamp((sy-G*.34)/(G*.62)));
-  var p=docPos(line),w=line.offsetWidth,h=line.offsetHeight,nx=p[0]+w/2,ny=p[1]+h/2-sy,cx=innerWidth/2,cy=60+(innerHeight-60)/2;
-  var K=Math.min(1.75,(innerWidth*.9)/w);
-  line.style.opacity=a;
-  line.style.transform=t>=1?'':'translate('+((cx-nx)*(1-t))+'px,'+((cy-ny)*(1-t))+'px) scale('+(1+(K-1)*(1-t))+')';
-  cue.style.opacity=1-clamp(sy/(G*.12));
-  if(sy>=G*.95)document.body.classList.add('landed');
- }
- addEventListener('scroll',scene,{passive:true});addEventListener('resize',scene);scene();
+ /* 여는 장면: 빈 화면 + 스크롤 안내 → (스크롤하면) 문장이 가운데에 나타남 → 제자리로 이동 → 이름과 정보 */
+ var root=document.documentElement,line=document.getElementById('line'),cue=document.getElementById('cue');
+ var q=new URLSearchParams(location.search),FX=q.get('fx')||'1',DUR={1:1550,2:1600,3:1700,4:1400,5:1550},timers=[],state='idle';
+ (function split(){var i=0;line.setAttribute('aria-label',line.textContent);
+  (function walk(node){[].slice.call(node.childNodes).forEach(function(n){
+    if(n.nodeType===3){var f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(function(w){if(!w)return;
+      if(/^\s+$/.test(w)){f.appendChild(document.createTextNode(' '));return}
+      var ws=document.createElement('span');ws.className='w';ws.setAttribute('aria-hidden','true');
+      w.split('').forEach(function(c){var ch=document.createElement('span');ch.className='ch';ch.textContent=c;ch.style.setProperty('--i',i++);
+        ch.style.setProperty('--dx',Math.round((Math.random()-.5)*150)+'px');ch.style.setProperty('--dy',Math.round((Math.random()-.5)*110)+'px');
+        ch.style.setProperty('--rot',Math.round((Math.random()-.5)*50)+'deg');ch.style.setProperty('--rd',Math.round(Math.random()*620)+'ms');ws.appendChild(ch)});
+      f.appendChild(ws)});n.parentNode.replaceChild(f,n)}
+    else if(n.nodeType===1&&n.tagName!=='BR')walk(n)})})(line)})();
+ function later(f,ms){timers.push(setTimeout(f,ms))}
+ function finish(){timers.forEach(clearTimeout);timers=[];state='done';line.className='line done';line.style.transition='';line.style.transform='';root.classList.remove('opening');document.body.classList.add('landed')}
+ function center(){var r=line.getBoundingClientRect(),K=Math.min(1.7,(innerWidth*.88)/r.width);
+  return 'translate('+(innerWidth/2-(r.left+r.width/2))+'px,'+(innerHeight/2-(r.top+r.height/2))+'px) scale('+K+')'}
+ function play(){if(state!=='idle')return;state='playing';cue.classList.add('off');
+  line.style.transition='none';line.style.transform=center();line.className='line show fx'+FX;void line.offsetWidth;line.classList.add('play');
+  later(function(){line.style.transition='transform .95s cubic-bezier(.65,0,.2,1)';line.style.transform='none'},DUR[FX]+450);
+  later(finish,DUR[FX]+450+900)}
+ function arm(){timers.forEach(clearTimeout);timers=[];state='idle';scrollTo(0,0);root.classList.add('opening');document.body.classList.remove('landed');
+  line.className='line';line.style.transition='none';line.style.transform='';cue.classList.remove('off')}
+ function onInput(e){if(state==='done')return;
+  if(e.type==='keydown'&&[' ','ArrowDown','PageDown','Enter'].indexOf(e.key)<0)return;
+  if(e.type==='wheel'&&e.deltaY<=0)return;
+  if(e.target&&e.target.closest&&e.target.closest('.sw'))return;
+  if(e.cancelable)e.preventDefault();
+  if(state==='idle')play();else if(e.type!=='wheel'&&e.type!=='touchmove')finish()}
+ ['wheel','touchmove','keydown','click'].forEach(function(t){addEventListener(t,onInput,{passive:false})});
+ if(reduce||location.hash){finish()}else{if('scrollRestoration' in history)history.scrollRestoration='manual';arm()}
+ $$('.sw button[data-fx]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.fx===FX);b.addEventListener('click',function(){FX=b.dataset.fx;$$('.sw button[data-fx]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.fx===FX)});arm();later(play,500)})});
+ var rp=document.querySelector('.sw [data-replay]');if(rp)rp.addEventListener('click',function(){arm()});
  /* 아래쪽 카드들은 화면에 들어올 때 나타난다 */
  var rv=$$('.col>.sheet');
  if(!reduce&&'IntersectionObserver' in window){rv.forEach(function(e){e.classList.add('rv')});
