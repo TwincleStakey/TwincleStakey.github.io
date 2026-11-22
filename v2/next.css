@@ -1,8 +1,8 @@
 /* 취업용 한 페이지 · 우주 배경 + 블로그형 본문 */
-@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=3c25ffd2) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=3c25ffd2) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=3c25ffd2) format('woff2')}
-@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=3c25ffd2) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=72d316b8) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=72d316b8) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=72d316b8) format('woff2')}
+@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=72d316b8) format('woff2')}
 :root{--ink:#1f2328;--body:#30363d;--mute:#6e7781;--line:#d8dde3;--soft:#f5f7f9;--green:#3f8a1f;--greenbg:#f3f8ee;--lime:#b8e46e;--red:#c3402b;--blue:#2f6fb5;--mono:'D2Coding',ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}
 html{background:#05080f;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -621,3 +621,7 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 @media(max-width:1000px){.mecol{order:-1;grid-template-columns:auto 1fr;justify-items:start;align-items:end}.mecol .pills{flex-direction:column;align-items:flex-start;width:auto}.stats3 li{flex:1 1 30%}}
 @media(max-height:820px) and (min-width:1001px){.v3 .nxt{display:none}}
 .subsheet .made.wide{margin-bottom:22px}.subsheet .lead{font-weight:600}
+/* 기타 작업: 타일을 누르면 펼쳐짐 */
+button.tile{font:inherit;cursor:pointer;text-align:left;padding:0;width:100%;color:inherit}
+.tile[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 2px rgba(184,228,110,.35)}
+.wplay{font-weight:700}
