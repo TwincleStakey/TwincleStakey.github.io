@@ -1,8 +1,8 @@
 /* 취업용 한 페이지 · 우주 배경 + 블로그형 본문 */
-@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2) format('woff2')}
-@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=826b09d7) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=826b09d7) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=826b09d7) format('woff2')}
+@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=826b09d7) format('woff2')}
 :root{--ink:#1f2328;--body:#30363d;--mute:#6e7781;--line:#d8dde3;--soft:#f5f7f9;--green:#3f8a1f;--greenbg:#f3f8ee;--lime:#b8e46e;--red:#c3402b;--blue:#2f6fb5;--mono:'D2Coding',ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}
 html{background:#05080f;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -398,3 +398,12 @@ html{scroll-padding-top:60px}
  .sublbl{margin:22px 0 10px}.pick .bd{padding:12px 18px 14px}.pick strong{font-size:21px}
 }
 @media(max-height:700px) and (min-width:1001px){.line{font-size:28px}.hero h1{font-size:38px}.fact li i{display:none}}
+
+/* 첫 화면: 사진 */
+.top1{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center}
+.mepic{margin:0;width:214px;aspect-ratio:3/4;border-radius:18px;overflow:hidden;border:1px solid #ffffff38;box-shadow:0 22px 60px rgba(0,0,0,.5);background:#fff}
+.mepic img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block;border:0;border-radius:0}
+.landed .mepic.hx{transition-delay:.2s}
+@media(max-height:820px) and (min-width:1001px){.mepic{width:176px}}
+@media(max-width:1000px){.top1{grid-template-columns:1fr;gap:22px}.mepic{width:132px;order:-1}}
+@media print{.mepic{width:120px;box-shadow:none}}
