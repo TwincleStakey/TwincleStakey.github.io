@@ -41,6 +41,8 @@ rewind:{cap:"되감기 = 지연 보상(Lag Compensation). 공격자 화면에서
   step("③","맞는 쪽 PC · 되감기 후","명중","good",p3,"12ms마다 기록해 둔 내 위치 중 공격자가 보던 시점의 위치를 꺼내 판정. 되감는 시간 = 공격자 편도 지연 + 보간 버퍼(최대 0.25초)")+
  `</div>`})()
 },
+// 라멘가게: 내 코드와 팀원 코드의 경계
+bound:{cap:"내 코드와 팀원 코드는 함수 하나로만 만남",svg:`<div class="bd"><div class="g"><b>내 코드</b><div class="row"><div class="bx">Bowl<i>담긴 재료</i></div><span class="ar"></span><div class="bx">GameManager<i>화면 흐름</i></div></div></div><span class="ar"></span><div class="lk">EvaluateRamen()<i>접점 함수 하나</i></div><span class="ar"></span><div class="g"><b>팀원 코드</b><div class="row"><div class="bx">RamenCalculator<i>채점</i></div><span class="ar"></span><div class="bx">DayManager<i>일차 · 정산</i></div></div></div></div>`},
 // 1. 문제: 에디터에서 재면 흔들리고, 빌드에서 재면 안정
 range: {cap:"에디터에서는 값이 흔들려 원인 확인 불가", svg:svg(520,210,
  t(0,22,"비도 판정 일치율",{weight:700,size:14})+

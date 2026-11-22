@@ -1,8 +1,8 @@
 /* 취업용 한 페이지 · 우주 배경 + 블로그형 본문 */
-@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=3502b02f) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=3502b02f) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=3502b02f) format('woff2')}
-@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=3502b02f) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=1ced714a) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=1ced714a) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=1ced714a) format('woff2')}
+@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=1ced714a) format('woff2')}
 :root{--ink:#1f2328;--body:#30363d;--mute:#6e7781;--line:#d8dde3;--soft:#f5f7f9;--green:#3f8a1f;--greenbg:#f3f8ee;--lime:#b8e46e;--red:#c3402b;--blue:#2f6fb5;--mono:'D2Coding',ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}
 html{background:#05080f;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -479,3 +479,19 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 
 .fig .lead2{font-size:14.5px;font-weight:700;color:#1f2328;margin:0 2px 10px}
 .fig .lead2 span{font-weight:400;color:#5d6773;margin-left:8px;font-size:13.5px}
+
+/* 경계 그림 */
+.fig .bd{display:flex;gap:8px;align-items:center;justify-content:center}
+.fig .bd .g{flex:1;background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:10px 12px 12px;min-width:0}
+.fig .bd .g>b{display:block;font-size:13px;color:#5d6773;margin-bottom:8px}
+.fig .bd .row{display:flex;align-items:center;gap:6px}
+.fig .bd .bx{flex:1;min-width:0;border:1px solid #c9ced6;border-radius:6px;padding:8px 6px;text-align:center;font-size:13px;font-weight:700;color:#1f2328;overflow-wrap:anywhere}
+.fig .bd .bx i,.fig .bd .lk i{display:block;font-style:normal;font-weight:400;font-size:12.5px;color:#5d6773;margin-top:2px}
+.fig .bd .lk{flex:none;background:#f3f8ee;border:1px solid #a9d27a;border-radius:8px;padding:10px 12px;text-align:center;font-weight:700;color:#2e6b1a;font-size:13.5px}
+.fig .bd .lk i{color:#2e6b1a}
+.fig .bd .ar{flex:none;color:#6e7781;font-size:15px;text-align:center}
+.fig .bd .ar:before{content:"→"}
+@media(max-width:760px){.fig .bd{flex-direction:column;align-items:stretch}.fig .bd>.ar:before{content:"↓"}}
+.fig .bd .g{flex:0 1 auto}
+.fig .bd .bx{flex:1 0 auto;white-space:nowrap;padding:8px 10px;overflow-wrap:normal}
+@media(max-width:760px){.fig .bd .bx{flex:1 1 0;white-space:normal;overflow-wrap:anywhere}}
