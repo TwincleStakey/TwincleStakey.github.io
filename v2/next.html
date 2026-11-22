@@ -7,7 +7,7 @@
 <meta name="description" content="영화보다 더 영화 같은 게임을 만드는 것이 목표입니다. Unity 클라이언트 프로그래머 김기백의 포트폴리오.">
 <meta property="og:title" content="김기백 · 게임 클라이언트 프로그래머"><meta property="og:description" content="정무대전(1인 개발 · 최대 6인 온라인 대전) · 나의 인생 라멘가게(팀 프로젝트)"><meta property="og:image" content="media/p_hero2.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="next.css?v=a1702ef0">
+<link rel="stylesheet" href="next.css?v=7be6a41c">
 </head>
 <body class="t-b">
 <header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
@@ -128,12 +128,12 @@
 
  <div class="case" id="jm-c1">
   <p class="kind">네트워크 판정</p>
-  <h4>화면에서는 맞았는데 피해가 없는 비도 <span class="res">피해 없이 지나가는 비도: 10번 중 4번 → 25번 중 1번</span></h4>
+  <h4>화면에서는 맞았는데 피해가 없는 비도 <span class="res">피해 없이 지나가는 비도 41% → 4%</span></h4>
   <dl class="psr">
    <dt class="q">문제</dt><dd>게스트 화면에서 맞은 비도(던지는 암기)가 피해 없이 지나가는 현상</dd>
    <dt>원인</dt><dd>판정은 맞는 쪽 PC가 하는데 지연 보상이 없었음. 공격자 화면 속 내 위치와 실제 위치가 달랐음</dd>
    <dt class="d">해결</dt><dd>공격자 화면에 내가 보이던 시점으로 위치를 되감아 판정(지연 보상, Lag Compensation). 막기 · 무적 여부는 지금 기준 그대로</dd>
-   <dt>결과</dt><dd>모든 조합에 같은 되감기 시간을 썼을 때는 게스트끼리 맞힌 비도 10번 중 4번이 피해 없이 지나감(일치율 59%). 방장 · 게스트 조합별로 따로 재서 맞춘 뒤 25번 중 1번(96%)</dd>
+   <dt>결과</dt><dd>모든 조합에 같은 되감기 시간을 썼을 때는 게스트끼리 맞힌 비도의 41%가 피해 없이 지나감(일치율 59%). 방장 · 게스트 조합별로 따로 재서 맞춘 뒤 4%(일치율 96%)</dd>
   </dl>
   <p class="cond">일치율: 내 화면에서 닿은 공격 중 실제로 맞은 비율. 측정 조건: 같은 PC에서 개발 빌드 두 개, 편도 지연 60±10ms, 봇끼리 자동 대전. 실제 인터넷 환경 전체를 대표하는 값은 아님</p>
   <div class="fig" data-svg="rewind"></div>
@@ -203,7 +203,7 @@
   <h4>프레임마다 쌓이는 쓰레기 메모리 <span class="res">프레임당 할당 184KB → 120KB</span></h4>
   <dl class="psr">
    <dt class="q">문제</dt><dd>AI 6명이 싸우는 3 대 3 판에서 프레임이 떨어지는 현상(에디터 기준 약 40fps)</dd>
-   <dt>원인</dt><dd>유니티 6 IMGUI는 글씨의 투명도 · 크기가 바뀔 때마다 글자 모양을 새로 만듦. 서서히 사라지는 피해 숫자 · 알림 글씨가 매 프레임 새로 만들어지며 쓰레기 메모리를 남김</dd>
+   <dt>원인</dt><dd>측정해 보니 IMGUI 글씨는 투명도 · 크기가 바뀌는 프레임마다 메모리를 새로 할당함(테두리 글씨 한 번에 약 9KB). 서서히 사라지는 피해 숫자 · 알림 글씨가 매 프레임 여기에 해당</dd>
    <dt class="d">해결</dt><dd>투명도는 16단계, 크기 변화는 배율 0.05 단위로 끊어 다시 만드는 횟수를 줄임. 화면 밖 글씨는 그리지 않음</dd>
    <dt>결과</dt><dd>같은 조건에서 프레임당 메모리 할당 184KB → 120KB(사라지는 글씨 몫 66KB → 33KB)</dd>
   </dl>
@@ -212,7 +212,7 @@
   <details class="more"><summary>상세 과정 <span>측정 순서 · 잘못 짚은 해결 · 한계 · 코드</span></summary><div class="in">
    <ul class="pts">
     <li>추측 대신 측정부터 진행. 화면 효과를 높음 / 낮음으로 30초씩 바꿔 재도 차이가 없었고, 3D 그리기는 1.7ms뿐이었음</li>
-    <li>가장 큰 비용은 판 화면 UI 그리기(OnGUI) 약 7ms와 프레임마다 230KB 할당. 대부분 글씨를 다시 만드는 비용</li>
+    <li>가장 큰 비용은 판 화면 UI 그리기(OnGUI) 약 7ms. 할당도 대부분 글씨를 다시 만드는 데서 발생</li>
     <li>첫 시도는 실패. 투명도를 GUI.color로 옮기면 될 것이라 봤지만, 다시 재 보니 효과가 없었음. GUI.color와 GUI.matrix 배율도 글씨 캐시 기준에 들어감</li>
     <li>테두리 글씨는 투명도가 바뀌면 한 번에 약 9KB, 안 바뀌면 약 0.6KB. 자리 이동은 비용 없음</li>
     <li>GUILayout을 쓰지 않는 판 화면은 Layout 단계를 건너뛰어, 같은 계산을 프레임마다 두 번 하지 않게 함</li>
@@ -473,8 +473,8 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
 </div></footer>
 
 <script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
-<script src="forms/space.js?v=a1702ef0"></script>
-<script src="forms/forms.js?v=a1702ef0"></script>
+<script src="forms/space.js?v=7be6a41c"></script>
+<script src="forms/forms.js?v=7be6a41c"></script>
 <script>
 (function(){
  var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
@@ -514,7 +514,7 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
     else if(n.nodeType===1&&n.tagName!=='BR')walk(n)})})(line)})();
  function later(f,ms){timers.push(setTimeout(f,ms))}
  var holdUntil=0,lastWheel=0;
- function finish(){timers.forEach(clearTimeout);timers=[];state='done';holdUntil=Date.now()+(reduce||location.hash?0:2000);line.className='line done';line.style.transition='';line.style.transform='';root.classList.remove('opening');document.body.classList.add('landed')}
+ function finish(){timers.forEach(clearTimeout);timers=[];state='done';holdUntil=Date.now()+(reduce||location.hash?0:2000);line.className='line done';line.style.transition='';line.style.transform='';root.classList.remove('opening');setTimeout(function(){try{spy()}catch(e){}},0);document.body.classList.add('landed')}
  function center(){var r=line.getBoundingClientRect(),K=Math.min(1.7,(innerWidth*.88)/r.width);
   return 'translate('+(innerWidth/2-(r.left+r.width/2))+'px,'+(innerHeight/2-(r.top+r.height/2))+'px) scale('+K+')'}
  function play(){if(state!=='idle')return;state='playing';cue.classList.add('off');
@@ -564,7 +564,7 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
    t.L.forEach(function(a,j){a.classList.toggle('on',j===i);a.classList.toggle('done',j<i)});
    t.el.style.setProperty('--p',p);t.pct.textContent=Math.round(p*100)+'%'});
   if(w&&w.getBoundingClientRect().top<innerHeight*.35)cur='#works';
-  if(d.scrollTop>=d.scrollHeight-innerHeight-4)cur='#contact';
+  if(!d.classList.contains('opening')&&d.scrollTop>0&&d.scrollTop>=d.scrollHeight-innerHeight-4)cur='#contact';
   N.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===cur)});}
  addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy();
 

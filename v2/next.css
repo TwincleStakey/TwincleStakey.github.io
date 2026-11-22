@@ -509,3 +509,16 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .fig .prow{display:grid;grid-template-columns:72px 1fr 62px;align-items:center;gap:10px;margin-top:6px;font-size:13.5px}
 .fig .prow strong{text-align:right}
 .fig .prow .trk{min-width:0}
+/* 카드 설명이 '자세히 보기' 단추 밑으로 들어가지 않게 */
+.pick .d{padding-right:124px}
+/* 펼친 본문이 화면 폭을 넘지 않게 (안쪽의 줄바꿈 없는 요소가 칸을 밀어내던 것) */
+.fold{grid-template-columns:minmax(0,1fr)}
+.fold>.fin0{min-width:0}
+
+/* 검수 반영: 배지 줄바꿈, 보조 글씨 대비, 그림 위 여백 */
+.case h4 .res{white-space:normal;display:inline-block;max-width:100%}
+.sheet .cond{color:#4d5965}
+.sheet figcaption{font-size:14.5px;color:#4d5965}
+.fig .cap{color:#4d5965}
+.psr+.fig,.cond+.fig{margin-top:18px}
+.tl a.s{color:#9fb0c6}
