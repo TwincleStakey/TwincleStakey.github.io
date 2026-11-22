@@ -480,6 +480,8 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
  var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
  var folds={},picks={};$$('.fold').forEach(function(f){folds[f.dataset.p]=f});$$('.pick,.subc').forEach(function(b){picks[b.dataset.p]=b});
  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+ /* 새로고침이면 주소에 남은 #위치를 지우고 처음(여는 장면)부터 다시 보여 준다. 링크로 바로 들어온 경우는 그대로 둔다 */
+ try{var nv=performance.getEntriesByType('navigation')[0];if(nv&&nv.type==='reload'&&location.hash)history.replaceState(null,'',location.pathname+location.search)}catch(e){}
  function ownerOf(el){var f=el&&el.closest('.fold');return f?f.dataset.p:null}
  function setOpen(p,on){Object.keys(folds).forEach(function(k){var o=on&&k===p;folds[k].classList.toggle('open',o);picks[k].setAttribute('aria-expanded',o);document.body.classList.toggle('open-'+k,o)});setTimeout(spy,520)}
  function go(el){var y=el.getBoundingClientRect().top+scrollY-76;scrollTo({top:y,behavior:reduce?'auto':'smooth'})}
