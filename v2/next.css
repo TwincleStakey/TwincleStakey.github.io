@@ -495,3 +495,4 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .fig .bd .g{flex:0 1 auto}
 .fig .bd .bx{flex:1 0 auto;white-space:nowrap;padding:8px 10px;overflow-wrap:normal}
 @media(max-width:760px){.fig .bd .bx{flex:1 1 0;white-space:normal;overflow-wrap:anywhere}}
+@media(max-width:760px){.fig .bd .bx{flex:1 1 auto;white-space:nowrap;font-size:12px;padding:8px 5px}.fig .bd .bx i{font-size:12px}}
