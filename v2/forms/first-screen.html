@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>첫 화면 시안</title>
+<link rel="stylesheet" href="../next.css">
+<style>
+/* 시안 공통 */
+.fs{display:none}
+.v1 .fs1,.v2 .fs2,.v3 .fs3,.v4 .fs4{display:block}
+.fs{color:#d5deea}
+.fs .ey{margin:0 0 12px;font-size:12.5px;letter-spacing:.16em;color:var(--lime);font-weight:600}
+.fs h1{color:#fff;margin:0;font-weight:700;letter-spacing:-.02em;line-height:1.12}
+.fs .role{color:#a9b6c8;font-weight:400}
+.fs .say{color:#c4cfdd;line-height:1.7;margin:0}
+.fs video,.fs img{display:block;width:100%;height:100%;object-fit:cover}
+.st{display:flex;gap:0;margin:0}
+.st div{padding:0 22px;border-left:1px solid #ffffff26}.st div:first-child{padding-left:0;border-left:0}
+.st b{display:block;color:#fff;font-size:26px;line-height:1.2;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.st b s{font-size:15px;font-weight:400;color:#8494a8;margin-right:6px}.st b em{font-style:normal;color:var(--lime)}
+.st span{font-size:13px;color:#9fb0c4}
+.tagl{position:absolute;left:14px;bottom:12px;font-size:12.5px;color:#fff;background:#000000a6;border-radius:20px;padding:2px 12px}
+
+/* 1 · 영상 전면 */
+.fs1{position:relative;height:calc(100vh - 60px);min-height:560px;overflow:hidden}
+.fs1 .bg{position:absolute;inset:0}
+.fs1 .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,8,15,.94) 0%,rgba(5,8,15,.78) 34%,rgba(5,8,15,.18) 68%,rgba(5,8,15,.05) 100%),linear-gradient(0deg,rgba(5,8,15,.9) 0%,rgba(5,8,15,0) 34%)}
+.fs1 .tx{position:absolute;left:max(24px,calc((100vw - 1120px)/2 + 24px));bottom:64px;max-width:600px}
+.fs1 h1{font-size:64px}.fs1 .role{display:block;font-size:22px;margin:10px 0 0}
+.fs1 .say{font-size:17px;margin:18px 0 26px}
+.fs1 .st{margin-bottom:26px}
+.fs1 .tagl{left:auto;right:24px;bottom:24px}
+.fs1 .more{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);font-size:12.5px;color:#9fb0c4;letter-spacing:.1em}
+
+/* 2 · 좌우 분할 */
+.fs2{max-width:1168px;margin:0 auto;padding:0 24px;min-height:calc(100vh - 60px);display:none}
+.v2 .fs2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:44px;align-items:center}
+.fs2 h1{font-size:54px}.fs2 .role{display:block;font-size:20px;margin:10px 0 0}
+.fs2 .say{font-size:16.5px;margin:18px 0 26px}
+.fs2 .st{margin-bottom:28px}.fs2 .st b{font-size:23px}.fs2 .st div{padding:0 16px}
+.fs2 .frame{position:relative;border-radius:14px;overflow:hidden;border:1px solid #ffffff26;box-shadow:0 30px 80px rgba(0,0,0,.55);aspect-ratio:16/9}
+
+/* 3 · 큰 숫자 */
+.fs3{max-width:1168px;margin:0 auto;padding:0 24px;min-height:calc(100vh - 60px);display:none}
+.v3 .fs3{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.fs3 .who{display:block;margin:0 0 22px;font-size:17px;color:#fff;font-weight:600}.fs3 .who span{color:#a9b6c8;font-weight:400;margin-left:8px}
+.fs3 .big{font-size:104px;font-weight:700;line-height:1;color:#fff;letter-spacing:-.04em;white-space:nowrap}
+.fs3 .big s{font-size:44px;color:#6f8098;font-weight:400;margin-right:10px;letter-spacing:-.02em}.fs3 .big i{font-style:normal;color:#6f8098;font-size:50px;margin-right:10px}.fs3 .big em{font-style:normal;color:var(--lime)}
+.fs3 h1{font-size:25px;line-height:1.45;margin:18px 0 0;font-weight:600;letter-spacing:-.01em}
+.fs3 .cond{font-size:13px;color:#8494a8;margin:10px 0 26px}
+.fs3 .say{font-size:15.5px;margin:0 0 24px}
+.fs3 .frame{position:relative;border-radius:14px;overflow:hidden;border:1px solid #ffffff26;box-shadow:0 30px 80px rgba(0,0,0,.55);aspect-ratio:16/9}
+
+/* 4 · 프로젝트 두 개 */
+.fs4{max-width:1168px;margin:0 auto;padding:44px 24px 30px;min-height:calc(100vh - 60px)}
+.fs4 .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:26px}
+.fs4 h1{font-size:44px}.fs4 .role{font-size:19px;margin-left:12px}
+.fs4 .say{font-size:15.5px;max-width:520px;margin-top:12px}
+.fs4 .cards{display:grid;grid-template-columns:1.25fr 1fr;gap:22px}
+.fs4 .card{display:block;text-decoration:none;color:inherit;border:1px solid #ffffff22;background:rgba(14,22,38,.72);border-radius:14px;overflow:hidden;transition:border-color .15s}
+.fs4 .card:hover{border-color:var(--lime)}
+.fs4 .card .pic{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000}
+.fs4 .card:nth-child(2) .pic{aspect-ratio:16/11.3}
+.fs4 .card .bd{padding:16px 20px 18px}
+.fs4 .card .k{font-size:12.5px;color:var(--lime);font-weight:600;letter-spacing:.06em}
+.fs4 .card h2{margin:2px 0 4px;color:#fff;font-size:23px;letter-spacing:-.01em}
+.fs4 .card p{margin:0;font-size:14.5px;color:#b9c6d6;line-height:1.6}
+.fs4 .card .n{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:14px;color:var(--lime);border:1px solid #b8e46e55;border-radius:6px;padding:0 9px}
+
+/* 바꾸기 단추 */
+.sw{position:fixed;left:14px;bottom:14px;z-index:30;background:#0b1220e6;border:1px solid #ffffff26;border-radius:10px;padding:10px 12px;font-size:13px;color:#cfd8e3;display:flex;gap:6px;align-items:center;backdrop-filter:blur(6px)}
+.sw b{color:#8fa1b6;font-weight:600;margin-right:4px}
+.sw button{all:unset;cursor:pointer;height:26px;padding:0 10px;text-align:center;line-height:26px;border-radius:6px;border:1px solid #ffffff2e}
+.sw button[aria-pressed=true]{background:#b8e46e;color:#0b1220;border-color:#b8e46e;font-weight:700}
+.below{opacity:.96}
+.cB{display:none}.cb .cA{display:none}.cb .cB{display:inline}
+.st span{max-width:150px;display:block;line-height:1.4;margin-top:3px}
+
+@media(max-width:1000px){
+ .fs1{height:auto;min-height:0;padding-top:56.25vw}.fs1 .bg{bottom:auto;height:56.25vw}
+ .fs1 .bg::after{background:linear-gradient(0deg,rgba(5,8,15,1) 0%,rgba(5,8,15,0) 40%)}
+ .fs1 .tx{position:static;padding:8px 18px 34px;max-width:none}.fs1 h1{font-size:40px}.fs1 .role{font-size:17px}.fs1 .tagl,.fs1 .more{display:none}
+ .v2 .fs2,.v3 .fs3{grid-template-columns:1fr;gap:24px;padding:34px 18px 34px;min-height:0}
+ .fs2 h1{font-size:40px}.fs2 .frame{order:-1}.fs3 .frame{order:2}
+ .fs3 .big{font-size:64px}.fs3 .big s{font-size:28px}.fs3 .big i{font-size:32px}.fs3 h1{font-size:20px}
+ .st{flex-wrap:wrap;gap:14px 0}.st div{padding:0 14px}.st b{font-size:21px!important}
+ .fs4{padding:30px 18px;min-height:0}.fs4 .hd{display:block}.fs4 h1{font-size:36px}.fs4 .role{display:block;margin:6px 0 0}.fs4 .cards{grid-template-columns:1fr}.fs4 .hd .pills{margin-top:16px}
+ .fs4 .card:nth-child(2) .pic{aspect-ratio:16/9}
+}
+</style>
+</head>
+<body class="v1">
+<header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
+<nav><a href="#">소개</a><a href="#">정무대전</a><a href="#">라멘가게</a><a href="#">그 밖의 작업</a><a href="#">연락</a></nav></div></header>
+
+<!-- 1 · 영상 전면 -->
+<section class="fs fs1" id="top">
+ <div class="bg"><video muted loop playsinline autoplay preload="metadata" poster="../media/p_hero2.jpg" src="../media/hero_loop.mp4"></video></div>
+ <div class="tx">
+  <p class="ey">GAME CLIENT PROGRAMMER</p>
+  <h1>김기백<span class="role">게임 클라이언트 프로그래머 · 신입</span></h1>
+  <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었습니다. 화면에서 맞은 공격이 실제로는 안 맞는 문제를 직접 재서 고쳤습니다.</span></p>
+  <div class="st"><div><b><s>15%</s><em>91%</em></b><span>화면에서 맞은 공격이 실제로 맞은 비율</span></div><div><b>최대 6인</b><span>온라인 대전 · 1인 개발</span></div><div><b>여섯 문파</b><span>3대3 · 4인 개인전</span></div></div>
+  <div class="pills" style="margin-top:0"><a class="p" href="#">정무대전 보기</a><a href="#">라멘가게 보기</a><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
+ </div>
+ <span class="tagl">정무대전 · 3대3 팀전 (실제 화면)</span>
+</section>
+
+<!-- 2 · 좌우 분할 -->
+<section class="fs fs2">
+ <div>
+  <p class="ey">GAME CLIENT PROGRAMMER</p>
+  <h1>김기백<span class="role">게임 클라이언트 프로그래머 · 신입</span></h1>
+  <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었습니다. 화면에서 맞은 공격이 실제로는 안 맞는 문제를 직접 재서 고쳤습니다.</span></p>
+  <div class="st"><div><b><s>15%</s><em>91%</em></b><span>화면에서 맞은 공격이 실제로 맞은 비율</span></div><div><b>최대 6인</b><span>온라인 대전 · 1인 개발</span></div><div><b>여섯 문파</b><span>3대3 · 4인 개인전</span></div></div>
+  <div class="pills" style="margin-top:0"><a class="p" href="#">정무대전 보기</a><a href="#">라멘가게 보기</a><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
+ </div>
+ <div class="frame"><video muted loop playsinline autoplay preload="metadata" poster="../media/p_hero2.jpg" src="../media/hero_loop_s.mp4"></video><span class="tagl">정무대전 · 3대3 팀전 (실제 화면)</span></div>
+</section>
+
+<!-- 3 · 큰 숫자 -->
+<section class="fs fs3">
+ <div>
+  <span class="who">김기백<span>게임 클라이언트 프로그래머 · 신입</span></span>
+  <div class="big"><s>15%</s><i>→</i><em>91%</em></div>
+  <h1>게스트 화면에서 맞은 공격이<br>실제로도 맞게 만들었습니다.</h1>
+  <p class="cond">정무대전 · 게스트 화면에서 맞은 비도가 실제로 맞은 비율 · 개발 빌드 두 개, 편도 지연 60±10ms</p>
+  <p class="say"><span class="cA">최대 6인 온라인 무협 대전 액션을 혼자 만들었습니다. 영화에서는 관객이지만, 게임에서는 주인공입니다.</span><span class="cB">최대 6인 온라인 무협 대전 액션 '정무대전'을 혼자 만들었습니다.</span></p>
+  <div class="pills" style="margin-top:0"><a class="p" href="#">어떻게 고쳤는지 보기</a><a href="#">라멘가게 보기</a><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
+ </div>
+ <div class="frame"><video muted loop playsinline autoplay preload="metadata" poster="../media/p_hero2.jpg" src="../media/hero_loop_s.mp4"></video><span class="tagl">정무대전 · 3대3 팀전 (실제 화면)</span></div>
+</section>
+
+<!-- 4 · 프로젝트 두 개 -->
+<section class="fs fs4">
+ <div class="hd">
+  <div><p class="ey">GAME CLIENT PROGRAMMER</p>
+   <h1>김기백<span class="role">게임 클라이언트 프로그래머 · 신입</span></h1>
+   <p class="say"><span class="cA">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</span><span class="cB">최대 6인 온라인 대전 액션 '정무대전'을 혼자 만들었습니다. 화면에서 맞은 공격이 실제로는 안 맞는 문제를 직접 재서 고쳤습니다.</span></p></div>
+  <div class="pills"><a href="#">GitHub ↗</a><a href="#">kbkim235@naver.com</a></div>
+ </div>
+ <div class="cards">
+  <a class="card" href="#"><div class="pic"><video muted loop playsinline autoplay preload="metadata" poster="../media/p_hero2.jpg" src="../media/hero_loop_s.mp4"></video></div>
+   <div class="bd"><span class="k">1인 개발 · 2026.10 ~</span><h2>정무대전</h2><p>여섯 문파 무인이 겨루는 최대 6인 온라인 무협 대전 액션</p><span class="n">화면에서 맞은 공격이 실제로 맞은 비율 15% → 91%</span></div></a>
+  <a class="card" href="#"><div class="pic"><img src="../media/rm_cook2.jpg" alt="나의 인생 라멘가게 조리 화면"></div>
+   <div class="bd"><span class="k">팀 프로젝트 · 2026.09</span><h2>나의 인생 라멘가게</h2><p>돌려 말한 주문을 해석해 라멘을 만드는 2D 조리 퍼즐</p><span class="n">조리 판정 · 화면 전체 · 씬 빌더</span></div></a>
+ </div>
+</section>
+
+<!-- 아래로 이어지는 본문 맛보기 -->
+<div class="shell below" style="margin-top:28px"><main class="col"><article class="sheet">
+ <h3 style="margin-top:0"><span class="no">1</span>소개</h3>
+ <dl class="who">
+  <dt>경력</dt><dd>해군 항공조작 부사관 6년(P-3C 해상초계기 탑승) → 네오위즈 K 게임 아카데미 Unity 과정(2026.05 ~ 2027.01)</dd>
+  <dt>기술</dt><dd><div class="chips"><span>Unity 6000.3</span><span>C#</span><span>URP</span><span>Netcode for GameObjects</span><span>Unity Relay</span><span>Input System</span><span>Win32 P/Invoke</span><span>Git LFS</span></div></dd>
+ </dl>
+</article></main><aside class="toc"><div class="th"><b>목차</b><span class="pct">0%</span></div><nav class="tl"><a class="c on" href="#" data-n="1">소개</a><a class="c" href="#" data-n="2">정무대전</a><a class="c" href="#" data-n="3">라멘가게</a><a class="c" href="#" data-n="4">그 밖의 작업</a><a class="c" href="#" data-n="5">연락</a></nav></aside></div>
+
+<div class="sw" aria-label="시안 바꾸기"><b>첫 화면</b><button data-v="1">1 영상 전면</button><button data-v="2">2 좌우 분할</button><button data-v="3">3 큰 숫자</button><button data-v="4">4 프로젝트 둘</button><b style="margin-left:10px">문구</b><button data-c="a">A 지금 문장</button><button data-c="b">B 한 일 먼저</button></div>
+
+<script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
+<script src="space.js"></script>
+<script>(function(){var q=new URLSearchParams(location.search),v=q.get('v')||'1',c=q.get('c')||'a';
+function apply(){document.body.className='v'+v+(c==='b'?' cb':'');
+ [].forEach.call(document.querySelectorAll('.sw button'),function(b){b.setAttribute('aria-pressed',b.dataset.v?b.dataset.v===v:b.dataset.c===c)});
+ [].forEach.call(document.querySelectorAll('.fs video'),function(x){if(x.closest('.fs'+v)){x.play().catch(function(){})}else x.pause()})}
+[].forEach.call(document.querySelectorAll('.sw button'),function(b){b.onclick=function(){if(b.dataset.v){v=b.dataset.v;scrollTo(0,0)}else c=b.dataset.c;apply();history.replaceState(null,'','?v='+v+'&c='+c)}});apply()})();</script>
+</body>
+</html>
