@@ -1,8 +1,8 @@
 /* 취업용 한 페이지 · 우주 배경 + 블로그형 본문 */
-@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=1ced714a) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=1ced714a) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=1ced714a) format('woff2')}
-@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=1ced714a) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=3a808359) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=3a808359) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=3a808359) format('woff2')}
+@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=3a808359) format('woff2')}
 :root{--ink:#1f2328;--body:#30363d;--mute:#6e7781;--line:#d8dde3;--soft:#f5f7f9;--green:#3f8a1f;--greenbg:#f3f8ee;--lime:#b8e46e;--red:#c3402b;--blue:#2f6fb5;--mono:'D2Coding',ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}
 html{background:#05080f;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -496,3 +496,16 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .fig .bd .bx{flex:1 0 auto;white-space:nowrap;padding:8px 10px;overflow-wrap:normal}
 @media(max-width:760px){.fig .bd .bx{flex:1 1 0;white-space:normal;overflow-wrap:anywhere}}
 @media(max-width:760px){.fig .bd .bx{flex:1 1 auto;white-space:nowrap;font-size:12px;padding:8px 5px}.fig .bd .bx i{font-size:12px}}
+
+/* 성능 그림 */
+.fig .pf{max-width:620px;margin:0 auto;color:#1f2328}
+.fig .pf .pt{display:block;font-size:14px;font-weight:700;margin:4px 0 8px}
+.fig .pf .pt:not(:first-child){margin-top:18px}
+.fig .pbar{display:flex;height:22px;border-radius:5px;overflow:hidden;background:#e3e7ec}
+.fig .pbar i{display:block}
+.fig .pf .a{background:#2f6fb5}.fig .pf .b{background:#c3402b}.fig .pf .c{background:#cfd5dc}
+.fig .pleg{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:13.5px;color:#30363d}
+.fig .pleg em{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
+.fig .prow{display:grid;grid-template-columns:72px 1fr 62px;align-items:center;gap:10px;margin-top:6px;font-size:13.5px}
+.fig .prow strong{text-align:right}
+.fig .prow .trk{min-width:0}

@@ -7,7 +7,7 @@
 <meta name="description" content="영화보다 더 영화 같은 게임을 만드는 것이 목표입니다. Unity 클라이언트 프로그래머 김기백의 포트폴리오.">
 <meta property="og:title" content="김기백 · 게임 클라이언트 프로그래머"><meta property="og:description" content="정무대전(1인 개발 · 최대 6인 온라인 대전) · 나의 인생 라멘가게(팀 프로젝트)"><meta property="og:image" content="media/p_hero2.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="next.css?v=2aeb7c58">
+<link rel="stylesheet" href="next.css?v=a1702ef0">
 </head>
 <body class="t-b">
 <header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
@@ -199,59 +199,53 @@
  </div>
 
  <div class="case" id="jm-c3">
-  <p class="kind">엔진 · 플랫폼</p>
-  <h4>다른 PC에서만 작아지는 커서 <span class="res">32px → 64px</span></h4>
+  <p class="kind">성능 최적화</p>
+  <h4>프레임마다 쌓이는 쓰레기 메모리 <span class="res">프레임당 할당 184KB → 120KB</span></h4>
   <dl class="psr">
-   <dt class="q">문제</dt><dd>다른 PC에서 커서가 작게 보이고, 설정에서 키워도 그대로인 현상</dd>
-   <dt>원인</dt><dd>Unity 6000.3 윈도우 빌드에서 Cursor.SetCursor로 넘긴 64px 그림이 32px로 그려지고 있었음</dd>
-   <dt class="d">해결</dt><dd>Win32로 커서를 직접 만들고, 유니티가 되돌리지 못하게 SetCursor 호출을 가로챔</dd>
-   <dt>결과</dt><dd>설정 50 / 100 / 200%에서 32 / 64 / 128px로 표시, 기본 화살표 깜빡임 0번</dd>
+   <dt class="q">문제</dt><dd>AI 6명이 싸우는 3 대 3 판에서 프레임이 떨어지는 현상(에디터 기준 약 40fps)</dd>
+   <dt>원인</dt><dd>유니티 6 IMGUI는 글씨의 투명도 · 크기가 바뀔 때마다 글자 모양을 새로 만듦. 서서히 사라지는 피해 숫자 · 알림 글씨가 매 프레임 새로 만들어지며 쓰레기 메모리를 남김</dd>
+   <dt class="d">해결</dt><dd>투명도는 16단계, 크기 변화는 배율 0.05 단위로 끊어 다시 만드는 횟수를 줄임. 화면 밖 글씨는 그리지 않음</dd>
+   <dt>결과</dt><dd>같은 조건에서 프레임당 메모리 할당 184KB → 120KB(사라지는 글씨 몫 66KB → 33KB)</dd>
   </dl>
-  <p class="cond">측정 조건: 윈도우 빌드, 1080p 모니터</p>
-  <details class="more"><summary>상세 과정 <span>잘못 짚은 원인 · 대안 검토 · 한계 · 코드</span></summary><div class="in">
+  <p class="cond">측정 조건: 에디터, AI 6명 3 대 3. 에디터 몫이 섞인 값이라 빌드에서 다시 재야 정확함</p>
+  <div class="fig" data-svg="perf"></div>
+  <details class="more"><summary>상세 과정 <span>측정 순서 · 잘못 짚은 해결 · 한계 · 코드</span></summary><div class="in">
    <ul class="pts">
-    <li>내 PC에서는 문제없어 보여 늦게 발견</li>
-    <li>처음엔 64px 고정이 원인이라 보고 크기별 이미지를 11벌 만들었으나, 잘못 짚은 원인이었음</li>
-    <li>Win32의 CreateIconIndirect로 커서를 직접 만들어 창에 걸자, 유니티가 매 프레임 기본 화살표를 다시 걸어 커서가 깜빡임</li>
-    <li>WndProc과 UnityPlayer.dll의 SetCursor 호출(가져오기 표, IAT)까지 가로채고, 게임 종료 시 원래대로 되돌리게 함</li>
+    <li>추측 대신 측정부터 진행. 화면 효과를 높음 / 낮음으로 30초씩 바꿔 재도 차이가 없었고, 3D 그리기는 1.7ms뿐이었음</li>
+    <li>가장 큰 비용은 판 화면 UI 그리기(OnGUI) 약 7ms와 프레임마다 230KB 할당. 대부분 글씨를 다시 만드는 비용</li>
+    <li>첫 시도는 실패. 투명도를 GUI.color로 옮기면 될 것이라 봤지만, 다시 재 보니 효과가 없었음. GUI.color와 GUI.matrix 배율도 글씨 캐시 기준에 들어감</li>
+    <li>테두리 글씨는 투명도가 바뀌면 한 번에 약 9KB, 안 바뀌면 약 0.6KB. 자리 이동은 비용 없음</li>
+    <li>GUILayout을 쓰지 않는 판 화면은 Layout 단계를 건너뛰어, 같은 계산을 프레임마다 두 번 하지 않게 함</li>
    </ul>
-   <div class="fig dark"><svg viewBox="0 0 560 210" width="100%" role="img" aria-label="커서 가로채기 그림" style="display:block;background:#0b1220">
-<defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"></path></marker></defs>
-<text x="20" y="22" fill="#ff8f7e" font-size="13" font-weight="700">고치기 전</text>
-<rect x="20" y="32" width="150" height="56" rx="8" fill="#111b2b" stroke="#2a3850"></rect><text x="95" y="55" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">Cursor.SetCursor</text><text x="95" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">64px 그림</text>
-<path d="M170,60 L220,60" stroke="#8e9bad" marker-end="url(#ar2)"></path>
-<rect x="222" y="32" width="150" height="56" rx="8" fill="#111b2b" stroke="#ff8f7e"></rect><text x="297" y="55" text-anchor="middle" fill="#ff8f7e" font-size="13" font-weight="700">UnityPlayer.dll</text><text x="297" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">32px로 줄임</text>
-<path d="M372,60 L422,60" stroke="#8e9bad" marker-end="url(#ar2)"></path>
-<rect x="424" y="32" width="116" height="56" rx="8" fill="#111b2b" stroke="#2a3850"></rect><text x="482" y="55" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">화면</text><text x="482" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">작은 커서</text>
-<text x="20" y="118" fill="#b8e46e" font-size="13" font-weight="700">고친 뒤</text>
-<rect x="20" y="128" width="150" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"></rect><text x="95" y="151" text-anchor="middle" fill="#b8e46e" font-size="13" font-weight="700">CreateIconIndirect</text><text x="95" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">원본 크기로 직접 생성</text>
-<path d="M170,156 L220,156" stroke="#8e9bad" marker-end="url(#ar2)"></path>
-<rect x="222" y="128" width="150" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"></rect><text x="297" y="151" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">WndProc 가로채기</text><text x="297" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">WM_SETCURSOR</text>
-<path d="M372,156 L422,156" stroke="#8e9bad" marker-end="url(#ar2)"></path>
-<rect x="424" y="128" width="116" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"></rect><text x="482" y="151" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">IAT 교체</text><text x="482" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">다시 걸어도 우리 것</text>
-</svg></div>
-   <pre class="cx"><span class="hd">DuelCursor.cs · PatchUnitySetCursor (요약)</span><span class="kw">var</span> module = GetModuleHandle(<span class="nm">"UnityPlayer.dll"</span>);
-<span class="kw">int</span> imports = Marshal.ReadInt32(module, pe + 24 + 120); <span class="cm">// 가져오기 표</span>
-<span class="cm">// USER32.dll 항목에서 이름이 "SetCursor"인 칸 찾기</span>
-<span class="hi">iatSlot = module + slots + i * 8;</span>
-<span class="hi">realSetCursor = Marshal.ReadIntPtr(iatSlot);</span>
-<span class="hi">WriteSlot(Marshal.GetFunctionPointerForDelegate(unitySetCursor));</span>
+<pre class="cx"><span class="hd">DuelInk.cs · Step / TextScaled (요약)</span><span class="cm">// 서서히 사라지는 글씨: 투명도를 16단으로 끊어 다시 만드는 횟수를 줄임</span>
+<span class="kw">public static float</span> <span class="fn">Step</span>(<span class="kw">float</span> a) => Mathf.Round(a * 16f) / 16f;
 
-<span class="cm">// 유니티가 SetCursor를 불러도 창 안이면 우리 커서로</span>
-<span class="kw">static</span> IntPtr <span class="fn">UnitySetCursor</span>(IntPtr c) =&gt; SetCursor(Inside() ? current : c);</pre>
+<span class="cm">// 크기만 움직이는 글씨: 글자 모양은 그대로 두고 GUI.matrix로 확대 (배율 0.05 단위)</span>
+scale = Mathf.Round(scale * 20f) / 20f;
+GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), pivot);
+<span class="fn">Text</span>(r, s, size, c, anchor, outline, outlineW / scale, bold);</pre>
+   <div class="rule"><b>적용 원칙</b>최적화는 추측하지 않고 먼저 측정. 고친 뒤에는 같은 조건으로 다시 측정</div>
    <p class="lbl">대안 검토</p>
-   <ul class="opt"><li class="x">"64px 고정"이라 보고 크기별 이미지 11벌 → 잘못 짚은 원인</li><li class="x">소프트웨어 커서 → 녹화에 찍히고 한 프레임 늦음</li><li class="o">Win32로 직접 만들어 창에 적용</li></ul>
+   <ul class="opt"><li class="x">투명도를 GUI.color로 곱하기 → 캐시 기준에 포함돼 효과 없음</li><li class="o">값이 바뀌는 횟수 자체를 줄이기(단계로 끊기)</li></ul>
    <p class="lbl">한계</p>
-   <p>윈도우 64비트에서만 동작. 엔진 버전이 바뀌면 재확인 필요</p>
+   <p>에디터에서 잰 값. 게임 루프 약 17KB와 나머지 약 100KB는 에디터 몫이 섞여 아직 구분하지 못함</p>
   </div></details>
  </div>
+
+ <h4 style="margin-top:36px">기타 해결</h4>
+ <div class="tblwrap"><table class="tbl"><thead><tr><th>증상</th><th>원인</th><th>해결</th></tr></thead><tbody>
+  <tr><td>판마다 메모리가 25~38MB씩 쌓임</td><td>맵을 지울 때 오브젝트만 부숴, 코드로 만든 텍스처 · 재질 · 메시가 남음</td><td>맵을 지울 때 함께 지우도록 소유 목록 추가</td></tr>
+  <tr><td>다른 PC에서 커서가 작게 보임</td><td>Unity 6000.3 윈도우 빌드에서 64px 커서 그림이 32px로 그려짐</td><td>Win32로 커서를 직접 만들어 적용</td></tr>
+  <tr><td>이펙트 색이 바래 보임</td><td>Linear 색 공간에서 메쉬 정점 색은 변환되지 않음</td><td>정점 색을 .linear로 바꿔 입력</td></tr>
+  <tr><td>맵 절반에서 회복 아이템이 0개</td><td>엄폐 조건을 추가한 뒤 배치 후보가 전부 조건에 걸림</td><td>200번 실패하면 조건을 풀고 재시도</td></tr>
+ </tbody></table></div>
  </section>
 
  <section id="jm-retro">
  <h3><span class="no">1.5</span>결과 · 회고</h3>
  <ul class="retro">
   <li>아카데미 동기 약 20명이 테스트, 2~3일마다 새 빌드 배포</li>
-  <li>배운 점: 값이 이상하면 코드보다 측정 방법부터 의심할 것</li>
+  <li>배운 점: 값이 이상하면 측정 방법부터 의심하고, 최적화는 추측하지 않고 먼저 측정할 것</li>
   <li>미확인: 실제 인터넷 환경에서 사람끼리 하는 대전, 서로 다른 PC 간 랭크 대전, 관전 · 재접속</li>
   <li>진행 중: 싱글 모드 개발</li>
  </ul>
@@ -267,7 +261,7 @@
   <a class="c" href="#jm-case" data-n="1.4">트러블슈팅</a>
   <a class="s" href="#jm-c1" data-n="·">피해가 없는 비도</a>
   <a class="s" href="#jm-c2" data-n="·">흔들리는 측정값</a>
-  <a class="s" href="#jm-c3" data-n="·">작아지는 커서</a>
+  <a class="s" href="#jm-c3" data-n="·">쓰레기 메모리</a>
   <a class="c" href="#jm-retro" data-n="1.5">결과 · 회고</a>
  </nav>
  <div class="bar"><i></i></div>
@@ -479,8 +473,8 @@
 </div></footer>
 
 <script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
-<script src="forms/space.js?v=2aeb7c58"></script>
-<script src="forms/forms.js?v=2aeb7c58"></script>
+<script src="forms/space.js?v=a1702ef0"></script>
+<script src="forms/forms.js?v=a1702ef0"></script>
 <script>
 (function(){
  var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};

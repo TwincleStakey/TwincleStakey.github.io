@@ -43,6 +43,8 @@ rewind:{cap:"되감기 = 지연 보상(Lag Compensation). 공격자 화면에서
 },
 // 라멘가게: 내 코드와 팀원 코드의 경계
 bound:{cap:"내 코드와 팀원 코드는 함수 하나로만 만남",svg:`<div class="bd"><div class="g"><b>내 코드</b><div class="row"><div class="bx">Bowl<i>담긴 재료</i></div><span class="ar"></span><div class="bx">GameManager<i>화면 흐름</i></div></div></div><span class="ar"></span><div class="lk">EvaluateRamen()<i>접점 함수 하나</i></div><span class="ar"></span><div class="g"><b>팀원 코드</b><div class="row"><div class="bx">RamenCalculator<i>채점</i></div><span class="ar"></span><div class="bx">DayManager<i>일차 · 정산</i></div></div></div></div>`},
+// 성능: 한 프레임 내역과 할당량
+perf:{cap:"병목은 3D나 화면 효과가 아니라 UI 글씨",svg:`<div class="pf"><b class="pt">한 프레임 약 18ms의 내역</b><div class="pbar"><i class="a" style="flex:1.7"></i><i class="b" style="flex:7"></i><i class="c" style="flex:9.3"></i></div><ul class="pleg"><li><em class="a"></em>3D 그리기 1.7ms</li><li><em class="b"></em><strong>UI 그리기 약 7ms</strong> · 프레임마다 230KB 할당</li><li><em class="c"></em>그 밖</li></ul><b class="pt">프레임당 메모리 할당 (같은 조건)</b><div class="prow"><span>고치기 전</span><div class="trk"><div class="pbar" style="width:100%"><i class="b" style="flex:66"></i><i class="c" style="flex:118"></i></div></div><strong>184KB</strong></div><div class="prow"><span>고친 뒤</span><div class="trk"><div class="pbar" style="width:65.2%"><i class="b" style="flex:33"></i><i class="c" style="flex:87"></i></div></div><strong>120KB</strong></div><ul class="pleg"><li><em class="b"></em>사라지는 글씨 몫 66KB → 33KB</li></ul></div>`},
 // 1. 문제: 에디터에서 재면 흔들리고, 빌드에서 재면 안정
 range: {cap:"에디터에서는 값이 흔들려 원인 확인 불가", svg:svg(520,210,
  t(0,22,"비도 판정 일치율",{weight:700,size:14})+
