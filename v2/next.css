@@ -1,8 +1,8 @@
 /* 취업용 한 페이지 · 우주 배경 + 블로그형 본문 */
-@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=affe6fb6) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=affe6fb6) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=affe6fb6) format('woff2')}
-@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=affe6fb6) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=73a5e5bd) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=73a5e5bd) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=73a5e5bd) format('woff2')}
+@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=73a5e5bd) format('woff2')}
 :root{--ink:#1f2328;--body:#30363d;--mute:#6e7781;--line:#d8dde3;--soft:#f5f7f9;--green:#3f8a1f;--greenbg:#f3f8ee;--lime:#b8e46e;--red:#c3402b;--blue:#2f6fb5;--mono:'D2Coding',ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}
 html{background:#05080f;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -440,3 +440,19 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .fold>.fin0{overflow:clip}
 
 .used{font-size:15.5px;color:var(--ink);margin:0 0 6px}
+
+/* 개조식 목록 */
+.pts{list-style:none;margin:18px 0 0;padding:0}
+.pts li{position:relative;padding:5px 0 5px 18px;font-size:16.5px;line-height:1.75;color:var(--ink)}
+.pts li:before{content:"";position:absolute;left:3px;top:17px;width:5px;height:5px;border-radius:50%;background:var(--green)}
+.more .in>.pts:first-child{margin-top:0}
+/* 첫 화면: 카드가 하나씩 뜨고, 마지막 화살표가 뜨면 넘길 수 있다 */
+.fact{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.landed .fact{opacity:1;transform:none}
+.landed .facts.hx{transition-delay:0s}
+.landed .fact:nth-child(1){transition-delay:.7s}
+.landed .fact:nth-child(2){transition-delay:.95s}
+.landed .fact:nth-child(3){transition-delay:1.2s}
+.landed .nxt.hx{transition-delay:1.75s}
+@media(prefers-reduced-motion:reduce){.fact{opacity:1;transform:none;transition:none}}
+@media print{.fact{opacity:1!important;transform:none!important}}
