@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>김기백 · 게임 클라이언트 프로그래머</title>
+<meta name="description" content="Unity 클라이언트 프로그래머 김기백의 포트폴리오. 최대 6인 온라인 대전 액션 정무대전(1인 개발), 2D 조리 퍼즐 나의 인생 라멘가게(팀).">
+<meta property="og:title" content="김기백 · 게임 클라이언트 프로그래머"><meta property="og:description" content="정무대전(1인 개발 · 최대 6인 온라인 대전) · 나의 인생 라멘가게(팀 프로젝트)"><meta property="og:image" content="media/p_hero2.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="next.css">
+</head>
+<body>
+<header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
+<nav><a href="#about">소개</a><a href="#jm">정무대전</a><a href="#ramen">라멘가게</a><a href="#works">그 밖의 작업</a><a href="#contact">연락</a></nav></div></header>
+
+<div class="hero" id="top">
+ <p class="ey">PORTFOLIO · 2026</p>
+ <h1>김기백 <span>게임 클라이언트 프로그래머 · 신입</span></h1>
+ <p class="sub">영화에서는 관객이지만, 게임에서는 주인공입니다. 플레이어가 한 행동이 그대로 결과로 돌아오게 만드는 데 집중해 왔습니다.</p>
+ <div class="pills"><a class="p" href="#jm">정무대전 보기</a><a href="#ramen">라멘가게 보기</a><a href="https://github.com/TwincleStakey" target="_blank" rel="noopener">GitHub ↗</a><a href="mailto:kbkim235@naver.com">kbkim235@naver.com</a></div>
+</div>
+
+<div class="shell">
+<main class="col">
+
+<article class="sheet">
+ <figure style="margin-top:0"><video muted loop playsinline autoplay preload="metadata" poster="media/p_hero2.jpg" src="media/hero_loop_s.mp4" width="1280" height="720" aria-label="정무대전 3대3 팀전 플레이 화면"></video><figcaption>정무대전 3대3 팀전 (실제 화면)</figcaption></figure>
+ <div class="nums">
+  <div><b><s>15%</s><em>91%</em></b><span>게스트 화면 판정 일치율 · 정무대전</span></div>
+  <div><b>최대 6인</b><span>온라인 대전 액션 1인 개발 · 정무대전</span></div>
+  <div><b>충돌 0번</b><span>화면을 코드로 만든 팀 작업 · 라멘가게</span></div>
+ </div>
+
+ <section id="about">
+ <h3 style="margin-top:44px"><span class="no">1</span>소개</h3>
+ <dl class="who">
+  <dt>경력</dt><dd>해군 항공조작 부사관 6년(P-3C 해상초계기 탑승) → 네오위즈 K 게임 아카데미 Unity 과정(2026.05 ~ 2027.01)</dd>
+  <dt>특기</dt><dd><ul>
+   <li><b>전투 · 판정 구현</b> — 여섯 문파의 기술, 막기 · 튕겨내기, 상태 이상까지 전투를 직접 만들었다.</li>
+   <li><b>멀티플레이 동기화</b> — 최대 6명이 같은 판을 보도록 판정과 위치를 맞췄다.</li>
+   <li><b>AI 활용과 검증</b> — AI 코딩 도구에 기능 단위로 일을 맡기고, 결과는 직접 만든 측정 도구와 빌드로 확인한다.</li>
+  </ul></dd>
+  <dt>기술</dt><dd><div class="chips"><span>Unity 6000.3</span><span>C#</span><span>URP</span><span>Netcode for GameObjects</span><span>Unity Relay</span><span>Input System</span><span>Win32 P/Invoke</span><span>Git LFS</span></div></dd>
+ </dl>
+ </section>
+</article>
+
+<article class="sheet" id="jm">
+ <p class="eyebrow">2 · 메인 프로젝트 · 1인 개발</p>
+ <h2>정무대전 <small>正武大战</small></h2>
+ <p class="meta">2026.10 ~ 진행 중 · Unity 6000.3 · Netcode for GameObjects · Relay</p>
+ <p class="lead">여섯 문파 무인이 무작위 맵에서 겨루는 최대 6인 온라인 무협 대전 액션.</p>
+
+ <p class="lbl">내가 만든 것</p>
+ <ul class="made">
+  <li><b>전투</b><span>여섯 문파 기술, 막기 · 튕겨내기, 상태 이상</span></li>
+  <li><b>멀티</b><span>방 만들기부터 결과창 · 랭크 대전까지</span></li>
+  <li><b>성장</b><span>판 안에서 경지가 오르고 기술이 열리는 구조</span></li>
+  <li><b>도구</b><span>자동 대전, 지연 시뮬, 판정 일치율 측정</span></li>
+ </ul>
+ <p class="lbl">AI와 나눈 일</p>
+ <div class="ai"><div><b>AI에 맡긴 것</b>기능 단위 구현 · 측정 도구 코드</div><div><b>직접 정한 것</b>무엇을 만들지 · 판정 원칙 · 통과 기준</div><div><b>확인한 방법</b>개발 빌드 실측 · 자동 대전 · 녹화</div></div>
+
+ <section id="jm-play">
+ <h3><span class="no">2.1</span>플레이 영상</h3>
+ <figure><video muted playsinline preload="none" controls poster="media/p_play_3v3.jpg" data-src="media/play_3v3.mp4" width="1280" height="720"></video><figcaption>3대3 팀전 한 판(63초, 소리가 나온다) · 오프닝부터 결과창까지는 <a href="https://youtu.be/zpFt8mJXa7Y" target="_blank" rel="noopener">YouTube 시연 영상 ↗</a></figcaption></figure>
+ </section>
+
+ <section id="jm-arch">
+ <h3><span class="no">2.2</span>구조 한 장</h3>
+ <div class="fig" data-svg="who"></div>
+ <p style="margin-top:18px">판의 흐름과 체력은 방장이, 맞았는지는 맞는 쪽이, 투사체 출발점은 쏘는 쪽이 정한다. 맞는 쪽이 보낸 피해는 방장이 한 번 더 걸러서 반영한다. 네트워크를 타는 클래스는 협객(Duelist)과 판(DuelGame) 둘뿐이고, 나머지 약 210개는 화면만 맡는다.</p>
+ </section>
+
+ <section id="jm-sys">
+ <h3><span class="no">2.3</span>핵심 시스템</h3>
+ <div class="sys">
+  <h4>되감기 판정</h4>
+  <p>맞는 쪽 PC가 판정하고, 공격자 화면에 보이던 위치로 되돌려서 잰다. 막기 · 튕겨내기는 지금 기준이라 맞는 쪽 입력이 무시되지 않는다.</p>
+  <div class="fig dark"><svg viewBox="0 0 560 250" width="100%" role="img" aria-label="되감기 판정 그림" style="display:block;background:#0b1220">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"></path></marker></defs>
+<text x="20" y="28" fill="#8e9bad" font-size="13" font-family="monospace">공격자 PC 화면</text>
+<text x="300" y="28" fill="#8e9bad" font-size="13" font-family="monospace">맞는 쪽 PC (판정)</text>
+<line x1="280" y1="40" x2="280" y2="235" stroke="#1e2a3d" stroke-dasharray="4 4"></line>
+<circle cx="150" cy="120" r="18" fill="#7cc4ff" opacity=".9"></circle><text x="150" y="124" text-anchor="middle" font-size="11" fill="#06101a" font-weight="700">나</text>
+<path d="M60,120 L128,120" stroke="#b8e46e" stroke-width="3" marker-end="url(#ar)"></path><text x="60" y="108" fill="#b8e46e" font-size="12">비도 던짐</text>
+<text x="150" y="160" text-anchor="middle" fill="#cfd8e3" font-size="12">공격자 화면 속 내 위치</text>
+<text x="150" y="178" text-anchor="middle" fill="#8e9bad" font-size="11">= 실제보다 90~170ms 전 자리</text>
+<circle cx="470" cy="90" r="18" fill="none" stroke="#ff8f7e" stroke-width="2" stroke-dasharray="3 3"></circle><text x="470" y="94" text-anchor="middle" font-size="11" fill="#ff8f7e">지금</text>
+<text x="470" y="60" text-anchor="middle" fill="#ff8f7e" font-size="12">지금 자리로 재면 빗나감</text>
+<circle cx="400" cy="150" r="18" fill="#7cc4ff" opacity=".9"></circle><text x="400" y="154" text-anchor="middle" font-size="11" fill="#06101a" font-weight="700">나</text>
+<path d="M452,100 Q420,120 414,138" stroke="#b8e46e" stroke-width="2" fill="none" marker-end="url(#ar)"></path>
+<text x="400" y="190" text-anchor="middle" fill="#b8e46e" font-size="12">공격자가 보던 시각만큼 되감은 자리</text>
+<text x="400" y="232" text-anchor="middle" fill="#cfd8e3" font-size="12">→ 공격자가 본 그대로 맞음 · 막기는 '지금' 기준</text>
+</svg></div>
+ </div>
+ <div class="sys">
+  <h4>판 안 경지 성장</h4>
+  <p>때리고, 막고, 튕겨내면 깨달음이 쌓이고, 경지를 돌파하면 문파마다 다른 기술이 하나씩 열린다. 돌파 중에 맞으면 주화입마에 빠진다.</p>
+  <figure><img src="media/jm_realm4.jpg" alt="이류 등극 알림과 함께 새 기술이 열린 화면" width="1280" height="620" loading="lazy"><figcaption>이류 등극: 새 기술 "회수 비도"가 열리고(①) 최대 체력이 오른다(②) · 실제 화면</figcaption></figure>
+ </div>
+ <div class="sys">
+  <h4>측정 도구</h4>
+  <p>봇끼리 50~150판을 4배속으로 돌려 문파별 승률을 모으고, 지연을 일부러 걸어 두 화면의 판정 일치율을 잰다. AI가 짠 코드를 눈으로만 보고 넘기지 않으려고 만들었다.</p>
+  <div class="fig"><svg viewBox="0 0 560 236" role="img" aria-label="자동 대전 문파별 승률 패치 전후"><line x1="320.0" y1="14" x2="320.0" y2="196" stroke="#c9ced6" stroke-dasharray="3 3"/><text x="320.0" y="212" font-size="11.5" fill="#6e7781" text-anchor="middle" style="font-family:Pretendard,sans-serif">50%</text><text x="110.0" y="212" font-size="11.5" fill="#9aa3ad" text-anchor="middle" style="font-family:Pretendard,sans-serif">0%</text><text x="530.0" y="212" font-size="11.5" fill="#9aa3ad" text-anchor="middle" style="font-family:Pretendard,sans-serif">100%</text><text x="0" y="37" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">마교</text><line x1="110.0" y1="32" x2="530.0" y2="32" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="471.2" y1="32" x2="429.2" y2="32" stroke="#a9d27a" stroke-width="6"/><circle cx="471.2" cy="32" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="429.2" cy="32" r="6.5" fill="#3f8a1f"/><text x="485.2" y="37" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">86% → <tspan font-weight="700" fill="#3f8a1f">76%</tspan></text><text x="0" y="73" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">화산</text><line x1="110.0" y1="68" x2="530.0" y2="68" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="315.8" y1="68" x2="345.20000000000005" y2="68" stroke="#a9d27a" stroke-width="6"/><circle cx="315.8" cy="68" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="345.20000000000005" cy="68" r="6.5" fill="#3f8a1f"/><text x="359.20000000000005" y="73" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">49% → <tspan font-weight="700" fill="#3f8a1f">56%</tspan></text><text x="0" y="109" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">소림</text><line x1="110.0" y1="104" x2="530.0" y2="104" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="311.6" y1="104" x2="294.8" y2="104" stroke="#a9d27a" stroke-width="6"/><circle cx="311.6" cy="104" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="294.8" cy="104" r="6.5" fill="#3f8a1f"/><text x="325.6" y="109" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">48% → <tspan font-weight="700" fill="#3f8a1f">44%</tspan></text><text x="0" y="145" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">북해</text><line x1="110.0" y1="140" x2="530.0" y2="140" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="294.8" y1="140" x2="269.6" y2="140" stroke="#a9d27a" stroke-width="6"/><circle cx="294.8" cy="140" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="269.6" cy="140" r="6.5" fill="#3f8a1f"/><text x="308.8" y="145" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">44% → <tspan font-weight="700" fill="#3f8a1f">38%</tspan></text><text x="0" y="181" font-size="14" font-weight="700" fill="#1f2328" style="font-family:Pretendard,sans-serif">당문</text><line x1="110.0" y1="176" x2="530.0" y2="176" stroke="#e6e9ed" stroke-width="6" stroke-linecap="round"/><line x1="181.4" y1="176" x2="244.4" y2="176" stroke="#a9d27a" stroke-width="6"/><circle cx="181.4" cy="176" r="6" fill="#fff" stroke="#8b949e" stroke-width="2"/><circle cx="244.4" cy="176" r="6.5" fill="#3f8a1f"/><text x="258.4" y="181" font-size="12.5" fill="#30363d" style="font-family:Pretendard,sans-serif">17% → <tspan font-weight="700" fill="#3f8a1f">32%</tspan></text><circle cx="118" cy="228" r="5" fill="#fff" stroke="#8b949e" stroke-width="2"/><text x="130" y="232" font-size="11.5" fill="#6e7781" style="font-family:Pretendard,sans-serif">패치 전</text><circle cx="196" cy="228" r="5.5" fill="#3f8a1f"/><text x="208" y="232" font-size="11.5" fill="#6e7781" style="font-family:Pretendard,sans-serif">패치 뒤</text></svg><div class="cap">자동 대전으로 잰 문파별 승률(같은 문파끼리는 제외). 패치 전 150판, 패치 뒤 50판</div></div>
+ </div>
+ <p class="also"><b>그 밖에</b>대기실 · 결과창 · 랭크 대전 / 입문 수련 8단계와 가이드 / 무공 도감(영상 68개) / 무작위 지형 5종</p>
+ </section>
+
+ <section id="jm-case">
+ <h3><span class="no">2.4</span>기술 사례</h3>
+
+ <div class="case" id="jm-c1">
+  <h4>게스트 화면에서만 빗나가는 비도 <span class="res">일치율 15% → 91%</span></h4>
+  <dl class="psr">
+   <dt class="q">문제</dt><dd>게스트 화면에서 맞은 비도가 실제로는 맞지 않았다.</dd>
+   <dt>원인</dt><dd>맞는 쪽이 지연 보상 없이 지금 위치로 판정했고, 던진 사람 화면만 비도 출발점이 달랐다.</dd>
+   <dt class="d">해결</dt><dd>공격자가 보던 시점으로 위치를 되감아 판정하고, 출발점과 방향은 쏘는 사람이 보낸다.</dd>
+   <dt>그 뒤</dt><dd>AI로 넣은 새 기술이 이 원칙을 깨서 76%로 떨어졌고, 같은 측정으로 찾아 89%로 되돌렸다.</dd>
+  </dl>
+  <p class="cond">측정 조건: 같은 PC에서 개발 빌드 두 개, 편도 지연 60±10ms, 봇끼리 자동 대전. 실제 인터넷 환경 전체를 대표하는 값은 아니다.</p>
+  <div class="fig" data-svg="cause"></div>
+  <details class="more"><summary>과정 펼치기 <span>측정을 빌드로 옮긴 이유 · 선택지 · 한계 · 코드</span></summary><div class="in">
+   <p>재 보니 게스트 화면에서 닿은 비도 가운데 실제로 맞은 것은 15%였다. 판정을 공격자 쪽으로 옮기면 막기 · 튕겨내기처럼 맞는 쪽이 누른 입력이 무시된다. 그래서 판정은 맞는 쪽에 두고, 12ms마다 기록해 둔 내 위치를 공격자 화면에 보이던 시점으로 되돌려서 쟀다.</p>
+   <pre class="cx"><span class="hd">Duelist.cs · ViewDelayOf / HitPosition</span><span class="kw">float</span> <span class="fn">ViewDelayOf</span>(Duelist attacker)
+{
+    <span class="kw">if</span> (attacker == <span class="kw">null</span> || attacker.IsOwner || !nm.IsListening) <span class="kw">return</span> 0f;
+    <span class="kw">bool</span> attackerIsHost = attacker.OwnerClientId == NetworkManager.ServerClientId;
+    <span class="kw">float</span> attackerOneWay = attackerIsHost ? 0f
+        : nm.IsServer ? transport.GetCurrentRtt(attacker.OwnerClientId) / 2000f : OneWay;
+    <span class="cm">// 방장 몸: 게스트 PC 보간 버퍼(50ms + 3틱)만큼 더 늦게 그려진다</span>
+    <span class="cm">// 게스트 몸: 이미 늦은 시각이 찍혀 와서 도착하는 대로 그려진다</span>
+<span class="hi">    <span class="kw">float</span> delay = IsServer ? attackerOneWay + 0.05f + 3f / 60f</span>
+<span class="hi">                           : OneWay + attackerOneWay + (attackerIsHost ? 0.02f : 0.01f);</span>
+    <span class="kw">return</span> Mathf.Min(<span class="nm">MaxRewind</span>, delay);   <span class="cm">// 상한 0.25초</span>
+}
+<span class="kw">public</span> Vector3 <span class="fn">HitPosition</span>(Duelist attacker) =&gt; PositionAgo(ViewDelayOf(attacker));</pre>
+<pre class="cx"><span class="hd">Duelist.cs · UseRemoteInterpolation</span><span class="kw">if</span> (IsServer) { NetworkTransform.InterpolationBufferTickOffset = 0; <span class="kw">return</span>; }
+<span class="kw">var</span> nt = GetComponent&lt;NetworkTransform&gt;();
+<span class="hi">nt.PositionInterpolationType = nt.RotationInterpolationType = InterpolationTypes.LegacyLerp;</span>
+<span class="hi">nt.PositionLerpSmoothing = nt.RotationLerpSmoothing = <span class="kw">false</span>;</span>
+NetworkTransform.InterpolationBufferTickOffset = 1; <span class="cm">// 3틱 전을 그린다</span></pre>
+   <p>되감기를 넣은 뒤에도 에디터에서는 일치율이 잴 때마다 38~60%로 달랐다. 창 두 개를 띄우면 포커스 없는 에디터가 49초에 3프레임만 돌았고, 프로파일러로 보니 화면 출력 대기가 1초마다 500ms씩 걸리고 있었다. 에디터에서만 생기는 멈춤이라 측정을 개발 빌드 두 개로 옮겼다.</p>
+   <div class="fig" data-svg="range"></div>
+   <div class="fig" data-svg="measure" style="margin-top:14px"></div>
+   <p style="margin-top:18px">숫자가 안정되자 남은 원인이 보였다. 던지는 사람 화면에서만 비도가 지금 자리에서 출발해 궤적이 최대 0.8m 갈라졌다. 출발점과 걸음 속도를 RPC 하나로 보내고 모든 화면이 같은 식으로 자리를 셈하게 하자, 비도 102번 중 93번이 일치했다.</p>
+   <div class="fig" data-svg="fix"></div>
+   <div data-code></div>
+   <div class="rule"><b>실제로 남긴 원칙</b>시간이 지난 뒤 나가는 암기는 출발점과 방향을 쏘는 사람이 정해 RPC로 보낸다. 새 초식을 넣으면 빌드 두 개로 일치율을 다시 잰다.</div>
+   <p class="lbl">선택지</p>
+   <ul class="opt"><li class="x">공격자 화면 기준 판정 → 막는 사람 반응이 무시된다</li><li class="x">에디터에서 멈춘 구간만 빼고 분석 → 매번 손으로 골라야 한다</li><li class="o">맞는 쪽 판정 + 되감기, 측정은 개발 빌드 두 개</li></ul>
+   <p class="lbl">한계</p>
+   <p>0.25초보다 늦은 연결은 보정하지 않는다. "화면에서 닿음 → 실제로 맞음"만 세고, 실제 공유기 환경이나 사람끼리 한 판은 아직 재지 못했다.</p>
+  </div></details>
+ </div>
+
+ <div class="case" id="jm-c2">
+  <h4>다른 PC에서만 작아지는 커서 <span class="res">32px → 64px</span></h4>
+  <dl class="psr">
+   <dt class="q">문제</dt><dd>다른 PC에서 커서가 작았고, 설정에서 키워도 그대로였다.</dd>
+   <dt>원인</dt><dd>윈도우에서 유니티 SetCursor는 그림 크기와 상관없이 32px로 줄인다.</dd>
+   <dt class="d">해결</dt><dd>Win32로 커서를 직접 만들고, 유니티가 되돌리지 못하게 SetCursor 호출을 가로챘다.</dd>
+  </dl>
+  <p class="cond">윈도우 빌드, 1080p 모니터 기준. 설정 50 / 100 / 200%에서 32 / 64 / 128px, 기본 화살표 깜빡임 0번.</p>
+  <details class="more"><summary>과정 펼치기 <span>잘못 짚은 원인 · 선택지 · 한계 · 코드</span></summary><div class="in">
+   <p>내 PC에서는 괜찮아 보여서 늦게 알았다. 처음엔 64px로 고정된 거라고 보고 크기별 이미지를 11벌 만들었는데, 잘못 짚은 원인이었다. 유니티의 SetCursor가 윈도우에서는 그림 크기와 상관없이 32px로 줄이고 있었다.</p>
+   <p>Win32의 CreateIconIndirect로 커서를 직접 만들어 창에 걸었더니, 유니티가 매 프레임 기본 화살표를 다시 걸어서 커서가 깜빡였다. 그래서 WndProc과 UnityPlayer.dll의 SetCursor 호출(가져오기 표, IAT)까지 가로채고, 게임을 끌 때 되돌리게 했다.</p>
+   <div class="fig dark"><svg viewBox="0 0 560 210" width="100%" role="img" aria-label="커서 가로채기 그림" style="display:block;background:#0b1220">
+<defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8e9bad"></path></marker></defs>
+<text x="20" y="22" fill="#ff8f7e" font-size="13" font-weight="700">고치기 전</text>
+<rect x="20" y="32" width="150" height="56" rx="8" fill="#111b2b" stroke="#2a3850"></rect><text x="95" y="55" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">Cursor.SetCursor</text><text x="95" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">64px 그림</text>
+<path d="M170,60 L220,60" stroke="#8e9bad" marker-end="url(#ar2)"></path>
+<rect x="222" y="32" width="150" height="56" rx="8" fill="#111b2b" stroke="#ff8f7e"></rect><text x="297" y="55" text-anchor="middle" fill="#ff8f7e" font-size="13" font-weight="700">UnityPlayer.dll</text><text x="297" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">32px로 줄임</text>
+<path d="M372,60 L422,60" stroke="#8e9bad" marker-end="url(#ar2)"></path>
+<rect x="424" y="32" width="116" height="56" rx="8" fill="#111b2b" stroke="#2a3850"></rect><text x="482" y="55" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">화면</text><text x="482" y="74" text-anchor="middle" fill="#8e9bad" font-size="11">작은 커서</text>
+<text x="20" y="118" fill="#b8e46e" font-size="13" font-weight="700">고친 뒤</text>
+<rect x="20" y="128" width="150" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"></rect><text x="95" y="151" text-anchor="middle" fill="#b8e46e" font-size="13" font-weight="700">CreateIconIndirect</text><text x="95" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">원본 크기로 직접 생성</text>
+<path d="M170,156 L220,156" stroke="#8e9bad" marker-end="url(#ar2)"></path>
+<rect x="222" y="128" width="150" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"></rect><text x="297" y="151" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">WndProc 가로채기</text><text x="297" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">WM_SETCURSOR</text>
+<path d="M372,156 L422,156" stroke="#8e9bad" marker-end="url(#ar2)"></path>
+<rect x="424" y="128" width="116" height="56" rx="8" fill="#111b2b" stroke="#b8e46e"></rect><text x="482" y="151" text-anchor="middle" fill="#f3f6fa" font-size="13" font-weight="700">IAT 교체</text><text x="482" y="170" text-anchor="middle" fill="#8e9bad" font-size="11">다시 걸어도 우리 것</text>
+</svg></div>
+   <pre class="cx"><span class="hd">DuelCursor.cs · PatchUnitySetCursor (요약)</span><span class="kw">var</span> module = GetModuleHandle(<span class="nm">"UnityPlayer.dll"</span>);
+<span class="kw">int</span> imports = Marshal.ReadInt32(module, pe + 24 + 120); <span class="cm">// 가져오기 표</span>
+<span class="cm">// USER32.dll 항목에서 이름이 "SetCursor"인 칸을 찾는다</span>
+<span class="hi">iatSlot = module + slots + i * 8;</span>
+<span class="hi">realSetCursor = Marshal.ReadIntPtr(iatSlot);</span>
+<span class="hi">WriteSlot(Marshal.GetFunctionPointerForDelegate(unitySetCursor));</span>
+
+<span class="cm">// 유니티가 SetCursor를 불러도 창 안이면 우리 커서로</span>
+<span class="kw">static</span> IntPtr <span class="fn">UnitySetCursor</span>(IntPtr c) =&gt; SetCursor(Inside() ? current : c);</pre>
+   <p class="lbl">선택지</p>
+   <ul class="opt"><li class="x">"64px 고정"이라 보고 크기별 이미지 11벌 → 잘못 짚은 원인</li><li class="x">소프트웨어 커서 → 녹화에 찍히고 한 프레임 늦다</li><li class="o">Win32로 직접 만들어 창에 건다</li></ul>
+   <p class="lbl">한계</p>
+   <p>윈도우 64비트에서만 동작한다. 엔진 버전이 바뀌면 다시 확인해야 한다.</p>
+  </div></details>
+ </div>
+ </section>
+
+ <section id="jm-retro">
+ <h3><span class="no">2.5</span>결과 · 회고</h3>
+ <ul class="retro">
+  <li>동기 약 20명이 테스트했고, 2~3일마다 새 빌드를 냈다.</li>
+  <li>다음에는 측정 방법부터 의심한다.</li>
+  <li>실제 인터넷 환경과 사람끼리 한 판은 아직 재지 못했다.</li>
+ </ul>
+ </section>
+</article>
+
+<article class="sheet" id="ramen">
+ <p class="eyebrow">3 · 팀 프로젝트</p>
+ <h2>나의 인생 라멘가게</h2>
+ <p class="meta">2026.09 · 2주 · 게임 파트 4명 중 프로그래밍 2명 · Unity 6000.3 · URP</p>
+ <p class="lead">손님이 돌려 말한 주문을 해석해 라멘을 만드는 2D 조리 퍼즐.</p>
+
+ <p class="lbl">내가 만든 것</p>
+ <ul class="made">
+  <li><b>판정</b><span>담는 순서와 개수를 그릇이 직접 확인한다</span></li>
+  <li><b>화면</b><span>조리 · 시식 · 엔딩 연출과 UI 전체</span></li>
+  <li><b>도구</b><span>조리 화면을 코드로 만드는 씬 빌더. 씬 파일 충돌이 한 번도 없었다</span></li>
+  <li><b>경계</b><span>주문 · 채점 · 정산은 팀원이 만들고, EvaluateRamen() 하나로 연결했다</span></li>
+ </ul>
+ <p class="lbl">AI와 나눈 일</p>
+ <div class="ai"><div><b>AI에 맡긴 것</b>구현 속도가 필요한 코드</div><div><b>직접 한 것</b>기획자 요구를 기능으로 나누기</div><div><b>확인한 방법</b>녹화 · 로그로 버그 원인 확인</div></div>
+
+ <section id="rm-play">
+ <h3><span class="no">3.1</span>플레이 영상</h3>
+ <figure><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/pF59wLZO8Vk" title="나의 인생 라멘가게 시연 영상" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>주문 듣기 → 주문 해석 → 조리 → 시식 반응 → 하루 정산</figcaption></figure>
+ </section>
+
+ <section id="rm-sys">
+ <h3><span class="no">3.2</span>핵심 시스템</h3>
+ <div class="sys">
+  <h4>조리 판정</h4>
+  <p>순서에 맞는 재료를 가져가면 그릇 테두리가 빛나며 받고, 순서를 어기면 붉게 깜빡이며 받지 않는다.</p>
+  <figure><img src="media/rm_cook2.jpg" alt="순서에 맞는 재료를 가져가자 그릇 테두리가 빛나는 조리 화면" width="960" height="600" loading="lazy"><figcaption>순서에 맞는 재료를 가져가면 그릇 테두리가 빛난다(①) · 실제 화면</figcaption></figure>
+ </div>
+ <div class="sys">
+  <h4>씬 빌더</h4>
+  <p>조리 화면의 UI 배치는 손으로 하지 않고 에디터 스크립트가 코드로 만들어 저장한다. 좌표와 크기를 상수 한 곳에 모아서, 해상도를 바꿀 때도 상수만 고치고 다시 실행했다.</p>
+  <figure><img src="media/rm_build1.jpg" alt="씬 빌더가 코드로 만든 조리 화면" width="1280" height="720" loading="lazy"><figcaption>빌더가 만든 조리 화면 · 실제 화면</figcaption></figure>
+ </div>
+ <p class="also"><b>그 밖에</b>일차별 난이도 구성 / 무엇을 틀렸는지 말해 주는 손님 반응 / 조리대 전용 배속</p>
+ </section>
+
+ <section id="rm-case">
+ <h3><span class="no">3.3</span>기술 사례</h3>
+ <div class="case" id="rm-c1">
+  <h4>둘째 손님부터 집히지 않는 재료 <span class="res">진행 불가 → 정상</span></h4>
+  <div class="pair" style="margin-top:14px">
+   <figure><img src="media/ramen/b_ba2_before.gif" alt="고치기 전: 시식 연출 뒤 둘째 손님에서 재료통을 눌러도 반응이 없다" width="640" height="368" loading="lazy"></figure>
+   <figure><img src="media/ramen/b_ba2_after.gif" alt="고친 뒤: 시식 연출 뒤에도 재료가 집힌다" width="640" height="368" loading="lazy"></figure>
+  </div>
+  <p class="cond" style="text-align:center">실제 조리 화면 위에 다시 만든 움짤(재구성)</p>
+  <dl class="psr">
+   <dt class="q">문제</dt><dd>시식 연출을 한 번 보고 나면 다음 손님부터 재료가 집히지 않았다.</dd>
+   <dt>원인</dt><dd>연출이 드래그 레이어를 껐다 켜면 커서 등록이 풀리는데, 등록은 Awake에서 한 번만 하고 있었다.</dd>
+   <dt class="d">해결</dt><dd>등록을 OnEnable로 옮겨 켜질 때마다 다시 등록한다.</dd>
+   <dt>찾은 법</dt><dd>같은 가설로 두 번 실패한 뒤, Console에 쌓인 경고 8개에서 찾았다.</dd>
+  </dl>
+  <details class="more"><summary>과정 펼치기 <span>호출 시점 표 · 코드</span></summary><div class="in">
+   <p>시식 연출이 DragLayer를 끄면 커서의 OnDisable()이 등록을 지운다. 다시 켜질 때 등록을 해 줘야 하는데, Awake()는 오브젝트가 처음 생길 때 한 번만 호출된다.</p>
+   <div class="tblwrap"><table class="tbl life"><thead><tr><th></th><th>처음 켜짐</th><th>꺼짐</th><th>다시 켜짐</th></tr></thead><tbody>
+    <tr><td>Awake</td><td class="ok">●</td><td class="na">–</td><td class="no">✕</td></tr>
+    <tr><td>OnEnable</td><td class="ok">●</td><td class="na">–</td><td class="ok">●</td></tr>
+    <tr><td>OnDisable</td><td class="na">–</td><td class="ok">●</td><td class="na">–</td></tr>
+   </tbody></table></div>
+<pre class="cx"><span class="hd">CookingCursor.cs · Awake / OnEnable / OnDisable (요약)</span><span class="kw">private void</span> <span class="fn">Awake</span>()
+{
+    <span class="del">Instance = <span class="kw">this</span>;</span>          <span class="cm">// 지움: 처음 생길 때 한 번만 등록하고 있었다</span>
+    rect = GetComponent&lt;RectTransform&gt;();
+}
+<span class="kw">private void</span> <span class="fn">OnEnable</span>()
+{
+<span class="hi">    Instance = <span class="kw">this</span>;          <span class="cm">// 추가: 켜질 때마다 다시 등록한다</span></span>
+}
+<span class="kw">private void</span> <span class="fn">OnDisable</span>()
+{
+    <span class="kw">if</span> (Instance == <span class="kw">this</span>) Instance = <span class="kw">null</span>;   <span class="cm">// 꺼질 때 등록을 지운다</span>
+}</pre>
+  </div></details>
+ </div>
+
+ <h4 style="margin-top:36px">그 밖에 잡은 버그</h4>
+ <div class="tblwrap"><table class="tbl"><thead><tr><th>증상</th><th>원인</th><th>해결</th></tr></thead><tbody>
+  <tr><td>재료통 위에서 커서가 사라짐</td><td>Camera 모드 Canvas에 픽셀 좌표를 그대로 넣음</td><td>좌표 변환 네 곳을 하나로 모음</td></tr>
+  <tr><td>둘째 줄부터 타자기 효과가 없음</td><td>같은 프레임에 클릭을 두 곳에서 읽음</td><td>기다림이 끝날 때 한 프레임 쉼</td></tr>
+  <tr><td>엔딩 아이리스가 엉뚱한 곳으로 닫힘</td><td>같은 부모 안에서 좌표 변환이 두 번 걸림</td><td>변환을 한 번으로 정리</td></tr>
+  <tr><td>에디터는 되는데 빌드만 실패</td><td>#if UNITY_EDITOR 안에서 선언하고 밖에서 사용</td><td>같은 유형 26곳을 전부 확인</td></tr>
+  <tr><td>머지 뒤 씬이 조용히 깨짐</td><td>씬 파일을 줄 단위로 머지</td><td>자동 병합을 꺼서 충돌이 바로 나게 함</td></tr>
+ </tbody></table></div>
+ <p class="cond">줄별 코드 설명은 <a href="../full/ramen.html">자세한 버전</a>에서 볼 수 있다.</p>
+ </section>
+
+ <section id="rm-retro">
+ <h3><span class="no">3.4</span>회고</h3>
+ <ul class="retro">
+  <li>화면을 코드로 만들어 씬 파일 충돌이 한 번도 없었다.</li>
+  <li>채점과는 함수 하나로만 연결해, 서로 상대 코드를 몰라도 작업할 수 있었다.</li>
+  <li>연출 버그는 눈으로만 확인하다 시간을 많이 썼다. 처음부터 녹화했어야 했다.</li>
+ </ul>
+ </section>
+</article>
+
+<article class="sheet" id="works">
+ <p class="eyebrow">4 · 그 밖의 작업</p>
+ <h2 style="font-size:26px">그 밖의 작업</h2>
+ <div class="tiles">
+<a class="tile" href="https://youtu.be/Okqo8yjtl2w" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/Okqo8yjtl2w/hqdefault.jpg)"><span><b>Novalast</b><i>WebGL</i></span></a>
+<a class="tile" href="https://youtu.be/pR34jS3oCPQ" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/pR34jS3oCPQ/hqdefault.jpg)"><span><b>High Stakes</b><i>카드 베팅 · WebGL</i></span></a>
+<a class="tile" href="https://youtu.be/PYXJpKdQYW8" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/PYXJpKdQYW8/hqdefault.jpg)"><span><b>Breaker</b><i>3D FPS · WebGL</i></span></a>
+<a class="tile" href="https://youtu.be/nQV6A8qrcCM" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/nQV6A8qrcCM/hqdefault.jpg)"><span><b>야간상담</b><i>공포 · 영상</i></span></a>
+<a class="tile" href="https://youtu.be/dhQ-Co4C3cY" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/dhQ-Co4C3cY/hqdefault.jpg)"><span><b>NFT 강화 게임</b><i>강화 · 자동 사냥</i></span></a>
+<a class="tile" href="https://youtu.be/o3MAWROWvsE" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/o3MAWROWvsE/hqdefault.jpg)"><span><b>Deep Abyss</b><i>2D · WebGL</i></span></a>
+<a class="tile" href="https://youtu.be/7EcrHt_X7pQ" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/7EcrHt_X7pQ/hqdefault.jpg)"><span><b>UNKNOWN</b><i>TEAM · 시네마틱</i></span></a>
+<a class="tile" href="https://youtu.be/bfZDj0d48Nw" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/bfZDj0d48Nw/hqdefault.jpg)"><span><b>LIGHTNING STICK MAN</b><i>2D 플랫포머</i></span></a>
+<a class="tile" href="https://youtu.be/fTrZAboNWJU" target="_blank" rel="noopener" style="background-image:url(https://i.ytimg.com/vi/fTrZAboNWJU/hqdefault.jpg)"><span><b>터레인 시네마틱</b><i>SOLO · 시네마틱</i></span></a>
+ </div>
+ <p class="cond">썸네일을 누르면 영상으로 넘어간다. 웹에서 바로 해 볼 수 있는 게임은 <a href="https://play.unity.com/ko/user/cb9d2950-bc11-4dac-b62b-7d8dfe906d33" target="_blank" rel="noopener">Unity Play</a>에 올려 두었다.</p>
+</article>
+
+</main>
+
+<aside class="toc" aria-label="목차">
+ <div class="th"><b>목차</b><span class="pct">0%</span></div>
+ <nav class="tl">
+  <a class="c" href="#about" data-n="1">소개</a>
+  <a class="c" href="#jm" data-n="2">정무대전</a>
+  <a class="s" href="#jm-play" data-n="2.1">플레이 영상</a>
+  <a class="s" href="#jm-arch" data-n="2.2">구조 한 장</a>
+  <a class="s" href="#jm-sys" data-n="2.3">핵심 시스템</a>
+  <a class="s" href="#jm-case" data-n="2.4">기술 사례</a>
+  <a class="s" href="#jm-retro" data-n="2.5">결과 · 회고</a>
+  <a class="c" href="#ramen" data-n="3">라멘가게</a>
+  <a class="s" href="#rm-play" data-n="3.1">플레이 영상</a>
+  <a class="s" href="#rm-sys" data-n="3.2">핵심 시스템</a>
+  <a class="s" href="#rm-case" data-n="3.3">기술 사례</a>
+  <a class="s" href="#rm-retro" data-n="3.4">회고</a>
+  <a class="c" href="#works" data-n="4">그 밖의 작업</a>
+  <a class="c" href="#contact" data-n="5">연락</a>
+ </nav>
+ <div class="bar"><i></i></div>
+</aside>
+</div>
+
+<footer><div class="fin" id="contact">
+ <b>궁금한 점이 있으면 편하게 연락 주세요</b>
+ <a class="mail" href="mailto:kbkim235@naver.com">kbkim235@naver.com</a>
+ <div class="ln"><a href="https://github.com/TwincleStakey" target="_blank" rel="noopener">GitHub ↗</a><a href="https://play.unity.com/ko/user/cb9d2950-bc11-4dac-b62b-7d8dfe906d33" target="_blank" rel="noopener">Unity Play ↗</a></div>
+ <small>© 2026 김기백 · "실제 화면"은 게임에서 그대로 찍은 것, "재구성"은 설명용으로 다시 만든 것이다.</small>
+</div></footer>
+
+<script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
+<script src="forms/space.js"></script>
+<script src="forms/forms.js"></script>
+<script>
+(function(){
+ var L=[].slice.call(document.querySelectorAll('.toc .tl a')),H=L.map(function(a){return document.querySelector(a.getAttribute('href'))}),toc=document.querySelector('.toc'),
+     N=[].slice.call(document.querySelectorAll('.top nav a')),pct=toc.querySelector('.pct');
+ function spy(){var i=0;H.forEach(function(h,j){if(h&&h.getBoundingClientRect().top<innerHeight*.3)i=j});
+  var d=document.documentElement,p=Math.max(0,Math.min(1,d.scrollTop/(d.scrollHeight-innerHeight)));
+  if(p>.995)i=L.length-1;
+  L.forEach(function(a,j){a.classList.toggle('on',j===i);a.classList.toggle('done',j<i)});
+  toc.style.setProperty('--p',p);pct.textContent=Math.round(p*100)+'%';
+  var ch=L[i].getAttribute('href').replace(/^#(jm|rm)-.*/,function(m,k){return k==='jm'?'#jm':'#ramen'});
+  N.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===ch)});}
+ addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy();
+ /* 영상은 화면에 들어올 때 불러온다 */
+ var vids=[].slice.call(document.querySelectorAll('video[data-src]'));
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!e.target.src){e.target.src=e.target.getAttribute('data-src');io.unobserve(e.target)}})},{rootMargin:'300px 0px'});vids.forEach(function(v){io.observe(v)})}
+ else vids.forEach(function(v){v.src=v.getAttribute('data-src')});
+ /* 인쇄할 때는 접힌 곳을 모두 펼친다 */
+ addEventListener('beforeprint',function(){[].forEach.call(document.querySelectorAll('details'),function(d){d.open=true})});
+})();
+</script>
+</body>
+</html>
