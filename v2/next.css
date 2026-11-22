@@ -1,8 +1,8 @@
 /* 취업용 한 페이지 · 우주 배경 + 블로그형 본문 */
-@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=cbece387) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=cbece387) format('woff2')}
-@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=cbece387) format('woff2')}
-@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=cbece387) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:400;font-display:swap;src:url(fonts-d/pretendard-400.woff2?v=9ccc3d69) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:600;font-display:swap;src:url(fonts-d/pretendard-600.woff2?v=9ccc3d69) format('woff2')}
+@font-face{font-family:'Pretendard';font-weight:700;font-display:swap;src:url(fonts-d/pretendard-700.woff2?v=9ccc3d69) format('woff2')}
+@font-face{font-family:'D2Coding';font-weight:400;font-display:swap;src:url(fonts-d/d2coding-400.woff2?v=9ccc3d69) format('woff2')}
 :root{--ink:#1f2328;--body:#30363d;--mute:#6e7781;--line:#d8dde3;--soft:#f5f7f9;--green:#3f8a1f;--greenbg:#f3f8ee;--lime:#b8e46e;--red:#c3402b;--blue:#2f6fb5;--mono:'D2Coding',ui-monospace,Consolas,monospace}
 *{box-sizing:border-box}
 html{background:#05080f;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -586,3 +586,24 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 .pick .pic{aspect-ratio:20/9}
 @media(max-width:1000px){.strip>div:first-child span{flex-basis:100%}.strip>div:first-child span+span{margin-left:0}}
 .tri+.also{margin-top:24px!important}
+/* 라멘가게 플레이 두 칸, 밸런스 표, 상세 끝의 다른 프로젝트 */
+.duo2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
+.duo2 figure{margin:0}
+.tbl.bal{font-size:14.5px}
+.tbl.bal td,.tbl.bal th{padding:7px 8px 7px 0;white-space:nowrap}
+.tbl.bal td:first-child{white-space:normal;width:34%;font-weight:600}
+.tbl.bal td.lo{color:var(--red);font-weight:700}.tbl.bal td.hi{color:var(--green);font-weight:700}
+.nextup{margin:22px 0 0}
+.nextup .nl{color:var(--lime);font-weight:700;font-size:15px;letter-spacing:.06em;margin:0 0 10px}
+.nrow{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:12px}
+.nextup a{display:block;text-decoration:none;border:1px solid #ffffff24;background:rgba(14,22,38,.78);border-radius:12px;overflow:hidden;color:#e6edf5;transition:transform .15s ease,border-color .15s ease}
+.nextup a:hover{transform:translateY(-2px);border-color:var(--lime)}
+.nextup .pic{display:block;aspect-ratio:16/9;min-height:0;background:#0a0f1a center/cover no-repeat}
+.nextup .nmain .pic{aspect-ratio:16/6}
+.nextup .tx{display:block;padding:10px 14px 12px}
+.nextup i{display:block;font-style:normal;font-size:12.5px;color:var(--lime);font-weight:600}
+.nextup b{display:block;font-size:16px;color:#fff;margin-top:2px;line-height:1.35}
+.nextup em{display:block;font-style:normal;font-size:14px;color:#b9c6d6;margin-top:2px}
+.nextup .nmain b{font-size:20px}
+@media(max-width:760px){.duo2{grid-template-columns:1fr}.nrow{grid-template-columns:1fr 1fr 1fr}.nextup .nmain{grid-column:1/-1}.nextup .tx{padding:8px 10px 10px}.nextup b{font-size:14px}.nextup i{font-size:11.5px}}
+@media print{.nextup{display:none}}

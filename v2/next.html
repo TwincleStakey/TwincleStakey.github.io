@@ -7,7 +7,7 @@
 <meta name="description" content="영화보다 더 영화 같은 게임을 만드는 것이 목표입니다. Unity 클라이언트 프로그래머 김기백의 포트폴리오.">
 <meta property="og:title" content="김기백 · 게임 클라이언트 프로그래머"><meta property="og:description" content="정무대전(1인 개발 · 최대 6인 온라인 대전) · 나의 인생 라멘가게(팀 프로젝트)"><meta property="og:image" content="media/p_hero2.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b8e46e'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="next.css?v=9d3a9fd7">
+<link rel="stylesheet" href="next.css?v=ec63b330">
 </head>
 <body class="t-b">
 <header class="top"><div class="in"><a class="nm" href="#top"><i>✦</i>김기백<span> · GAME CLIENT</span></a>
@@ -57,7 +57,7 @@
   <div class="subs">
    <button class="subc" type="button" data-p="sub-night" aria-expanded="false" aria-controls="sub-night"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/nQV6A8qrcCM/hqdefault.jpg)"></span><span class="bd"><span class="k">1인 개발 · 공포</span><strong>야간상담</strong><span class="d">1인 개발 공포 게임. 플레이 영상 공개</span><span class="go"><i class="o">자세히 보기</i><i class="c">접기</i></span></span></button>
    <button class="subc" type="button" data-p="sub-nft" aria-expanded="false" aria-controls="sub-nft"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/dhQ-Co4C3cY/hqdefault.jpg)"></span><span class="bd"><span class="k">1인 개발 · 외부 서비스 연동</span><strong>NFT 강화 게임</strong><span class="d">강화 · 자동 사냥 게임에 Unity Gaming Services 거래소와 테스트넷 NFT 연동</span><span class="go"><i class="o">자세히 보기</i><i class="c">접기</i></span></span></button>
-   <button class="subc" type="button" data-p="sub-unknown" aria-expanded="false" aria-controls="sub-unknown"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/7EcrHt_X7pQ/hqdefault.jpg)"></span><span class="bd"><span class="k">팀 · 디렉팅</span><strong>UNKNOWN</strong><span class="d">3D 시네마틱 트레일러. 디렉터로 세계관 · 컷 구성 · 파트 분담 담당, 제작은 팀원</span><span class="go"><i class="o">자세히 보기</i><i class="c">접기</i></span></span></button>
+   <button class="subc" type="button" data-p="sub-unknown" aria-expanded="false" aria-controls="sub-unknown"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/7EcrHt_X7pQ/hqdefault.jpg)"></span><span class="bd"><span class="k">팀 · 대본 · 디렉팅</span><strong>UNKNOWN</strong><span class="d">3D 시네마틱 트레일러. 대본 작성과 디렉팅(세계관 · 컷 구성 · 파트 분담) 담당, 영상 제작은 팀원</span><span class="go"><i class="o">자세히 보기</i><i class="c">접기</i></span></span></button>
   </div>
  </section>
 </div>
@@ -170,7 +170,7 @@
    <tr><td>비도 일치율 91% → 76% → 89%</td><td>새 기술 '폭우연사' 추가 전 → 추가 직후 → 수정 후. 새 기능을 넣은 뒤 기존 판정이 나빠진 경우</td></tr>
    <tr><td>프레임당 메모리 할당 184KB → 120KB</td><td>전투 UI 글씨 수정 전 → 후. 할당량 감소만 확인했고 FPS 변화는 같은 조건으로 재지 못함</td><td>에디터, AI 6명 3 대 3</td></tr>
   </tbody></table></div>
-  <p class="cond">일치율은 화면에서 닿은 공격 중 실제로 맞은 비율. 세 줄은 실험 목적이 달라 서로 이어지는 값이 아님. 사람 테스트(동기 약 20명)와는 별개로, 모두 봇 자동 대전으로 잰 값</p>
+  <p class="cond">일치율은 화면에서 닿은 공격 중 실제로 맞은 비율. 세 줄은 실험 목적이 달라 서로 이어지는 값이 아님. 사람 테스트(지인 포함 약 20명)와는 별개로, 모두 봇 자동 대전으로 잰 값</p>
  </div>
 
  <div class="case fold2" id="jm-c3">
@@ -214,10 +214,24 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
   <figure><video muted playsinline preload="none" controls poster="media/p_finisher3.jpg" data-src="media/finisher_full.mp4" width="1280" height="720" aria-label="결정타 연출부터 결과 화면까지"></video><figcaption><b>결정타 연출</b>마지막 일격에 문파 색 붓 한 획. 여섯 문파마다 다르게 제작</figcaption></figure>
  </div>
  <ul class="pts">
-  <li>판 길이: 자동 대전 50판 평균 12초 → 30초. 체력과 피해량을 조정해 공방이 오갈 시간을 확보</li>
-  <li>문파 밸런스: 처음에는 승률이 당문 0% · 소림 93%로 쏠려, 50판씩 다시 재며 조정. 쏠림은 줄었지만 아직 남아 있어 조정 중(문파당 표본이 20판 안팎이라 오차가 큼)</li>
+  <li>밸런스: 체력 · 피해량 · 튕겨내기 판정 시간 · 이동 속도 · 재사용 대기 등 여러 수치를, 자동 대전 50판 단위로 문파별 승률과 판 길이를 재며 10차례 이상 조정</li>
+  <li>판 길이: 평균 12초로 너무 빨리 끝나던 판을 30초대로, 다섯째 문파를 넣은 뒤에는 50초대로 조정</li>
+  <li>승률: 가장 약했던 당문은 0% → 32%, 가장 강한 문파는 소림 93% → 마교 76%. 쏠림이 아직 남아 조정 중</li>
+  <li>수치만 올리지 않고 원인을 추적: 소림이 당문에게 1:9로 지던 이유는 수치가 아니라, 중독된 AI가 멀리서 운기만 하며 서 있던 행동 조건이었음</li>
   <li>연출 · UI: 항목마다 시안을 4개 이상 실제 게임 녹화로 만들어 비교한 뒤 선택</li>
  </ul>
+ <details class="more"><summary>밸런스 조정 기록 <span>측정 7회 · 문파별 승률 · 판 길이</span></summary><div class="in">
+  <div class="tblwrap"><table class="tbl bal"><thead><tr><th>측정</th><th>판 길이</th><th>당문</th><th>화산</th><th>소림</th><th>북해</th><th>마교</th></tr></thead><tbody>
+   <tr><td>처음</td><td>12초</td><td class="lo">0%</td><td>47%</td><td class="hi">93%</td><td>47%</td><td>–</td></tr>
+   <tr><td>체력 +30%, 소림 하향, 당문 암기 조정</td><td>30초</td><td>48%</td><td>67%</td><td class="lo">23%</td><td>58%</td><td>–</td></tr>
+   <tr><td>버그 · 네트워크 수정 뒤</td><td>35초</td><td>42%</td><td>67%</td><td class="lo">8%</td><td class="hi">72%</td><td>–</td></tr>
+   <tr><td>화산 · 북해 하향</td><td>30초</td><td>56%</td><td>58%</td><td class="lo">29%</td><td>63%</td><td>–</td></tr>
+   <tr><td>소림 상향</td><td>36초</td><td class="hi">75%</td><td>57%</td><td class="lo">26%</td><td>53%</td><td>–</td></tr>
+   <tr><td>다섯째 문파 마교 추가 (150판)</td><td>52초</td><td class="lo">17%</td><td>49%</td><td>48%</td><td>44%</td><td class="hi">86%</td></tr>
+   <tr><td>수치 5건 · 새 기술 패치</td><td>59초</td><td class="lo">32%</td><td>56%</td><td>44%</td><td>38%</td><td class="hi">76%</td></tr>
+  </tbody></table></div>
+  <p class="cond">2인 대전, AI끼리 4배속, 같은 문파끼리 붙은 판은 제외한 승률. 문파당 표본이 10~20판대라 오차가 큼(±20%p 안팎). 북해는 중간에 기술이 바뀌어 앞뒤 비교가 어려움</p>
+ </div></details>
  <p class="also"><b>기타 구현</b>대기실 · 결과창 · 랭크 대전 / 입문 수련 8단계와 가이드 / 무작위 지형 5종</p>
  </section>
 
@@ -235,7 +249,7 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
  <section id="jm-retro">
  <h3><span class="no">1.5</span>결과 · 회고</h3>
  <ul class="retro">
-  <li>아카데미 동기 약 20명에게 빌드를 전달해 피드백을 받았고, 2~3일마다 새 빌드 배포</li>
+  <li>지인 포함 약 20명에게 빌드를 전달해 피드백을 받았고, 2~3일마다 새 빌드 배포</li>
   <li>적용 범위: 맞는 쪽 판정 + 방장 확인 구조. 부정행위 방지는 고려하지 않았고, 실제 인터넷 환경에서 사람끼리 하는 대전 수치는 아직 없음</li>
   <li>배운 점: 값이 이상하면 측정 방법부터 의심하고, 최적화는 추측하지 않고 먼저 측정할 것</li>
   <li>진행 중: 싱글 모드 개발</li>
@@ -259,6 +273,15 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
  <div class="bar"><i></i></div>
 </aside>
 </div>
+<nav class="nextup" aria-label="다른 프로젝트">
+ <p class="nl">이어서 보기</p>
+ <div class="nrow">
+  <a class="nmain" href="#ramen"><span class="pic" style="background-image:url(media/ramen/cook.gif)"></span><span class="tx"><i>대표작 · 팀 개발</i><b>나의 인생 라멘가게</b><em>조리 시스템과 협업 →</em></span></a>
+  <a class="nsub" href="#sub-night"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/nQV6A8qrcCM/hqdefault.jpg)"></span><span class="tx"><i>1인 개발 · 공포</i><b>야간상담</b></span></a>
+  <a class="nsub" href="#sub-nft"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/dhQ-Co4C3cY/hqdefault.jpg)"></span><span class="tx"><i>1인 개발 · 외부 서비스 연동</i><b>NFT 강화 게임</b></span></a>
+  <a class="nsub" href="#sub-unknown"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/7EcrHt_X7pQ/hqdefault.jpg)"></span><span class="tx"><i>팀 · 대본 · 디렉팅</i><b>UNKNOWN</b></span></a>
+ </div>
+</nav>
 <p class="shut"><button type="button" data-shut="jm">정무대전 접기 ▴</button></p>
 </div></div>
 
@@ -279,12 +302,26 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
 
  <section id="rm-play">
  <h3><span class="no">2.1</span>플레이</h3>
- <figure><img src="media/rm_cook2.jpg" alt="순서에 맞는 재료를 가져가자 그릇 테두리가 빛나는 조리 화면" width="960" height="600" loading="lazy"><figcaption>순서에 맞는 재료를 가져가면 그릇 테두리가 빛나며 받고(①), 순서가 틀리면 붉게 깜빡이며 받지 않음 · 실제 화면</figcaption></figure>
- <figure style="margin-top:22px"><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/pF59wLZO8Vk" title="나의 인생 라멘가게 시연 영상" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>시연 영상: 주문 듣기 → 주문 해석 → 조리 → 시식 반응 → 하루 정산 · <a href="https://youtu.be/pF59wLZO8Vk" target="_blank" rel="noopener">YouTube에서 보기 ↗</a></figcaption></figure>
+ <div class="duo2">
+  <figure><div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/pF59wLZO8Vk" title="나의 인생 라멘가게 시연 영상" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><figcaption>시연 영상: 주문 듣기 → 해석 → 조리 → 시식 반응 → 하루 정산 · <a href="https://youtu.be/pF59wLZO8Vk" target="_blank" rel="noopener">YouTube ↗</a></figcaption></figure>
+  <figure><img src="media/rm_cook2.jpg" alt="순서에 맞는 재료를 가져가자 그릇 테두리가 빛나는 조리 화면" width="960" height="600" loading="lazy"><figcaption>순서에 맞는 재료는 그릇 테두리가 빛나며 받고(①), 틀리면 붉게 깜빡이며 받지 않음 · 실제 화면</figcaption></figure>
+ </div>
+ </section>
+
+ <section id="rm-sys">
+ <h3><span class="no">2.2</span>주요 구현</h3>
+ <div class="tri">
+  <figure><a href="media/rm_react1.jpg" target="_blank" rel="noopener"><img src="media/rm_react1.jpg" alt="틀린 내용에 따라 대사가 달라지는 손님 반응 화면" loading="lazy"></a><figcaption><b>틀린 이유를 말해 주는 손님</b>점수 대신 빠짐 · 넘침 · 뒤바뀜에 따라 손님 대사가 달라짐</figcaption></figure>
+  <figure><a href="media/rm_react2.jpg" target="_blank" rel="noopener"><img src="media/rm_react2.jpg" alt="정확도에 따라 달라지는 시식 연출 화면" loading="lazy"></a><figcaption><b>시식 연출</b>정확도 구간마다 다른 시식 연출이 나옴</figcaption></figure>
+  <figure><a href="media/rm_react3.jpg" target="_blank" rel="noopener"><img src="media/rm_react3.jpg" alt="조리대 전용 배속 모드 화면" loading="lazy"></a><figcaption><b>조리대 전용 배속</b>붓고 넣는 연출이 실제 시간 기준이라 빨리 감기가 안 돼, 배속을 따로 구현</figcaption></figure>
+ </div>
+ <ul class="pts">
+  <li>일차별 난이도: 손님마다 따로 뽑으면 첫날부터 어려운 손님만 나오기도 해서, 일차별 구성표를 정해 두고 섞어서 한 명씩 꺼내는 방식으로 변경</li>
+ </ul>
  </section>
 
  <section id="rm-arch">
- <h3><span class="no">2.2</span>역할과 협업</h3>
+ <h3><span class="no">2.3</span>역할과 협업</h3>
  <div class="fig" data-svg="bound"></div>
  <ul class="pts">
   <li>조리 결과는 EvaluateRamen() 하나로만 채점에 전달. 이 경계 덕분에 나는 조리 판정과 화면을, 팀원은 주문과 채점을 서로의 코드를 기다리지 않고 따로 진행</li>
@@ -293,7 +330,7 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
  </section>
 
  <section id="rm-case">
- <h3><span class="no">2.3</span>트러블슈팅</h3>
+ <h3><span class="no">2.4</span>트러블슈팅</h3>
  <div class="case" id="rm-c1">
   <p class="kind">Unity 생명주기</p>
   <h4>둘째 손님부터 집히지 않는 재료 <span class="res">진행 불가 → 정상</span></h4>
@@ -352,7 +389,7 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
  </section>
 
  <section id="rm-retro">
- <h3><span class="no">2.4</span>회고</h3>
+ <h3><span class="no">2.5</span>회고</h3>
  <ul class="retro">
   <li>채점과 함수 하나로만 연결해, 서로 상대 코드를 몰라도 작업할 수 있었음</li>
   <li>절대 좌표로 적은 손님 위치가 화면을 넓히자 어긋남</li>
@@ -365,14 +402,24 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
  <nav class="tl">
   <a class="c" href="#ramen" data-n="2">개요</a>
   <a class="c" href="#rm-play" data-n="2.1">플레이</a>
-  <a class="c" href="#rm-arch" data-n="2.2">역할과 협업</a>
-  <a class="c" href="#rm-case" data-n="2.3">트러블슈팅</a>
+  <a class="c" href="#rm-sys" data-n="2.2">주요 구현</a>
+  <a class="c" href="#rm-arch" data-n="2.3">역할과 협업</a>
+  <a class="c" href="#rm-case" data-n="2.4">트러블슈팅</a>
   <a class="s" href="#rm-c1" data-n="·">집히지 않는 재료</a>
-  <a class="c" href="#rm-retro" data-n="2.4">회고</a>
+  <a class="c" href="#rm-retro" data-n="2.5">회고</a>
  </nav>
  <div class="bar"><i></i></div>
 </aside>
 </div>
+<nav class="nextup" aria-label="다른 프로젝트">
+ <p class="nl">이어서 보기</p>
+ <div class="nrow">
+  <a class="nmain" href="#jm"><span class="pic" style="background-image:url(media/p_hero2.jpg)"></span><span class="tx"><i>대표작 · 1인 개발</i><b>정무대전</b><em>전투 판정 개선 →</em></span></a>
+  <a class="nsub" href="#sub-night"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/nQV6A8qrcCM/hqdefault.jpg)"></span><span class="tx"><i>1인 개발 · 공포</i><b>야간상담</b></span></a>
+  <a class="nsub" href="#sub-nft"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/dhQ-Co4C3cY/hqdefault.jpg)"></span><span class="tx"><i>1인 개발 · 외부 서비스 연동</i><b>NFT 강화 게임</b></span></a>
+  <a class="nsub" href="#sub-unknown"><span class="pic" style="background-image:url(https://i.ytimg.com/vi/7EcrHt_X7pQ/hqdefault.jpg)"></span><span class="tx"><i>팀 · 대본 · 디렉팅</i><b>UNKNOWN</b></span></a>
+ </div>
+</nav>
 <p class="shut"><button type="button" data-shut="ramen">라멘가게 접기 ▴</button></p>
 </div></div>
 
@@ -411,7 +458,7 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
  <section class="head">
   <p class="eyebrow">서브 프로젝트 · 팀 · 디렉팅</p>
   <h2>UNKNOWN</h2>
-  <p class="lead">이상 현상이 일어난 도시에 정보 수집 드론 네 대가 투입되는 3D 시네마틱 트레일러. 디렉터로 세계관 · 컷 구성 · 파트 분담 담당, 제작은 팀원</p>
+  <p class="lead">이상 현상이 일어난 도시에 정보 수집 드론 네 대가 투입되는 3D 시네마틱 트레일러. 대본 작성과 디렉팅(세계관 · 컷 구성 · 파트 분담) 담당, 영상 제작은 팀원</p>
   <div class="shots"><span class="shot"><img src="https://i.ytimg.com/vi/7EcrHt_X7pQ/maxresdefault.jpg" alt="UNKNOWN 화면 1" loading="lazy"></span><span class="shot"><img src="https://i.ytimg.com/vi/7EcrHt_X7pQ/hq1.jpg" alt="UNKNOWN 화면 2" loading="lazy"></span><span class="shot"><img src="https://i.ytimg.com/vi/7EcrHt_X7pQ/hq2.jpg" alt="UNKNOWN 화면 3" loading="lazy"></span><span class="shot"><img src="https://i.ytimg.com/vi/7EcrHt_X7pQ/hq3.jpg" alt="UNKNOWN 화면 4" loading="lazy"></span></div>
   <p class="cond" style="text-align:center">영상에서 가져온 화면</p>
   <p class="lbl">영상</p>
@@ -446,8 +493,8 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
 </div></footer>
 
 <script>window.SKY={"seed":11,"bg":"#05080f","starColors":["#ffffff","#dfe7ff","#fff1d6","#cfe0ff"],"nebula":[[0.12,0.22,0.45,"rgba(96,72,170,.55)",0.55],[0.88,0.5,0.42,"rgba(40,115,160,.5)",0.5],[0.55,0.88,0.38,"rgba(130,60,140,.45)",0.4]],"milky":true,"shooting":true,"sats":[{"x":120,"y":170,"vx":9,"vy":1.2,"k":0.08,"s":3,"ang":0.4},{"x":900,"y":640,"vx":-6,"vy":-0.8,"k":0.06,"s":2.4,"ang":-0.6,"a":0.6}],"rocks":[{"x":60,"y":430,"r":9,"vx":3,"spin":0.05,"k":0.1},{"x":1180,"y":820,"r":6,"vx":-2,"spin":-0.08,"k":0.14,"a":0.6},{"x":300,"y":900,"r":4,"vx":4,"spin":0.1,"k":0.16,"a":0.55}]}</script>
-<script src="forms/space.js?v=9d3a9fd7"></script>
-<script src="forms/forms.js?v=9d3a9fd7"></script>
+<script src="forms/space.js?v=ec63b330"></script>
+<script src="forms/forms.js?v=ec63b330"></script>
 <script>
 (function(){
  var $$=function(q,r){return [].slice.call((r||document).querySelectorAll(q))};
