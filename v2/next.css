@@ -407,3 +407,15 @@ html{scroll-padding-top:60px}
 @media(max-height:820px) and (min-width:1001px){.mepic{width:176px}}
 @media(max-width:1000px){.top1{grid-template-columns:1fr;gap:22px}.mepic{width:132px;order:-1}}
 @media print{.mepic{width:120px;box-shadow:none}}
+
+/* 서브 프로젝트: 누르면 소개 · 화면 네 장 · 영상 */
+button.subc{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:148px 1fr;border:1px solid #ffffff1f;background:rgba(14,22,38,.72);border-radius:12px;overflow:hidden;transition:border-color .15s,transform .15s}
+button.subc:hover{border-color:#b8e46e99}
+button.subc:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px var(--lime)}
+.subc .go{color:var(--lime);font-weight:600}.subc .go i{font-style:normal}.subc .go .c{display:none}.subc .go .o::after{content:" ▾"}.subc .go .c::after{content:" ▴"}
+.subc[aria-expanded=true] .go .o{display:none}.subc[aria-expanded=true] .go .c{display:inline}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 8px}
+.shot{display:block;aspect-ratio:16/9;overflow:hidden;border-radius:8px;border:1px solid var(--line);background:#0a0f1a}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:1000px){button.subc{grid-template-columns:118px 1fr}.shots{gap:8px}}
