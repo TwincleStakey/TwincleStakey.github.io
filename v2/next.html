@@ -334,42 +334,64 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
 
  <section id="rm-case">
  <h3><span class="no">2.4</span>트러블슈팅</h3>
- <div class="case" id="rm-c3">
-  <p class="kind">연출 · 측정</p>
-  <h4>엔딩 크레딧 창 둘레에 남는 갈색 띠 <span class="res">추측 3번 실패 → 측정으로 해결</span></h4>
+ <div class="case" id="rm-c4">
+  <p class="kind">UI 좌표계</p>
+  <h4>Canvas 렌더 모드를 바꾼 뒤 화면 밖으로 사라진 커서 <span class="res">좌표 변환 네 곳 → 함수 하나</span></h4>
   <dl class="psr">
-   <dt class="q">문제</dt><dd>엔딩 크레딧에서 가게 창 둘레에 검정이 아닌 갈색 띠가 남는 현상. 제출 전날 발견했고, 배경 그림 크기 · 검은 판 · 밤 배경 그림 순으로 원인을 추측해 세 번 고쳤지만 그대로였음</dd>
-   <dt class="d">선택</dt><dd>추측을 멈추고, 크레딧 화면을 일정 간격으로 저장하는 에디터 전용 녹화 스크립트를 만들어 띠의 색과 크기를 측정. 크기가 480×270으로 화면(960×540)의 정확히 절반 → 0.5배로 줄인 크레딧 창과 함께 줄어든 그림임을 확인. 화면 가장자리를 어둡게 하는 비네트 그림 한 장이 원인</dd>
-   <dt>검증</dt><dd>크레딧 동안 비네트를 끄고 다시 녹화. 창 바깥에 검정이 아닌 픽셀 0개</dd>
+   <dt class="q">문제</dt><dd>화면 필터를 UI에도 적용하려고 Canvas를 Overlay에서 Screen Space - Camera로 바꾼 뒤, 재료통 위에서 커서가 사라지는 현상. 마우스의 픽셀 좌표를 RectTransform.position(월드 좌표)에 그대로 넣고 있었고, 두 값은 Overlay에서만 우연히 같았음. Camera 모드에서는 화면 세로가 월드 10칸(직교 카메라 Size 5)이라, y=300은 화면 30개만큼 위</dd>
+   <dt class="d">선택</dt><dd>화면 좌표를 UI 좌표로 바꾸는 CanvasPoint.ToWorld()를 만들고, 같은 계산을 하던 네 곳(커서, 드래그 중인 재료 그림, 클릭 효과, 주문서 판정)을 모두 이 함수로 통합. 변환은 RectTransformUtility에 맡기고, 그 Canvas가 쓰는 카메라를 찾아 함께 넘김</dd>
+   <dt>검증</dt><dd>네 곳 모두 마우스 위치에 맞게 동작. 렌더 모드를 Overlay로 되돌려도 같은 코드로 동작하는 것까지 확인</dd>
   </dl>
   <div class="pair" style="margin-top:14px">
-   <figure><span class="tg">이전</span><img src="media/ramen/a_window.jpg" alt="고치기 전: 검은 바탕 위 가게 창 둘레에 갈색 띠가 남아 있다" width="658" height="350" loading="lazy"></figure>
-   <figure><span class="tg ok">이후</span><img src="media/ramen/a_ba3_after.jpg" alt="고친 뒤: 창 바깥이 완전히 검다" width="658" height="350" loading="lazy"></figure>
+   <figure><img src="media/ramen/b_ba1_before.gif" alt="고치기 전: 재료통 위로 가면 커서가 사라진다" width="640" height="368" loading="lazy"></figure>
+   <figure><img src="media/ramen/b_ba1_after.gif" alt="고친 뒤: 재료통 위에서 젓가락 커서가 마우스를 따라온다" width="640" height="368" loading="lazy"></figure>
   </div>
-  <p class="cond" style="text-align:center">이전은 실제 화면(창 왼쪽의 갈색 띠), 이후는 고친 결과를 다시 만든 화면(재구성)</p>
-  <details class="more"><summary>상세 과정 <span>시도 4번 · 코드 · 배운 점</span></summary><div class="in">
-   <div class="tblwrap"><table class="tbl"><colgroup><col style="width:9%"><col style="width:33%"><col style="width:58%"></colgroup><thead><tr><th>시도</th><th>가설</th><th>결과</th></tr></thead><tbody>
-    <tr><td>1</td><td>배경 그림이 화면 밖까지 깔림</td><td>배경 크기를 고정하고 카메라 배경을 검정으로 변경. 띠는 그대로</td></tr>
-    <tr><td>2</td><td>검은 판이 화면 일부만 덮음</td><td>픽셀 색을 읽어 검은 판은 정상임을 확인. 다만 잰 값의 위치를 창 안쪽으로 잘못 읽음. 띠는 그대로</td></tr>
-    <tr><td>3</td><td>밤 배경 그림이 창보다 큼</td><td>그림 크기를 960×540으로 줄임. 띠는 그대로</td></tr>
-    <tr><td>4</td><td>가설 없이 측정부터</td><td>녹화 프레임에서 띠 영역을 계산. 크기 480×270, 색 RGB(22,11,8). 창과 같은 비율로 줄어든 그림을 찾아 비네트로 확인</td></tr>
-   </tbody></table></div>
-<pre class="cx"><span class="hd">CreditsSequence.cs · 크레딧 동안 꺼 둘 화면 요소 (요약)</span><span class="kw">public static readonly string</span>[] FrameHidden =
+  <p class="cond" style="text-align:center">실제 조리 화면 위에 다시 만든 움짤(재구성)</p>
+<pre class="cx"><span class="hd">CanvasPoint.cs · 화면 좌표 → UI 좌표 (새 파일)</span><span class="kw">public static</span> Vector3 <span class="fn">ToWorld</span>(RectTransform area, Vector2 screen)
 {
-    <span class="nm">"TitleScreen"</span>, <span class="nm">"HoldToSkip"</span>, <span class="nm">"DragLayer"</span>, <span class="nm">"TutorialPrompt"</span>, <span class="nm">"TutorialDim"</span>,
-<span class="hi">    <span class="nm">"ScreenVignette"</span>, <span class="nm">"ScreenGrain"</span>,   <span class="cm">// 추가: 띠로 남던 그림</span></span>
-};</pre>
+    <span class="kw">if</span> (area == <span class="kw">null</span>) <span class="kw">return</span> screen;
+    Vector3 world;
+<span class="hi">    <span class="kw">return</span> RectTransformUtility.<span class="fn">ScreenPointToWorldPointInRectangle</span>(</span>
+<span class="hi">               area, screen, <span class="fn">CameraFor</span>(area), <span class="kw">out</span> world) ? world : (Vector3)screen;</span>
+}
+
+<span class="kw">public static</span> Camera <span class="fn">CameraFor</span>(RectTransform area)
+{
+    Canvas canvas = area != <span class="kw">null</span> ? area.<span class="fn">GetComponentInParent</span>&lt;Canvas&gt;() : <span class="kw">null</span>;
+    <span class="kw">if</span> (canvas == <span class="kw">null</span>) <span class="kw">return null</span>;
+    canvas = canvas.rootCanvas;
+    <span class="cm">// Overlay면 카메라 없이, Camera 모드면 그 Canvas의 카메라</span>
+<span class="hi">    <span class="kw">return</span> canvas.renderMode == RenderMode.ScreenSpaceOverlay ? <span class="kw">null</span> : canvas.worldCamera;</span>
+}</pre>
+  <details class="more"><summary>상세 과정 <span>틀린 가설 2번 · 고친 네 곳 · 배운 점</span></summary><div class="in">
+   <div class="tblwrap"><table class="tbl"><colgroup><col style="width:9%"><col style="width:33%"><col style="width:58%"></colgroup><thead><tr><th>시도</th><th>가설</th><th>결과</th></tr></thead><tbody>
+    <tr><td>1</td><td>튜토리얼의 어두운 판(그리기 순서 100)에 커서가 가려짐</td><td>커서 레이어에 Canvas를 추가해 순서를 120으로 올림. 커서는 그대로 보이지 않음</td></tr>
+    <tr><td>2</td><td>고친 내용이 씬에 반영되지 않음</td><td>씬 빌더를 다시 실행해 반영. 그대로였고 Console에도 에러가 없음. 화면 밖에 그려지는 것은 에러를 남기지 않음</td></tr>
+    <tr><td>3</td><td>가설 대신 값부터 확인</td><td>Main Camera가 직교 Size 5인 것을 보고, 며칠 전 Canvas 모드를 바꾼 작업과 연결. 마우스 좌표를 그대로 쓰는 코드를 검색해 네 곳을 찾음</td></tr>
+   </tbody></table></div>
+<pre class="cx"><span class="hd">고친 네 곳 (요약)</span><span class="cm">// CookingCursor.cs · 커서</span>
+<span class="del">rect.position = screen + offset * scale;</span>
+<span class="hi">rect.position = CanvasPoint.<span class="fn">ToWorld</span>(rect.parent <span class="kw">as</span> RectTransform, screen + offset * scale);</span>
+<span class="cm">// IngredientSlot.cs · 드래그 중인 재료 그림</span>
+<span class="del">ghost.transform.position = eventData.position;</span>
+<span class="hi">ghost.transform.position = CanvasPoint.<span class="fn">ToWorld</span>(ghost.transform.parent <span class="kw">as</span> RectTransform, screen);</span>
+<span class="cm">// ClickRipple.cs · 클릭 효과</span>
+<span class="del">rect.position = Mouse.current.position.<span class="fn">ReadValue</span>();</span>
+<span class="hi">rect.position = CanvasPoint.<span class="fn">ToWorld</span>(rect.parent <span class="kw">as</span> RectTransform, Mouse.current.position.<span class="fn">ReadValue</span>());</span>
+<span class="cm">// OrderNoteUI.cs · 주문서 위에 마우스가 있는지 판정: 카메라 자리에 null을 넘기고 있었음</span>
+<span class="hi">    panel, Mouse.current.position.<span class="fn">ReadValue</span>(), CanvasPoint.<span class="fn">CameraFor</span>(panel));</span></pre>
    <p class="lbl">배운 점</p>
    <ul class="pts">
-    <li>같은 문제를 세 번 틀리면 추측 대신 측정. 480×270이라는 숫자 하나로 원인을 바로 찾음</li>
-    <li>값을 잰 뒤에는 그 값이 화면의 어디에 해당하는지도 확인</li>
+    <li>마우스 위치는 화면 픽셀, RectTransform.position은 월드 좌표로 단위가 다름. 둘 사이는 카메라를 받는 함수로 변환해야 렌더 모드가 바뀌어도 동작</li>
+    <li>설정 하나를 바꿨는데 네 곳이 함께 깨짐. 같은 계산을 두 번째로 쓰게 되면 함수로 분리</li>
+    <li>어두운 판 가설은 바로 옆의 확인창이 실제로 같은 이유로 가려져 있어 더 믿게 됨. 가설을 세우기 전에 Console과 Inspector 값부터 확인</li>
    </ul>
   </div></details>
  </div>
 
  <div class="case" id="rm-c2">
-  <p class="kind">입력 처리</p>
-  <h4>클릭으로 넘기면 타자기 효과가 사라지는 내레이션 <span class="res">한 번에 출력 → 한 글자씩</span></h4>
+  <p class="kind">Input System · 코루틴</p>
+  <h4>같은 프레임에 두 번 읽힌 클릭 <span class="res">넘긴 줄이 한 번에 출력 → 한 글자씩</span></h4>
   <dl class="psr">
    <dt class="q">문제</dt><dd>오프닝 내레이션을 클릭으로 넘기면 둘째 줄부터 타자기 효과 없이 한 번에 출력되는 현상. wasPressedThisFrame은 누른 프레임 동안 계속 true인데, 입력 대기가 끝난 바로 그 프레임에 다음 줄의 건너뛰기 검사가 같은 값을 한 번 더 읽고 있었음</dd>
    <dt class="d">선택</dt><dd>입력 대기가 끝날 때도 한 프레임 쉰 뒤 다음 줄을 시작. 입력을 받고 다음 단계로 넘어가는 코루틴은 들어갈 때와 나갈 때 모두 한 프레임 쉬는 것을 기본으로 함</dd>
@@ -436,14 +458,44 @@ Sfx.<span class="fn">Play</span>(<span class="nm">"sfx_flow_next"</span>, 0.5f);
   </div></details>
  </div>
 
+ <div class="case fold2" id="rm-c3">
+  <details class="more"><summary>보조 사례 · 엔딩 크레딧 창 둘레에 남는 갈색 띠 <span>추측 3번 실패 → 측정으로 해결</span></summary><div class="in">
+  <dl class="psr">
+   <dt class="q">문제</dt><dd>엔딩 크레딧에서 가게 창 둘레에 검정이 아닌 갈색 띠가 남는 현상. 제출 전날 발견했고, 배경 그림 크기 · 검은 판 · 밤 배경 그림 순으로 원인을 추측해 세 번 고쳤지만 그대로였음</dd>
+   <dt class="d">선택</dt><dd>추측을 멈추고, 크레딧 화면을 일정 간격으로 저장하는 에디터 전용 녹화 스크립트를 만들어 띠의 색과 크기를 측정. 크기가 480×270으로 화면(960×540)의 정확히 절반 → 0.5배로 줄인 크레딧 창과 함께 줄어든 그림임을 확인. 화면 가장자리를 어둡게 하는 비네트 그림 한 장이 원인</dd>
+   <dt>검증</dt><dd>크레딧 동안 비네트를 끄고 다시 녹화. 창 바깥에 검정이 아닌 픽셀 0개</dd>
+  </dl>
+  <div class="pair" style="margin-top:14px">
+   <figure><span class="tg">이전</span><img src="media/ramen/a_window.jpg" alt="고치기 전: 검은 바탕 위 가게 창 둘레에 갈색 띠가 남아 있다" width="658" height="350" loading="lazy"></figure>
+   <figure><span class="tg ok">이후</span><img src="media/ramen/a_ba3_after.jpg" alt="고친 뒤: 창 바깥이 완전히 검다" width="658" height="350" loading="lazy"></figure>
+  </div>
+  <p class="cond" style="text-align:center">이전은 실제 화면(창 왼쪽의 갈색 띠), 이후는 고친 결과를 다시 만든 화면(재구성)</p>
+   <div class="tblwrap"><table class="tbl"><colgroup><col style="width:9%"><col style="width:33%"><col style="width:58%"></colgroup><thead><tr><th>시도</th><th>가설</th><th>결과</th></tr></thead><tbody>
+    <tr><td>1</td><td>배경 그림이 화면 밖까지 깔림</td><td>배경 크기를 고정하고 카메라 배경을 검정으로 변경. 띠는 그대로</td></tr>
+    <tr><td>2</td><td>검은 판이 화면 일부만 덮음</td><td>픽셀 색을 읽어 검은 판은 정상임을 확인. 다만 잰 값의 위치를 창 안쪽으로 잘못 읽음. 띠는 그대로</td></tr>
+    <tr><td>3</td><td>밤 배경 그림이 창보다 큼</td><td>그림 크기를 960×540으로 줄임. 띠는 그대로</td></tr>
+    <tr><td>4</td><td>가설 없이 측정부터</td><td>녹화 프레임에서 띠 영역을 계산. 크기 480×270, 색 RGB(22,11,8). 창과 같은 비율로 줄어든 그림을 찾아 비네트로 확인</td></tr>
+   </tbody></table></div>
+<pre class="cx"><span class="hd">CreditsSequence.cs · 크레딧 동안 꺼 둘 화면 요소 (요약)</span><span class="kw">public static readonly string</span>[] FrameHidden =
+{
+    <span class="nm">"TitleScreen"</span>, <span class="nm">"HoldToSkip"</span>, <span class="nm">"DragLayer"</span>, <span class="nm">"TutorialPrompt"</span>, <span class="nm">"TutorialDim"</span>,
+<span class="hi">    <span class="nm">"ScreenVignette"</span>, <span class="nm">"ScreenGrain"</span>,   <span class="cm">// 추가: 띠로 남던 그림</span></span>
+};</pre>
+   <p class="lbl">배운 점</p>
+   <ul class="pts">
+    <li>같은 문제를 세 번 틀리면 추측 대신 측정. 480×270이라는 숫자 하나로 원인을 바로 찾음</li>
+    <li>값을 잰 뒤에는 그 값이 화면의 어디에 해당하는지도 확인</li>
+   </ul>
+  </div></details>
+ </div>
+
  <div class="case fold2" id="rm-more">
-  <details class="more"><summary>더 보기 <span>씬 빌더 · 기타 버그 8건</span></summary><div class="in">
+  <details class="more"><summary>더 보기 <span>씬 빌더 · 기타 버그 7건</span></summary><div class="in">
    <p class="lbl">씬 빌더</p>
    <p>조리 화면 UI는 손으로 배치하지 않고 에디터 스크립트가 코드로 만들어 저장. 좌표와 크기를 상수 한 곳에 모아, 해상도를 640×360에서 960×540으로 바꿀 때도 상수만 고치고 다시 실행</p>
    <figure style="margin-top:14px"><img src="media/rm_build1.jpg" alt="씬 빌더가 코드로 만든 조리 화면" width="1280" height="720" loading="lazy"><figcaption>빌더가 만든 조리 화면 · 실제 화면</figcaption></figure>
    <p class="lbl">기타 버그</p>
    <div class="tblwrap"><table class="tbl"><thead><tr><th>증상</th><th>원인</th><th>해결</th></tr></thead><tbody>
-    <tr><td>재료통 위에서 커서가 사라짐</td><td>Canvas를 Camera 모드로 바꾼 뒤에도 픽셀 좌표를 그대로 사용</td><td>좌표 변환 네 곳을 함수 하나로 통합</td></tr>
     <tr><td>에디터는 되는데 빌드만 실패</td><td>#if UNITY_EDITOR 안에서 선언하고 밖에서 사용</td><td>선언을 밖으로 옮기고 같은 유형 26곳 전부 확인</td></tr>
     <tr><td>Play 직후 간판 점등 연출이 안 보임</td><td>첫 프레임 하나가 4.27초. unscaledDeltaTime은 유니티가 잘라 주지 않음</td><td>한 프레임에 흘려보낼 시간을 0.05초로 제한</td></tr>
     <tr><td>머지는 됐는데 씬이 조용히 깨짐</td><td>씬 파일이 줄 단위로 머지돼 참조 ID가 어긋남</td><td>.gitattributes로 자동 병합을 꺼 명시적 충돌로 전환</td></tr>
@@ -473,8 +525,8 @@ Sfx.<span class="fn">Play</span>(<span class="nm">"sfx_flow_next"</span>, 0.5f);
   <a class="c" href="#rm-sys" data-n="2.2">주요 구현</a>
   <a class="c" href="#rm-arch" data-n="2.3">역할과 협업</a>
   <a class="c" href="#rm-case" data-n="2.4">트러블슈팅</a>
-  <a class="s" href="#rm-c3" data-n="·">크레딧의 갈색 띠</a>
-  <a class="s" href="#rm-c2" data-n="·">사라지는 타자기 효과</a>
+  <a class="s" href="#rm-c4" data-n="·">화면 밖으로 사라진 커서</a>
+  <a class="s" href="#rm-c2" data-n="·">두 번 읽힌 클릭</a>
   <a class="c" href="#rm-retro" data-n="2.5">회고</a>
  </nav>
  <div class="bar"><i></i></div>
