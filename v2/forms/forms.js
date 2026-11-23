@@ -90,6 +90,29 @@ who:{cap:"판 흐름 · 체력은 방장, 피격 판정은 맞는 쪽, 출발점
  arrow(362,110,388,110)+t(375,214,"맞았다 · 피해량",{anchor:"middle",size:11.5,fill:"#2f6fb5"})+t(375,228,"ReportHitRpc",{anchor:"middle",size:10.5,fill:"#6e7781"})+`<line x1="375" y1="112" x2="375" y2="200" stroke="#c9ced6" stroke-dasharray="2 3"/>`+
  `<path d="M470 192 C470 280 90 280 90 192" fill="none" stroke="#6e7781" stroke-width="1.8" marker-end="url(#a)"/>`+`<line x1="280" y1="262" x2="280" y2="194" stroke="#6e7781" stroke-width="1.4" marker-end="url(#a)"/>`+t(300,292,"체력 · 판 흐름 (NetworkVariable) → 모든 PC",{anchor:"middle",size:11.5,fill:"#2f6fb5"})
 )},
+// 라멘가게: 같은 숫자가 Canvas 모드에 따라 다른 위치를 가리킴
+coord:{cap:"같은 마우스 좌표도 Canvas 모드에 따라 가리키는 위치가 달라짐",svg:svg(520,270,
+ t(125,24,"Overlay",{anchor:"middle",weight:700})+t(125,44,"월드 1칸 = 화면 1픽셀",{anchor:"middle",size:12,fill:"#6e7781"})+
+ box(20,56,210,150,{fill:"#f3f8ee",stroke:"#a9d27a"})+t(30,74,"화면 · 세로 540칸",{size:11.5,fill:"#2e6b1a"})+
+ `<circle cx="135" cy="125" r="7" fill="#3f8a1f"/>`+t(135,150,"마우스 (480, 300)",{anchor:"middle",size:12})+
+ t(125,232,"좌표를 그대로 넣어도 화면 안",{anchor:"middle",size:12.5,fill:"#3f8a1f",weight:700})+
+ `<line x1="260" y1="20" x2="260" y2="250" stroke="#dfe3e8"/>`+
+ t(395,24,"Screen Space - Camera",{anchor:"middle",weight:700})+t(395,44,"화면 세로 = 월드 10칸",{anchor:"middle",size:12,fill:"#6e7781"})+
+ box(335,170,120,36,{fill:"#fff"})+t(395,193,"화면 · 세로 10칸",{anchor:"middle",size:11.5,fill:"#6e7781"})+
+ `<circle cx="395" cy="72" r="7" fill="#c3402b"/>`+t(408,76,"커서 y = 300칸",{size:12,fill:"#c3402b"})+
+ `<line x1="395" y1="168" x2="395" y2="84" stroke="#c3402b" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#r)"/>`+t(408,130,"화면 30개만큼 위",{size:12.5,fill:"#c3402b",weight:700})+
+ t(395,232,"같은 숫자인데 위치는 화면 밖",{anchor:"middle",size:12.5,fill:"#c3402b",weight:700})
+)},
+// 라멘가게: 클릭한 프레임 안에서 입력을 두 번 읽음
+frame:{cap:"클릭한 프레임 안에서는 몇 번을 읽어도 true",svg:svg(520,250,
+ box(150,14,200,150,{fill:"#fdf3f1",stroke:"#e9b3a8"})+box(360,14,150,150,{fill:"#fbfcfd"})+
+ t(250,36,"프레임 N · 클릭",{anchor:"middle",weight:700})+t(435,36,"프레임 N+1",{anchor:"middle",weight:700,fill:"#6e7781"})+
+ [["눌림 값",66],["입력 대기",102],["다음 줄 타자기",138]].map(([n,y])=>t(10,y,n,{size:12.5,fill:"#5d6773"})+`<line x1="10" y1="${y+14}" x2="510" y2="${y+14}" stroke="#eceff2"/>`).join("")+
+ t(250,66,"true",{anchor:"middle",size:13,weight:700})+t(435,66,"false",{anchor:"middle",size:13,fill:"#6e7781"})+
+ t(250,102,"끝남",{anchor:"middle",size:12.5})+
+ t(250,138,"바로 시작 → true를 또 읽음",{anchor:"middle",size:12.5,fill:"#c3402b",weight:700})+
+ box(10,184,500,50,{fill:"#f3f8ee",stroke:"#a9d27a"})+t(260,205,"고친 뒤: 대기가 끝나면 한 프레임 쉼",{anchor:"middle",size:12.5,fill:"#2e6b1a",weight:700})+t(260,224,"다음 줄은 프레임 N+1에서 시작 → 눌림 false → 한 글자씩 출력",{anchor:"middle",size:12,fill:"#2e6b1a"})
+)},
 // 구조: 코드 덩어리
 chunks:{cap:"네트워크를 타는 클래스는 둘뿐, 나머지는 화면 전용이다",svg:svg(520,250,
  box(10,10,240,150,{fill:"#fff",stroke:"#2f6fb5"})+t(24,34,"Duelist · 협객 하나",{weight:700})+t(24,52,"파일 22개 (partial)",{size:12,fill:"#6e7781"})+
