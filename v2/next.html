@@ -19,7 +19,7 @@
   <div class="who3">
    <h1>김기백 <span>신입 게임 클라이언트 프로그래머</span></h1>
    <p class="intro3">Unity로 6개월 동안 게임 9편을 만들며 기획부터 구현, 빌드 배포까지 직접 끝내 봤습니다. AI 코딩 도구를 적극적으로 활용하되, 결과는 그대로 믿지 않고 측정으로 확인합니다.</p>
-   <ul class="stats3" aria-label="작업 요약"><li><b>9편</b>완성한 게임</li><li><b>6개월</b>2026.06 ~ 11</li><li><b>5편</b>웹에서 바로 플레이</li><li><b>1인 개발 · 팀 프로젝트</b>경험 보유</li></ul>
+   <ul class="stats3" aria-label="작업 요약"><li><b>게임 9편 · 영상 2편</b>6개월간 완성(2026.06 ~ 11)</li><li><b>5편</b>웹에서 바로 플레이</li><li><b>1인 개발 · 팀 프로젝트</b>경험 보유</li></ul>
    <div class="cta3">
     <a class="cta" href="#jm"><b>정무대전</b><span>1인 개발 · 6인 온라인 대전</span><i aria-hidden="true">→</i></a>
     <a class="cta" href="#ramen"><b>라멘가게</b><span>팀 개발 · 조리 퍼즐</span><i aria-hidden="true">→</i></a>
@@ -52,7 +52,7 @@
   </button>
   <button class="pick" type="button" data-p="ramen" aria-expanded="false" aria-controls="ramen">
    <span class="pic"><img src="media/ramen/cook.gif" alt="나의 인생 라멘가게 조리 화면" width="480" height="270"></span>
-   <span class="bd"><span class="k">팀 개발 · 2주 · 게임 파트 프로그래머 2명</span><strong>나의 인생 라멘가게</strong><span class="d">손님의 말을 해석해 라멘을 만드는 조리 퍼즐</span><span class="c2">재료의 순서 · 개수를 판단하는 그릇과 조리 화면을 맡고, 완성된 그릇을 팀원의 채점 시스템에 연결했습니다.</span><span class="go"><i class="o">자세히 보기</i><i class="c">접기</i></span></span>
+   <span class="bd"><span class="k">팀 개발 · 2주 · 8인 팀(게임 파트 프로그래머 2명)</span><strong>나의 인생 라멘가게</strong><span class="d">손님의 말을 해석해 라멘을 만드는 조리 퍼즐</span><span class="c2">재료의 순서 · 개수를 판단하는 그릇과 조리 화면을 맡고, 완성된 그릇을 팀원의 채점 시스템에 연결했습니다.</span><span class="go"><i class="o">자세히 보기</i><i class="c">접기</i></span></span>
   </button>
  </div>
   <p class="sublbl">서브 프로젝트</p>
@@ -97,7 +97,7 @@
   <dl class="psr">
    <dt class="q">문제</dt><dd>게스트 화면에서 맞은 비도(던지는 암기)가 피해 없이 지나가는 현상. 판정은 맞는 쪽 PC가 하는데, 공격자 화면에는 네트워크 지연만큼 과거의 상대가 보이기 때문</dd>
    <dt class="d">선택</dt><dd>명중 여부는 공격자가 보던 시점의 위치로 되감아 판정(지연 보상, Lag Compensation). 막기 · 무적은 맞는 사람이 누른 입력을 살리기 위해 지금 기준 그대로 둠</dd>
-   <dt>검증</dt><dd>개발 빌드 두 개에 편도 지연 60±10ms를 걸고 봇 자동 대전으로 측정. 되감는 시간을 방장 · 게스트 조합별로 맞추자, 게스트끼리 비도 일치율(화면에서 닿은 공격 중 실제로 맞은 비율)이 59% → 96%</dd>
+   <dt>검증</dt><dd>개발 빌드 두 개에 편도 지연 60±10ms를 걸고 봇 자동 대전으로 측정. 되감는 시간을 방장 · 게스트 조합별로 맞추자, 게스트끼리 비도 일치율(화면에서 닿은 공격 중 실제로 맞은 비율)이 59% → 96%. 피해 없이 지나가는 비도로 보면 41% → 4%</dd>
   </dl>
   <div class="fig" data-svg="rewind"></div>
   <details class="more"><summary>상세 과정 <span>판정 구조 · 되감는 시간 · 대안 검토 · 한계 · 코드</span></summary><div class="in">
@@ -145,7 +145,7 @@
   <div class="fig" data-svg="measure"></div>
   <details class="more"><summary>상세 과정 <span>멈춤 원인 · 측정으로 찾은 버그 · 대안 검토 · 한계 · 코드</span></summary><div class="in">
    <ul class="pts">
-    <li>프로파일러로 확인하니 포커스 없는 에디터에서 화면 출력 대기가 1초마다 500ms씩 걸리고 있었음</li>
+    <li>게임 루프를 강제로 돌려도 약 1초마다 0.5초씩 멈춤. 프로파일러로 확인하니 포커스 없는 에디터에서 직전 화면 출력을 기다리는 구간이 500ms씩 걸리고 있었음</li>
     <li>에디터에서만 생기는 멈춤이라, 고치는 대신 측정 환경을 개발 빌드로 변경</li>
    </ul>
    <div class="fig" data-svg="range" style="margin-top:14px"></div>
@@ -201,7 +201,7 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
   <details class="more"><summary>기타 해결 4건 <span>메모리 누수 · 커서 크기 · 색 공간 · 아이템 배치</span></summary><div class="in">
    <div class="tblwrap"><table class="tbl"><thead><tr><th>증상</th><th>원인</th><th>해결</th></tr></thead><tbody>
     <tr><td>판마다 메모리가 25~38MB씩 쌓임</td><td>맵을 지울 때 오브젝트만 부숴, 코드로 만든 텍스처 · 재질 · 메시가 남음</td><td>맵을 지울 때 함께 지우도록 소유 목록 추가</td></tr>
-    <tr><td>다른 PC에서 커서가 작게 보임</td><td>Unity 6000.3 윈도우 빌드에서 64px 커서 그림이 32px로 그려짐</td><td>Win32로 커서를 직접 만들어 적용</td></tr>
+    <tr><td>다른 PC에서 커서가 작게 보임</td><td>윈도우에서 Cursor.SetCursor가 그림 크기와 관계없이 OS 기본 커서 크기(100% 배율 32px)로 줄여 그림</td><td>Win32로 커서를 직접 만들어 적용</td></tr>
     <tr><td>이펙트 색이 바래 보임</td><td>Linear 색 공간에서 메쉬 정점 색은 변환되지 않음</td><td>정점 색을 .linear로 바꿔 입력</td></tr>
     <tr><td>맵 절반에서 회복 아이템이 0개</td><td>엄폐 조건을 추가한 뒤 배치 후보가 전부 조건에 걸림</td><td>200번 실패하면 조건을 풀고 재시도</td></tr>
    </tbody></table></div>
@@ -340,7 +340,7 @@ GUIUtility.ScaleAroundPivot(<span class="kw">new</span> Vector2(scale, scale), p
   <p class="kind">UI 좌표계</p>
   <h4>Canvas 모드를 바꾼 뒤 사라진 커서 <span class="res">화면 30개 위에 그려지던 커서 → 마우스 위치</span></h4>
   <dl class="psr">
-   <dt class="q">문제</dt><dd>화면 필터를 UI에도 적용하려고 Canvas를 Overlay에서 Screen Space - Camera로 바꾼 뒤, 재료통 위에서 커서가 사라지는 현상. 마우스의 픽셀 좌표를 월드 좌표에 그대로 넣고 있었고, 두 값은 Overlay에서만 우연히 같았음</dd>
+   <dt class="q">문제</dt><dd>화면 필터를 UI에도 적용하려고 Canvas를 Overlay에서 Screen Space - Camera로 바꾼 뒤, 재료통 위에서 커서가 사라지는 현상. 마우스의 픽셀 좌표를 월드 좌표에 그대로 넣고 있었음. Overlay에서는 월드 좌표가 화면 픽셀과 같아 문제가 드러나지 않았지만, Camera 모드에서는 카메라를 거친 변환이 필요함</dd>
    <dt class="d">선택</dt><dd>화면 좌표를 UI 좌표로 바꾸는 함수(CanvasPoint)를 만들어, 같은 계산을 하던 네 곳을 통합. 변환은 RectTransformUtility에 맡기고 그 Canvas가 쓰는 카메라를 함께 넘김</dd>
    <dt>검증</dt><dd>커서 · 드래그 중인 재료 · 클릭 효과 · 주문서 판정 네 곳 모두 마우스 위치에 맞게 동작. 렌더 모드를 Overlay로 되돌려도 같은 코드로 동작</dd>
   </dl>
