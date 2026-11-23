@@ -625,3 +625,15 @@ button.subc[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 1px va
 button.tile{font:inherit;cursor:pointer;text-align:left;padding:0;width:100%;color:inherit}
 .tile[aria-expanded=true]{border-color:var(--lime);box-shadow:0 0 0 2px rgba(184,228,110,.35)}
 .wplay{font-weight:700}
+
+/* 주 사례만 부각, 보조 사례는 얇은 목록으로 낮춤 */
+.case:not(.fold2){border:1px solid #cdd5dd;border-left:4px solid var(--green);background:#fff;box-shadow:0 3px 14px rgba(20,30,40,.07)}
+.sheet p.sublab{margin:36px 0 6px!important;font-size:13px;font-weight:600;color:var(--mute);letter-spacing:.02em}
+.case.fold2{border:0;border-top:1px solid var(--line);border-radius:0;padding:0;margin:0;background:none;box-shadow:none}
+.case.fold2:last-of-type{border-bottom:1px solid var(--line)}
+.case.fold2>.more>summary{font-size:14.5px;font-weight:500;color:var(--body);padding:11px 2px}
+.case.fold2>.more>summary::before{font-size:14px;color:var(--mute)}
+.case.fold2>.more>summary span{color:var(--mute);font-weight:400;font-size:13.5px}
+.case.fold2>.more[open]>summary{font-weight:700;color:var(--ink)}
+.case.fold2>.more .in{padding:6px 2px 20px}
+@media(max-width:760px){.case.fold2{padding:0}.case:not(.fold2){border-left-width:3px}}
